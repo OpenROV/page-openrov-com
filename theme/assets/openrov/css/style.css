@@ -13,6 +13,19 @@
     background-color: white;
 }
 
+#masthead .navbar-brand>img.white {
+    display: none;
+}
+#masthead .navbar-brand>img.black {
+    display: inline;
+}
+
+#masthead.navbar-scrolled .navbar-brand>img.white {
+    display: inline;
+}
+#masthead.navbar-scrolled .navbar-brand>img.black {
+    display: none;
+}
 
 
 #front-jumbotron {
