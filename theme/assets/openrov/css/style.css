@@ -37,3 +37,10 @@
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
 }
+
+.swatch-black .panel.panel-primary > .panel-heading {
+    background-color: #428bca;
+}
+.swatch-black .panel.panel-primary > .panel-heading > .panel-title {
+    color: white;
+}
