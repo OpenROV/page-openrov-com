@@ -9,3 +9,12 @@
 #masthead .nav>li>a:hover:before {
     background-color: black;
 }
+#masthead.navbar-scrolled .nav>li>a:hover:before {
+    background-color: white;
+}
+
+
+
+#front-jumbotron {
+    background-color: rgba(60, 60, 60, 0.56);
+}
