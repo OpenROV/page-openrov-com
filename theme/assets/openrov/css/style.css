@@ -1,0 +1,11 @@
+#masthead .nav>li>a {
+    color: black;
+}
+
+#masthead.navbar-scrolled .nav>li>a {
+    color: white;
+}
+
+#masthead .nav>li>a:hover:before {
+    background-color: black;
+}
