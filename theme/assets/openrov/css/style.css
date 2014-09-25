@@ -18,3 +18,9 @@
 #front-jumbotron {
     background-color: rgba(60, 60, 60, 0.56);
 }
+
+.fa.ninety-deg {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
