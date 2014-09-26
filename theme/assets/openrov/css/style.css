@@ -84,8 +84,13 @@ a:hover .ks {
     background-image: url('../images/kickstarter_dark.png');
 }
 
+
 #masthead.navbar-scrolled {
-    background-color: #0c2f3e!important;
+    background-color: rgba(12, 47, 62, 0.95) !important;
+}
+
+#masthead.swatch-white {
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .link-partners i.fa {
