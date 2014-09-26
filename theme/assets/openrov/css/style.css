@@ -1,3 +1,15 @@
+.swatch-white a, [class*=swatch-] .swatch-white a,
+.swatch-gray .scroll-to svg, [class*=swatch-] .swatch-gray .scroll-to svg,
+.swatch-white .scroll-to svg, [class*=swatch-] .swatch-white .scroll-to svg {
+    color: #146086;
+    stroke: #146086;
+}
+
+.swatch-white .scroll-to, [class*=swatch-] .swatch-white .scroll-to,
+.swatch-gray .scroll-to, [class*=swatch-] .swatch-gray .scroll-to {
+    border-color: #146086;
+}
+
 #masthead .nav>li>a {
     color: black;
 }
