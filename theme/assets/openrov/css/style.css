@@ -44,3 +44,40 @@
 .swatch-black .panel.panel-primary > .panel-heading > .panel-title {
     color: white;
 }
+
+.oe {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/oe_white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+
+}
+a:hover .oe {
+    background-image: url('../images/oe_dark.png');
+}
+
+.ks {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/kickstarter_white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%
+}
+a:hover .ks {
+    background-image: url('../images/kickstarter_dark.png');
+}
+
+#masthead.navbar-scrolled {
+    background-color: #0c2f3e!important;
+}
+
+.link-partners i.fa {
+    font-size: 20px;
+}
+.link-partners .btn-block {
+    width: 70%;
+    margin-bottom: 10px!important;
+}
