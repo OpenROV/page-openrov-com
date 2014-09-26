@@ -10,8 +10,10 @@
     border-color: #146086;
 }
 
-#masthead .nav>li>a {
-    color: black;
+@media (min-width: 992px) {
+    #masthead .nav>li>a {
+        color: black;
+    }
 }
 
 #masthead.navbar-scrolled .nav>li>a {
