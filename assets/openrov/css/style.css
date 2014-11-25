@@ -10,18 +10,18 @@
     border-color: #146086;
 }
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
     #masthead .nav>li>a {
         color: black;
     }
 }
-
+*/
 #masthead.navbar-scrolled .nav>li>a {
     color: white;
 }
 
 #masthead .nav>li>a:hover:before {
-    background-color: black;
+    background-color: white;
 }
 #masthead.navbar-scrolled .nav>li>a:hover:before {
     background-color: white;
