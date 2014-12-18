@@ -1,1 +1,4 @@
-#baseurl: /page-openrov-com
+baseurl: /page-openrov-com
+collections:
+  - products
+  output: true
