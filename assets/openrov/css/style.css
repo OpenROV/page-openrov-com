@@ -104,3 +104,8 @@ a:hover .ks {
     width: 70%;
     margin-bottom: 10px!important;
 }
+
+.affix {
+  top: 50px;
+  width:100%;
+}
