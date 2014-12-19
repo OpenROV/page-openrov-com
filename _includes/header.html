@@ -25,8 +25,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             {% for p in site.products %}
-            <li><a href="p.url">p.title</a></li>
-            {% endfor %}        
+            <li><a href="{{p.url}}">{{p.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <li class="dropdown">
