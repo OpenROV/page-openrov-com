@@ -109,3 +109,8 @@ a:hover .ks {
   top: 70px;
   width:100%;
 }
+
+.navbar-lower.a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
