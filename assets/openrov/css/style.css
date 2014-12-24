@@ -104,3 +104,14 @@ a:hover .ks {
     width: 70%;
     margin-bottom: 10px!important;
 }
+
+.affix {
+  top: 70px;
+  width:100%;
+}
+
+.navbar-lower>li>a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: white;  
+}

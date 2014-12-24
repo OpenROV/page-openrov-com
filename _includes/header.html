@@ -1,0 +1,71 @@
+<div id="masthead" class="navbar navbar-static-top swatch-black navbar-sticky" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{ site.baseurl }}/index.html" class="navbar-brand">
+        <img src="{{ site.baseurl }}/assets/openrov/images/openrov.png"  alt="OpenROV | Underwater Exploration Robots">
+        <!--                         <img src="assets/openrov/images/openrov.png" class="white" alt="OpenROV | Underwater Exploration Robots">
+        <img src="assets/openrov/images/openrov-dark.png" class="black" alt="OpenROV | Underwater Exploration Robots">
+      -->                    </a>
+    </div>
+    <!--navigation-->
+    <nav class="collapse navbar-collapse main-navbar" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="http://store.openrov.com" target="_blank"><span>Store</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="http://community.openrov.com/profiles/blog/list" target="_blank"><span>Blog</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            {% for p in site.products %}
+            <li><a href="{{ site.baseurl }}/{{p.url}}">{{p.title}}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://openrov.dozuki.com/c/Building_from_a_kit" target="_blank">Kit Assembly Instructions</a></li>
+            <li><a href="http://openrov.dozuki.com/c/Operation" target="_blank">Operation Manuals</a></li>
+            <li class="divider"></li>
+            <li><a href="http://community.openrov.com/forum" target="_blank">Forums</a></li>
+            <li><a href="https://docs.google.com/forms/d/1erC38nIh78S734N2UQK6Xx3VYgYXOvShA9TQ25Pyzs0/viewform?fbzx=329119282362925793" target="_blank">Contact Support</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://community.openrov.com/forum" target="_blank">Forums</a></li>
+            <li><a href="https://gitter.im/OpenROV/discuss?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank">Chat on Gitter</a></li>
+            <li><a href="https://github.com/OpenROV/openrov-software#how-to-contribute" target="_blank">Development</a></li>
+            <li><a href="http://www.openexplorer.com" target="_blank"><span>OpenExplorer</span></a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">OpenSource<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="https://github.com/OpenROV/openrov-software" target="_blank">Software</a></li>
+            <li><a href="https://github.com/OpenROV/openrov-hardware" target="_blank">Hardware</a></li>
+            <li><a href="https://github.com/OpenROV/openrov-electronics" target="_blank">Electronics</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Media<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="https://www.youtube.com/user/OpenROV" target="_blank">Youtube Videos</a></li>
+            <li><a href="https://drive.google.com/folderview?id=0B2JJHiiQbT09bWZkYkVRQ2ZUcnc&usp=sharing" target="_blank">Photo Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!--/ navigation-->
+  </div>
+</div>

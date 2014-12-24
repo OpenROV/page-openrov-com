@@ -1,0 +1,18 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ page.title }}</title>
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.shortdescription }}" />
+  <meta property="og:image" content="{{ page.keyimage}}" />
+  <meta property="og:url" content="{{ page.url }}" />
+  {% include headers.html %}
+</head>
+{% include header.html %}
+{{content}}
+{% include footer.html %}
+</body>
+</html>
