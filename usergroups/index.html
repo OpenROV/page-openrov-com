@@ -13,7 +13,31 @@
 
 <body class="transparent-header">
   {% include header.html %}
-  <div id="content">
+  <article>
+  <script type="text/javascript">
+  var oxyThemeData = {
+    navbarHeight: 90,
+    navbarScrolled: 70,
+    navbarScrolledPoint: 200,
+    navbarScrolledSwatches:
+  {
+    up: 'swatch-white',
+    down: 'swatch-black'
+  },
+  scrollFinishedMessage: 'No more items to load.',
+  hoverMenu:
+{
+  hoverActive: false,
+  hoverDelay: 1,
+  hoverFadeDelay: 200
+}
+};
+</script>
+<section id="one" class="section swatch-white section-fullheight">
+  <div class="container">
+    <div class="row element-tall-top element-short-bottom">
+      <div class="col-md-12">
+
     <p>OpenROV is a global phenomonan. Here is a listing of self forming rover communities around the world (if you would like to have your OpenROV group added, post an introduction of your group to our forums!):</p>
     <h2>North America</h2>
     <h3> BayArea OpenROV Users Group </h3>
@@ -65,8 +89,13 @@
           Japan
           Southeast Asia
         -->
-  </div>
-  {% include footer.html %}
-</body>
 
+      </div>
+    </div>
+  </div>
+</section>
+</article>
+</div>
+{% include footer.html %}
+</body>
 </html>
