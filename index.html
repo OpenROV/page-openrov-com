@@ -422,8 +422,8 @@ $.getScript( "https://sdepold.github.io/jquery-rss/src/jquery.rss.js", function(
   $("#rss-styled").rss("https://forum.openrov.com/c/blog.rss", {
     limit: 5,
     ssl: true,
-    layoutTemplate: '<dl class="dl-horizontal">{entries}</dl>',
-    entryTemplate: '<dt><a href="{url}">{title}</a></dt><br><dd>{shortBodyPlain}[{author}@{date}]</dd>'
+    layoutTemplate: '<div>{entries}</div>',
+    entryTemplate: '<div><a href="{url}">{title}</a></div><div>{shortBodyPlain}[{author}@{date}]</div>'
   }).show();
 });
 </script>
