@@ -31,11 +31,13 @@
                     }
                 };
                 </script>
+                <div id=”content” role=”main”>        
             <div id="rss-styled" class="portfolio-container">
 
             </div>
 
         {% include footer.html %}
+      </div>
         <script>
         $.getScript( "https://sdepold.github.io/jquery-rss/src/jquery.rss.js", function( data, textStatus, jqxhr ) {
           $("#rss-styled").rss("https://forum.openrov.com/c/blog.rss", {
