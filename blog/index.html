@@ -1,0 +1,78 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OpenROV | Underwater Exploration Robots</title>
+        <meta property="og:title" content="OpenROV | Underwater Exploration Robots" />
+        <meta property="og:description" content="OpenROV is an open-source, low-cost underwater robot for exploration and education.<br> It's also a passionate community of professional and amateur ocean explorers and technologists." />
+        <meta property="og:image" content="http://www.openrov.com/assets/openrov/images/ogimage.jpg" />
+        <meta property="og:url" content="http://www.openrov.com" />
+        {% include headers.html %}
+  </head>
+    <body class="transparent-header">
+      {% include header.html %}
+      <div id="content">
+            <article>
+                <script type="text/javascript">
+                var oxyThemeData = {
+                    navbarHeight: 90,
+                    navbarScrolled: 70,
+                    navbarScrolledPoint: 200,
+                    navbarScrolledSwatches:
+                    {
+                        up: 'swatch-black',
+                        down: 'swatch-black'
+                    },
+                    scrollFinishedMessage: 'No more items to load.',
+                    hoverMenu:
+                    {
+                        hoverActive: false,
+                        hoverDelay: 1,
+                        hoverFadeDelay: 200
+                    }
+                };
+                </script>
+            </article>
+            <div class="portfolio-container">
+
+            </div>
+        </div>
+        {% include footer.html %}
+        <script>
+        $.getScript( "https://sdepold.github.io/jquery-rss/src/jquery.rss.js", function( data, textStatus, jqxhr ) {
+          $("#rss-styled").rss("https://forum.openrov.com/c/blog.rss", {
+            limit: 5,
+            ssl: true,
+            layoutTemplate: '<div class="portfolio masonry isotope" data-padding="15" data-col-xs="2" data-col-sm="2" data-col-md="3" data-col-lg="3" data-layout="fitRows">
+              {entries}
+            </div>',
+            entryTemplate: '
+            <div class="masonry-item portfolio-item isotope-item" data-menu-order="1" data-title="{title}">
+            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-sepia fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
+            <span class="figure-image" target="_self">
+            <img src="{teaserImageUrl}" alt="{title}" class="normalwidth">
+            <div class="figure-overlay grid-overlay-30">
+            <div class="figure-overlay-container">
+            <div class="figure-caption">
+            <h4 class="figure-caption-title element-small-bottom bordered bordered-small">
+          {title}
+            </h4>
+            <p class="figure-caption-description">
+            <a href="{teaserImageUrl}" class="btn btn-primary btn-sm magnific" target="_self">
+            View Larger
+            </a>
+            <a href="portfolio-slideshow.html" class="btn btn-primary btn-sm" target="_self">More Details</a>
+            </p>
+            </div>
+            </div>
+            </div>
+            </span>
+            </div>
+            </div>
+            '
+          }).show();
+        });
+        </script>
+    </body>
+</html>
