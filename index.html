@@ -107,18 +107,6 @@
                       <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tridenthilights.mob.mp4" media="screen and (max-device-width:800px)">
                     </video> </div>
 
-    <script>
-      var body = document.getElementById('body');
-      var video = document.getElementById('tridentVideo');
-
-      var loadData = function () {
-          video.load();
-          console.log('#');
-      };
-
-      body.addEventListener('ontouchstart', loadData, false);  
-  </script>
-
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
@@ -623,6 +611,24 @@ $.getScript( "https://sdepold.github.io/jquery-rss/src/jquery.rss.js", function(
     entryTemplate: '<p><h3><a href="{url}">{title}</a></h3>{shortBody}</p>'
   }).show();
 });
+
+
+(function(document) {
+  
+      var body = $('body')[0];
+      var video = $('#tridentVideo')[0];
+
+      var loadData = function () {
+          video.load();
+          console.log('#');
+      };
+
+      body.addEventListener('ontouchstart', loadData, false);  
+
+  
+})(document);
+
+
 </script>
     </body>
 </html>
