@@ -102,10 +102,22 @@
 
                 <section id="one" class="section swatch-black section-text-shadow section-fullheight">
                   <div class="background-media" data-start="background-position:" data-70-top-bottom="background-position:">
-                    <video autoplay loop style="width: auto; height: 100%;" class="section-background-video">
+                    <video id="tridentVideo" poster="https://s3.amazonaws.com/openrov-com-assets/videos/hilights.png" autoplay loop style="width: auto; height: 100%;" class="section-background-video">
                       <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tridenthilights.mp4" media="screen and (min-device-width:801px)">
                       <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tridenthilights.mob.mp4" media="screen and (max-device-width:800px)">
                     </video> </div>
+
+    <script>
+      var body = document.getElementById('body');
+      var video = document.getElementById('tridentVideo');
+
+      var loadData = function () {
+          video.load();
+          console.log('#');
+      };
+
+      body.addEventListener('ontouchstart', loadData, false);  
+  </script>
 
                     <div class="container">
                         <div class="row">
