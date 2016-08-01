@@ -1,10 +1,10 @@
 /* - Blue - */
 .swatch-blue, [class*="swatch-"] .swatch-blue {
   background: #82c9ed;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue h1, .swatch-blue h2, .swatch-blue h3, .swatch-blue h4, .swatch-blue h5, .swatch-blue h6, [class*="swatch-"] .swatch-blue h1, [class*="swatch-"] .swatch-blue h2, [class*="swatch-"] .swatch-blue h3, [class*="swatch-"] .swatch-blue h4, [class*="swatch-"] .swatch-blue h5, [class*="swatch-"] .swatch-blue h6 {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue h1 small, .swatch-blue h2 small, .swatch-blue h3 small, .swatch-blue h4 small, .swatch-blue h5 small, .swatch-blue h6 small, [class*="swatch-"] .swatch-blue h1 small, [class*="swatch-"] .swatch-blue h2 small, [class*="swatch-"] .swatch-blue h3 small, [class*="swatch-"] .swatch-blue h4 small, [class*="swatch-"] .swatch-blue h5 small, [class*="swatch-"] .swatch-blue h6 small {
   color: rgba(255, 255, 255, 0.8);
@@ -27,32 +27,35 @@
 .swatch-blue i, [class*="swatch-"] .swatch-blue i {
   color: #3b83a8;
 }
+.swatch-blue blockquote p, [class*="swatch-"] .swatch-blue blockquote p {
+  color: #ffffff !important;
+}
 .swatch-blue blockquote:before, [class*="swatch-"] .swatch-blue blockquote:before {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-blue blockquote small, .swatch-blue blockquote footer, [class*="swatch-"] .swatch-blue blockquote small, [class*="swatch-"] .swatch-blue blockquote footer {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue ::selection, [class*="swatch-"] .swatch-blue ::selection {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue ::-moz-selection, [class*="swatch-"] .swatch-blue ::-moz-selection {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue hr, [class*="swatch-"] .swatch-blue hr {
   border-top-color: #58a8d1;
 }
 .swatch-blue pre, [class*="swatch-"] .swatch-blue pre {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .active, [class*="swatch-"] .swatch-blue .active {
   color: #1f5f7f;
 }
 .swatch-blue .btn-primary, .swatch-blue button, .swatch-blue input[type="submit"], [class*="swatch-"] .swatch-blue .btn-primary, [class*="swatch-"] .swatch-blue button, [class*="swatch-"] .swatch-blue input[type="submit"] {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .btn-primary:hover, .swatch-blue button:hover, .swatch-blue input[type="submit"]:hover, [class*="swatch-"] .swatch-blue .btn-primary:hover, [class*="swatch-"] .swatch-blue button:hover, [class*="swatch-"] .swatch-blue input[type="submit"]:hover {
@@ -67,31 +70,31 @@
 }
 .swatch-blue .btn-link, [class*="swatch-"] .swatch-blue .btn-link {
   background: none;
-  color: whitesmoke;
+  color: #f5f5f5;
   text-decoration: none;
-  box-shadow: 0px 0px 0px 1px whitesmoke inset;
+  box-shadow: 0px 0px 0px 1px #f5f5f5 inset;
 }
 .swatch-blue .btn-link span, [class*="swatch-"] .swatch-blue .btn-link span {
   background: none;
 }
 .swatch-blue .btn-link i, [class*="swatch-"] .swatch-blue .btn-link i {
-  color: whitesmoke !important;
+  color: #f5f5f5 !important;
 }
 .swatch-blue .btn-link:hover, [class*="swatch-"] .swatch-blue .btn-link:hover {
   text-decoration: none;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   color: #82c9ed;
-  box-shadow: 0px 0px 0px 1px whitesmoke;
+  box-shadow: 0px 0px 0px 1px #f5f5f5;
 }
 .swatch-blue .btn-link:hover i, [class*="swatch-"] .swatch-blue .btn-link:hover i {
   color: #82c9ed !important;
 }
 .swatch-blue .open .dropdown-toggle.btn-primary, [class*="swatch-"] .swatch-blue .open .dropdown-toggle.btn-primary {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .btn-group .dropdown-menu, [class*="swatch-"] .swatch-blue .btn-group .dropdown-menu {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 .swatch-blue .btn-group .dropdown-menu > li > a, [class*="swatch-"] .swatch-blue .btn-group .dropdown-menu > li > a {
   color: #82c9ed;
@@ -104,7 +107,7 @@
   background: white;
 }
 .swatch-blue .label-primary, [class*="swatch-"] .swatch-blue .label-primary {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .label-primary a, [class*="swatch-"] .swatch-blue .label-primary a {
@@ -140,7 +143,7 @@
   color: #3b83a8;
 }
 .swatch-blue input[type="button"], [class*="swatch-"] .swatch-blue input[type="button"] {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .select-wrap, [class*="swatch-"] .swatch-blue .select-wrap {
@@ -150,7 +153,7 @@
   color: #3b83a8;
 }
 .swatch-blue .table th, [class*="swatch-"] .swatch-blue .table th {
-  background-color: white;
+  background-color: #ffffff;
   text-transform: uppercase;
   color: #82c9ed;
 }
@@ -168,19 +171,19 @@
 }
 .swatch-blue.navbar, [class*="swatch-"] .swatch-blue.navbar {
   background: #82c9ed;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .navbar-text, [class*="swatch-"] .swatch-blue .navbar-text {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.navbar .navbar-brand, [class*="swatch-"] .swatch-blue.navbar .navbar-brand {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.navbar .navbar-brand:hover, [class*="swatch-"] .swatch-blue.navbar .navbar-brand:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.navbar .nav > li > a, [class*="swatch-"] .swatch-blue.navbar .nav > li > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.navbar .nav > li > a:hover, .swatch-blue.navbar .nav > li > a:focus, [class*="swatch-"] .swatch-blue.navbar .nav > li > a:hover, [class*="swatch-"] .swatch-blue.navbar .nav > li > a:focus {
   color: #3b83a8;
@@ -190,7 +193,7 @@
   background-color: #3b83a8;
 }
 .swatch-blue.navbar a .menu-icon, [class*="swatch-"] .swatch-blue.navbar a .menu-icon {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.navbar a:hover .menu-icon, [class*="swatch-"] .swatch-blue.navbar a:hover .menu-icon {
   color: #3b83a8;
@@ -202,7 +205,7 @@
   background: none !important;
 }
 .swatch-blue .navbar-toggle .icon-bar, [class*="swatch-"] .swatch-blue .navbar-toggle .icon-bar {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-blue .navbar-toggle:hover, [class*="swatch-"] .swatch-blue .navbar-toggle:hover {
   background: none;
@@ -214,7 +217,7 @@
   background-color: #3b83a8;
 }
 .swatch-blue.navbar .nav > .disabled > a, [class*="swatch-"] .swatch-blue.navbar .nav > .disabled > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.navbar .nav > .disabled > a:before, [class*="swatch-"] .swatch-blue.navbar .nav > .disabled > a:before {
   display: none;
@@ -226,7 +229,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 3px 0px white inset;
 }
 .swatch-blue .dropdown-menu > li > a, [class*="swatch-"] .swatch-blue .dropdown-menu > li > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .dropdown-menu > li > a:hover, .swatch-blue .dropdown-menu > .active > a, .swatch-blue .dropdown-menu > .active > a:hover, .swatch-blue .dropdown-menu > .active > a:focus, [class*="swatch-"] .swatch-blue .dropdown-menu > li > a:hover, [class*="swatch-"] .swatch-blue .dropdown-menu > .active > a, [class*="swatch-"] .swatch-blue .dropdown-menu > .active > a:hover, [class*="swatch-"] .swatch-blue .dropdown-menu > .active > a:focus {
   background: #3b83a8;
@@ -236,7 +239,7 @@
   color: #82c9ed;
 }
 .swatch-blue .dropdown-menu > li.disabled > a:hover, [class*="swatch-"] .swatch-blue .dropdown-menu > li.disabled > a:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.navbar .nav > li > .dropdown-menu:after, .swatch-blue.navbar .nav > li > .dropdown-menu:before, [class*="swatch-"] .swatch-blue.navbar .nav > li > .dropdown-menu:after, [class*="swatch-"] .swatch-blue.navbar .nav > li > .dropdown-menu:before {
   display: none;
@@ -287,7 +290,7 @@
   background: #82c9ed !important;
 }
 .swatch-blue .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a, [class*="swatch-"] .swatch-blue .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover, [class*="swatch-"] .swatch-blue .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover {
   background: transparent;
@@ -355,7 +358,7 @@
   }
 }
 .swatch-blue .pagination > li > a, .swatch-blue .pagination > li > span, [class*="swatch-"] .swatch-blue .pagination > li > a, [class*="swatch-"] .swatch-blue .pagination > li > span {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .pagination > .active > a, .swatch-blue .pagination > .active > span, .swatch-blue .pagination > li > a:hover, [class*="swatch-"] .swatch-blue .pagination > .active > a, [class*="swatch-"] .swatch-blue .pagination > .active > span, [class*="swatch-"] .swatch-blue .pagination > li > a:hover {
@@ -371,43 +374,43 @@
   color: rgba(130, 201, 237, 0.4);
 }
 .swatch-blue .pager > li > a, [class*="swatch-"] .swatch-blue .pager > li > a {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .pager > li > a i, [class*="swatch-"] .swatch-blue .pager > li > a i {
   color: #82c9ed;
 }
 .swatch-blue .tooltip-inner, [class*="swatch-"] .swatch-blue .tooltip-inner {
-  background-color: white;
+  background-color: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .tooltip.in, [class*="swatch-"] .swatch-blue .tooltip.in {
   opacity: 1;
 }
 .swatch-blue .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-blue .tooltip.top .tooltip-arrow {
-  border-top-color: white;
+  border-top-color: #ffffff;
 }
 .swatch-blue .tooltip.right .tooltip-arrow, [class*="swatch-"] .swatch-blue .tooltip.right .tooltip-arrow {
-  border-right-color: white;
+  border-right-color: #ffffff;
 }
 .swatch-blue .tooltip.left .tooltip-arrow, [class*="swatch-"] .swatch-blue .tooltip.left .tooltip-arrow {
-  border-left-color: white;
+  border-left-color: #ffffff;
 }
 .swatch-blue .tooltip.bottom .tooltip-arrow, [class*="swatch-"] .swatch-blue .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: white;
+  border-bottom-color: #ffffff;
 }
 .swatch-blue .jumbotron, [class*="swatch-"] .swatch-blue .jumbotron {
   background: #58a8d1;
 }
 .swatch-blue .progress-bar-primary, [class*="swatch-"] .swatch-blue .progress-bar-primary {
-  background: whitesmoke;
+  background: #f5f5f5;
   box-shadow: none;
 }
 .swatch-blue .progress-bar-primary span, [class*="swatch-"] .swatch-blue .progress-bar-primary span {
   color: #82c9ed;
 }
 .swatch-blue .progress-bar-primary.progress-striped .progress-bar, .swatch-blue .progress-striped .progress-bar-primary, [class*="swatch-"] .swatch-blue .progress-bar-primary.progress-striped .progress-bar, [class*="swatch-"] .swatch-blue .progress-striped .progress-bar-primary {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -416,15 +419,15 @@
   background-size: 40px 40px;
 }
 .swatch-blue .badge, [class*="swatch-"] .swatch-blue .badge {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .tab-content, .swatch-blue .nav-tabs .active a, .swatch-blue .tab-content, .swatch-blue .nav-tabs .active a:hover, [class*="swatch-"] .swatch-blue .tab-content, [class*="swatch-"] .swatch-blue .nav-tabs .active a, [class*="swatch-"] .swatch-blue .tab-content, [class*="swatch-"] .swatch-blue .nav-tabs .active a:hover {
-  background: white;
+  background: #ffffff;
 }
 .swatch-blue .nav-tabs > li > a:hover, .swatch-blue .nav-tabs > li > a:focus, [class*="swatch-"] .swatch-blue .nav-tabs > li > a:hover, [class*="swatch-"] .swatch-blue .nav-tabs > li > a:focus {
   color: #82c9ed;
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-blue .nav-tabs > li.active > a, [class*="swatch-"] .swatch-blue .nav-tabs > li.active > a {
   color: #82c9ed;
@@ -433,16 +436,16 @@
   color: #82c9ed;
 }
 .swatch-blue .nav-pills > li > a .badge, [class*="swatch-"] .swatch-blue .nav-pills > li > a .badge {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .nav-pills > .active > a, .swatch-blue .nav-pills > .active > a:hover, .swatch-blue .nav-pills > li > a:hover, .swatch-blue .nav-pills > li > a:focus, [class*="swatch-"] .swatch-blue .nav-pills > .active > a, [class*="swatch-"] .swatch-blue .nav-pills > .active > a:hover, [class*="swatch-"] .swatch-blue .nav-pills > li > a:hover, [class*="swatch-"] .swatch-blue .nav-pills > li > a:focus {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .nav-pills > .active > a .badge, .swatch-blue .nav-pills > .active > a:hover .badge, .swatch-blue .nav-pills > li > a:hover .badge, .swatch-blue .nav-pills > li > a:focus .badge, [class*="swatch-"] .swatch-blue .nav-pills > .active > a .badge, [class*="swatch-"] .swatch-blue .nav-pills > .active > a:hover .badge, [class*="swatch-"] .swatch-blue .nav-pills > li > a:hover .badge, [class*="swatch-"] .swatch-blue .nav-pills > li > a:focus .badge {
   background: #82c9ed;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .nav-pills > .active > a:hover, .swatch-blue .nav-pills > .active > a:hover:hover, .swatch-blue .nav-pills > li > a:hover:hover, .swatch-blue .nav-pills > li > a:focus:hover, [class*="swatch-"] .swatch-blue .nav-pills > .active > a:hover, [class*="swatch-"] .swatch-blue .nav-pills > .active > a:hover:hover, [class*="swatch-"] .swatch-blue .nav-pills > li > a:hover:hover, [class*="swatch-"] .swatch-blue .nav-pills > li > a:focus:hover {
   color: #82c9ed;
@@ -454,12 +457,12 @@
   color: #82c9ed;
 }
 .swatch-blue .tab-pane .btn, .swatch-blue .tab-pane.active .btn, [class*="swatch-"] .swatch-blue .tab-pane .btn, [class*="swatch-"] .swatch-blue .tab-pane.active .btn {
-  color: white !important;
+  color: #ffffff !important;
   background: #82c9ed !important;
 }
 .swatch-blue .tab-pane .tooltip-inner, .swatch-blue .tab-pane.active .tooltip-inner, [class*="swatch-"] .swatch-blue .tab-pane .tooltip-inner, [class*="swatch-"] .swatch-blue .tab-pane.active .tooltip-inner {
   background-color: #82c9ed;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .tab-pane .tooltip.top .tooltip-arrow, .swatch-blue .tab-pane.active .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-blue .tab-pane .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-blue .tab-pane.active .tooltip.top .tooltip-arrow {
   border-top-color: #82c9ed;
@@ -477,7 +480,7 @@
   background: #58a8d1;
 }
 .swatch-blue .panel-primary .panel-heading, [class*="swatch-"] .swatch-blue .panel-primary .panel-heading {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-blue .panel-primary .panel-heading a, .swatch-blue .panel-primary .panel-heading .panel-title, [class*="swatch-"] .swatch-blue .panel-primary .panel-heading a, [class*="swatch-"] .swatch-blue .panel-primary .panel-heading .panel-title {
   color: #82c9ed;
@@ -495,17 +498,17 @@
 }
 .swatch-blue .panel .table th, [class*="swatch-"] .swatch-blue .panel .table th {
   background: #58a8d1;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .portfolio-title, [class*="swatch-"] .swatch-blue .portfolio-title {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .portfolio-nav svg, [class*="swatch-"] .swatch-blue .portfolio-nav svg {
-  stroke: white;
+  stroke: #ffffff;
 }
 .swatch-blue .social-icons li a, [class*="swatch-"] .swatch-blue .social-icons li a {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-blue .social-icons li a i, [class*="swatch-"] .swatch-blue .social-icons li a i {
   color: #82c9ed;
@@ -514,13 +517,13 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 .swatch-blue .social-simple li a i, [class*="swatch-"] .swatch-blue .social-simple li a i {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .social-simple li a:not([data-iconcolor]):hover i, [class*="swatch-"] .swatch-blue .social-simple li a:not([data-iconcolor]):hover i {
   color: #3b83a8;
 }
 .swatch-blue .box-inner, [class*="swatch-"] .swatch-blue .box-inner {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-blue .box:not(.box-simple) a.box-inner:hover, [class*="swatch-"] .swatch-blue .box:not(.box-simple) a.box-inner:hover {
   background: none !important;
@@ -530,7 +533,7 @@
   stroke: #3b83a8;
 }
 .swatch-blue .bordered:after, [class*="swatch-"] .swatch-blue .bordered:after {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-blue .bordered-link:after, [class*="swatch-"] .swatch-blue .bordered-link:after {
   background-color: #3b83a8 !important;
@@ -542,11 +545,11 @@
   background-color: #3b83a8 !important;
 }
 .swatch-blue #infscr-loading, [class*="swatch-"] .swatch-blue #infscr-loading {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .counter .value, [class*="swatch-"] .swatch-blue .counter .value {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .scroll-to, [class*="swatch-"] .swatch-blue .scroll-to {
   border-color: #3b83a8;
@@ -564,11 +567,11 @@
   border-top-color: #3b83a8;
 }
 .swatch-blue .tag-list span, [class*="swatch-"] .swatch-blue .tag-list span {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .mejs-audio, [class*="swatch-"] .swatch-blue .mejs-audio {
-  background-color: white;
+  background-color: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .mejs-container .mejs-controls .mejs-time span, [class*="swatch-"] .swatch-blue .mejs-container .mejs-controls .mejs-time span {
@@ -583,11 +586,37 @@
 .swatch-blue .mejs-controls .mejs-time-rail .mejs-time-current, .swatch-blue .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current, [class*="swatch-"] .swatch-blue .mejs-controls .mejs-time-rail .mejs-time-current, [class*="swatch-"] .swatch-blue .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
   background: #58a8d1;
 }
+.swatch-blue .select2-container, [class*="swatch-"] .swatch-blue .select2-container {
+  background: #f0f0f0;
+}
+.swatch-blue .select2-container .select2-choice, [class*="swatch-"] .swatch-blue .select2-container .select2-choice {
+  color: #3b83a8;
+}
+.swatch-blue .select2-container .select2-choice .select2-arrow b:after, [class*="swatch-"] .swatch-blue .select2-container .select2-choice .select2-arrow b:after {
+  color: #3b83a8;
+}
+.swatch-blue .select2-drop-active, [class*="swatch-"] .swatch-blue .select2-drop-active {
+  background: rgba(240, 240, 240, 0.9);
+  color: #3b83a8;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.swatch-blue .select2-results .select2-highlighted, [class*="swatch-"] .swatch-blue .select2-results .select2-highlighted {
+  background-color: #3b83a8;
+  color: #3b83a8;
+}
+.swatch-blue .select2-results, [class*="swatch-"] .swatch-blue .select2-results {
+  background: #f0f0f0;
+}
+.swatch-blue .select2-search, [class*="swatch-"] .swatch-blue .select2-search {
+  background: #82c9ed;
+}
 .swatch-blue .post:after, [class*="swatch-"] .swatch-blue .post:after {
   background: #58a8d1;
 }
 .swatch-blue .post-icon, [class*="swatch-"] .swatch-blue .post-icon {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-blue .post-icon i, [class*="swatch-"] .swatch-blue .post-icon i {
   color: #82c9ed;
@@ -603,16 +632,16 @@
   color: #3b83a8;
 }
 .swatch-blue .post-extras i, [class*="swatch-"] .swatch-blue .post-extras i {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .post-more-link i, [class*="swatch-"] .swatch-blue .post-more-link i {
   color: #3b83a8;
 }
 .swatch-blue .media-inner:after, [class*="swatch-"] .swatch-blue .media-inner:after {
-  background: white;
+  background: #ffffff;
 }
 .swatch-blue .author-info, [class*="swatch-"] .swatch-blue .author-info {
-  background-color: white;
+  background-color: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .author-info .media-heading, [class*="swatch-"] .swatch-blue .author-info .media-heading {
@@ -622,16 +651,16 @@
   background: #82c9ed;
 }
 .post-masonry .swatch-blue:hover, .post-masonry [class*="swatch-"] .swatch-blue:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .breadcrumb-blog a, .swatch-blue .breadcrumb-blog .active, [class*="swatch-"] .swatch-blue .breadcrumb-blog a, [class*="swatch-"] .swatch-blue .breadcrumb-blog .active {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .breadcrumb-blog a:hover, [class*="swatch-"] .swatch-blue .breadcrumb-blog a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 .swatch-blue .post-related-post, [class*="swatch-"] .swatch-blue .post-related-post {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-blue .post-related-post a, [class*="swatch-"] .swatch-blue .post-related-post a {
   background: rgba(255, 255, 255, 0.9);
@@ -642,7 +671,7 @@
 }
 .swatch-blue .post-related-post small, [class*="swatch-"] .swatch-blue .post-related-post small {
   background: #82c9ed;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .post-related-post blockquote, [class*="swatch-"] .swatch-blue .post-related-post blockquote {
   color: #82c9ed;
@@ -667,26 +696,26 @@
   background: #58a8d1;
 }
 .swatch-blue .gf_progressbar_percentage, [class*="swatch-"] .swatch-blue .gf_progressbar_percentage {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .sidebar, [class*="swatch-"] .swatch-blue .sidebar {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .sidebar h3, [class*="swatch-"] .swatch-blue .sidebar h3 {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .sidebar a, [class*="swatch-"] .swatch-blue .sidebar a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .sidebar a:hover, [class*="swatch-"] .swatch-blue .sidebar a:hover {
   color: #3b83a8;
 }
 .swatch-blue .sidebar-header:after, [class*="swatch-"] .swatch-blue .sidebar-header:after {
-  background: white;
+  background: #ffffff;
 }
 .swatch-blue .sidebar-widget .post-icon, [class*="swatch-"] .swatch-blue .sidebar-widget .post-icon {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-blue .sidebar-widget .post-icon i, [class*="swatch-"] .swatch-blue .sidebar-widget .post-icon i {
   color: #82c9ed;
@@ -695,7 +724,7 @@
   border-color: #58a8d1;
 }
 .swatch-blue .widget_tag_cloud ul a, [class*="swatch-"] .swatch-blue .widget_tag_cloud ul a {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .widget_tag_cloud ul a:hover, [class*="swatch-"] .swatch-blue .widget_tag_cloud ul a:hover {
@@ -703,7 +732,7 @@
   color: #82c9ed;
 }
 .swatch-blue .widget_calendar tbody a, [class*="swatch-"] .swatch-blue .widget_calendar tbody a {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .widget_calendar tbody a:hover, [class*="swatch-"] .swatch-blue .widget_calendar tbody a:hover {
@@ -717,29 +746,29 @@
   color: #58a8d1;
 }
 .swatch-blue .widget_oxy_twitter li:before, [class*="swatch-"] .swatch-blue .widget_oxy_twitter li:before {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .top-search form, [class*="swatch-"] .swatch-blue .top-search form {
   background-color: #82c9ed;
 }
 .swatch-blue .top-search input, [class*="swatch-"] .swatch-blue .top-search input {
   background: none;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .top-search input:focus, [class*="swatch-"] .swatch-blue .top-search input:focus {
   box-shadow: none;
 }
 .swatch-blue .top-search input:-moz-placeholder, [class*="swatch-"] .swatch-blue .top-search input:-moz-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .top-search input::-moz-placeholder, [class*="swatch-"] .swatch-blue .top-search input::-moz-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .top-search input:-ms-input-placeholder, [class*="swatch-"] .swatch-blue .top-search input:-ms-input-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .top-search input::-webkit-input-placeholder, [class*="swatch-"] .swatch-blue .top-search input::-webkit-input-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .top-search .search-close, [class*="swatch-"] .swatch-blue .top-search .search-close {
   color: #3b83a8;
@@ -748,7 +777,7 @@
   stroke: #3b83a8;
 }
 .swatch-blue.top-bar a, [class*="swatch-"] .swatch-blue.top-bar a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.top-bar a:hover, [class*="swatch-"] .swatch-blue.top-bar a:hover {
   color: #3b83a8;
@@ -760,7 +789,7 @@
   background: #58a8d1;
 }
 .swatch-blue .button, [class*="swatch-"] .swatch-blue .button {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .button:hover, [class*="swatch-"] .swatch-blue .button:hover {
@@ -769,7 +798,7 @@
 }
 .swatch-blue.section-commerce .breadcrumb, [class*="swatch-"] .swatch-blue.section-commerce .breadcrumb {
   background: none;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue.section-commerce .breadcrumb a, [class*="swatch-"] .swatch-blue.section-commerce .breadcrumb a {
   color: #3b83a8;
@@ -778,7 +807,7 @@
   color: #3b83a8;
 }
 .swatch-blue .woocommerce-ordering .select-wrap, [class*="swatch-"] .swatch-blue .woocommerce-ordering .select-wrap {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-blue .woocommerce-ordering .select-wrap:after, [class*="swatch-"] .swatch-blue .woocommerce-ordering .select-wrap:after {
   color: #82c9ed;
@@ -788,21 +817,21 @@
   background: transparent;
 }
 .swatch-blue .onsale, [class*="swatch-"] .swatch-blue .onsale {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .price, [class*="swatch-"] .swatch-blue .price {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .page-numbers a, .swatch-blue .page-numbers span, [class*="swatch-"] .swatch-blue .page-numbers a, [class*="swatch-"] .swatch-blue .page-numbers span {
   color: #82c9ed;
 }
 .swatch-blue .page-numbers li, [class*="swatch-"] .swatch-blue .page-numbers li {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-blue .page-numbers .current, .swatch-blue .page-numbers li a:hover, [class*="swatch-"] .swatch-blue .page-numbers .current, [class*="swatch-"] .swatch-blue .page-numbers li a:hover {
   background: #58a8d1;
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue #reviews .comment, [class*="swatch-"] .swatch-blue #reviews .comment {
   border-bottom: 1px solid rgba(130, 201, 237, 0.2);
@@ -812,10 +841,10 @@
 }
 .swatch-blue #reviews input[type="submit"], [class*="swatch-"] .swatch-blue #reviews input[type="submit"] {
   background: #82c9ed;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 .swatch-blue .related h2, .swatch-blue .cross-sells h2, .swatch-blue .upsells h2, [class*="swatch-"] .swatch-blue .related h2, [class*="swatch-"] .swatch-blue .cross-sells h2, [class*="swatch-"] .swatch-blue .upsells h2 {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .product-category h3, [class*="swatch-"] .swatch-blue .product-category h3 {
@@ -823,24 +852,24 @@
   color: #82c9ed;
 }
 .swatch-blue .product-category h3 mark, [class*="swatch-"] .swatch-blue .product-category h3 mark {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .product-nav a i, [class*="swatch-"] .swatch-blue .product-nav a i {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .product-images figcaption, [class*="swatch-"] .swatch-blue .product-images figcaption {
   box-shadow: none;
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-blue .product-images figcaption i, [class*="swatch-"] .swatch-blue .product-images figcaption i {
   color: #82c9ed;
 }
 .swatch-blue .product-images .flex-active, [class*="swatch-"] .swatch-blue .product-images .flex-active {
-  -webkit-box-shadow: 0px 3px 0px white;
-  -moz-box-shadow: 0px 3px 0px white;
-  box-shadow: 0px 3px 0px white;
+  -webkit-box-shadow: 0px 3px 0px #ffffff;
+  -moz-box-shadow: 0px 3px 0px #ffffff;
+  box-shadow: 0px 3px 0px #ffffff;
 }
 .swatch-blue .order_details, [class*="swatch-"] .swatch-blue .order_details {
   background: #58a8d1;
@@ -855,7 +884,7 @@
   background: #82c9ed;
 }
 .swatch-blue .widget_product_tag_cloud a, [class*="swatch-"] .swatch-blue .widget_product_tag_cloud a {
-  background: white;
+  background: #ffffff;
   color: #82c9ed;
 }
 .swatch-blue .widget_product_tag_cloud a:hover, [class*="swatch-"] .swatch-blue .widget_product_tag_cloud a:hover {
@@ -872,16 +901,16 @@
   background: #58a8d1;
 }
 .swatch-blue .widget_price_filter .ui-slider .ui-slider-handle, [class*="swatch-"] .swatch-blue .widget_price_filter .ui-slider .ui-slider-handle {
-  background: white;
+  background: #ffffff;
 }
 .swatch-blue .widget_product_search form:after, [class*="swatch-"] .swatch-blue .widget_product_search form:after {
   color: #82c9ed;
 }
 .swatch-blue .bbp-forums-list li, [class*="swatch-"] .swatch-blue .bbp-forums-list li {
-  border-left-color: whitesmoke;
+  border-left-color: #f5f5f5;
 }
 .swatch-blue .bbp-topic-freshness-author:after, [class*="swatch-"] .swatch-blue .bbp-topic-freshness-author:after {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-blue .bbp-topic-permalink i, [class*="swatch-"] .swatch-blue .bbp-topic-permalink i {
   color: #3b83a8;
@@ -890,7 +919,7 @@
   background: #82c9ed;
 }
 .swatch-blue .panel-bbpress .panel-heading, [class*="swatch-"] .swatch-blue .panel-bbpress .panel-heading {
-  border-color: whitesmoke;
+  border-color: #f5f5f5;
 }
 .swatch-blue .panel-bbpress .panel-body, [class*="swatch-"] .swatch-blue .panel-bbpress .panel-body {
   border-color: #58a8d1;
@@ -928,13 +957,13 @@
   box-shadow: 0px 0px 0px 4px #3b83a8;
 }
 .swatch-blue .bbpress-header .breadcrumb a, .swatch-blue .bbpress-header .breadcrumb .active, [class*="swatch-"] .swatch-blue .bbpress-header .breadcrumb a, [class*="swatch-"] .swatch-blue .bbpress-header .breadcrumb .active {
-  color: white;
+  color: #ffffff;
 }
 .swatch-blue .bbpress-header .breadcrumb a:hover, [class*="swatch-"] .swatch-blue .bbpress-header .breadcrumb a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 .swatch-blue .bbp-topic-tags a, [class*="swatch-"] .swatch-blue .bbp-topic-tags a {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }
 .swatch-blue .bbp-topic-tags a:hover, [class*="swatch-"] .swatch-blue .bbp-topic-tags a:hover {
@@ -947,6 +976,6 @@
   color: #82c9ed;
 }
 .swatch-blue .post-count, [class*="swatch-"] .swatch-blue .post-count {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #82c9ed;
 }

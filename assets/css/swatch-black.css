@@ -1,16 +1,16 @@
 /* - Black - */
 .swatch-black, [class*="swatch-"] .swatch-black {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
 }
 .swatch-black h1, .swatch-black h2, .swatch-black h3, .swatch-black h4, .swatch-black h5, .swatch-black h6, [class*="swatch-"] .swatch-black h1, [class*="swatch-"] .swatch-black h2, [class*="swatch-"] .swatch-black h3, [class*="swatch-"] .swatch-black h4, [class*="swatch-"] .swatch-black h5, [class*="swatch-"] .swatch-black h6 {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black h1 small, .swatch-black h2 small, .swatch-black h3 small, .swatch-black h4 small, .swatch-black h5 small, .swatch-black h6 small, [class*="swatch-"] .swatch-black h1 small, [class*="swatch-"] .swatch-black h2 small, [class*="swatch-"] .swatch-black h3 small, [class*="swatch-"] .swatch-black h4 small, [class*="swatch-"] .swatch-black h5 small, [class*="swatch-"] .swatch-black h6 small {
   color: rgba(255, 255, 255, 0.8);
 }
 .swatch-black a, [class*="swatch-"] .swatch-black a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black a:hover, [class*="swatch-"] .swatch-black a:hover {
   color: #d0d0d0;
@@ -22,37 +22,40 @@
   color: rgba(255, 255, 255, 0.8);
 }
 .swatch-black small a:hover, [class*="swatch-"] .swatch-black small a:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black i, [class*="swatch-"] .swatch-black i {
-  color: white;
+  color: #ffffff;
+}
+.swatch-black blockquote p, [class*="swatch-"] .swatch-black blockquote p {
+  color: #ffffff !important;
 }
 .swatch-black blockquote:before, [class*="swatch-"] .swatch-black blockquote:before {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black blockquote small, .swatch-black blockquote footer, [class*="swatch-"] .swatch-black blockquote small, [class*="swatch-"] .swatch-black blockquote footer {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black ::selection, [class*="swatch-"] .swatch-black ::selection {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black ::-moz-selection, [class*="swatch-"] .swatch-black ::-moz-selection {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black hr, [class*="swatch-"] .swatch-black hr {
   border-top-color: #3c3c3c;
 }
 .swatch-black pre, [class*="swatch-"] .swatch-black pre {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .active, [class*="swatch-"] .swatch-black .active {
   color: #d0d0d0;
 }
 .swatch-black .btn-primary, .swatch-black button, .swatch-black input[type="submit"], [class*="swatch-"] .swatch-black .btn-primary, [class*="swatch-"] .swatch-black button, [class*="swatch-"] .swatch-black input[type="submit"] {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .btn-primary:hover, .swatch-black button:hover, .swatch-black input[type="submit"]:hover, [class*="swatch-"] .swatch-black .btn-primary:hover, [class*="swatch-"] .swatch-black button:hover, [class*="swatch-"] .swatch-black input[type="submit"]:hover {
@@ -67,31 +70,31 @@
 }
 .swatch-black .btn-link, [class*="swatch-"] .swatch-black .btn-link {
   background: none;
-  color: whitesmoke;
+  color: #f5f5f5;
   text-decoration: none;
-  box-shadow: 0px 0px 0px 1px whitesmoke inset;
+  box-shadow: 0px 0px 0px 1px #f5f5f5 inset;
 }
 .swatch-black .btn-link span, [class*="swatch-"] .swatch-black .btn-link span {
   background: none;
 }
 .swatch-black .btn-link i, [class*="swatch-"] .swatch-black .btn-link i {
-  color: whitesmoke !important;
+  color: #f5f5f5 !important;
 }
 .swatch-black .btn-link:hover, [class*="swatch-"] .swatch-black .btn-link:hover {
   text-decoration: none;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   color: #3c3c3c;
-  box-shadow: 0px 0px 0px 1px whitesmoke;
+  box-shadow: 0px 0px 0px 1px #f5f5f5;
 }
 .swatch-black .btn-link:hover i, [class*="swatch-"] .swatch-black .btn-link:hover i {
   color: #3c3c3c !important;
 }
 .swatch-black .open .dropdown-toggle.btn-primary, [class*="swatch-"] .swatch-black .open .dropdown-toggle.btn-primary {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .btn-group .dropdown-menu, [class*="swatch-"] .swatch-black .btn-group .dropdown-menu {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 .swatch-black .btn-group .dropdown-menu > li > a, [class*="swatch-"] .swatch-black .btn-group .dropdown-menu > li > a {
   color: #3c3c3c;
@@ -104,14 +107,14 @@
   background: white;
 }
 .swatch-black .label-primary, [class*="swatch-"] .swatch-black .label-primary {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .label-primary a, [class*="swatch-"] .swatch-black .label-primary a {
   color: #3c3c3c;
 }
 .swatch-black select, .swatch-black textarea, .swatch-black input, .swatch-black .uneditable-input, .swatch-black .input-group-btn, [class*="swatch-"] .swatch-black select, [class*="swatch-"] .swatch-black textarea, [class*="swatch-"] .swatch-black input, [class*="swatch-"] .swatch-black .uneditable-input, [class*="swatch-"] .swatch-black .input-group-btn {
-  background: white;
+  background: #ffffff;
   color: #1c1c1c;
 }
 .swatch-black select:-moz-placeholder, .swatch-black textarea:-moz-placeholder, .swatch-black input:-moz-placeholder, .swatch-black .uneditable-input:-moz-placeholder, .swatch-black .input-group-btn:-moz-placeholder, [class*="swatch-"] .swatch-black select:-moz-placeholder, [class*="swatch-"] .swatch-black textarea:-moz-placeholder, [class*="swatch-"] .swatch-black input:-moz-placeholder, [class*="swatch-"] .swatch-black .uneditable-input:-moz-placeholder, [class*="swatch-"] .swatch-black .input-group-btn:-moz-placeholder {
@@ -140,19 +143,19 @@
   color: #82c9ed;
 }
 .swatch-black input[type="button"], [class*="swatch-"] .swatch-black input[type="button"] {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .select-wrap, [class*="swatch-"] .swatch-black .select-wrap {
-  background: white;
+  background: #ffffff;
 }
 .swatch-black .select-wrap:after, [class*="swatch-"] .swatch-black .select-wrap:after {
   color: #1c1c1c;
 }
 .swatch-black .table th, [class*="swatch-"] .swatch-black .table th {
-  background-color: white;
+  background-color: #ffffff;
   text-transform: uppercase;
-  color: black;
+  color: #000000;
 }
 .swatch-black .table th, .swatch-black .table td, .swatch-black .table-bordered, [class*="swatch-"] .swatch-black .table th, [class*="swatch-"] .swatch-black .table td, [class*="swatch-"] .swatch-black .table-bordered {
   border-color: #3c3c3c;
@@ -164,57 +167,57 @@
   background: #3c3c3c;
 }
 .swatch-black#masthead, [class*="swatch-"] .swatch-black#masthead {
-  border-color: black;
+  border-color: #000000;
 }
 .swatch-black.navbar, [class*="swatch-"] .swatch-black.navbar {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
 }
 .swatch-black .navbar-text, [class*="swatch-"] .swatch-black .navbar-text {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .navbar-brand, [class*="swatch-"] .swatch-black.navbar .navbar-brand {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .navbar-brand:hover, [class*="swatch-"] .swatch-black.navbar .navbar-brand:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .nav > li > a, [class*="swatch-"] .swatch-black.navbar .nav > li > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .nav > li > a:hover, .swatch-black.navbar .nav > li > a:focus, [class*="swatch-"] .swatch-black.navbar .nav > li > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > li > a:focus {
-  color: white;
+  color: #ffffff;
   background: none;
 }
 .swatch-black.navbar .nav > li > a:before, [class*="swatch-"] .swatch-black.navbar .nav > li > a:before {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black.navbar a .menu-icon, [class*="swatch-"] .swatch-black.navbar a .menu-icon {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar a:hover .menu-icon, [class*="swatch-"] .swatch-black.navbar a:hover .menu-icon {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .dropdown-menu a:hover .menu-icon, [class*="swatch-"] .swatch-black.navbar .dropdown-menu a:hover .menu-icon {
-  color: black;
+  color: #000000;
 }
 .swatch-black .navbar-toggle, [class*="swatch-"] .swatch-black .navbar-toggle {
   background: none !important;
 }
 .swatch-black .navbar-toggle .icon-bar, [class*="swatch-"] .swatch-black .navbar-toggle .icon-bar {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black .navbar-toggle:hover, [class*="swatch-"] .swatch-black .navbar-toggle:hover {
   background: none;
 }
 .swatch-black.navbar .nav > li > a:focus, .swatch-black.navbar .nav > li > a:hover, .swatch-black.navbar .nav > .active > a, .swatch-black.navbar .nav > .active > a:hover, .swatch-black.navbar .nav > .current-menu-parent > a, .swatch-black.navbar .nav > .current-menu-ancestor > a, .swatch-black.navbar .nav > .current-menu-item > a, .swatch-black.navbar .nav > .current-menu-item > a:hover, .swatch-black.navbar .nav > .current-menu-item > a:focus, .swatch-black.navbar .nav > .active > a:focus, .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle, .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle, .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle, [class*="swatch-"] .swatch-black.navbar .nav > li > a:focus, [class*="swatch-"] .swatch-black.navbar .nav > li > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > .active > a, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-parent > a, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-ancestor > a, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:focus, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:focus, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .nav > li > a:focus:before, .swatch-black.navbar .nav > li > a:hover:before, .swatch-black.navbar .nav > .active > a:before, .swatch-black.navbar .nav > .active > a:hover:before, .swatch-black.navbar .nav > .current-menu-parent > a:before, .swatch-black.navbar .nav > .current-menu-ancestor > a:before, .swatch-black.navbar .nav > .current-menu-item > a:before, .swatch-black.navbar .nav > .current-menu-item > a:hover:before, .swatch-black.navbar .nav > .current-menu-item > a:focus:before, .swatch-black.navbar .nav > .active > a:focus:before, .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle:before, .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle:before, .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle:before, [class*="swatch-"] .swatch-black.navbar .nav > li > a:focus:before, [class*="swatch-"] .swatch-black.navbar .nav > li > a:hover:before, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:hover:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-parent > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-ancestor > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:hover:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:focus:before, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:focus:before, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle:before, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle:before, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle:before {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black.navbar .nav > .disabled > a, [class*="swatch-"] .swatch-black.navbar .nav > .disabled > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .nav > .disabled > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .disabled > a:before {
   display: none;
@@ -226,17 +229,17 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 3px 0px white inset;
 }
 .swatch-black .dropdown-menu > li > a, [class*="swatch-"] .swatch-black .dropdown-menu > li > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .dropdown-menu > li > a:hover, .swatch-black .dropdown-menu > .active > a, .swatch-black .dropdown-menu > .active > a:hover, .swatch-black .dropdown-menu > .active > a:focus, [class*="swatch-"] .swatch-black .dropdown-menu > li > a:hover, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:hover, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:focus {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .dropdown-menu > li > a:hover i, .swatch-black .dropdown-menu > .active > a i, .swatch-black .dropdown-menu > .active > a:hover i, .swatch-black .dropdown-menu > .active > a:focus i, [class*="swatch-"] .swatch-black .dropdown-menu > li > a:hover i, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a i, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:hover i, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:focus i {
-  color: black;
+  color: #000000;
 }
 .swatch-black .dropdown-menu > li.disabled > a:hover, [class*="swatch-"] .swatch-black .dropdown-menu > li.disabled > a:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar .nav > li > .dropdown-menu:after, .swatch-black.navbar .nav > li > .dropdown-menu:before, [class*="swatch-"] .swatch-black.navbar .nav > li > .dropdown-menu:after, [class*="swatch-"] .swatch-black.navbar .nav > li > .dropdown-menu:before {
   display: none;
@@ -245,31 +248,31 @@
   background: rgba(0, 0, 0, 0.95);
 }
 .swatch-black .dropdown-submenu > a:after, [class*="swatch-"] .swatch-black .dropdown-submenu > a:after {
-  border-left-color: white !important;
+  border-left-color: #ffffff !important;
 }
 .swatch-black .dropdown-submenu > a:hover:after, [class*="swatch-"] .swatch-black .dropdown-submenu > a:hover:after {
-  border-left-color: black !important;
+  border-left-color: #000000 !important;
 }
 .swatch-black .dropdown-menu .divider, [class*="swatch-"] .swatch-black .dropdown-menu .divider {
   background-color: rgba(60, 60, 60, 0.8);
 }
 .swatch-black.navbar .nav-highlight > a, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a {
-  color: black !important;
+  color: #000000 !important;
 }
 .swatch-black.navbar .nav-highlight > a:after, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a:after {
-  background: white;
+  background: #ffffff;
 }
 .swatch-black.navbar .nav-highlight > a:hover, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a:hover {
-  color: black !important;
+  color: #000000 !important;
 }
 .swatch-black.navbar .nav-highlight > a:hover:after, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a:hover:after {
   background: rgba(255, 255, 255, 0.8);
 }
 .swatch-black.navbar li.nav-highlight-ghost > a, [class*="swatch-"] .swatch-black.navbar li.nav-highlight-ghost > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.navbar li.nav-highlight-ghost > a:after, [class*="swatch-"] .swatch-black.navbar li.nav-highlight-ghost > a:after {
-  border: 1px solid white;
+  border: 1px solid #ffffff;
 }
 .swatch-black.navbar li.nav-highlight-ghost > a:hover, [class*="swatch-"] .swatch-black.navbar li.nav-highlight-ghost > a:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -284,20 +287,20 @@
   background: rgba(0, 0, 0, 0.95) !important;
 }
 .transparent-header .swatch-black.search-active, .transparent-header [class*="swatch-"] .swatch-black.search-active {
-  background: black !important;
+  background: #000000 !important;
 }
 .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover {
   background: transparent;
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover .menu-icon, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover .menu-icon {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li.current-menu-item > a, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li.current-menu-item > a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > p, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > p {
   border-bottom-color: rgba(60, 60, 60, 0.8);
@@ -318,8 +321,8 @@
     border-radius: 0;
   }
   .swatch-black.navbar .dropdown-menu > li > a:hover, .swatch-black.navbar .dropdown-menu > li > a:focus, .swatch-black.navbar .dropdown-menu > li.active > a, [class*="swatch-"] .swatch-black.navbar .dropdown-menu > li > a:hover, [class*="swatch-"] .swatch-black.navbar .dropdown-menu > li > a:focus, [class*="swatch-"] .swatch-black.navbar .dropdown-menu > li.active > a {
-    background: white;
-    color: black;
+    background: #ffffff;
+    color: #000000;
   }
   .swatch-black .dropdown-submenu > ul > li > a, [class*="swatch-"] .swatch-black .dropdown-submenu > ul > li > a {
     background: #3c3c3c;
@@ -329,23 +332,23 @@
   }
   .swatch-black .dropdown-submenu > a:after, [class*="swatch-"] .swatch-black .dropdown-submenu > a:after {
     border-left-color: transparent !important;
-    border-top-color: white !important;
+    border-top-color: #ffffff !important;
   }
   .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover {
-    background: white;
-    color: black;
+    background: #ffffff;
+    color: #000000;
   }
   .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li:before, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li:before {
     display: none;
   }
   .swatch-black .nav-highlight > a, [class*="swatch-"] .swatch-black .nav-highlight > a {
-    color: white !important;
+    color: #ffffff !important;
   }
   .swatch-black .nav-highlight > a:after, [class*="swatch-"] .swatch-black .nav-highlight > a:after {
     background: transparent;
   }
   .swatch-black .nav-highlight > a:hover, [class*="swatch-"] .swatch-black .nav-highlight > a:hover {
-    color: white !important;
+    color: #ffffff !important;
   }
   .swatch-black .nav-highlight > a:hover:after, [class*="swatch-"] .swatch-black .nav-highlight > a:hover:after {
     background: transparent;
@@ -355,7 +358,7 @@
   }
 }
 .swatch-black .pagination > li > a, .swatch-black .pagination > li > span, [class*="swatch-"] .swatch-black .pagination > li > a, [class*="swatch-"] .swatch-black .pagination > li > span {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .pagination > .active > a, .swatch-black .pagination > .active > span, .swatch-black .pagination > li > a:hover, [class*="swatch-"] .swatch-black .pagination > .active > a, [class*="swatch-"] .swatch-black .pagination > .active > span, [class*="swatch-"] .swatch-black .pagination > li > a:hover {
@@ -371,43 +374,43 @@
   color: rgba(60, 60, 60, 0.4);
 }
 .swatch-black .pager > li > a, [class*="swatch-"] .swatch-black .pager > li > a {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .pager > li > a i, [class*="swatch-"] .swatch-black .pager > li > a i {
   color: #3c3c3c;
 }
 .swatch-black .tooltip-inner, [class*="swatch-"] .swatch-black .tooltip-inner {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
 }
 .swatch-black .tooltip.in, [class*="swatch-"] .swatch-black .tooltip.in {
   opacity: 1;
 }
 .swatch-black .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.top .tooltip-arrow {
-  border-top-color: white;
+  border-top-color: #ffffff;
 }
 .swatch-black .tooltip.right .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.right .tooltip-arrow {
-  border-right-color: white;
+  border-right-color: #ffffff;
 }
 .swatch-black .tooltip.left .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.left .tooltip-arrow {
-  border-left-color: white;
+  border-left-color: #ffffff;
 }
 .swatch-black .tooltip.bottom .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: white;
+  border-bottom-color: #ffffff;
 }
 .swatch-black .jumbotron, [class*="swatch-"] .swatch-black .jumbotron {
   background: #3c3c3c;
 }
 .swatch-black .progress-bar-primary, [class*="swatch-"] .swatch-black .progress-bar-primary {
-  background: whitesmoke;
+  background: #f5f5f5;
   box-shadow: none;
 }
 .swatch-black .progress-bar-primary span, [class*="swatch-"] .swatch-black .progress-bar-primary span {
   color: #3c3c3c;
 }
 .swatch-black .progress-bar-primary.progress-striped .progress-bar, .swatch-black .progress-striped .progress-bar-primary, [class*="swatch-"] .swatch-black .progress-bar-primary.progress-striped .progress-bar, [class*="swatch-"] .swatch-black .progress-striped .progress-bar-primary {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -416,68 +419,68 @@
   background-size: 40px 40px;
 }
 .swatch-black .badge, [class*="swatch-"] .swatch-black .badge {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .tab-content, .swatch-black .nav-tabs .active a, .swatch-black .tab-content, .swatch-black .nav-tabs .active a:hover, [class*="swatch-"] .swatch-black .tab-content, [class*="swatch-"] .swatch-black .nav-tabs .active a, [class*="swatch-"] .swatch-black .tab-content, [class*="swatch-"] .swatch-black .nav-tabs .active a:hover {
-  background: white;
+  background: #ffffff;
 }
 .swatch-black .nav-tabs > li > a:hover, .swatch-black .nav-tabs > li > a:focus, [class*="swatch-"] .swatch-black .nav-tabs > li > a:hover, [class*="swatch-"] .swatch-black .nav-tabs > li > a:focus {
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #ffffff;
 }
 .swatch-black .nav-tabs > li.active > a, [class*="swatch-"] .swatch-black .nav-tabs > li.active > a {
-  color: black;
+  color: #000000;
 }
 .swatch-black .nav-tabs > li.active > a:hover, [class*="swatch-"] .swatch-black .nav-tabs > li.active > a:hover {
-  color: black;
+  color: #000000;
 }
 .swatch-black .nav-pills > li > a .badge, [class*="swatch-"] .swatch-black .nav-pills > li > a .badge {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .nav-pills > .active > a, .swatch-black .nav-pills > .active > a:hover, .swatch-black .nav-pills > li > a:hover, .swatch-black .nav-pills > li > a:focus, [class*="swatch-"] .swatch-black .nav-pills > .active > a, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:focus {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .nav-pills > .active > a .badge, .swatch-black .nav-pills > .active > a:hover .badge, .swatch-black .nav-pills > li > a:hover .badge, .swatch-black .nav-pills > li > a:focus .badge, [class*="swatch-"] .swatch-black .nav-pills > .active > a .badge, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover .badge, [class*="swatch-"] .swatch-black .nav-pills > li > a:hover .badge, [class*="swatch-"] .swatch-black .nav-pills > li > a:focus .badge {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
 }
 .swatch-black .nav-pills > .active > a:hover, .swatch-black .nav-pills > .active > a:hover:hover, .swatch-black .nav-pills > li > a:hover:hover, .swatch-black .nav-pills > li > a:focus:hover, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:hover:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:focus:hover {
-  color: black;
+  color: #000000;
 }
 .swatch-black .tab-pane, .swatch-black .tab-pane.active, [class*="swatch-"] .swatch-black .tab-pane, [class*="swatch-"] .swatch-black .tab-pane.active {
-  color: black;
+  color: #000000;
 }
 .swatch-black .tab-pane h1, .swatch-black .tab-pane h2, .swatch-black .tab-pane h3, .swatch-black .tab-pane h4, .swatch-black .tab-pane h5, .swatch-black .tab-pane h6, .swatch-black .tab-pane a, .swatch-black .tab-pane p, .swatch-black .tab-pane.active h1, .swatch-black .tab-pane.active h2, .swatch-black .tab-pane.active h3, .swatch-black .tab-pane.active h4, .swatch-black .tab-pane.active h5, .swatch-black .tab-pane.active h6, .swatch-black .tab-pane.active a, .swatch-black .tab-pane.active p, [class*="swatch-"] .swatch-black .tab-pane h1, [class*="swatch-"] .swatch-black .tab-pane h2, [class*="swatch-"] .swatch-black .tab-pane h3, [class*="swatch-"] .swatch-black .tab-pane h4, [class*="swatch-"] .swatch-black .tab-pane h5, [class*="swatch-"] .swatch-black .tab-pane h6, [class*="swatch-"] .swatch-black .tab-pane a, [class*="swatch-"] .swatch-black .tab-pane p, [class*="swatch-"] .swatch-black .tab-pane.active h1, [class*="swatch-"] .swatch-black .tab-pane.active h2, [class*="swatch-"] .swatch-black .tab-pane.active h3, [class*="swatch-"] .swatch-black .tab-pane.active h4, [class*="swatch-"] .swatch-black .tab-pane.active h5, [class*="swatch-"] .swatch-black .tab-pane.active h6, [class*="swatch-"] .swatch-black .tab-pane.active a, [class*="swatch-"] .swatch-black .tab-pane.active p {
-  color: black;
+  color: #000000;
 }
 .swatch-black .tab-pane .btn, .swatch-black .tab-pane.active .btn, [class*="swatch-"] .swatch-black .tab-pane .btn, [class*="swatch-"] .swatch-black .tab-pane.active .btn {
-  color: white !important;
-  background: black !important;
+  color: #ffffff !important;
+  background: #000000 !important;
 }
 .swatch-black .tab-pane .tooltip-inner, .swatch-black .tab-pane.active .tooltip-inner, [class*="swatch-"] .swatch-black .tab-pane .tooltip-inner, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip-inner {
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }
 .swatch-black .tab-pane .tooltip.top .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.top .tooltip-arrow {
-  border-top-color: black;
+  border-top-color: #000000;
 }
 .swatch-black .tab-pane .tooltip.right .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.right .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.right .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.right .tooltip-arrow {
-  border-right-color: black;
+  border-right-color: #000000;
 }
 .swatch-black .tab-pane .tooltip.left .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.left .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.left .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.left .tooltip-arrow {
-  border-left-color: black;
+  border-left-color: #000000;
 }
 .swatch-black .tab-pane .tooltip.bottom .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.bottom .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.bottom .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: black;
+  border-bottom-color: #000000;
 }
 .swatch-black .panel, .swatch-black .well, [class*="swatch-"] .swatch-black .panel, [class*="swatch-"] .swatch-black .well {
   background: #3c3c3c;
 }
 .swatch-black .panel-primary .panel-heading, [class*="swatch-"] .swatch-black .panel-primary .panel-heading {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-black .panel-primary .panel-heading a, .swatch-black .panel-primary .panel-heading .panel-title, [class*="swatch-"] .swatch-black .panel-primary .panel-heading a, [class*="swatch-"] .swatch-black .panel-primary .panel-heading .panel-title {
   color: #3c3c3c;
@@ -495,99 +498,125 @@
 }
 .swatch-black .panel .table th, [class*="swatch-"] .swatch-black .panel .table th {
   background: #3c3c3c;
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .portfolio-title, [class*="swatch-"] .swatch-black .portfolio-title {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .portfolio-nav svg, [class*="swatch-"] .swatch-black .portfolio-nav svg {
-  stroke: white;
+  stroke: #ffffff;
 }
 .swatch-black .social-icons li a, [class*="swatch-"] .swatch-black .social-icons li a {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black .social-icons li a i, [class*="swatch-"] .swatch-black .social-icons li a i {
-  color: black;
+  color: #000000;
 }
 .swatch-black .social-icons li a:not([data-iconcolor]):hover, [class*="swatch-"] .swatch-black .social-icons li a:not([data-iconcolor]):hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
 .swatch-black .social-simple li a i, [class*="swatch-"] .swatch-black .social-simple li a i {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .social-simple li a:not([data-iconcolor]):hover i, [class*="swatch-"] .swatch-black .social-simple li a:not([data-iconcolor]):hover i {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .box-inner, [class*="swatch-"] .swatch-black .box-inner {
-  background-color: lightgrey;
+  background-color: #d3d3d3;
 }
 .swatch-black .box:not(.box-simple) a.box-inner:hover, [class*="swatch-"] .swatch-black .box:not(.box-simple) a.box-inner:hover {
   background: none !important;
-  box-shadow: 0px 0px 0px 1px white inset;
+  box-shadow: 0px 0px 0px 1px #ffffff inset;
 }
 .swatch-black .box:not(.box-simple) a.box-inner:hover svg, [class*="swatch-"] .swatch-black .box:not(.box-simple) a.box-inner:hover svg {
-  stroke: white;
+  stroke: #ffffff;
 }
 .swatch-black .bordered:after, [class*="swatch-"] .swatch-black .bordered:after {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black .bordered-link:after, [class*="swatch-"] .swatch-black .bordered-link:after {
-  background-color: white !important;
+  background-color: #ffffff !important;
 }
 .swatch-black .bordered > a:after, [class*="swatch-"] .swatch-black .bordered > a:after {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black .bordered-link:after, [class*="swatch-"] .swatch-black .bordered-link:after {
-  background-color: white !important;
+  background-color: #ffffff !important;
 }
 .swatch-black #infscr-loading, [class*="swatch-"] .swatch-black #infscr-loading {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .counter .value, [class*="swatch-"] .swatch-black .counter .value {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .scroll-to, [class*="swatch-"] .swatch-black .scroll-to {
-  border-color: white;
+  border-color: #ffffff;
 }
 .swatch-black .scroll-to svg, [class*="swatch-"] .swatch-black .scroll-to svg {
-  stroke: white;
+  stroke: #ffffff;
 }
 .swatch-black .scroll-to:hover, [class*="swatch-"] .swatch-black .scroll-to:hover {
-  border-color: white;
+  border-color: #ffffff;
 }
 .swatch-black .scroll-to:hover svg, [class*="swatch-"] .swatch-black .scroll-to:hover svg {
-  stroke: white;
+  stroke: #ffffff;
 }
 .swatch-black .map-marker-label, [class*="swatch-"] .swatch-black .map-marker-label {
-  border-top-color: white;
+  border-top-color: #ffffff;
 }
 .swatch-black .tag-list span, [class*="swatch-"] .swatch-black .tag-list span {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .mejs-audio, [class*="swatch-"] .swatch-black .mejs-audio {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
 }
 .swatch-black .mejs-container .mejs-controls .mejs-time span, [class*="swatch-"] .swatch-black .mejs-container .mejs-controls .mejs-time span {
-  color: black;
+  color: #000000;
 }
 .swatch-black .mejs-controls .mejs-button button:hover, [class*="swatch-"] .swatch-black .mejs-controls .mejs-button button:hover {
   background-color: transparent;
 }
 .swatch-black .mejs-controls .mejs-time-rail .mejs-time-loaded, [class*="swatch-"] .swatch-black .mejs-controls .mejs-time-rail .mejs-time-loaded {
-  background: black;
+  background: #000000;
 }
 .swatch-black .mejs-controls .mejs-time-rail .mejs-time-current, .swatch-black .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current, [class*="swatch-"] .swatch-black .mejs-controls .mejs-time-rail .mejs-time-current, [class*="swatch-"] .swatch-black .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
   background: #3c3c3c;
+}
+.swatch-black .select2-container, [class*="swatch-"] .swatch-black .select2-container {
+  background: #ffffff;
+}
+.swatch-black .select2-container .select2-choice, [class*="swatch-"] .swatch-black .select2-container .select2-choice {
+  color: #1c1c1c;
+}
+.swatch-black .select2-container .select2-choice .select2-arrow b:after, [class*="swatch-"] .swatch-black .select2-container .select2-choice .select2-arrow b:after {
+  color: #1c1c1c;
+}
+.swatch-black .select2-drop-active, [class*="swatch-"] .swatch-black .select2-drop-active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1c1c1c;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.swatch-black .select2-results .select2-highlighted, [class*="swatch-"] .swatch-black .select2-results .select2-highlighted {
+  background-color: #82c9ed;
+  color: #1c1c1c;
+}
+.swatch-black .select2-results, [class*="swatch-"] .swatch-black .select2-results {
+  background: #ffffff;
+}
+.swatch-black .select2-search, [class*="swatch-"] .swatch-black .select2-search {
+  background: #000000;
 }
 .swatch-black .post:after, [class*="swatch-"] .swatch-black .post:after {
   background: #3c3c3c;
 }
 .swatch-black .post-icon, [class*="swatch-"] .swatch-black .post-icon {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-black .post-icon i, [class*="swatch-"] .swatch-black .post-icon i {
   color: #3c3c3c;
@@ -600,56 +629,56 @@
   color: rgba(255, 255, 255, 0.8);
 }
 .swatch-black .post-extras a:hover, [class*="swatch-"] .swatch-black .post-extras a:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .post-extras i, [class*="swatch-"] .swatch-black .post-extras i {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .post-more-link i, [class*="swatch-"] .swatch-black .post-more-link i {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .media-inner:after, [class*="swatch-"] .swatch-black .media-inner:after {
-  background: white;
+  background: #ffffff;
 }
 .swatch-black .author-info, [class*="swatch-"] .swatch-black .author-info {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
 }
 .swatch-black .author-info .media-heading, [class*="swatch-"] .swatch-black .author-info .media-heading {
-  color: black;
+  color: #000000;
 }
 .swatch-black .author-info .media-heading:after, [class*="swatch-"] .swatch-black .author-info .media-heading:after {
-  background: black;
+  background: #000000;
 }
 .post-masonry .swatch-black:hover, .post-masonry [class*="swatch-"] .swatch-black:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .breadcrumb-blog a, .swatch-black .breadcrumb-blog .active, [class*="swatch-"] .swatch-black .breadcrumb-blog a, [class*="swatch-"] .swatch-black .breadcrumb-blog .active {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .breadcrumb-blog a:hover, [class*="swatch-"] .swatch-black .breadcrumb-blog a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 .swatch-black .post-related-post, [class*="swatch-"] .swatch-black .post-related-post {
-  background-color: white;
+  background-color: #ffffff;
 }
 .swatch-black .post-related-post a, [class*="swatch-"] .swatch-black .post-related-post a {
   background: rgba(255, 255, 255, 0.9);
-  color: black;
+  color: #000000;
 }
 .swatch-black .post-related-post a:hover, [class*="swatch-"] .swatch-black .post-related-post a:hover {
-  color: black;
+  color: #000000;
 }
 .swatch-black .post-related-post small, [class*="swatch-"] .swatch-black .post-related-post small {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
 }
 .swatch-black .post-related-post blockquote, [class*="swatch-"] .swatch-black .post-related-post blockquote {
-  color: black;
+  color: #000000;
 }
 .swatch-black .post-related-post blockquote small, [class*="swatch-"] .swatch-black .post-related-post blockquote small {
   background: rgba(255, 255, 255, 0.9);
-  color: black;
+  color: #000000;
 }
 .swatch-black .post-related-post blockquote:before, [class*="swatch-"] .swatch-black .post-related-post blockquote:before {
   background-color: #ededed;
@@ -667,26 +696,26 @@
   background: #3c3c3c;
 }
 .swatch-black .gf_progressbar_percentage, [class*="swatch-"] .swatch-black .gf_progressbar_percentage {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .sidebar, [class*="swatch-"] .swatch-black .sidebar {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .sidebar h3, [class*="swatch-"] .swatch-black .sidebar h3 {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .sidebar a, [class*="swatch-"] .swatch-black .sidebar a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .sidebar a:hover, [class*="swatch-"] .swatch-black .sidebar a:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .sidebar-header:after, [class*="swatch-"] .swatch-black .sidebar-header:after {
-  background: white;
+  background: #ffffff;
 }
 .swatch-black .sidebar-widget .post-icon, [class*="swatch-"] .swatch-black .sidebar-widget .post-icon {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-black .sidebar-widget .post-icon i, [class*="swatch-"] .swatch-black .sidebar-widget .post-icon i {
   color: #3c3c3c;
@@ -695,7 +724,7 @@
   border-color: #3c3c3c;
 }
 .swatch-black .widget_tag_cloud ul a, [class*="swatch-"] .swatch-black .widget_tag_cloud ul a {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .widget_tag_cloud ul a:hover, [class*="swatch-"] .swatch-black .widget_tag_cloud ul a:hover {
@@ -703,12 +732,12 @@
   color: #3c3c3c;
 }
 .swatch-black .widget_calendar tbody a, [class*="swatch-"] .swatch-black .widget_calendar tbody a {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .widget_calendar tbody a:hover, [class*="swatch-"] .swatch-black .widget_calendar tbody a:hover {
   background: #ededed;
-  color: black;
+  color: #000000;
 }
 .swatch-black .widget_calendar tfoot, [class*="swatch-"] .swatch-black .widget_calendar tfoot {
   background: #3c3c3c;
@@ -717,41 +746,41 @@
   color: #3c3c3c;
 }
 .swatch-black .widget_oxy_twitter li:before, [class*="swatch-"] .swatch-black .widget_oxy_twitter li:before {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .top-search form, [class*="swatch-"] .swatch-black .top-search form {
-  background-color: black;
+  background-color: #000000;
 }
 .swatch-black .top-search input, [class*="swatch-"] .swatch-black .top-search input {
   background: none;
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .top-search input:focus, [class*="swatch-"] .swatch-black .top-search input:focus {
   box-shadow: none;
 }
 .swatch-black .top-search input:-moz-placeholder, [class*="swatch-"] .swatch-black .top-search input:-moz-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .top-search input::-moz-placeholder, [class*="swatch-"] .swatch-black .top-search input::-moz-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .top-search input:-ms-input-placeholder, [class*="swatch-"] .swatch-black .top-search input:-ms-input-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .top-search input::-webkit-input-placeholder, [class*="swatch-"] .swatch-black .top-search input::-webkit-input-placeholder {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .top-search .search-close, [class*="swatch-"] .swatch-black .top-search .search-close {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .top-search svg, [class*="swatch-"] .swatch-black .top-search svg {
-  stroke: white;
+  stroke: #ffffff;
 }
 .swatch-black.top-bar a, [class*="swatch-"] .swatch-black.top-bar a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.top-bar a:hover, [class*="swatch-"] .swatch-black.top-bar a:hover {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.top-bar .sidebar-widget:after, [class*="swatch-"] .swatch-black.top-bar .sidebar-widget:after {
   background: #3c3c3c;
@@ -760,7 +789,7 @@
   background: #3c3c3c;
 }
 .swatch-black .button, [class*="swatch-"] .swatch-black .button {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .button:hover, [class*="swatch-"] .swatch-black .button:hover {
@@ -769,16 +798,16 @@
 }
 .swatch-black.section-commerce .breadcrumb, [class*="swatch-"] .swatch-black.section-commerce .breadcrumb {
   background: none;
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.section-commerce .breadcrumb a, [class*="swatch-"] .swatch-black.section-commerce .breadcrumb a {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black.section-commerce .breadcrumb > li + li:before, [class*="swatch-"] .swatch-black.section-commerce .breadcrumb > li + li:before {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .woocommerce-ordering .select-wrap, [class*="swatch-"] .swatch-black .woocommerce-ordering .select-wrap {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-black .woocommerce-ordering .select-wrap:after, [class*="swatch-"] .swatch-black .woocommerce-ordering .select-wrap:after {
   color: #3c3c3c;
@@ -788,34 +817,34 @@
   background: transparent;
 }
 .swatch-black .onsale, [class*="swatch-"] .swatch-black .onsale {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .price, [class*="swatch-"] .swatch-black .price {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .page-numbers a, .swatch-black .page-numbers span, [class*="swatch-"] .swatch-black .page-numbers a, [class*="swatch-"] .swatch-black .page-numbers span {
   color: #3c3c3c;
 }
 .swatch-black .page-numbers li, [class*="swatch-"] .swatch-black .page-numbers li {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-black .page-numbers .current, .swatch-black .page-numbers li a:hover, [class*="swatch-"] .swatch-black .page-numbers .current, [class*="swatch-"] .swatch-black .page-numbers li a:hover {
   background: #3c3c3c;
-  color: white;
+  color: #ffffff;
 }
 .swatch-black #reviews .comment, [class*="swatch-"] .swatch-black #reviews .comment {
   border-bottom: 1px solid rgba(60, 60, 60, 0.2);
 }
 .swatch-black #reviews .form-control, [class*="swatch-"] .swatch-black #reviews .form-control {
-  background: black;
+  background: #000000;
 }
 .swatch-black #reviews input[type="submit"], [class*="swatch-"] .swatch-black #reviews input[type="submit"] {
   background: #3c3c3c;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 .swatch-black .related h2, .swatch-black .cross-sells h2, .swatch-black .upsells h2, [class*="swatch-"] .swatch-black .related h2, [class*="swatch-"] .swatch-black .cross-sells h2, [class*="swatch-"] .swatch-black .upsells h2 {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .product-category h3, [class*="swatch-"] .swatch-black .product-category h3 {
@@ -823,24 +852,24 @@
   color: #3c3c3c;
 }
 .swatch-black .product-category h3 mark, [class*="swatch-"] .swatch-black .product-category h3 mark {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .product-nav a i, [class*="swatch-"] .swatch-black .product-nav a i {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .product-images figcaption, [class*="swatch-"] .swatch-black .product-images figcaption {
   box-shadow: none;
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-black .product-images figcaption i, [class*="swatch-"] .swatch-black .product-images figcaption i {
   color: #3c3c3c;
 }
 .swatch-black .product-images .flex-active, [class*="swatch-"] .swatch-black .product-images .flex-active {
-  -webkit-box-shadow: 0px 3px 0px white;
-  -moz-box-shadow: 0px 3px 0px white;
-  box-shadow: 0px 3px 0px white;
+  -webkit-box-shadow: 0px 3px 0px #ffffff;
+  -moz-box-shadow: 0px 3px 0px #ffffff;
+  box-shadow: 0px 3px 0px #ffffff;
 }
 .swatch-black .order_details, [class*="swatch-"] .swatch-black .order_details {
   background: #3c3c3c;
@@ -852,51 +881,51 @@
   border-color: #3c3c3c;
 }
 .swatch-black .cart-actions, [class*="swatch-"] .swatch-black .cart-actions {
-  background: black;
+  background: #000000;
 }
 .swatch-black .widget_product_tag_cloud a, [class*="swatch-"] .swatch-black .widget_product_tag_cloud a {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 .swatch-black .widget_product_tag_cloud a:hover, [class*="swatch-"] .swatch-black .widget_product_tag_cloud a:hover {
   background: rgba(255, 255, 255, 0.9);
-  color: black;
+  color: #000000;
 }
 .swatch-black .product_list_widget li, [class*="swatch-"] .swatch-black .product_list_widget li {
   border-color: #3c3c3c;
 }
 .swatch-black .star-rating, [class*="swatch-"] .swatch-black .star-rating {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .widget_price_filter .ui-slider .ui-slider-range, [class*="swatch-"] .swatch-black .widget_price_filter .ui-slider .ui-slider-range {
   background: #3c3c3c;
 }
 .swatch-black .widget_price_filter .ui-slider .ui-slider-handle, [class*="swatch-"] .swatch-black .widget_price_filter .ui-slider .ui-slider-handle {
-  background: white;
+  background: #ffffff;
 }
 .swatch-black .widget_product_search form:after, [class*="swatch-"] .swatch-black .widget_product_search form:after {
-  color: black;
+  color: #000000;
 }
 .swatch-black .bbp-forums-list li, [class*="swatch-"] .swatch-black .bbp-forums-list li {
-  border-left-color: whitesmoke;
+  border-left-color: #f5f5f5;
 }
 .swatch-black .bbp-topic-freshness-author:after, [class*="swatch-"] .swatch-black .bbp-topic-freshness-author:after {
-  background: whitesmoke;
+  background: #f5f5f5;
 }
 .swatch-black .bbp-topic-permalink i, [class*="swatch-"] .swatch-black .bbp-topic-permalink i {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .panel-bbpress, [class*="swatch-"] .swatch-black .panel-bbpress {
-  background: black;
+  background: #000000;
 }
 .swatch-black .panel-bbpress .panel-heading, [class*="swatch-"] .swatch-black .panel-bbpress .panel-heading {
-  border-color: whitesmoke;
+  border-color: #f5f5f5;
 }
 .swatch-black .panel-bbpress .panel-body, [class*="swatch-"] .swatch-black .panel-bbpress .panel-body {
   border-color: #3c3c3c;
 }
 .swatch-black .panel-bbpress .panel-warning, [class*="swatch-"] .swatch-black .panel-bbpress .panel-warning {
-  color: white;
+  color: #ffffff;
   border-color: #3c3c3c;
 }
 .swatch-black .panel-bbpress .bbp-template-notice, [class*="swatch-"] .swatch-black .panel-bbpress .bbp-template-notice {
@@ -908,7 +937,7 @@
 }
 .swatch-black .label-bbpress, [class*="swatch-"] .swatch-black .label-bbpress {
   background: transparent;
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .bbp-reply-content, [class*="swatch-"] .swatch-black .bbp-reply-content {
   border-color: #3c3c3c;
@@ -918,23 +947,23 @@
   border-color: #2f2f2f;
 }
 .swatch-black .bbp_author_details img, [class*="swatch-"] .swatch-black .bbp_author_details img {
-  background: black;
+  background: #000000;
   box-shadow: 0px 0px 0px 4px #3c3c3c;
 }
 .swatch-black .bbp_author_details:after, [class*="swatch-"] .swatch-black .bbp_author_details:after {
   background: #3c3c3c;
 }
 .swatch-black .bbp_author_details:hover img, [class*="swatch-"] .swatch-black .bbp_author_details:hover img {
-  box-shadow: 0px 0px 0px 4px white;
+  box-shadow: 0px 0px 0px 4px #ffffff;
 }
 .swatch-black .bbpress-header .breadcrumb a, .swatch-black .bbpress-header .breadcrumb .active, [class*="swatch-"] .swatch-black .bbpress-header .breadcrumb a, [class*="swatch-"] .swatch-black .bbpress-header .breadcrumb .active {
-  color: white;
+  color: #ffffff;
 }
 .swatch-black .bbpress-header .breadcrumb a:hover, [class*="swatch-"] .swatch-black .bbpress-header .breadcrumb a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 .swatch-black .bbp-topic-tags a, [class*="swatch-"] .swatch-black .bbp-topic-tags a {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }
 .swatch-black .bbp-topic-tags a:hover, [class*="swatch-"] .swatch-black .bbp-topic-tags a:hover {
@@ -947,6 +976,6 @@
   color: #3c3c3c;
 }
 .swatch-black .post-count, [class*="swatch-"] .swatch-black .post-count {
-  background: whitesmoke;
+  background: #f5f5f5;
   color: #3c3c3c;
 }

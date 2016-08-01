@@ -10,7 +10,7 @@
 // ignore camel case because it breaks jshint for vars from php localisation
 /* jshint camelcase: false */
 
-/* global jQuery: false, skrollr: false, Odometer: false */
+/* global jQuery: false, skrollr: false, paceOptions: false, Pace: false, Odometer: false */
 
 // If script is not localized apply defaults
 
@@ -27,7 +27,13 @@ var oxyThemeData = oxyThemeData || {
         hoverActive : false,
         hoverDelay : 1,
         hoverFadeDelay : 200
-    }
+    },
+    siteLoader: 'on'
+};
+
+window.paceOptions = {
+    startOnPageLoad: oxyThemeData.siteLoader === 'on',
+    restartOnRequestAfter: false
 };
 
 jQuery(document).ready(function( $ ) {
@@ -45,7 +51,7 @@ jQuery(document).ready(function( $ ) {
             $('body').not('.oxy-agent-iphone').addClass('oxy-agent-iphone');
         }
         if((/iPad/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-            $('body').not('.oxy-agent-ipad').addClass('oxy-agent-ipad');   
+            $('body').not('.oxy-agent-ipad').addClass('oxy-agent-ipad');
         }
     }
 
@@ -301,68 +307,94 @@ jQuery(document).ready(function( $ ) {
     // Setiing responsive videos
     $( '.video-wrapper' ).fitVids();
 
-    // make poster cover the video container
-    var $backgroundVideos = $('.section-background-video');
-    $.each($backgroundVideos, function(){    
-        $(this).css('background-image','url(\'' + $(this).attr('poster') + '\')');
-    });
-
-    // Play videos & audio    
-    $('.section-background-video, audio').mediaelementplayer({
+    // Play videos & audio
+    $('audio').mediaelementplayer({
         pauseOtherPlayers: false,
         enableAutosize: false,
-        features: ['playpause'],
         setDimensions:false,
-        success: function(mediaElement, node, player) {            
-            $(mediaElement).show();
-            var $section = $(mediaElement).closest('section');            
-            // dont move the video element on iphone safari, we only display the poster
-            if( !$('body').hasClass('oxy-agent-iphone') ) { 
-                mediaElement.addEventListener('loadeddata', function () {                     
-                    // player arg has media property filled only after loadeddata even triggers ( first frame loaded! )                    
-                    var containerHeight    = $section.outerHeight();
-                    var containerWidth     = $section.outerWidth();
-                    var playerHeight       = player.media.videoHeight;                    
-                    var playerWidth        = player.media.videoWidth;                    
-                    var aspectRatio        = ( playerHeight / playerWidth * 100 ) + '%';                   
-                    var scaleFactor        = containerWidth /playerWidth;
-                    var playerActualHeight = playerHeight * scaleFactor; 
+    });
 
-                    $(mediaElement).parent().css('padding-bottom', aspectRatio);   
-                    if( playerActualHeight >= containerHeight ){  
-                        $(mediaElement).css('top', ( containerHeight - (playerHeight * scaleFactor) )/2 );                
-                    }    
+    $('.section-background-video').mediaelementplayer({
+        pauseOtherPlayers: false,
+        enableAutosize: false,
+        setDimensions:false,
+        success: function(mediaElement, node, player) {
+            // video tag is initially hidden ( in order to hide the poster and display the cover bg only )
+            var attr = $(mediaElement).attr('poster');
+            var hasPoster = false;
+
+            if(typeof attr !== typeof undefined && attr !== '') {
+                hasPoster = true;
+                $(mediaElement).parent().css('background-image','url(\'' + $(mediaElement).attr('poster') + '\')');
+            }
+            var $section = $(mediaElement).closest('section');
+
+            // loadded data event does not trigger on ios, its dektop only
+            mediaElement.addEventListener('loadeddata', function () {
+                // player arg has media property filled only after loadeddata even triggers ( first frame loaded! )
+                var containerHeight    = $section.outerHeight();
+                var containerWidth     = $section.outerWidth();
+                var playerHeight       = player.media.videoHeight;
+                var playerWidth        = player.media.videoWidth;
+                var aspectRatio        = ( playerHeight / playerWidth * 100 ) + '%';
+                var scaleFactor        = containerWidth /playerWidth;
+                var playerActualHeight = playerHeight * scaleFactor;
+
+                $(mediaElement).parent().css('padding-bottom', aspectRatio);
+                if( playerActualHeight >= containerHeight ){
+                    $(mediaElement).css('top', ( containerHeight - (playerHeight * scaleFactor) )/2 );
+                }
+                else {
+                    $(mediaElement).css('background-image', '');
+                }
+
+                $(mediaElement).show();
+
+                $(window).smartresize(function(){
+                        containerHeight    = $section.outerHeight();
+                        containerWidth     = $section.outerWidth();
+                        scaleFactor        = containerWidth /playerWidth;
+                        playerActualHeight = playerHeight * scaleFactor;
+                    if( playerActualHeight >= containerHeight ){
+                        $(mediaElement).css('top', ( containerHeight - (playerHeight * scaleFactor) )/2 );
+                    }
                     else {
                         $(mediaElement).css('background-image', '');
-                    }                                                     
-                    
-                    $(window).smartresize(function(){                                            
-                            containerHeight    = $section.outerHeight();
-                            containerWidth     = $section.outerWidth();                    
-                            scaleFactor        = containerWidth /playerWidth;
-                            playerActualHeight = playerHeight * scaleFactor;
-                        if( playerActualHeight >= containerHeight ){  
-                            $(mediaElement).css('top', ( containerHeight - (playerHeight * scaleFactor) )/2 );
-                        }
-                        else {
-                            $(mediaElement).css('background-image', '');
-                        }                                                     
-                    });                  
-                });            
-            }  
-            // ipad safari needs a javascript controller for the video
-            if( $('body').hasClass('oxy-agent-ipad') ) { 
+                    }
+                });
+            });
+
+            // mobile needs a javascript controller for the video
+            if( $('body[class*="oxy-agent-"]').length ) {
                 $section.on('click', function (e) {
                     if(mediaElement.paused) {
                         mediaElement.play();
                     }
-                    else {
+                    else{
+                        // ipad-only control, since it does not go fullscreen automatically
                         mediaElement.pause();
-                    }       
-                });   
-            }           
+                    }
+                });
+
+                // display the play button if not an iphone or mobile video has a poster
+                if(hasPoster || !$('body').hasClass('oxy-agent-iphone')){
+                    $section.find('.mejs-overlay-play').show();
+                }
+                // when pausing mobile videos, display the play button
+                // and hide the video if there is a poster
+                if(hasPoster){
+                    mediaElement.addEventListener('pause', function () {
+                        $section.find('.mejs-overlay-play').show();
+                        $(mediaElement).hide();
+                    });
+
+                    mediaElement.addEventListener('play', function () {
+                        $(mediaElement).show();
+                    });
+                }
+            }
         }
-    });  
+    });
 
     // Feature List Shortcode
     // ======================
@@ -424,7 +456,7 @@ jQuery(document).ready(function( $ ) {
     // ======================
 
     // Add wrapper to select boxes
-    $('select').wrap('<div class="select-wrap">');
+    $('select').not('.country_to_state, #billing_state, #shipping_state, #calc_shipping_state').wrap('<div class="select-wrap">');
 
 
     // Bullet navigation
@@ -451,7 +483,9 @@ jQuery(document).ready(function( $ ) {
             }
         });
         if( sections.length ) {
-            menuItems.parent().removeClass('active current-menu-item');
+            if( scrollMenuItems.length ) {
+                menuItems.parent().removeClass('active current-menu-item');
+            }
             $.each( sections, function( index, section) {
                 var $section = $(section);
                 // create bullet nav
@@ -557,8 +591,7 @@ jQuery(document).ready(function( $ ) {
     // ======================
 
     // Add top bar functionallity
-    $('.top-bar, #masthead').find('.widget_search form').wrap('<div class="top-search">');
-    $('.top-search').append('<i class="fa fa-search search-trigger navbar-text"></i><svg class="search-close" preserveAspectRatio="none"  version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M25 25 L75 75" stroke-width="2"></path><path d="M25 75 L75 25" stroke-width="2"></path></svg>');
+
     $('body').on('click', '.search-trigger', function() {
         $('.top-search').toggleClass('active');
         $('#content').toggleClass('blur');
@@ -656,9 +689,22 @@ jQuery(document).ready(function( $ ) {
         });
     }
 
-    onScrollInit( $('.os-animation') );
-    onScrollInit( $( '.staff-os-animation' ), $('.staff-list-container') );
-    onScrollInit( $( '.recent-simple-os-animation' ), $('.recent-simple-os-container') );
+    // if we have page loader on wait for it to finish before init animations
+    if(oxyThemeData.siteLoader === 'on') {
+        Pace.on('done', function() {
+            setTimeout(function() {
+                onScrollInit( $('.os-animation') );
+                onScrollInit( $( '.staff-os-animation' ), $('.staff-list-container') );
+                onScrollInit( $( '.recent-simple-os-animation' ), $('.recent-simple-os-container') );
+            }, 500);
+        });
+    }
+    else {
+        onScrollInit( $('.os-animation') );
+        onScrollInit( $( '.staff-os-animation' ), $('.staff-list-container') );
+        onScrollInit( $( '.recent-simple-os-animation' ), $('.recent-simple-os-container') );
+    }
+
 
 
     // Goto top button
@@ -723,28 +769,13 @@ jQuery(document).ready(function( $ ) {
     // Fix for embedded videos
     // ======================
 
-    var frames = document.getElementsByTagName( 'iframe' );
+    var frames = $( '.video-wrapper iframe' );
     for( var i = 0; i < frames.length; i++ ) {
         if( frames[i].src.indexOf('?') === -1 ) {
             frames[i].src += '?wmode=opaque';
         }
         else{
             frames[i].src += '&wmode=opaque';
-        }
-    }
-
-    // Scroll to hide nav in iOS < 7
-    // ======================
-
-    if( ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ) && !navigator.userAgent.match(/(iPad|iPhone);.*CPU.*OS 7_\d/i) ) {
-        if(window.addEventListener){
-            window.addEventListener('load', function() {
-                // Set a timeout...
-                setTimeout(function(){
-                    // Hide the address bar!
-                    window.scrollTo(0, 1);
-                }, 0);
-            });
         }
     }
 
@@ -841,8 +872,7 @@ jQuery(document).ready(function( $ ) {
     // Magnific Video Popup
     // ======================
 
-    $('.magnific-youtube, .magnific-vimeo, .magnific-gmaps').magnificPopup({
-        disableOn: 700,
+    $('.magnific-youtube, .magnific-vimeo, .magnific-gmaps').magnificPopup({        
         type: 'iframe',
         mainClass: 'mfp-fade',
         removalDelay: 300,
@@ -875,11 +905,53 @@ jQuery(document).ready(function( $ ) {
         });
     });
 
+    $('.magnific-all').each(function() {
+        var $portfolio = $(this);
+        var $imageLinks = $portfolio.find('.image-all');
+
+        var items = [];
+        $imageLinks.each(function() {
+            var $item = $(this);
+            var type = 'image';
+            if ($item.hasClass('magnific-youtube') || $item.hasClass('magnific-vimeo')) {
+                type = 'iframe';
+            }
+            var magItem = {
+                src: $item.attr('href'),
+                type: type
+            };
+            var title = $item.find('.figure-caption-title');
+            if (title.length > 0) {
+                magItem.title = $(title).text();
+            }
+            items.push(magItem);
+        });
+
+        $imageLinks.magnificPopup({
+            mainClass: 'mfp-fade',
+            items: items,
+            gallery:{
+                enabled:true,
+                tPrev: $(this).data('prev-text'),
+                tNext: $(this).data('next-text')
+            },
+            type: 'image',
+            callbacks: {
+                beforeOpen: function() {
+                    var index = $imageLinks.index(this.st.el);
+                    if (-1 !== index) {
+                        this.goTo(index);
+                    }
+                }
+            }
+        });
+    });
+
     // Magnific Product Popup
     // ======================
 
     $('.product-gallery').magnificPopup({
-        delegate: 'li figcaption a',
+        delegate: 'li:not(.clone) figcaption a',
         type: 'image',
         mainClass: 'mfp-fade',
         gallery:{
@@ -916,10 +988,26 @@ jQuery(document).ready(function( $ ) {
     // Hover menu
     // ======================
     if (oxyThemeData.hoverMenu.hoverActive === true) {
-        $('.navbar .dropdown').hover(function() {
-            $(this).find('.dropdown-menu').first().stop(true, true).delay(oxyThemeData.hoverMenu.hoverDelay).fadeIn(parseInt(oxyThemeData.hoverMenu.hoverFadeDelay));
-        }, function() {
-            $(this).find('.dropdown-menu').first().stop(true, true).delay(oxyThemeData.hoverMenu.hoverDelay).fadeOut(parseInt(oxyThemeData.hoverMenu.hoverFadeDelay));
+        if($('body:not([class*="oxy-agent"])').length) {
+            $('.navbar .dropdown').hover(function() {
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(oxyThemeData.hoverMenu.hoverDelay).fadeIn(parseInt(oxyThemeData.hoverMenu.hoverFadeDelay));
+            }, function() {
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(oxyThemeData.hoverMenu.hoverDelay).fadeOut(parseInt(oxyThemeData.hoverMenu.hoverFadeDelay));
+            });
+        }
+
+        $('#masthead .nav li.dropdown a').on('click', function(){
+            var $dropdown = $(this);
+            if($dropdown.parent().hasClass('open') && ($dropdown.attr('data-link') !== undefined) ) {
+                window.location = $dropdown.attr('data-link');
+            }
         });
     }
+
+    // woocommerce
+
+    // if country changed and js injects text input make sure it has a form-control class
+    $('body').on( 'country_to_state_changed', function(e, data) {
+        $('.input-text').addClass('form-control');
+    });
 });

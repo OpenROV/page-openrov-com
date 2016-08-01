@@ -1,14 +1,19 @@
+/* jshint camelcase: false */
 window.map = {
-    mapType: 'ROADMAP',
-    mapZoom: 13,
-    mapStyle: 'blackwhite',
-    mapScroll: 'on',
+    map_type: 'ROADMAP',
+    map_zoom: 15,
+    map_style: 'blackwhite',
+    map_scrollable: 'on',
     marker: 'show',
-    label: 'Hi there welcome to our <strong>headquarters</strong>. If you are around come in for a coffee.',
-    lat: '51.5171',
-    lng: '0.1062',
-    markerURL: 'assets/images/marker.png'
+    label: ['London Royal','Athens Bistro'],
+    address: '',
+    latlng : ['51.511084, -0.133202','51.506623, -0.111916'],
+    center_latlng: '',
+    markerURL: 'assets/images/marker.png',
+    auto_center: true,
 };
+'use strict';
+
 /* ========================================================================
  * Omega: map.js
  * Map Shortcode Javascript file
@@ -16,100 +21,17 @@ window.map = {
  * Copyright 2014 Oxygenna LTD
  * ======================================================================== */
 
-'use strict';
-
 /* jshint camelcase: false */
 
 /* global jQuery: false, google: false, alert: false */
 
-jQuery(document).ready(function( $ ) {
+jQuery(document).ready(function($) {
 
-    $('.google-map').each( function() {
+    $('.google-map').each(function() {
         var mapDiv = $(this);
         var mapData = window[mapDiv.attr('id')];
 
-         // Our custom marker label overlay
-        var MarkerLabel = function(options) {
-
-            var self = this;
-            this.setValues(options);
-
-            // Create the label container
-            this.div = document.createElement('div');
-            this.div.className = 'map-marker-label fadeIn animated';
-
-            // Trigger the marker click handler if clicking on the label
-            // google.maps.event.addDomListener(this.div, 'click', function(e){
-            //     (e.stopPropagation) && e.stopPropagation();
-            //     google.maps.event.trigger(self.marker, 'click');
-            // });
-        };
-
-        MarkerLabel.prototype = $.extend(new google.maps.OverlayView(), {
-            onAdd: function() {
-                this.getPanes().overlayImage.appendChild(this.div);
-
-                // Ensures the label is redrawn if the text or position is changed.
-                var self = this;
-                this.listeners = [
-                    google.maps.event.addListener(this, 'position_changed', function() { self.draw(); }),
-                    google.maps.event.addListener(this, 'text_changed', function() { self.draw(); }),
-                    google.maps.event.addListener(this, 'zindex_changed', function() { self.draw(); })
-                ];
-            },
-            onRemove: function() {
-                this.div.parentNode.removeChild(this.div);
-                // Label is removed from the map, stop updating its position/text
-                for (var i = 0, l = this.listeners.length; i < l; ++i) {
-                    google.maps.event.removeListener(this.listeners[i]);
-                }
-            },
-            draw: function() {
-                var
-                    text = String(this.get('text')),
-                    markerSize = this.marker.icon.anchor,
-                    position = this.getProjection().fromLatLngToDivPixel(this.get('position')),
-                    labelHeight,
-                    labelWidth;
-
-                this.div.innerHTML = text;
-                this.div.style.position = 'relative';
-                // dynamically grab the label height/width in order to properly position it vertically/horizontally.
-                labelHeight = $('div.map-marker-label').outerHeight();
-                labelWidth = $('div.map-marker-label').outerWidth();
-                this.div.style.left = (position.x - (labelWidth / 2))  + 'px';
-                this.div.style.top = (position.y - markerSize.y - labelHeight -10) + 'px';
-
-            }
-        });
-
-        var Marker = function(options){
-
-            google.maps.Marker.apply(this, arguments);
-            if (options.label) {
-                this.MarkerLabel = new MarkerLabel({
-                    map: this.map,
-                    marker: this,
-                    text: options.label
-                });
-                this.MarkerLabel.bindTo('position', this, 'position');
-            }
-        };
-
-        Marker.prototype = $.extend(new google.maps.Marker(), {
-            // If we're adding/removing the marker from the map, we need to do the same for the marker label overlay
-            setMap: function(){
-                google.maps.Marker.prototype.setMap.apply(this, arguments);
-                if (this.MarkerLabel) {
-                    this.MarkerLabel.setMap.apply(this.MarkerLabel, arguments);
-                }
-            }
-        });
-
-
-        function createMap( position ) {
-            var map;
-
+        function createMap() {
             var style = [{
                 'stylers': [{
                     'saturation': -100
@@ -117,62 +39,112 @@ jQuery(document).ready(function( $ ) {
             }];
 
             var options = {
-                zoom: parseInt( mapData.mapZoom, 10 ),
-                center: position,
+                zoom: parseInt(mapData.map_zoom, 10),
                 scrollwheel: false,
-                draggable: mapData.mapScroll === 'on',
-                mapTypeId: google.maps.MapTypeId[mapData.mapType]
+                draggable: mapData.map_scrollable === 'on',
+                mapTypeId: google.maps.MapTypeId[mapData.map_type]
             };
 
-            map = new google.maps.Map(mapDiv[0], options);
-            var marker;
-
-            function toggleBounce() {
-                if (marker.getAnimation() !== null) {
-                    marker.setAnimation(null);
-                } else {
-                    marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
+            if(mapData.map_style === 'blackwhite') {
+                options.styles = style;
             }
 
-            if( mapData.mapStyle === 'blackwhite' ) {
-                map.setOptions({
-                    styles: style
-                });
-            }
+            return new google.maps.Map(mapDiv[0], options);
+        }
 
-            if( mapData.marker === 'show' ) {
+        // create map
+        var map = createMap();
+
+        // create bounds in case we dont have center map coordinates
+        // every time a marker is added we increase the bounds
+        var bounds = new google.maps.LatLngBounds();
+        function addMarker(position, index) {
+            if(mapData.marker === 'show') {
                 var image = {
                     url: mapData.markerURL,
+                    size: new google.maps.Size(30, 48),
                     origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(12, 50)
+                    anchor: new google.maps.Point(15, 48)
                 };
 
-                marker = new Marker({
-                    label: mapData.label,
+                var marker = new google.maps.Marker({
                     position: position,
                     icon:image,
                     map: map
                 });
 
-                google.maps.event.addListener(marker, 'click', toggleBounce);
+                // extend bounds to encase new marker
+                bounds.extend(position);
+
+                // add label popup to marker
+                if (mapData.label[index] !== undefined) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: mapData.label[index]
+                    });
+                    google.maps.event.addListener(marker, 'click', function(e) {
+                        infoWindow.open(map, this);
+                    });
+                }
+
             }
         }
 
-        if( undefined !== mapData.address ) {
-            // lookup address
-            var geocoder = new google.maps.Geocoder();
-            geocoder.geocode( { 'address': mapData.address}, function(results, status) {
-                if(status === google.maps.GeocoderStatus.OK) {
-                    createMap( results[0].geometry.location );
-                }
-                else {
-                    alert( 'Geocode was not successful for the following reason: ' + status );
-                }
+        // centre map
+
+        var centerMapWithCoordinates = !mapData.auto_center;
+        if(centerMapWithCoordinates) {
+            if (mapData.center_latlng !== undefined) {
+                var center_lat_lng = mapData.center_latlng.split(',');
+                var center_map = new google.maps.LatLng(center_lat_lng[0], center_lat_lng[1]);
+                map.setCenter(center_map);
+            }
+            else {
+                console.log('You have not set any coordinates for the map to be centered at.');
+            }
+        }
+
+
+        // create markers
+        if(mapData.address) {
+            // lookup addresses
+            var markerAddressCount = 0;
+            $.each(mapData.address, function(index, address) {
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({ 'address': address}, function(results, status) {
+                    if(status === google.maps.GeocoderStatus.OK) {
+                        if(undefined !== results[0]) {
+                            var location = results[0].geometry.location;
+                            var position = new google.maps.LatLng(location.lat(), location.lng());
+                            addMarker(position, index);
+                        }
+
+                        // increment count so we can keep track of all markers loaded
+                        markerAddressCount++;
+                        // if all markers are loaded then fit map
+                        if(!centerMapWithCoordinates && markerAddressCount === mapData.address.length) {
+                            map.fitBounds(bounds);
+                        }
+                    }
+                    else {
+                        console.log('Geocode was not successful for the following reason: ' + status);
+                    }
+                });
             });
         }
-        else if( undefined !== mapData.lat && undefined !== mapData.lng ) {
-            createMap( new google.maps.LatLng(mapData.lat, mapData.lng) );
+        else if(undefined !== mapData.latlng) {
+            for(var i = 0; i < mapData.latlng.length; i++) {
+                var coordinates = mapData.latlng[i].split(',');
+                var position = new google.maps.LatLng(coordinates[0], coordinates[1]);
+                addMarker(position, i);
+            }
+            if(!centerMapWithCoordinates) {
+                map.fitBounds(bounds);
+            }
         }
+
+        var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+            this.setZoom(parseInt(mapData.map_zoom, 10));
+            google.maps.event.removeListener(boundsListener);
+        });
     });
 });

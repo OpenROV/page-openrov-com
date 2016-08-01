@@ -1,709 +1,1069 @@
---- 
----
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>OpenROV | Underwater Exploration Robots</title>
+        <meta property="og:title" content="OpenROV | Underwater Exploration Robots" />
+        <meta property="og:description" content="OpenROV is an open-source, low-cost underwater robot for exploration and education.<br> It's also a passionate community of professional and amateur ocean explorers and technologists." />
+        <meta property="og:image" content="http://www.openrov.com/assets/openrov/images/ogimage.jpg" />
+        <meta property="og:url" content="http://www.openrov.com" />
+        <meta name="google-site-verification" content="6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvmNxYDI4" />
 
-<head>
-  <title>OpenROV | Underwater Exploration Robots</title>
-  <meta property="og:title" content="OpenROV | Underwater Exploration Robots" />
-  <meta property="og:description" content="OpenROV is an open-source, low-cost underwater robot for exploration and education.<br> It's also a passionate community of professional and amateur ocean explorers and technologists."
-  />
-  <meta property="og:image" content="http://www.openrov.com/assets/openrov/images/ogimage.jpg" />
-  <meta property="og:url" content="http://www.openrov.com" />
-  <meta name="google-site-verification" content="6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvmNxYDI4" /> {% include headers.html %}
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
 
-  <style>
-    a.kickstarter:hover {
-      text-decoration: underline;
-    }
-    
-    a.preorder:hover {
-      text-decoration: underline;
-    }
-    
-    .navbar {
-      background-color: rgba(12, 47, 62, 0.95) !important;
-    }
-    
-    @media (max-width: 1199px) and (min-width: 992px) {
-      .front-jumbotron.element-normal-top {
-        margin-top: 0!important
-      }
-      .front-jumbotron.element-tall-bottom {
-        margin-bottom: 0!important
-      }
-    }
-    
-    @media (max-width: 760px) {
-      #front-jumbotron.element-tall-bottom {
-        margin-bottom: 1em!important
-      }
-    }
-  </style>
-  <script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
-</head>
-
-<body class="transparent-header">
-  {% include header.html %}
-  <div id="content">
-    <article>
-      <script type="text/javascript">
-        var oxyThemeData = {
-                    navbarHeight: 90,
-                    navbarScrolled: 70,
-                    navbarScrolledPoint: 200,
-                    navbarScrolledSwatches:
-                    {
-                        up: 'swatch-black',
-                        down: 'swatch-black'
-                    },
-                    scrollFinishedMessage: 'No more items to load.',
-                    hoverMenu:
-                    {
-                        hoverActive: false,
-                        hoverDelay: 1,
-                        hoverFadeDelay: 200
-                    }
-                };
-      </script>
-
-<!--
-              <section id="oneOne" class="section swatch-black section-text-shadow section-fullheight">
-                    <div class="background-media" style="background-image: url('assets/openrov/images/pool.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50% 0px;" data-start="background-position:50% 0px"
-                    data-70-top-bottom="background-position:50% -80px">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/theme.min.css">
+        <link rel="stylesheet" href="assets/css/color-defaults.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/swatch-white.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/swatch-blue.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/swatch-gray.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/swatch-black.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/swatch-white-black.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/swatch-white-green.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/swatch-white-red.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/fonts.min.css" media="screen">
+    </head>
+    <body class="normal-header pace-on pace-counter">
+        <div class="pace-overlay"></div>
+        <div id="masthead" class="navbar navbar-static-top swatch-white navbar-sticky" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/images/omega.gif" alt="One of the best themes ever">Omega
+                    </a>
+                </div>
+                <nav class="collapse navbar-collapse main-navbar" role="navigation">
+                    <div class="menu-sidebar pull-right">
+                        <div id="search-4" class="sidebar-widget  widget_search">
+                            <div class="top-search">
+                                <form role="search" method="get" id="searchform" action="blog-classic.html">
+                                    <div class="input-group">
+                                        <input type="text" value="" name="s" id="s" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                        <button class="btn" type="submit" id="searchsubmit" value="Search">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                    </div>
+                                </form>
+                                <i class="fa fa-search search-trigger navbar-text"></i>
+                                <svg class="search-close" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25 25 L75 75" stroke-width="2"></path>
+                                    <path d="M25 75 L75 25" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown menu-item-object-oxy_mega_menu ">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                            <ul class="dropdown-menu row">
+                                <li class="dropdown col-md-4 menu-item-object-oxy_mega_columns">
+                                    <strong>Business</strong>
+                                    <ul role="menu">
+                                        <li>
+                                            <a href="index.html">Home - Classic
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-business.html">Home - Business
+                                                    
+                                                        <span class="label menu-label label-primary">New!</span>
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-corporate.html">Home - Corporate
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-restaurant.html">Home - Restaurant
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-app.html">Home - App Page
+                                                    
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown col-md-4 menu-item-object-oxy_mega_columns">
+                                    <strong>Creative</strong>
+                                    <ul role="menu">
+                                        <li>
+                                            <a href="index-landing.html">Home - Landing Page
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-minimal.html">Home - Minimal
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-dark.html">Home - Dark Version
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-photography.html">Home - Photography
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-portfolio.html">Home - Portfolio
+                                                    
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown col-md-4 menu-item-object-oxy_mega_columns">
+                                    <strong>Extra Frontpages</strong>
+                                    <ul role="menu">
+                                        <li>
+                                            <a href="index-fullscreen.html">Home - Fullscreen
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-slideshow.html">Home - Slideshow
+                                                    
+                                                        <span class="label menu-label label-primary">New!</span>
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-bullet.html">Home - Bullet Nav
+                                                    
+                                                        <span class="label menu-label label-primary">New!</span>
+                                                    
+                                                </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-one-page.html">Home - One Page Style
+                                                    
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="page-about-classic.html">About Us - Classic
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-about-bold.html">About Us - Bold
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-about-me.html">About Me
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-services.html">Services
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-service.html">Single Service
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-service-2.html">Single Service - Fancy
+                                                    
+                                                        <span class="label menu-label label-primary">New!</span>
+                                                    
+                                                </a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li>
+                                    <a href="app-page-v2.html">App Landing Page
+                                                    
+                                                        <span class="label menu-label label-primary">New!</span>
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-404.html">404 page
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-faq.html">FAQ page
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-maintenance.html">Maintenance Mode
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-coming-soon.html">Coming Soon Page
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-background-videos.html">Background Videos
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-right-sidebar.html">Right Sidebar Page
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="page-left-sidebar.html">Left Sidebar Page
+                                                    
+                                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Elements</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="elements-basic-type.html">Basic Type
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="elements-headers.html">Headers
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="elements-columns.html">Columns
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="elements-font-icons.html">Font Icons
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="elements-section-backgrounds.html">Section Backgrounds
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="elements-bootstrap-components.html">Bootstrap Components
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="elements-pricing-tables.html">Pricing Tables
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="elements-features-lists.html">Features Lists
+                                                    
+                                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="portfolio-3-columns.html">3 Columns Classic
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-3-columns-captions.html">3 Columns with Captions
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-3-columns-fullwidth.html">3 Columns Fullwidth
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-3-columns-filters.html">3 Columns with Filters
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-3-columns-no-gutters.html">3 Columns without Gutters
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-single.html">Single Portfolio Page
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-slideshow.html">Single Slideshow page
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-4-columns.html">4 Columns Classic
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-4-columns-captions.html">4 Columns with Captions
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-4-columns-fullwidth.html">4 Columns Fullwidth
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-4-columns-filters.html">4 Columns with Filters
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-4-columns-no-gutters.html">4 Columns without Gutters
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-masonry.html">Masonry
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-masonry-alt.html">Masonry alt
+                                                    
+                                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="blog-classic.html">Blog - Classic
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="blog-fullwidth.html">Blog - Fullwidth
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="blog-narrow.html">Blog - Fullwidth Narrow
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="blog-wide.html">Blog - Fullwidth Wide
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="blog-masonry.html">Blog - Masonry
+                                                    
+                                                </a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li>
+                                    <a href="blog-post.html">Blog - Single Post
+                                                    
+                                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="contact-big-map.html">Contact Us - Big Map
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-big-map-alt.html">Contact Us - Big Map Alt
+                                                    
+                                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-small-map.html">Contact Us - Small Map
+                                                    
+                                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="content">
+            <article>
+                <section class="section swatch-black section-text-shadow section-inner-shadow">
+                    <div class="background-media" style="background-image: url('assets/images/uploads/home-intro.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50%;" data-start="background-position:50% 50%"
+                    data-70-top-bottom="background-position:50% 70%">
+                    </div>
+                    <div class="background-overlay grid-overlay-70 "></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
-                                    <div class="visible-xs" style="height:60px;"></div>
-                                    <div class="visible-sm" style="height:60px;"></div>
-                                    <div class="visible-md" style="height:60px;"></div>
-                                    <div class="visible-lg" style="height:60px;"></div>
-                                </div>
-                                <header class="text-center  element-no-top element-no-bottom not-condensed" data-os-animation="none" data-os-animation-delay="0s" data-70-top-bottom="opacity:0" data-start="opacity:1" data-center="opacity:1" style=" ">
-                                  <div id="front-jumbotron" class="jumbotron  element-normal-top element-tall-bottom os-animation animated fadeIn">
-
-
-                                    <h1>
-                                      <a href="https://www.twitch.tv/openrov">Review our coverage of the <br>MATE ROV competition</a>
-                                    </h1>
-                                    <p></p>
-
-<iframe src="https://player.twitch.tv/?video=v74301767" frameborder="0" scrolling="no" height="378" width="620"></iframe><a href="https://www.twitch.tv/openrov?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Watch live video from openrov on www.twitch.tv</a>
-                                    
-                                  </div>
+                                <header class="element-tall-top element-normal-bottom condensed" data-start="opacity:1" data-center="opacity:1" data-100-top-bottom="opacity:0">
+                                    <h1 class="super hairline bordered-normal">
+                  we are a digital <strong>design</strong> agency with a passion for pixels.
+                </h1>
                                 </header>
-
-                                  
-              </header>
-              <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
-                <div class="visible-xs" style="height:60px;"></div>
-                <div class="visible-sm" style="height:60px;"></div>
-                <div class="visible-md" style="height:60px;"></div>
-                <div class="visible-lg" style="height:60px;"></div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-12 text-center">
-                  <a href="#two" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                    data-os-animation-delay="0s">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                        <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
+                                <a href="#goto" class="scroll-to-id btn btn-link btn-lg element-no-top element-normal-bottom">
+                read more
+           </a>
                             </div>
                         </div>
                     </div>
                 </section>
--->
-
-
-      <section id="one" class="section swatch-black section-text-shadow section-inner-shadow">
-        <div class="background-media" data-start="background-position:" data-70-top-bottom="background-position:">
-          <video style="width: auto; height: 100%;" loop autoplay class="section-background-video" poster="https://s3.amazonaws.com/openrov-com-assets/videos/hilights.png">
-              <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tridenthilights.mp4" media="screen and (min-device-width:801px)">
-              <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tridenthilights.mob.mp4" media="screen and (max-device-width:800px)">
-          </video>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 ">
-              <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
-                <div class="visible-xs" style="height:10px;"></div>
-                <div class="visible-sm" style="height:10px;"></div>
-                <div class="visible-md" style="height:100px;"></div>
-                <div class="visible-lg" style="height:100px;"></div>
-              </div>
-              <header class="text-center  element-tall-top element-tall-bottom not-condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
-
-                <div id="front-jumbotron" class="jumbotron  element-normal-top element-tall-bottom os-animation animated fadeIn">
-                  <h1>
-                    <img src="assets/images/trident/trident%20name%20white%20small.png" alt="Trident ROV">
-                  </h1>
-
-                  <h2 class="light no-bordered-header bordered-normal" style="font-size:2.5em; line-height: 52px;">
-                    <a style="font-weight: bold; text-decoration: underline;" class="preorder" href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" data-celery="5637ca44df92ea03009633b3" data-celery-version="v2">Pre-order Now</a> and be one of the first to get a <a style="text-decoration: underline; font-weight: bold;" class="kickstarter" href="products/1-trident.html">Trident</a> underwater drone.
-                  </h2>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                    <!-- ----------------------------------------- -->
-
-                    <!-- Begin MailChimp Signup Form -->
-                    <!--<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">-->
-                    <style type="text/css">
-                      #mc_embed_signup {
-                        background: transparent;
-                        clear: left;
-                        font: 14px Helvetica, Arial, sans-serif;
-                      }
-                      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                                                                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                      
-                      input[type="email"] {
-                        border: 1px white solid;
-                        border-radius: 5px;
-                        color: white;
-                        background: transparent;
-                      }
-                      
-                      input[type="email"]::-webkit-input-placeholder {
-                        /* Chrome/Opera/Safari */
-                        color: rgba(255, 255, 255, 0.50);
-                      }
-                      
-                      input[type="email"]::-moz-placeholder {
-                        /* Firefox 19+ */
-                        color: rgba(255, 255, 255, 0.50);
-                      }
-                      
-                      input[type="email"]:-ms-input-placeholder {
-                        /* IE 10+ */
-                        color: rgba(255, 255, 255, 0.50);
-                      }
-                      
-                      input[type="email"]:-moz-placeholder {
-                        /* Firefox 18- */
-                        color: rgba(255, 255, 255, 0.50);
-                      }
-                      
-                      input[type="email"]:focus {
-                        border: 1px white solid;
-                        box-shadow: none;
-                      }
-                    </style>
-                    <div id="mc_embed_signup" class="">
-                      <form action="//openrov.us5.list-manage.com/subscribe/post?u=0f4e2a0115f4c948c958f001d&amp;id=fc022bfeab" method="post" id="mc-embedded-subscribe-form"
-                        name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                          <label for="email" style="vertical-align:middle; display:inline; font-weight:600; font-size:24px">Join our mailing list! &nbsp;</label>
-                          <input type="email" value="" name="EMAIL" class="required email form-control" style="" id="mce-EMAIL" placeholder="E-Mail Address">
-
-                          <div style="display:inline">
-                            <!--<label for="mce-EMAIL">Email Address </label>-->
-                            <div class="" style="display:inline">
-                              <input type="submit" value="Send!" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-sm">
-                            </div>
-
-                          </div>
-                          <div>
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                          </div>
-                          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0f4e2a0115f4c948c958f001d_fc022bfeab" tabindex="-1" value=""></div>
-                        </div>
-
-
-                        <!--<div class="mc-field-group">
-                            </div>
-                              <div id="mce-responses" class="clear">
-                              </div>     real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-
-                        <!--</div>-->
-                      </form>
-                    </div>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-                    <script type='text/javascript'>
-                      (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-                    </script>
-                    <!--End mc_embed_signup-->
-                    <!-- ----------------------------------------- -->
-
-                  </div>
-                </div>
-
-
-              </header>
-              <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
-                <div class="visible-xs" style="height:60px;"></div>
-                <div class="visible-sm" style="height:60px;"></div>
-                <div class="visible-md" style="height:120px;"></div>
-                <div class="visible-lg" style="height:180px;"></div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-12 text-center">
-                  <a href="#two" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                    data-os-animation-delay="0s">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                        <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="two" class="section swatch-black section-text-shadow">
-        <div class="background-media" style="background-image: url('assets/images/2-8/two_guys_and_a_28_kit.JPG'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50%;"
-          data-start="background-position:50% 0px" data-70-top-bottom="background-position:50% -180px">
-        </div>
-        <div class="background-overlay grid-overlay-20 " style=""></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 ">
-              <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
-                <div class="visible-xs" style="height:0;"></div>
-                <div class="visible-sm" style="height:20px;"></div>
-                <div class="visible-md" style="height:40px;"></div>
-                <div class="visible-lg" style="height:80px;"></div>
-              </div>
-              <header class="text-center  element-tall-top element-tall-bottom not-condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
-
-                <div id="front-jumbotron" class="jumbotron  element-normal-top element-tall-bottom os-animation animated fadeIn">
-
-                  <h2 class="light no-bordered-header bordered-normal" style="font-size:40px; line-height: 52px;">
-                    <b>OpenROV 2.8 Kit</b>
-                  </h2>
-                  <h2 class="light no-bordered-header bordered-normal" style="font-size:40px; line-height: 52px;">
-                      The original open-source underwater robot, upgraded.
-                  </h2>
-                  <h2>
-                    <a style="font-weight: bold; text-decoration: underline;" href="http://store.openrov.com/collections/openrov">Buy Now</a>
-                  </h2>
-                </div>
-
-              </header>
-              <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
-                <div class="visible-xs" style="height:60px;"></div>
-                <div class="visible-sm" style="height:60px;"></div>
-                <div class="visible-md" style="height:120px;"></div>
-                <div class="visible-lg" style="height:180px;"></div>
-              </div>
-              
-              <div class="row">
-                <div class="col-md-12 text-center">
-                  <a href="#three" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                    data-os-animation-delay="0s">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                        <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="three" class="section swatch-black section-inner-shadow">
-        <div class="background-media skrollable skrollable-between" style="background-image: url(assets/openrov/images/sharks.jpg); background-attachment: fixed; background-size: cover; background-position: 50% -158.99785254116px; background-repeat: no-repeat;"
-          data-start="background-position:50% 0px" data-70-top-bottom="background-position:50% -80px">
-          <div class="background-overlay grid-overlay-20 " style="background-color: rgba(0,0,0,0.4);"></div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <header class="text-center  element-normal-top element-short-bottom not-condensed" data-os-animation="none" data-os-animation-delay="0s">
-                <h1 class="bigger hairline bordered bordered-normal">
-                  Welcome to OpenROV!
+                <section id="two" class="section swatch-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <header class="text-center element-tall-top element-no-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                    <h1 class="bigger hairline bordered bordered-normal">
+                    Services
                 </h1>
-              </header>
-            </div>
-
-            <div class="col-md-4">
-              <div class="panel panel-success element-no-top element-short-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp"
-                data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    About OpenROV
-                  </h3>
-                </div>
-                <div class="panel-body swatch-white">
-                  <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                    <p>
-                      <strong>OpenROV</strong> is an open-source, low-cost underwater robot for exploration and education.<br>                      It's also a passionate community of professional and amateur ocean explorers and technologists.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-warning element-no-top element-short-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp"
-                data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    Get one
-                  </h3>
-                </div>
-                <div class="panel-body swatch-white">
-                  <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                    <p>
-                      <ul>
-                        <li>Go to our <a href="http://store.openrov.com" target="_blank">online shop</a> and get yours</li>
-                        <li>Get our <a href="http://openrov.dozuki.com/c/Building_from_a_kit" target="_blank">build instructions</a></li>
-                      </ul>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-success element-no-top element-short-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp"
-                data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    Get Involved
-                  </h3>
-                </div>
-                <div class="panel-body swatch-white">
-                  <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                    <p>
-                      <ul>
-                        <li>Go to our <a href="https://forum.openrov.com" target="_blank">forums</a></li>
-                        <li><a href="http://www.openexplorer.com" target="_blank">Explore!</a></li>
-                        <li><a href="https://github.com/OpenROV/openrov-software#how-to-contribute" target="_blank">Become an OpenROV developer!</a></li>
-                      </ul>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="row" style="display: none">
-            <div class="col-md-7 col-md-offset-2">
-
-              <div class="panel panel-success element-short-top element-normal-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp"
-                data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                              Latest Community News
-                            </h3>
-                </div>
-                <div class="panel-body swatch-white">
-                  <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                    <div id="rss-styled" class="well" style="display:none;"></div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <!-- next -->
-            <div class="col-md-12 text-center" style="height: 60px">
-              <a href="#four" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                data-os-animation-delay="0s" style="bottom: 0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <section id="four" class="section swatch-white">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="row " data-os-animation="" data-os-animation-delay="">
-                <div class="col-md-4 ">
-                  <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".2s">
-                    <a href="http://store.openrov.com/collections/openrov/products/openrov-v2-8-kit" target="_blank">
-                      <div class="box box-round box-big element-normal-top element-short-bottom os-animation">
-                        <div class="box-dummy"></div>
-                        <div class="box-inner grid-overlay-0" style="background-color:#e9e9e9;">
-                          <img class="" src="assets/openrov/images/kit.jpg" alt="the kit" />
+                                    <p class="lead">
+                                        We create a unique process for each client to ensure that business objectives are met, success is achieved and users are happy.
+                                    </p>
+                                </header>
+                                <div class="row " data-os-animation="" data-os-animation-delay="">
+                                    <div class="col-md-3 ">
+                                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
+                                            <div class="box box-round box-normal element-medium-top element-short-bottom os-animation">
+                                                <div class="box-dummy"></div>
+                                                <a class="box-inner grid-overlay-10" href="page-service.html" style="background-color:#e9e9e9;">
+                                                    <img class="" src="assets/images/icons/indicator-512.png" alt="a clock" />
+                                                </a>
+                                            </div>
+                                            <h3 class="normal bold bordered bordered-small ">
+        
+            Powerful panel
+        
+    </h3>
+                                            <p class="">Create stunning pages which look great on <strong>any device</strong>. Clean HTML5 and CSS, <strong>beautifully coded</strong> to make modifications easy!</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 ">
+                                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".3s">
+                                            <div class="box box-round box-normal">
+                                                <div class="box-dummy"></div>
+                                                <a class="box-inner grid-overlay-10" href="page-service.html" style="background-color:#e9e9e9;">
+                                                    <img class="" src="assets/images/icons/gift-512.png" alt="a gift" />
+                                                </a>
+                                            </div>
+                                            <h3 class="normal bold bordered bordered-small ">
+        
+            Stunning pages
+        
+    </h3>
+                                            <p class="">Omega is the Most <strong>Flexible</strong> template We Have Ever Made! You can use it to make any kind of web site. Try it today, you wont be disappointed</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 ">
+                                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".6s">
+                                            <div class="box box-round box-normal">
+                                                <div class="box-dummy"></div>
+                                                <a class="box-inner grid-overlay-10" href="page-service.html" style="background-color:#e9e9e9;">
+                                                    <img class="" src="assets/images/icons/lifebuoy-512.png" alt="a support" />
+                                                </a>
+                                            </div>
+                                            <h3 class="normal bold bordered bordered-small ">
+        
+            Solid support
+        
+    </h3>
+                                            <p class="">With Omega you get a <strong>five star</strong> customer support. As with all our themes you will receive our 100% rock solid support and free updates.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 ">
+                                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".9s">
+                                            <div class="box box-round box-normal">
+                                                <div class="box-dummy"></div>
+                                                <a class="box-inner grid-overlay-10" href="page-service.html" style="background-color:#e9e9e9;">
+                                                    <img class="" src="assets/images/icons/map-512.png" alt="a clock" />
+                                                </a>
+                                            </div>
+                                            <h3 class="normal bold bordered bordered-small ">
+        
+            Ultra flexible
+        
+    </h3>
+                                            <p class="">Omega is ultra flexible and lets you create <strong>stunning</strong> pages easily for any kind of site out of the box. Get started now.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <h3 class="normal bold bordered bordered-small ">
-                        The OpenROV Kit
-                      </h3>
-                      <p class="">
-                        Everything you need <br>to build your own ROV!
-                      </p>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-4 ">
-                  <a href="http://openrov.dozuki.com/c/Operation" target="_blank">
-                    <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".4s">
-                      <div class="box box-round box-big element-normal-top element-short-bottom os-animation">
-                        <div class="box-dummy"></div>
-                        <div class="box-inner grid-overlay-0" style="background-color:#e9e9e9;">
-                          <img class="" src="assets/openrov/images/explore.jpg" alt="assembled" />
+                    </div>
+                </section>
+                <section class="section swatch-gray">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <div class="figure element-medium-top element-no-bottom os-animation text-center" data-os-animation="fadeInLeft" data-os-animation-delay="0.3s">
+                                            <span class="figure-image">
+                            <img src="assets/images/uploads/image-22-devices.png" alt="Devices">
+                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <header class="text-left element-tall-top element-medium-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                            <h1 class="bigger hairline bordered bordered-small">
+                            Features
+                        </h1>
+                                        </header>
+                                        <ul class="features-list element-no-top element-no-bottom features-white" data-linecolor="" data-os-animation="none" data-os-animation-delay="0s">
+                                            <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
+                                                <div class="features-list-icon">
+                                                    <img src="assets/images/icons/eye-512.png" alt="Eye Icon" class="">
+                                                </div>
+                                                <h3>
+                Retina ready
+            </h3>
+                                                <p>
+                                                    Omega is designed with the latest technologies so that your website will look sharp and stunning even on high resolution retina displays.
+                                                </p>
+                                            </li>
+                                            <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
+                                                <div class="features-list-icon">
+                                                    <img src="assets/images/icons/idea-512.png" alt="Idea Icon" class="">
+                                                </div>
+                                                <h3>
+                Solid 100% Support
+            </h3>
+                                                <p>
+                                                    As usual with all of our themes you will receive our 100% support, should you need any help.
+                                                </p>
+                                            </li>
+                                            <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
+                                                <div class="features-list-icon">
+                                                    <img src="assets/images/icons/imac-512.png" alt="iMac Icon" class="">
+                                                </div>
+                                                <h3>
+                Responsive layout
+            </h3>
+                                                <p>
+                                                    This Theme has a fully responsive layout. It will respond and fit to a large desktop, tablet screens and all the way down to a mobile sized display.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <h3 class="normal bold bordered bordered-small ">
-                        Guides
-                      </h3>
-                      <p class="">
-                        &dash; Drive your ROV<br> &dash; Pre-dive checklist<br>
-                      </p>
                     </div>
-                  </a>
-                </div>
-                <div class="col-md-4 ">
-                  <a href="http://www.openexplorer.com" target="_blank">
-                    <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".6s">
-                      <div class="box box-round box-big element-normal-top element-short-bottom os-animation">
-                        <div class="box-dummy"></div>
-                        <div class="box-inner grid-overlay-0" style="background-color:#e9e9e9;">
-                          <img class="" src="assets/openrov/images/map.jpg" alt="explore" />
-                        </div>
-                      </div>
-                      <h3 class="normal bold bordered bordered-small ">
-                        Explore
-                      </h3>
-                      <p class="">See what OpenROVers are<br> discovering around the world.</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row element-normal-top">
-            <!-- next -->
-            <div class="col-md-12 text-center" style="height: 60px color:black">
-              <a href="#five" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                data-os-animation-delay="0s" style="bottom: 0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- buy - build - explore -->
-
-      <section id="five" class="section swatch-black section-text-shadow section-inner-shadow section-fullheight">
-
-        <div class="background-media" data-start="background-position:" data-70-top-bottom="background-position:">
-          <video poster="https://s3.amazonaws.com/openrov-com-assets/videos/tahoe.jpg" style="width: auto; height: 100%;" class="section-background-video">
-            <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tahoe.mp4" media="screen and (min-device-width:801px)">
-            <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tahoe_mob.mp4" media="screen and (max-device-width:800px)">
-          </video>
-
-          <div class="row element-no-top">
-            <!-- next -->
-            <div class="col-md-12 text-center" style="height: 60px color:black">
-              <a href="#six" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                data-os-animation-delay="0s" style="bottom: 0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- video -->
-      <section id="six" class="section swatch-gray">
-        <div class="container">
-          <div class="row element-short-bottom">
-            <div class="col-md-6">
-              <ul class="features-list element-tall-top element-no-bottom features-dark" data-linecolor="" data-os-animation="none" data-os-animation-delay="0s">
-                <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
-                  <div class="features-list-icon">
-                    &nbsp;<i class="fa fa-forward ninety-deg" style="color: #ffffff"></i>
-                  </div>
-                  <h3>100 m/328 feet</h3>
-                  <p>
-                    OpenROV is capable to reach 100 meter/328 feet of seawater. More than double the depth of recreational SCUBA divers.
-                  </p>
-                </li>
-                <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
-                  <div class="features-list-icon">
-                    &nbsp;<i class="fa fa-sun-o" style="color: #ffffff"></i>
-                  </div>
-                  <h3>OpenSource/OpenHardware</h3>
-                  <p>
-                    The source code as well as the hardware design are open and extensible.
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul class="features-list element-tall-top element-no-bottom features-dark" data-linecolor="" data-os-animation="none" data-os-animation-delay="0s">
-                <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
-                  <div class="features-list-icon">
-                    &nbsp;<i class="fa fa-flash" style="color: #ffffff"></i>
-                  </div>
-                  <h3>2 hours battery life</h3>
-                  <p>
-                    When driving the ROV on a moderate power setting, you get 2 hours or more battery setting.
-                  </p>
-                </li>
-                <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
-                  <div class="features-list-icon">
-                    &nbsp;<i class="fa fa-gamepad" style="color: #ffffff"></i>
-                  </div>
-                  <h3>Gamepad control</h3>
-                  <p>
-                    You can drive the ROV with a gamepad. Exploration hasn't been easier!
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row element-normal-top">
-            <!-- next -->
-            <div class="col-md-12 text-center" style="height: 60px color:black">
-              <a href="#seven" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                data-os-animation-delay="0s" style="bottom: 0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="seven" class="section swatch-white">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <div class="list-container row  element-normal-top element-normal-bottom">
-                <div class="col-md-4 element-short-bottom element-short-top os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                  <blockquote class="blockquote-list">
-                    <div class="box box-small box-round">
-                      <div class="box-dummy"></div>
-                      <div class="box-inner " style="background-color:;">
-                        <img class="" src="assets/openrov/images/nytimes.jpg" alt="The New York Times" />
-                      </div>
-                    </div>
-                    <p>&quot;It could change the future of ocean exploration.&quot;</p>
-                    <footer>
-                      <a href="http://bits.blogs.nytimes.com/2012/05/28/a-mini-sub-made-from-cheap-parts-could-change-underwater-exploration/"
-                        target="_blank">The New York Times</a>
-                    </footer>
-                  </blockquote>
-                </div>
-                <div class="col-md-4 element-short-bottom element-short-top os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                  <blockquote class="blockquote-list">
-                    <div class="box box-small box-round">
-                      <div class="box-dummy"></div>
-                      <div class="box-inner " style="background-color:;">
-                        <img class="" src="assets/openrov/images/earle.jpg" alt="Dr. Sylvia Earle, National Geographic Explorer-in-residence" />
-                      </div>
-                    </div>
-                    <p>&quot;I wish they were in every hardware store in the world.&quot;</p>
-                    <footer>
-                      Dr. Sylvia Earle, National Geographic Explorer-in-residence
-                    </footer>
-                  </blockquote>
-                </div>
-                <div class="col-md-4 element-short-bottom element-short-top os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                  <blockquote class="blockquote-list">
-                    <div class="box box-small box-round">
-                      <div class="box-dummy"></div>
-                      <div class="box-inner " style="background-color:;">
-                        <img class="" src="assets/openrov/images/timoreilly.jpeg" alt="Tim O'Reilly" />
-                      </div>
-                    </div>
-                    <p>&quot;The maker movement at its best.&quot;</p>
-                    <footer>
-                      Tim O'Reilly, Founder and CEO of O'Reilly Media, Inc
-                    </footer>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row element-no-top">
-            <!-- next -->
-            <div class="col-md-12 text-center" style="height: 60px color:black">
-              <a href="#eight" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none"
-                data-os-animation-delay="0s" style="bottom: 0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="eight" class="section swatch-black section-inner-shadow section-text-shadow">
-        <div class="background-media" style="background-image: url('assets/openrov/images/rov1.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50%;"
-          data-start="background-position:50% 0px" data-70-top-bottom="background-position:50% -120px">
-        </div>
-        <div class="background-overlay grid-overlay-0 " style="background-color: rgba(0,0,0,0.4);"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <header class="text-center  element-tall-top element-tall-bottom condensed os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0s">
-                <h1 class="big light no-bordered-header bordered-normal">
-                    Let's build a future where everyone has access to the tools for adventure.<br><br>
-                    What will you <strong><a href="http://www.openexplorer.com" target="_blank">explore</a></strong>?
+                </section>
+                <section class="section swatch-white">
+                    <div class="container-fullwidth">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <header class="text-center element-tall-top element-medium-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                    <h1 class="bigger hairline bordered">
+                    Our Work
                 </h1>
-              </header>
-            </div>
-          </div>
+                                </header>
+                                <div class="portfolio-container element-short-top element-no-bottom">
+                                    <div class="portfolio masonry " data-padding="2" data-col-xs="2" data-col-sm="3" data-col-md="4" data-col-lg="4" data-layout="fitRows">
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="1" data-title="Coffee and Biscuits">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                                <a href="assets/images/uploads/image-03-normal.jpg" class="figure-image magnific" data-links="
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-03-normal-800x600.jpg" alt="Coffee and Biscuits" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="2" data-title="Cactus Love">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
+                                                <a href="assets/images/uploads/image-06-normal.jpg" class="figure-image magnific" data-links="
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-06-normal-800x600.jpg" alt="Cactus Love" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="3" data-title="Colors galore">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0.6s">
+                                                <a href="http://www.youtube.com/watch?v=-zOrV-5vh1A" class="figure-image magnific-vimeo" data-links="
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-02-normal-800x600.jpg" alt="Colors galore" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="4" data-title="Playful mood">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0.9s">
+                                                <a href="assets/images/uploads/image-05-normal.jpg" class="figure-image magnific" data-links="
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-05-normal-800x600.jpg" alt="Playful mood" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="5" data-title="Vinyl music">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="1.2s">
+                                                <a href="assets/images/uploads/image-07-normal.jpg" class="figure-image magnific" data-links="
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-07-normal-800x600.jpg" alt="Vinyl music" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="6" data-title="Summer field">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="1.5s">
+                                                <a href="http://vimeo.com/78567595" class="figure-image magnific-vimeo" data-links="
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-08-normal-800x600.jpg" alt="Summer field" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="7" data-title="Red coffee">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="1.8s">
+                                                <a href="" class="figure-image magnific-gallery" data-links="
+                        
+                            assets/images/uploads/image-03-normal.jpg,
+                        
+                            assets/images/uploads/rev-image-20-normal.jpg
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-09-normal-800x600.jpg" alt="Red coffee" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="8" data-title="Vintage building">
+                                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="2.1s">
+                                                <a href="assets/images/uploads/image-10-normal.jpg" class="figure-image magnific" data-links="
+                         " target="_self">
+                                                    <img src="assets/images/uploads/image-10-normal-800x600.jpg" alt="Vintage building" class="normalwidth">
+                                                    <div class="figure-overlay grid-overlay-20">
+                                                        <div class="figure-overlay-container">
+                                                            <span class="figure-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="reviews" class="section swatch-black section-text-shadow section-inner-shadow">
+                    <div class="background-media" data-start="background-position:" data-70-top-bottom="background-position:">
+                        <video style="width: 100%; height: 100%;" loop autoplay class="section-background-video">
+                            <source type="video/mp4" src="http://theme-background-videos.s3.amazonaws.com/darkbokeh.mp4.mp4">
+                                <source type="video/webm" src="http://theme-background-videos.s3.amazonaws.com/darkbokeh.webmhd.webm">
+                        </video>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <header class="text-center element-tall-top element-medium-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                    <h1 class="bigger hairline bordered-normal">
+                    Welcome to our company. We are a digital design agency passionate about pixel perfection.
+                </h1>
+                                </header>
+                                <a href="http://themeforest.net/item/omega-multi-purpose-bootstrap-html-template/8591628" class="btn btn-primary btn-lg element-short-top element-normal-bottom os-animation" target="_blank" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                Let's work together
+            </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="two" class="section swatch-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <header class="text-center  element-normal-top element-no-bottom not-condensed os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                    <h1 class="bigger hairline bordered bordered-normal">
+                    Meet the team
+                </h1>
+                                </header>
+                                <div class="row staff-list-container list-container element-short-top element-normal-bottom">
+                                    <div class="col-md-4 staff-os-animation" data-os-animation="fadeIn" data-os-animation-delay=".1s">
+                                        <div class="figure fade-in element-no-top element-no-bottom image-filter-grayscale image-filter-onhover text-center figcaption-middle" data-os-animation="fadeIn" data-os-animation-delay=".0s">
+                                            <a href="page-about-me.html" class="figure-image" data-links="" target="_self">
+                                                <img src="assets/images/people/image-16-normal.jpg" alt="Jane Doe" class="normalwidth">
+                                                <div class="figure-overlay grid-overlay-20">
+                                                    <div class="figure-overlay-container">
+                                                        <span class="figure-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                    </span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="figure-caption text-center">
+                                                <h3 class="figure-caption-title bordered bordered-small ">
+                <strong>Jane Doe</strong> 
+                <span>Designer</span>                    
+            </h3>
+                                                <p class="figure-caption-description">In the center of the roof was a great light, as bright as the sun, which made the emeralds sparkle in a wonderful manner.</p>
+                                            </div>
+                                        </div>
+                                        <ul class="social-icons element-short-top element-short-bottom text-center">
+                                            <li>
+                                                <a href="page-about-me.html" target="_self" data-iconcolor="#3b5998">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="page-about-me.html" target="_self" data-iconcolor="#00acee">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="page-about-me.html" target="_self" data-iconcolor="#ea4c89">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 staff-os-animation" data-os-animation="fadeIn" data-os-animation-delay=".2s">
+                                        <div class="figure fade-in element-no-top element-no-bottom image-filter-grayscale image-filter-onhover text-center figcaption-middle" data-os-animation="fadeIn" data-os-animation-delay=".0s">
+                                            <a href="page-about-me.html" class="figure-image" data-links="" target="_self">
+                                                <img src="assets/images/people/image-17-normal1.jpg" alt="Jim Doe" class="normalwidth">
+                                                <div class="figure-overlay grid-overlay-20">
+                                                    <div class="figure-overlay-container">
+                                                        <span class="figure-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                    </span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="figure-caption text-center">
+                                                <h3 class="figure-caption-title bordered bordered-small ">
+                <strong>Jim Doe</strong> 
+                <span>CEO</span>                    
+            </h3>
+                                                <p class="figure-caption-description">Just then a bell rang, and the green girl said to Dorothy, &quot;That is the signal. You must go into the Throne Room alone.</p>
+                                            </div>
+                                        </div>
+                                        <ul class="social-icons element-short-top element-short-bottom text-center">
+                                            <li>
+                                                <a href="page-about-me.html" target="_self" data-iconcolor="#5FB0D5">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="page-about-me.html" target="_self" data-iconcolor="#ea4c89">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 staff-os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                                        <div class="figure fade-in element-no-top element-no-bottom image-filter-grayscale image-filter-onhover text-center figcaption-middle" data-os-animation="fadeIn" data-os-animation-delay=".0s">
+                                            <a href="page-about-me.html" class="figure-image" data-links="" target="_self">
+                                                <img src="assets/images/people/image-15-normal.jpg" alt="Sue Smith" class="normalwidth">
+                                                <div class="figure-overlay grid-overlay-20">
+                                                    <div class="figure-overlay-container">
+                                                        <span class="figure-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                    </span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="figure-caption text-center">
+                                                <h3 class="figure-caption-title bordered bordered-small ">
+                <strong>Sue Smith</strong> 
+                <span>Founder</span>                    
+            </h3>
+                                                <p class="figure-caption-description">These people had nothing to do but talk to each other, but they always came to wait outside the Throne Room every morning.</p>
+                                            </div>
+                                        </div>
+                                        <ul class="social-icons element-short-top element-short-bottom text-center">
+                                            <li>
+                                                <a href="page-about-me.html" target="_self" data-iconcolor="#ea4c89">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="page-about-me.html3b5998" target="_self" data-iconcolor="#00acee">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="page-about-me.html" target="_self" data-iconcolor="#5FB0D5">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section swatch-blue section-text-shadow section-inner-shadow">
+                    <div class="background-media" data-start="background-position:" data-70-top-bottom="background-position:">
+                        <video style="width: 100%; height: 100%;" loop autoplay class="section-background-video">
+                            <source type="video/mp4" src="http://theme-background-videos.s3.amazonaws.com/blue.mp4">
+                        </video>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <header class="text-center element-tall-top element-short-bottom not-condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                    <h1 class="bigger hairline bordered bordered-normal">
+                    Ready to be amazed?
+                </h1>
+                                </header>
+                                <div class="figure element-short-top element-no-bottom os-animation image-filter-none image-filter-onhover text-center figcaption-middle" data-os-animation="fadeInUp" data-os-animation-delay="0.3s">
+                                    <span class="figure-image">
+                    <img src="assets/images/uploads/image-23-devices.png" alt="">
+                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="two" class="section swatch-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <header class="text-center element-medium-top element-medium-bottom not-condensed os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">
+                                    <h2 class="big hairline bordered-normal">
+                    We create amazing experiences for our clients. Want to try us?
+                </h2>
+                                </header>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <a href="http://themeforest.net/item/omega-multi-purpose-bootstrap-html-template/8591628" class="btn btn-primary btn-lg  element-medium-top element-medium-bottom os-animation animated fadeInRight" target="_blank" data-os-animation="fadeInRight" data-os-animation-delay="0s ">
+                get in touch
+            </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <footer id="footer" role="contentinfo">
+                <section class="section swatch-black">
+                    <div class="container">
+                        <div class="row element-normal-top element-normal-bottom">
+                            <div class="col-md-3">
+                                <div id="recent-posts-4" class="sidebar-widget  widget_recent_entries">
+                                    <h3 class="sidebar-header">Recent Posts</h3>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <div class="post-icon">
+                                                <a href="blog-post.html" title="The beauty of the world.">
+                                                    <img width="150" height="150" src="assets/images/uploads/image-08-normal-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="image-08-normal">
+                                                </a>
+                                            </div>
+                                            <a href="blog-post.html" title="The beauty of the world.">The beauty of the world.</a>
+                                            <small class="post-date">
+                                        March 14, 2014
+                                    </small>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="post-icon">
+                                                <a href="blog-post.html" title="Colors are the smiles of nature.">
+                                                    <img width="150" height="150" src="assets/images/uploads/image-02-normal-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="image-02-normal">
+                                                </a>
+                                            </div>
+                                            <a href="blog-post.html" title="Colors are the smiles of nature.">Colors are the smiles of nature.</a>
+                                            <small class="post-date">
+                                    March 1, 2014
+                                </small>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="post-icon">
+                                                <a href="blog-post.html" title="Coffee is a language in itself.">
+                                                    <img width="150" height="150" src="assets/images/uploads/image-03-normal-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="image-03-normal">
+                                                </a>
+                                            </div>
+                                            <a href="blog-post.html" title="Coffee is a language in itself.">Coffee is a language in itself.</a>
+                                            <small class="post-date">
+                                    February 14, 2014
+                                </small>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div id="categories-4" class="sidebar-widget  widget_categories">
+                                    <h3 class="sidebar-header">Categories</h3>
+                                    <ul>
+                                        <li class="cat-item cat-item-65">
+                                            <a href="blog-classic.html" title="View all posts filed under About Design">About Design</a>
+                                        </li>
+                                        <li class="cat-item cat-item-62">
+                                            <a href="blog-classic.html" title="View all posts filed under Coffee &amp; more">Coffee &amp; more</a>
+                                        </li>
+                                        <li class="cat-item cat-item-47">
+                                            <a href="blog-classic.html" title="View all posts filed under Nature journal">Nature journal</a>
+                                        </li>
+                                        <li class="cat-item cat-item-54">
+                                            <a href="blog-classic.html" title="View all posts filed under People and more">People and more</a>
+                                        </li>
+                                        <li class="cat-item cat-item-1">
+                                            <a href="blog-classic.html" title="View all posts filed under Uncategorized">Uncategorized</a>
+                                        </li>
+                                        <li class="cat-item cat-item-59">
+                                            <a href="blog-classic.html" title="View all posts filed under Wooden things">Wooden things</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div id="archives-4" class="sidebar-widget  widget_archive">
+                                    <h3 class="sidebar-header">Archives</h3>
+                                    <ul>
+                                        <li>
+                                            <a href="blog-classic.html">March 2014</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-classic.html">February 2014</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-classic.html">January 2014</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-classic.html">December 2013</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-classic.html">November 2013</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div id="tag_cloud-3" class="sidebar-widget  widget_tag_cloud">
+                                    <h3 class="sidebar-header">Tags</h3>
+                                    <div class="tagcloud">
+                                        <ul>
+                                            <li>
+                                                <a href="blog-classic.html">about</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">audio</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">birds</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">cactus</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">calm</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">coffee</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">design</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">field</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">flowers</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">game</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">music</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">nature</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">sky</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">sounds</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">things</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog-classic.html">wood</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
         </div>
-      </section>
-      <div class="bullet-nav">
-        <ul></ul>
-      </div>
-    </article>
-  </div>
-
-  {% include footer.html %}
-
-  <script>
-    $.getScript( "https://sdepold.github.io/jquery-rss/src/jquery.rss.js", function( data, textStatus, jqxhr ) {
-  $("#rss-styled").rss("https://forum.openrov.com/c/blog.rss", {
-    limit: 5,
-    ssl: true,
-    layoutTemplate: '<div>{entries}</div>',
-    entryTemplate: '<p><h3><a href="{url}">{title}</a></h3>{shortBody}</p>'
-  }).show();
-});
-
-
-(function(document) {
-  
-      var body = $('body')[0];
-      var video = $('#tridentVideo')[0];
-
-      var loadData = function () {
-          video.load();
-          console.log('#');
-      };
-
-      body.addEventListener('ontouchstart', loadData, false);  
-
-  
-})(document);
-
-  </script>
-</body>
-
+        <script src="assets/js/packages.min.js"></script>
+        <script src="assets/js/theme.min.js"></script>
+    </body>
 </html>

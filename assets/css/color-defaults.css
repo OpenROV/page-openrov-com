@@ -5,12 +5,12 @@
   background: rgba(255, 255, 255, 0.2);
 }
 .btn i {
-  color: white !important;
+  color: #fff !important;
 }
 
 .btn-default {
   background: #6c6c6c !important;
-  color: white !important;
+  color: #fff !important;
 }
 .btn-default:hover {
   background: #404040 !important;
@@ -18,7 +18,7 @@
 
 .btn-warning {
   background: #f18d38 !important;
-  color: white !important;
+  color: #fff !important;
 }
 .btn-warning:hover {
   background: #e57211 !important;
@@ -26,7 +26,7 @@
 
 .btn-danger {
   background: #e74c3c !important;
-  color: white !important;
+  color: #fff !important;
 }
 .btn-danger:hover {
   background: #d62c1a !important;
@@ -34,7 +34,7 @@
 
 .btn-success {
   background: #427e77 !important;
-  color: white !important;
+  color: #fff !important;
 }
 .btn-success:hover {
   background: #305d57 !important;
@@ -42,114 +42,130 @@
 
 .btn-info {
   background: #5d89ac !important;
-  color: white !important;
+  color: #fff !important;
 }
 .btn-info:hover {
   background: #486f8e !important;
+}
+
+.pace-overlay {
+  background: #fff;
+}
+
+.pace-dot .pace-progress-inner {
+  background: #82c9ed;
+}
+
+.pace-minimal .pace .pace-progress {
+  background: #82c9ed;
+}
+
+.pace-counter .pace .pace-progress:after {
+  color: #82c9ed;
 }
 
 .panel-default .panel-heading {
   background: #6c6c6c !important;
 }
 .panel-default .panel-heading a, .panel-default .panel-heading a:hover {
-  color: white !important;
+  color: #fff !important;
 }
 .panel-default .panel-title {
-  color: white !important;
+  color: #fff !important;
 }
 
 .panel-warning .panel-heading {
   background: #f18d38 !important;
 }
 .panel-warning .panel-heading a, .panel-warning .panel-heading a:hover {
-  color: white !important;
+  color: #fff !important;
 }
 .panel-warning .panel-title {
-  color: white !important;
+  color: #fff !important;
 }
 
 .panel-danger .panel-heading {
   background: #e74c3c !important;
 }
 .panel-danger .panel-heading a, .panel-danger .panel-heading a:hover {
-  color: white !important;
+  color: #fff !important;
 }
 .panel-danger .panel-title {
-  color: white !important;
+  color: #fff !important;
 }
 
 .panel-success .panel-heading {
   background: #427e77 !important;
 }
 .panel-success .panel-heading a, .panel-success .panel-heading a:hover {
-  color: white !important;
+  color: #fff !important;
 }
 .panel-success .panel-title {
-  color: white !important;
+  color: #fff !important;
 }
 
 .panel-info .panel-heading {
   background: #5d89ac !important;
 }
 .panel-info .panel-heading a, .panel-info .panel-heading a:hover {
-  color: white !important;
+  color: #fff !important;
 }
 .panel-info .panel-title {
-  color: white !important;
+  color: #fff !important;
 }
 
 .alert-warning {
   background: #f18d38;
-  color: white !important;
+  color: #fff !important;
 }
 .alert-warning a {
-  color: white !important;
+  color: #fff !important;
   text-decoration: underline;
 }
 .alert-warning .btn, .alert-warning .button {
-  background: white !important;
+  background: #fff !important;
   color: #f18d38 !important;
   text-decoration: none;
 }
 
 .alert-danger {
   background: #e74c3c;
-  color: white !important;
+  color: #fff !important;
 }
 .alert-danger a {
-  color: white !important;
+  color: #fff !important;
   text-decoration: underline;
 }
 .alert-danger .btn, .alert-danger .button {
-  background: white !important;
+  background: #fff !important;
   color: #e74c3c !important;
   text-decoration: none;
 }
 
 .alert-success {
   background: #427e77;
-  color: white !important;
+  color: #fff !important;
 }
 .alert-success a {
-  color: white !important;
+  color: #fff !important;
   text-decoration: underline;
 }
 .alert-success .btn, .alert-success .button {
-  background: white !important;
+  background: #fff !important;
   color: #427e77 !important;
   text-decoration: none;
 }
 
 .alert-info {
   background: #5d89ac;
-  color: white !important;
+  color: #fff !important;
 }
 .alert-info a {
-  color: white !important;
+  color: #fff !important;
   text-decoration: underline;
 }
 .alert-info .btn, .alert-info .button {
-  background: white !important;
+  background: #fff !important;
   color: #5d89ac !important;
   text-decoration: none;
 }
@@ -159,7 +175,7 @@
   background: #6c6c6c;
 }
 .progress-bar-default span {
-  color: white;
+  color: #fff;
 }
 
 .progress-bar-default.progress-striped .progress-bar, .progress-striped .progress-bar-default {
@@ -176,7 +192,7 @@
   box-shadow: none;
 }
 .progress-bar-warning span {
-  color: white;
+  color: #fff;
 }
 
 .progress-bar-warning.progress-striped .progress-bar, .progress-striped .progress-bar-warning {
@@ -193,7 +209,7 @@
   background: #e74c3c;
 }
 .progress-bar-danger span {
-  color: white;
+  color: #fff;
 }
 
 .progress-bar-danger.progress-striped .progress-bar, .progress-striped .progress-bar-danger {
@@ -210,7 +226,7 @@
   background: #427e77;
 }
 .progress-bar-success span {
-  color: white;
+  color: #fff;
 }
 
 .progress-bar-success.progress-striped .progress-bar, .progress-striped .progress-bar-success {
@@ -227,7 +243,7 @@
   background: #5d89ac;
 }
 .progress-bar-info span {
-  color: white;
+  color: #fff;
 }
 
 .progress-bar-info.progress-striped .progress-bar, .progress-striped .progress-bar-info {
@@ -241,10 +257,10 @@
 
 .figure-overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #fff;
 }
 .figure-overlay .figure-caption-title, .figure-overlay .figure-caption-description {
-  color: white;
+  color: #fff;
 }
 .figure-overlay .figure-icon {
   border-color: rgba(255, 255, 255, 0.8);
@@ -253,13 +269,13 @@
   color: rgba(255, 255, 255, 0.8) !important;
 }
 .figure-overlay svg {
-  stroke: white !important;
+  stroke: #fff !important;
 }
 .figure-overlay .bordered:after {
-  background: white !important;
+  background: #fff !important;
 }
 .figure-overlay .btn {
-  background: white !important;
+  background: #fff !important;
   color: rgba(0, 0, 0, 0.5) !important;
 }
 .figure-overlay .btn:hover {
@@ -273,11 +289,11 @@
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
   background-color: rgba(0, 0, 0, 0.9) !important;
-  color: white;
+  color: #fff;
 }
 
 .mfp-counter, .mfp-preloader {
-  color: black;
+  color: #000000;
 }
 
 button.mfp-arrow {
@@ -285,23 +301,23 @@ button.mfp-arrow {
 }
 
 .mfp-arrow:before {
-  color: white;
+  color: #fff;
 }
 
 .go-top {
   background: #1c1c1c !important;
 }
 .go-top i {
-  color: white;
+  color: #fff;
 }
 
 .carousel-control {
-  color: white !important;
+  color: #fff !important;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-caption, .carousel-caption h3 {
-  color: white !important;
+  color: #fff !important;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -311,12 +327,12 @@ button.mfp-arrow {
 }
 
 .carousel-indicators li.active {
-  background: white;
-  border-color: white;
+  background: #fff;
+  border-color: #fff;
 }
 
 .flex-direction-nav a {
-  color: white !important;
+  color: #fff !important;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -326,18 +342,18 @@ button.mfp-arrow {
 }
 
 .flex-control-nav a.flex-active {
-  background: white;
+  background: #fff;
 }
 
 .flexslider figcaption {
   background: rgba(0, 0, 0, 0.2);
 }
 .flexslider figcaption h3, .flexslider figcaption p {
-  color: white;
+  color: #fff;
 }
 
 .ls-fullwidth .ls-nav-prev:after, .ls-fullwidth .ls-nav-next:after {
-  color: white !important;
+  color: #fff !important;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -357,7 +373,7 @@ button.mfp-arrow {
 
 .validation_error {
   background: #e74c3c;
-  color: white;
+  color: #fff;
 }
 
 .validation_error hr {
