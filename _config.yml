@@ -2,3 +2,6 @@ baseurl: /page-openrov-com
 #collections:
 #  products:
 #    output: true
+
+sass:
+  sass_dir: _includes
