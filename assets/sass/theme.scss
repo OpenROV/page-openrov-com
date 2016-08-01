@@ -62,3 +62,21 @@
         }
     }
 }
+
+section#media {
+    .logos {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+
+        img {
+            display: inline-block;
+            max-height: 30px;
+            -webkit-filter: opacity(60%); /* Chrome, Safari, Opera */
+            filter: opacity(60%);
+            padding-left: 8px;
+            padding-right: 8px;
+            // valign: middle;
+        }
+    }
+}
