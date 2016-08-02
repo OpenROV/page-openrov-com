@@ -1,0 +1,13 @@
+section#product {
+    width: 100%;
+
+    .pre-order-content-container {
+        height: 500px;
+        background-image: url('../images/hero/trident2.jpg');
+        @import "home/pre-order-content.scss";
+
+        .price h1 {
+            color: black!important;
+        }
+    }
+}
