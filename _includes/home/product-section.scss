@@ -37,6 +37,7 @@ section#product {
                 height: $productRowHeight;
                 width: 100%;
                 position: relative;
+                background-color: rgba(0, 0, 0, 0.2);
 
                 .figure-overlay {
                     opacity: 1;
@@ -53,6 +54,7 @@ section#product {
         .product-description {
             h2 {
                 color: white;
+                text-shadow: 2px 2px 2px black;
 
             }
         }
