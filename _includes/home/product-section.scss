@@ -1,6 +1,6 @@
 section#product {
     width: 100%;
-
+    
     .pre-order-content-container {
         height: 500px;
         background-image: url('../images/hero/trident2.jpg');
@@ -11,29 +11,44 @@ section#product {
         }
     }
 
-    .product-left {
-        .product-left-container {
-            height: 200px;
-            width: 100%;
-            background-color: grey;
-            position: relative;
+    $productRowHeight: 250px;
+    .product-bottom-row {
+        height: $productRowHeight;
 
-            .item {
-                margin: 0 auto;
-                position: absolute;
-                transform: translateY(-50%);
-                top: 50%;
-                width: 100%;                
+        .product-left {
+            .product-left-container {
+                height: $productRowHeight;
+                width: 100%;
+                background-color: gray;
+                position: relative;
+
+                .item {
+                    margin: 0 auto;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    width: 100%;                
+                }
             }
         }
-    }
 
-    .product-right {
-        .product-right-container {
-            height: 200px;
-            width: 100%;
-            background-color: blue;
+        .product-right {
+            .product-right-container {
+                height: $productRowHeight;
+                width: 100%;
+                position: relative;
+
+                .figure-overlay {
+                    opacity: 1;
+                    background-color: transparent;
+                }
+
+                .figure-overlay:hover {
+                    background-color: rgba(0, 0, 0, 0.5); 
+                }
+            }
+
         }
-
     }
 }
+
