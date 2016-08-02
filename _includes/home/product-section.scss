@@ -10,4 +10,30 @@ section#product {
             color: black!important;
         }
     }
+
+    .product-left {
+        .product-left-container {
+            height: 200px;
+            width: 100%;
+            background-color: grey;
+            position: relative;
+
+            .item {
+                margin: 0 auto;
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+                width: 100%;                
+            }
+        }
+    }
+
+    .product-right {
+        .product-right-container {
+            height: 200px;
+            width: 100%;
+            background-color: blue;
+        }
+
+    }
 }
