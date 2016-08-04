@@ -58,3 +58,39 @@
 .hover-grid-overlay-100:hover {
   background-image: url(../../images/grid-100.png);
 }
+
+// #footer .swatch-black {
+//     background-color: rgba(12, 47, 62, 1) !important;
+// }
+
+.link-partners i.fa {
+    font-size: 20px;
+}
+.link-partners .btn-block {
+    width: 70%;
+    margin-bottom: 10px!important;
+}
+
+
+.oe {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/oe_white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+
+}
+a:hover .oe {
+    background-image: url('../images/oe_dark.png');
+}
+
+footer#footer {
+  ul { padding-left: 20px; }
+}
+
+@media (max-width: 767px) {
+  .hideOnMobile {
+    display: none;
+  }
+}
