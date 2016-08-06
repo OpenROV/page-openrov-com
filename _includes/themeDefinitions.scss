@@ -1,0 +1,14 @@
+$tabletWidth: 767px;
+$mobileWidth: 435px;
+$smallWidth: 320px;
+
+$heightiPhone5: 568px;
+$heightNexus5: 640px;
+$heightiPhone6: 667px;
+$heightNexus5x-iPhone6P: 736px;
+$heightNexus6P: 773px;
+
+
+$tabletMedia: 'screen and (max-width: #{$tabletWidth})';
+$mobileMedia: 'screen and (max-width: #{$mobileWidth})';
+$smallMedia: 'screen and (max-width: #{$smallWidth})';
