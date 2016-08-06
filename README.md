@@ -3,7 +3,7 @@ OpenROV website using GitHub pages
 
 
 Pages are generated with Jekyll;
-Style sheets are writen in Sass and Jekyll translates it to CSS.
+ Style sheets are writen in Sass and Jekyll translates it to CSS.
 
 
 For the development we recommend using a Jekyll docker instance:
