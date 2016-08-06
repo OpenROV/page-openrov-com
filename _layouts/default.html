@@ -1,0 +1,58 @@
+--- 
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+        <meta property="og:description" content="OpenROV is an open-source, low-cost underwater robot for exploration and education.<br> It's also a passionate community of professional and amateur ocean explorers and technologists." />
+        <meta property="og:image" content="{{ '/assets/openrov/images/ogimage.jpg' | prepend: site.baseurl }}" />
+        <meta property="og:url" content="http://www.openrov.com" />
+        <meta name="google-site-verification" content="6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvmNxYDI4" />
+
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/assets/css/theme.min.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/assets/css/color-defaults.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/swatch-white.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/swatch-blue.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/swatch-gray.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/swatch-black.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/swatch-white-black.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/swatch-white-green.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/swatch-white-red.min.css' | prepend: site.baseurl }}" media="screen">
+        <link rel="stylesheet" href="{{ '/assets/css/fonts.min.css' | prepend: site.baseurl }}" media="screen">
+        
+        <link rel="stylesheet" href="{{ '/assets/openrov/css/theme.css' | prepend: site.baseurl }}" media="screen">
+        {% if page.page_css %}<link rel="stylesheet" href="{{ page.page_css | prepend: site.baseurl }}" media="screen">{% endif %}
+    </head>
+    <body class="normal-header "><!--pace-on pace-counter-->
+        <div class="pace-overlay"></div>
+        <div id="masthead" class="navbar navbar-static-top swatch-white navbar-sticky" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--logo-->
+                    <a href="{{ '/' | prepend: site.baseurl }}" class="navbar-brand">
+                        <img src="{{ '/assets/openrov/images/openrov-dark.png' | prepend: site.baseurl }}" alt="OpenROV | Underwater Exploration Robots">
+                    </a>
+                </div>
+                {% include nav.html %}
+            </div>
+        </div>
+        <div id="content">
+            {{ content }}
+            {% include footer.html %}
+        </div>
+        <script src="{{ '/assets/js/packages.min.js' | prepend: site.baseurl }}"></script>
+        <script src="{{ '/assets/js/theme.min.js' | prepend: site.baseurl }}"></script>
+    </body>
+</html>
