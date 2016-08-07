@@ -1,6 +1,5 @@
 ---
 ---
-@import "product/promotions.scss";
-@import "product/trident.scss";
-@import "product/rov28.scss";
-@import "product/components.scss";
+{% loop_directory directory:"_includes/product/**/" iterator:item filter:"*.scss" replace:'_includes/' with:'' %}
+    @import '{{ item }}'; 
+{% endloop_directory %}
