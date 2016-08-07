@@ -1,5 +1,3 @@
 ---
 ---
-{% loop_directory directory:"_includes/product-trident/**/" iterator:item filter:"*.scss" replace:'_includes/' with:'' %}
-    @import '{{ item }}'; 
-{% endloop_directory %}
+@import 'product-trident/head.scss';
