@@ -1,12 +1,39 @@
+
+                        <!--<li class="dropdown open">
+                            <href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Elements</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="elements-basic-type.html">Basic Type </a>
+                                </li>
+                            </ul>
+                        </li>-->
+
                 <nav class="collapse navbar-collapse main-navbar" role="navigation">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="menu-item-object-oxy_mega_menu ">
-                            <a href="{{ '/product' | prepend: site.baseurl }}">Product</a>
+                            <a href="{{ '/products' | prepend: site.baseurl }}" data-toggle="dropdown" class="dropdown-toggle">Product</a>
+                            <ul class="dropdown-menu first">
+                                <li>
+                                    <a href="{{ '/products' | prepend: site.baseurl }}">Overview                                                    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ '/products/trident' | prepend: site.baseurl }}"><strong>Trident</strong>
+                                        <span class="label menu-label label-primary">New!</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ '/products/openrov28' | prepend: site.baseurl }}">OpenROV 2.8 Kit                                                    
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
+
                         <li class="">
-                            <a href="{ '/support' | prepend: site.baseurl }}">Support</a>
-                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support</a>
-                            <ul class="dropdown-menu">
+                            <!--<a href="{ '/support' | prepend: site.baseurl }}">Support</a>-->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support</a>
+                            <!--<ul class="dropdown-menu">
                                 <li>
                                     <a href="page-about-classic.html">About Us - Classic</a>
                                 </li>
