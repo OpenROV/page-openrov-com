@@ -1,17 +1,5 @@
+@import "themeDefinitions.scss";
 section#components {
-
-
-    .portfolio-item .col-md-12 {
-        // padding-left: 0;
-        // padding-right: 0;
-    }
-    // .portfolio-item:first-child .col-md-12 {
-    //         margin-left: -15px;
-    // }
-    // .portfolio-item:last-child .col-md-12 {
-    //         margin-right: -15px;
-    //         float: right;
-    // }
 
     .portfolio-item .figure  {
         margin-left: 5px;
@@ -26,19 +14,39 @@ section#components {
         margin-right: 0;
     }
 
+    @media #{$tabletMedia} {
+        .portfolio-item .figure,
+        .portfolio-item:first-child .figure,
+        .portfolio-item:last-child .figure {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        $width: 5px;
+        @media #{$mobileMedia} {
+            $width: 5px;
+        }
+        .portfolio-item[data-menu-order="1"]  {
+            padding-right: $width;
+            padding-bottom: $width;
+        }
+        .portfolio-item[data-menu-order="2"]  {
+            padding-left: $width;
+            padding-bottom: $width;
+        }
+        .portfolio-item[data-menu-order="3"]  {
+            padding-right: $width;
+            padding-top: $width;
+        }
+        .portfolio-item[data-menu-order="4"]  {
+            padding-left: $width;
+            padding-top: $width;
+        }
+    }
+
     .figure img {
         border: solid black 1px;
     }
-    // .isotope-item:last-child {
-    //     padding-right: 0;
-    // }
-
-    // .isotope:first-of-type .col-md-12 {
-    //     padding-left: 0;
-    // }
-    // .isotope:last-of-type .col-md-12 {
-    //     padding-right: 0;
-    // }
 
     .item.accessories {
         background-image: url(../images/product/accessories.jpg);

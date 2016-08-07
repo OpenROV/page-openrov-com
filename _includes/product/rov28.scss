@@ -6,4 +6,20 @@ section#rov28 {
         background-size: cover;
         background-position: center;
     }
+
+    .overlay-container {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        right: 15px;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .overlay-content {
+        background-color: rgba(0,0,0,0.2);
+        width: 100%;
+        height: 100%;
+    }
+
 }
