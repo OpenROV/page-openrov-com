@@ -1,7 +1,33 @@
 section#components {
 
-    .isotope-item {
-        // padding-right: 20px;
+
+    .portfolio-item .col-md-12 {
+        // padding-left: 0;
+        // padding-right: 0;
+    }
+    // .portfolio-item:first-child .col-md-12 {
+    //         margin-left: -15px;
+    // }
+    // .portfolio-item:last-child .col-md-12 {
+    //         margin-right: -15px;
+    //         float: right;
+    // }
+
+    .portfolio-item .figure  {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .portfolio-item:first-child .figure  {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    .portfolio-item:last-child .figure  {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    .figure img {
+        border: solid black 1px;
     }
     // .isotope-item:last-child {
     //     padding-right: 0;
