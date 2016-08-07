@@ -1,0 +1,18 @@
+version: '2'
+services:
+    jekyll:
+        image: jekyll/jekyll:pages
+        volumes:
+            - ./:/srv/jekyll
+    browsersync:
+        image: ustwo/browser-sync
+        ports:
+            - 3000
+            - 3001
+        volumes:
+            - ./_site:/data
+        ports:
+            - "3000:3000"
+            - "3001:3001"
+        entrypoint: browser-sync start --proxy "jekyll:4000" --files "/data/**/*.*"
+        
