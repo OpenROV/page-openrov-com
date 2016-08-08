@@ -1,0 +1,41 @@
+--- 
+title: Gallery | OpenROV | Underwater Exploration Robots
+layout: default
+page_css: 
+    - /assets/openrov/css/gallery.css
+    - //cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css
+    - //cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css
+page_script:
+    - //cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js
+    - /assets/openrov/js/gallery.js
+---
+<section id="gallery" class="section swatch-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 element-medium-top  text-center">
+                <h1 class="hairline bordered">Gallery</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 element-short-top element-tall-bottom">
+
+                <div class="row slider-container">
+                    <div class="image-container">
+                        <div class="v-container">
+                            <div class="v-box"><h2>Loading</h2></div>
+                        </div>
+                    </div>
+                    <div class="slider element-short-top">
+                        {% for file in site.static_files %}{% if file.path contains 'gallery/images' %}
+                        <div><img data-lazy=" {{ file.path | prepend: site.baseurl }}" /></div>
+                        {% endif %} {% endfor %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+

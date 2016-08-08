@@ -38,7 +38,13 @@
         <link rel="stylesheet" href="{{ '/assets/css/fonts.min.css' | prepend: site.baseurl }}" media="screen">
         
         <link rel="stylesheet" href="{{ '/assets/openrov/css/theme.css' | prepend: site.baseurl }}" media="screen">
-        {% if page.page_css %}<link rel="stylesheet" href="{{ page.page_css | prepend: site.baseurl }}" media="screen">{% endif %}
+        {% if page.page_css %}
+            {% for css in page.page_css %}
+                {% assign cssPath = css | prepend: site.baseurl %}
+                {% if css contains '//' %} {% assign cssPath = css %} {% endif %} 
+        <link rel="stylesheet" href="{{ cssPath }}" media="screen">
+            {% endfor %}
+        {% endif %}
     </head>
     <body class="normal-header "><!--pace-on pace-counter-->
         <div class="pace-overlay"></div>
@@ -64,5 +70,12 @@
         </div>
         <script src="{{ '/assets/js/packages.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/assets/js/theme.min.js' | prepend: site.baseurl }}"></script>
+        {% if page.page_script %}
+            {% for item in page.page_script %}
+                {% assign itemPath = item | prepend: site.baseurl %}
+                {% if item contains '//' %} {% assign itemPath = item %} {% endif %} 
+        <script type="text/javascript" src="{{ itemPath }}"></script>
+            {% endfor %}
+        {% endif %}
     </body>
 </html>

@@ -1,0 +1,63 @@
+---
+---
+section#gallery {
+
+    .slider {
+        opacity: 0;
+
+        -webkit-transition: opacity 0.5s ease-in-out;
+        -moz-transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out;        
+    }
+
+    .slick-slider.slick-initialized {
+        opacity: 1;
+    }
+
+    .slick-slide {
+        margin: 0 15px;
+        max-width: 150px;
+    }
+
+    .slick-current {
+        border: solid 3px #27B3F0;
+    }
+
+    .slider-container {
+        position: relative;
+
+        .image-container {
+            width: 100%;
+            height: 500px;
+            background-color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            $duration: 500ms;
+
+            -webkit-transition-property: background;
+            -webkit-transition-duration: $duration;
+            -webkit-transition-timing-function: ease-in;
+            -webkit-transition-delay: 100ms;
+
+            -moz-transition-property: background;
+            -moz-transition-duration: $duration;
+            -moz-transition-timing-function: ease-in;
+            -moz-transition-delay: 100ms;
+
+            -o-transition-property: background;
+            -o-transition-duration: $duration;
+            -o-transition-timing-function: ease-in;
+            -o-transition-delay: 100ms;
+
+            transition-property: background;
+            transition-duration: $duration;
+            transition-timing-function: ease-in;
+            transition-delay: 100ms;
+        }        
+    }
+
+
+    
+}
