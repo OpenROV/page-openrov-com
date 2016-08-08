@@ -38,14 +38,23 @@
       slider.slick('slickNext');
       return false;
     })
-    $('.image-container').on( "swipeleft", () => {
-      slider.slick('slickNext');
-      return false;
-    });
-    $('.image-container').on( "swiperight", () => {
-      slider.slick('slickPrev');
-      return false;
-    });
+    $('.image-container')
+      .on( "swipeleft", () => {
+        slider.slick('slickNext');
+        return false;
+      })
+      .on( "swiperight", () => {
+        slider.slick('slickPrev');
+        return false;
+      })
+      .on('movestart', function(e) { //enable scrolling
+        // If the movestart is heading off in an upwards or downwards
+        // direction, prevent it so that the browser scrolls normally.
+        if ((e.distX > e.distY && e.distX < -e.distY) ||
+            (e.distX < e.distY && e.distX > -e.distY)) {
+          e.preventDefault();
+        }
+      });
 
   });
 
@@ -61,7 +70,7 @@
   function setImageToUrl(url) {
     $('.image-container').css('background-image', 'url(' + url.trim() + ')');
     if (url != '') {
-      $('.image-container .v-container .text-hide').fadeOut(100);
+      $('.image-container .v-container.text-hide').fadeOut(100);
     }    
   }
 
