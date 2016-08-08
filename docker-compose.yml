@@ -4,8 +4,8 @@ services:
         image: jekyll/jekyll:pages
         volumes:
             - ./:/srv/jekyll
-        environment:
-            - VERBOSE=true
+        # environment:
+            # - VERBOSE=true
     browsersync:
         image: ustwo/browser-sync
         ports:
