@@ -20,15 +20,27 @@ page_script:
             <div class="col-md-12 element-short-top element-tall-bottom">
 
                 <div class="row slider-container">
-                    <div class="image-container">
-                        <div class="v-container">
-                            <div class="v-box"><h2>Loading</h2></div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="image-container">
+                                <div class="left arrow v-container">
+                                    <a class="arrow-container v-box" href="#"></a>
+                                </div>
+                                <div class="right arrow v-container">
+                                    <a class="arrow-container v-box" href="#"></a>
+                                </div>
+                                <div class="v-container">
+                                    <div class="v-box text-hide"><h2>Loading</h2></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="slider element-short-top">
-                        {% for file in site.static_files %}{% if file.path contains 'gallery/images' %}
-                        <div><img data-lazy=" {{ file.path | prepend: site.baseurl }}" /></div>
-                        {% endif %} {% endfor %}
+                        <div class="row">
+                            <div class="slider element-short-top">
+                                {% for file in site.static_files %}{% if file.path contains 'gallery/images' %}
+                                <div><img data-lazy=" {{ file.path | prepend: site.baseurl }}" /></div>
+                                {% endif %} {% endfor %}
+                            </div>
+                        </div>
                     </div>
 
                 </div>

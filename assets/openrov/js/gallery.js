@@ -17,6 +17,7 @@
   slider.slick({
     slidesToShow: 5,
     dots: false,
+    arrows: false,
     focusOnSelect: true,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -28,6 +29,24 @@
 
   $(() => {
     setImageToUrl(($('.slider .slick-current').find('img').data('lazy')));
+
+    $('.arrow.left .arrow-container').click(() => {
+      slider.slick('slickPrev');
+      return false;
+    })
+    $('.arrow.right .arrow-container').click(() => {
+      slider.slick('slickNext');
+      return false;
+    })
+    $('.image-container').on( "swipeleft", () => {
+      slider.slick('slickPrev');
+      return false;
+    });
+    $('.image-container').on( "swiperight", () => {
+      slider.slick('slickNext');
+      return false;
+    });
+
   });
 
   function setImage(nextSlide) {
@@ -42,7 +61,7 @@
   function setImageToUrl(url) {
     $('.image-container').css('background-image', 'url(' + url.trim() + ')');
     if (url != '') {
-      $('.image-container .v-container').fadeOut(100);
+      $('.image-container .v-container .text-hide').fadeOut(100);
     }    
   }
 

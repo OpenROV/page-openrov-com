@@ -1,5 +1,6 @@
 ---
 ---
+@import "themeDefinitions.scss";
 section#gallery {
 
     .slider {
@@ -28,7 +29,13 @@ section#gallery {
 
         .image-container {
             width: 100%;
+            position: relative;
             height: 500px;
+            
+            @media #{$mobileMedia} {
+                height: 250px;
+            }
+
             background-color: transparent;
             background-size: contain;
             background-repeat: no-repeat;
@@ -55,6 +62,46 @@ section#gallery {
             transition-duration: $duration;
             transition-timing-function: ease-in;
             transition-delay: 100ms;
+
+
+            .arrow {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 40px;
+                // background-color: rgba(0,0,0,0.5);
+                background-position: center;
+                background-repeat: no-repeat;
+
+                .arrow-container {
+                    height: 40px;
+                    width: 40px;
+                    background-position-x: 0;
+                    background-position-y: -40px;
+                }
+
+                .arrow-container:hover {
+                    background-position-x: 0;
+                    background-position-y: -80px;
+                }
+            }
+            .arrow.left {
+                left: 0;
+
+                .arrow-container {
+                    background-image: url(../../images/rev-slider/large_left.png);
+                }
+            }
+
+            .arrow.right {
+                right: 0;
+
+                .arrow-container {
+                    background-image: url(../../images/rev-slider/large_right.png);
+                }
+            }
+            
+
         }        
     }
 
