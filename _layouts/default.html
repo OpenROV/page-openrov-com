@@ -70,7 +70,8 @@
         </div>
         <script src="{{ '/assets/js/packages.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/assets/js/theme.min.js' | prepend: site.baseurl }}"></script>
-        <script src="https://cdn.jsdelivr.net/g/jquery@2.2.4,jquery.mobile@1.4.5"></script>
+        <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script> <!-- query mobile requires 2.x -->
+        <script src="https://cdn.jsdelivr.net/jquery.mobile/1.4.5/jquery.mobile.min.js"></script>
         {% if page.page_script %}
             {% for item in page.page_script %}
                 {% assign itemPath = item | prepend: site.baseurl %}

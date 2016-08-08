@@ -39,11 +39,11 @@
       return false;
     })
     $('.image-container').on( "swipeleft", () => {
-      slider.slick('slickPrev');
+      slider.slick('slickNext');
       return false;
     });
     $('.image-container').on( "swiperight", () => {
-      slider.slick('slickNext');
+      slider.slick('slickPrev');
       return false;
     });
 
