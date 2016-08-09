@@ -4,21 +4,10 @@
             <div class="row element-normal-top element-short-bottom">
                 <div class="col-md-3 link-partners">
                     <h3 class="sidebar-header">Find us here:</h3>
-                    <a href="http://www.openexplorer.com" class="btn btn-link btn-md  btn-icon-right btn-block  element-no-top element-no-bottom"
+                    {% for social in site.data.social %}<a href="{{social.link}}" class="btn btn-link btn-md  btn-icon-right btn-block  element-no-top element-no-bottom"
                         target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
-            OpenExplorer<span ><div class="oe" data-animation="none"></div></span></a>
-                    <a href="https://twitter.com/OpenROV" class="btn btn-link btn-md  btn-icon-right btn-block  element-no-top element-no-bottom"
-                        target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
-              Twitter<span><i class="fa fa-twitter" data-animation="none" ></i></span></a>
-                    <a href="https://www.facebook.com/OpenROV" class="btn btn-link btn-md  btn-icon-right btn-block element-no-top element-no-bottom"
-                        target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
-                Facebook<span><i class="fa fa-facebook" data-animation="none"></i></span></a>
-                    <a href="https://plus.google.com/117843373009218782805" class="btn btn-link btn-md btn-block btn-icon-right  element-no-top element-no-bottom"
-                        target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
-                  Google+<span><i class="fa fa-google-plus-square" data-animation="none" ></i></span></a>
-                    <a href="https://www.youtube.com/user/OpenROV" class="btn btn-link btn-md btn-block btn-icon-right  element-no-top element-no-bottom"
-                        target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
-                  YouTube<span><i class="fa fa-youtube" data-animation="none" ></i></span></a>
+                        {{ social.label }}<span ><div class="{{ social.class }}" data-animation="none"></div></span>
+                    </a>{% endfor %}
                 </div>
                 <div class="col-md-2">
                     <h3 class="sidebar-header">Products:</h3>
@@ -46,7 +35,7 @@
                     <ul>
                         <li><a href="{{ site.baseurl }}/about.html">About us</a></li>
                         <li><a href="{{ site.baseurl }}/press">Press</a></li>
-                        <li><a href="{{ site.baseurl }}/gallery">Gallry</a></li>
+                        <li><a href="{{ site.baseurl }}/gallery">Gallery</a></li>
                         <li><a href="{{ site.baseurl }}/tos.html">Terms of Service</a></li>
                         <li><a href="{{ site.baseurl }}/privacy.html">Privacy Policy</a></li>
                     </ul>
