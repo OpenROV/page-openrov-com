@@ -2,10 +2,22 @@
 section#head {
     .flexslider {
 
-        .jumbotron {
+        $height: 600px;
+
+        .background-media {
+            height: $height;
+        }
+
+        li.video {
+            .jumbotron { 
+                background-color: transparent;
+            }
+        }
+
+        .jumbotron {    
             background-size: cover;
             background-position: center;
-            height: 600px;
+            height: $height;
 
             h1 {
                 font-size: 2em;

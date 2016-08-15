@@ -9,23 +9,25 @@
                             data-flex-controlsposition="inside"
                         data-flex-sliderdirection="horizontal" data-flex-controlsvertical="bottom">
                     <ul class="slides">
-                        <li>
-                            <div class="jumbotron  element-no-top element-no-bottom" 
-                                style="background-image: url(assets/openrov/images/hero/trident.jpg)">
-                                {% include home/pre-order-content.html %}
+
+                        <li class=video>
+                            <div class="background-media" data-start="background-position:" data-70-top-bottom="background-position:">
+                                <video style="width: auto; height: 100%;" loop autoplay class="section-background-video" poster="https://s3.amazonaws.com/openrov-com-assets/videos/hilights.png">
+                                    <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tridenthilights.mp4" media="screen and (min-device-width:801px)">
+                                    <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tridenthilights.mob.mp4" media="screen and (max-device-width:800px)">
+                                </video>
                             </div>
-                        </li>
-                        <li>
-                            <div class="jumbotron  element-no-top element-no-bottom" 
-                                style="background-image: url(assets/openrov/images/hero/trident2.jpg)">
-                                {% include home/pre-order-content.html %}
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 ">
+                                        <div class="jumbotron  element-no-top element-no-bottom">
+                                            {% include home/pre-order-content.html %}
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="jumbotron  element-no-top element-no-bottom" 
-                                style="background-image: url(assets/openrov/images/hero/trident3.jpg)">
-                                {% include home/pre-order-content.html %}
-                            </div>
+
                         </li>
                     </ul>
                 </div>
