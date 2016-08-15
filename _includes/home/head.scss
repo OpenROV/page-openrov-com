@@ -11,6 +11,45 @@ section#head {
         li.video {
             .jumbotron { 
                 background-color: transparent;
+                padding-bottom: 0;
+
+                @media #{$mobileMedia} {
+                    .container {
+                        .pre-order-container .pre-order {
+                            position: absolute;
+                            bottom: .5em;
+
+
+                            @media screen and (max-height: #{$heightNexus6P}) {
+                                bottom: 12em;
+                            }
+                            @media screen and (max-height: #{$heightNexus5x-iPhone6P}) {
+                                bottom: 9em;
+                            }
+                            @media screen and (max-height: #{$heightiPhone6}) {
+                                bottom: 5em;
+                            }
+                            @media screen and (max-height: #{$heightNexus5}) {
+                                bottom: 1em;
+                            }
+
+
+                            .btn {
+                                margin-bottom: .2em;
+                            }
+
+                            .price {
+                                padding-bottom: 4em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media #{$mobileMedia} {            
+                .mejs-mediaelement > video {
+                    left: -300px
+                }
             }
         }
 
