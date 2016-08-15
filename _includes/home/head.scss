@@ -1,11 +1,30 @@
 @import "themeDefinitions.scss";
 section#head {
+
+    @mixin header-height() {
+            @media screen and (max-height: #{$heightNexus6P}) { 
+                height: 645px;
+            }
+            @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
+                height: 605px;
+            }
+            @media screen and (max-height: #{$heightiPhone6}) { 
+                height: 535px;
+            }
+
+            @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
+                height: 440px;
+            }            
+    }
+
     .flexslider {
 
         $height: 600px;
 
         .background-media {
             height: $height;
+
+            @include header-height();
         }
 
         li.video {
@@ -63,20 +82,7 @@ section#head {
                 text-shadow: 2px 2px 2px rgba(0,0,0, 0.6);
             }
 
-            @media screen and (max-height: #{$heightNexus6P}) { 
-                height: 645px;
-            }
-            @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
-                height: 605px;
-            }
-            @media screen and (max-height: #{$heightiPhone6}) { 
-                height: 535px;
-            }
-
-            @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
-                height: 440px;
-            }
-
+            @include header-height();
 
             @import "home/pre-order-content.scss";
 
