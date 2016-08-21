@@ -3,4 +3,11 @@ section#tridentFeatures {
         height: 100%!important;
         width: 100%!important;
     }
+
+    .feature-shadow {
+        -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+        background-color: rgba(0, 0, 0, 0.75);
+    }
 }

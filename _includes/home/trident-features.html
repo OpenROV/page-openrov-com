@@ -7,78 +7,25 @@
                         Trident Features
                     </h1>
                 </header>
-                <div class="col-md-3 col-xs-4  text-center">
-                    <div class="chart easyPieChart element-normal-top element-short-bottom os-animation" data-track-color="#ffffff" data-bar-color="#82c9ed"
-                        data-line-width="6" data-percent="76" data-size="200" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                        <span>76</span>
-                        <i class="fa fa-html5"></i>
-                    </div>
-                    <header class="text-center element-short-top element-no-bottom not-condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <h3 class="normal bold bordered bordered-small">
-                            HTML
+
+                {% for item in site.data.home-trident-features %}<div class="col-md-3 col-xs-4 {{item.additional-css}}">
+                    <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
+                        <div class="box box-round box-medium box-simple">
+                            <div class="box-dummy"></div>
+                            <div class="box-inner grid-overlay-0 icon feature-shadow">
+                                <img class="" src="assets/openrov/images/features/{{item.image}}-200x200.jpg" alt="{{item.title}}" />
+                            </div>
+                        </div>
+                        <h3 class="normal bold bordered bordered-small ">
+
+                            {{item.title}}
+
                         </h3>
-                    </header>
-                    <div class="element-no-top element-normal-bottom os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <p>
-                            So seemed it with the Pequod. For next day after encountering the gay Bachelor, whales were seen and four were slain; and
-                            one of them by Ahab.
-                        </p>
+                        <p class="">{{item.text}}</p>
                     </div>
-                </div>
-                <div class="col-md-3 col-xs-4 text-center">
-                    <div class="chart easyPieChart element-normal-top element-short-bottom os-animation" data-track-color="#ffffff" data-bar-color="#82c9ed"
-                        data-line-width="6" data-percent="90" data-size="200" data-os-animation="fadeIn" data-os-animation-delay=".3s">
-                        <span>90</span>
-                        <i class="fa fa-css3"></i>
-                    </div>
-                    <header class="text-center element-short-top element-no-bottom not-condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <h3 class="normal bold bordered bordered-small">
-                            CSS
-                        </h3>
-                    </header>
-                    <div class="element-no-top element-normal-bottom os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <p>
-                            Not seldom in this life, when, on the right side, fortune’s favourites sail close by us, we, though all adroop before catch
-                            somewhat.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-4 text-center">
-                    <div class="chart easyPieChart element-normal-top element-short-bottom os-animation" data-track-color="#ffffff" data-bar-color="#82c9ed"
-                        data-line-width="6" data-percent="10" data-size="200" data-os-animation="fadeIn" data-os-animation-delay=".6s">
-                        <span>10</span>
-                        <i class="fa fa-gamepad"></i>
-                    </div>
-                    <header class="text-center element-short-top element-no-bottom not-condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <h3 class="normal bold bordered bordered-small">
-                            GAMES
-                        </h3>
-                    </header>
-                    <div class="element-no-top element-normal-bottom os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <p>
-                            So seemed it with the Pequod. For next day after encountering the gay Bachelor, whales were seen and four were slain; and
-                            one of them by Ahab.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3  text-center hideOnMobile">
-                    <div class="chart easyPieChart element-normal-top element-short-bottom os-animation" data-track-color="#ffffff" data-bar-color="#82c9ed"
-                        data-line-width="6" data-percent="50" data-size="200" data-os-animation="fadeIn" data-os-animation-delay=".9s">
-                        <span>50</span>
-                        <i class="fa fa-coffee"></i>
-                    </div>
-                    <header class="text-center element-short-top element-no-bottom not-condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <h3 class="normal bold bordered bordered-small">
-                            COFFEE
-                        </h3>
-                    </header>
-                    <div class="element-no-top element-normal-bottom os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-                        <p>
-                            Not seldom in this life, when, on the right side, fortune’s favourites sail close by us, we, though all adroop before catch
-                            somewhat.
-                        </p>
-                    </div>
-                </div>
+                </div>{% endfor %}
+
+
             </div>
         </div>
     </div>
