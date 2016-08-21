@@ -3,87 +3,34 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="portfolio-container element-no-top element-no-bottom">
+
+                   
                     <div class="portfolio masonry " data-padding="2" data-col-xs="2" data-col-sm="2" data-col-md="4" data-col-lg="4" data-layout="fitRows">
                         
-                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="1" data-title="Trident use case boating">
-                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                                <a href="assets/openrov/images/usecases/family_explore_underwater_400x300.jpg" class="figure-image magnific" data-links="" target="_self">
-
-                                    <!--<div class="usecase-boating">
-                                    </div>-->
-
-                                    <img src="assets/openrov/images/usecases/family_explore_underwater_400x300.jpg" alt="Explore the underwater world with your family" class="normalwidth">
-                                    <div class="figure-overlay grid-overlay-20">
+                        {% for item in site.data.home-trident-usecases %}
+                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="{{forloop.index}}" data-title="{{item.title}}">
+                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-sepia fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                <span class="figure-image" target="_self">
+                                    <img src="assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg" alt="{{item.title}}" class="normalwidth">
+                                    <div class="figure-overlay grid-overlay-30">
                                         <div class="figure-overlay-container">
-                                            <span class="figure-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
-                                            </span>
+                                            <div class="figure-caption">
+                                                <a href="assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg" class="magnific" target="_self">
+                                                <h4 title class="title figure-caption-title element-small-bottom bordered bordered-small">
+                                                    {{item.text}}
+                                                </h4>
+                                                <p class="figure-caption-description">
+                                                    <span class="figure-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
+                                                    </span>
+                                                </p>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-
-                                </a>
+                                </span>
                             </div>
-                        </div>
-
-                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="2" data-title="Trident use case boating">
-                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                                <a href="assets/openrov/images/usecases/trident_hull_inspection_400x300.jpg" class="figure-image magnific" data-links="" target="_self">
-
-                                    <!--<div class="usecase-boating">
-                                    </div>-->
-
-                                    <img src="assets/openrov/images/usecases/trident_hull_inspection_400x300.jpg" alt="Inspect boat hulls" class="normalwidth">
-                                    <div class="figure-overlay grid-overlay-20">
-                                        <div class="figure-overlay-container">
-                                            <span class="figure-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="3" data-title="Trident use case boating">
-                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                                <a href="assets/openrov/images/usecases/trident_mini_research_rov_400x300.jpg" class="figure-image magnific" data-links="" target="_self">
-
-                                    <!--<div class="usecase-boating">
-                                    </div>-->
-
-                                    <img src="assets/openrov/images/usecases/trident_mini_research_rov_400x300.jpg" alt="Low cost research ROV" class="normalwidth">
-                                    <div class="figure-overlay grid-overlay-20">
-                                        <div class="figure-overlay-container">
-                                            <span class="figure-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="4" data-title="Trident use case boating">
-                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-grayscale fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                                <a href="assets/openrov/images/usecases/trident_scuba_drone_400x300.jpg" class="figure-image magnific" data-links="" target="_self">
-
-                                    <!--<div class="usecase-boating">
-                                    </div>-->
-
-                                    <img src="assets/openrov/images/usecases/trident_scuba_drone_400x300.jpg" alt="A drone for SCUBA divers" class="normalwidth">
-                                    <div class="figure-overlay grid-overlay-20">
-                                        <div class="figure-overlay-container">
-                                            <span class="figure-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                </a>
-                            </div>
-                        </div>
+                        </div>{% endfor %}
 
                     </div>
                 </div>

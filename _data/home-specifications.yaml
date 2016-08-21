@@ -1,0 +1,19 @@
+- header: Go to 100m
+  image: assets/openrov/images/specs/depth-black.png
+  text: Go deep! Trident dives comfortably to 100m, far deeper than recreational diving.
+  additional-css:
+
+- header: 4 Hours battery life
+  image: assets/openrov/images/specs/battery-black.png
+  text: Onboard rechargeable lithium batteries give you 4 hours of power to explore underwater.
+  additional-css:
+
+- header: Full HD Camera
+  image: assets/openrov/images/specs/camera-black.png
+  text: The underwater-optimized full HD camera offers low latency, high quality video streaming and recording.
+  additional-css:
+
+- header: Wifi Buoy
+  image: assets/openrov/images/specs/wifi-buoy-black.png
+  text: Trident uses a neutrally buoyant tether to communicate to a towable WiFi buoy allowing for unprecedented freedom of movement.
+  additional-css: hideOnMobile

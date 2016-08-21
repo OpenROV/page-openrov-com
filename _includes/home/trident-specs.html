@@ -8,74 +8,23 @@
                     </h1>
                 </header>
                 <div class="row " data-os-animation="" data-os-animation-delay="">
-                    <div class="col-md-3 col-xs-4">
+                    {% for item in site.data.home-specifications %}<div class="col-md-3 col-xs-4 {{item.additional-css}}">
                         <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
                             <div class="box box-round box-medium box-simple">
                                 <div class="box-dummy"></div>
                                 <div class="box-inner grid-overlay-0 icon">
-                                    <img class="" src="assets/openrov/images/specs/depth.png" alt="Go to 100 m" />
+                                    <img class="" src="{{item.image}}" alt="{{item.header}}" />
                                 </div>
                             </div>
                             <h3 class="normal bold bordered bordered-small ">
 
-                                Go to 100m
+                                {{item.header}}
 
                             </h3>
-                            <p class="">Create stunning pages which look great on <strong>any device</strong>. Clean HTML5 and CSS, beautifully
-                                coded to make modifications easy!</p>
+                            <p class="">{{item.text}}</p>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-xs-4">
-                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".3s">
-                            <div class="box box-round box-medium box-simple">
-                                <div class="box-dummy"></div>
-                                <div class="box-inner grid-overlay-0 icon">
-                                    <img class="" src="assets/openrov/images/specs/battery.png" alt="4 hours battery life" />
-                                </div>
-                            </div>
-                            <h3 class="normal bold bordered bordered-small ">
-
-                                4 Hours battery life
-
-                            </h3>
-                            <p class="">Omega is the Most <strong>Flexible</strong> template We Have Ever Made! You can use it to make
-                                any kind of web site. Try it today, you wont be disappointed</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-4">
-                        <div class="element-medium-top element-medium-bottom text-center os-animation " data-os-animation="fadeInUp" data-os-animation-delay=".6s">
-                            <div class="box box-round box-medium box-simple">
-                                <div class="box-dummy"></div>
-                                <div class="box-inner grid-overlay-0 icon">
-                                    <img class="" src="assets/openrov/images/specs/camera.png" alt="HD Camera" />
-                                </div>
-                            </div>
-                            <h3 class="normal bold bordered bordered-small ">
-
-                                HD Camera
-
-                            </h3>
-                            <p class="">With Omega you get a <strong>five star</strong> customer support. As with all our themes you
-                                will receive our 100% rock solid support and free updates.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 hideOnMobile">
-                        <div class="element-medium-top element-medium-bottom text-center os-animation " data-os-animation="fadeInUp" data-os-animation-delay=".9s">
-                            <div class="box box-round box-medium box-simple">
-                                <div class="box-dummy"></div>
-                                <div class="box-inner grid-overlay-0 icon">
-                                    <img class="" src="assets/openrov/images/specs/wifi_buoy.png" alt="Wifi surface buoy" />
-                                </div>
-                            </div>
-                            <h3 class="normal bold bordered bordered-small ">
-
-                                Wifi Buoy
-
-                            </h3>
-                            <p class="">Omega is ultra flexible and lets you create <strong>stunning</strong> pages easily for any kind
-                                of site out of the box. Get started now.</p>
-                        </div>
-                    </div>
+                    </div>{% endfor %}
+                    
                 </div>
             </div>
         </div>

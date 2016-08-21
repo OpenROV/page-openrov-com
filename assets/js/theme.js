@@ -866,8 +866,14 @@ jQuery(document).ready(function( $ ) {
     $('.magnific').magnificPopup({
         type:'image',
         removalDelay: 300,
-        mainClass: 'mfp-fade'
+        mainClass: 'mfp-fade',
+        image: {
+            titleSrc: item => {
+                return item.el.find('.figure-caption-title').text();
+            }
+        }
     });
+ 
 
     // Magnific Video Popup
     // ======================

@@ -4,4 +4,11 @@ section#usecases {
         height: 600px;
         background-color: blue;
     }
+
+    .figure-image {
+        .figure-caption .figure-icon {
+            position: relative;
+            top: 1.8em;            
+        }
+    }
 }
