@@ -2,5 +2,47 @@
 ---
 section#support {
 
-    
+    .panel {
+        height: 300px;
+        overflow: hidden;
+
+        .panel-body {
+            height: 100%;
+
+            div {
+                height: 100%;
+            }
+
+            &.image {
+                padding:0;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .white {
+        color: white;
+    }
+
+    .zendesk {
+        height: 50%!important;
+    }
+   
+   .orov-overlay .hilight {
+       color: black;
+       background-color: white;
+       padding: 5px 10px;
+       width: auto;
+       display: inline-block;
+   }
+
+   .orov-overlay:hover .hilight {
+       border: 2px solid white;
+       background-color: transparent;
+       color: white;
+   }
 }
