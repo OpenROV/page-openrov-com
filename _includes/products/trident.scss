@@ -38,6 +38,10 @@ section#trident {
             max-height: 1em;
             margin: 0 0 0 !important
         }
+
+        footer:before {
+            color: white;
+        }
     }
 
 }
