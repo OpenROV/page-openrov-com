@@ -1,5 +1,33 @@
 ---
 ---
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.image-overlay-text {
+  h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+
+  &.right {
+    text-align: right!important;
+    margin-right: 2em;
+  }
+
+  &.black {
+    h1 { color: black; }
+  }
+
+  &.no-shadow {
+    h1 { 
+      text-shadow: initial;
+    }
+  }
+}
+
 .orov-overlay {
     position: absolute;
     top: 0;

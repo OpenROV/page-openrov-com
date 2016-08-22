@@ -6,5 +6,14 @@ section#promotions {
         h1 { 
             margin-top: 1.5em;
         }
+
+        &.image {
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        &.right.black.no-shadow {
+            h1 { margin-top: .2em; }
+        }
     }
 }
