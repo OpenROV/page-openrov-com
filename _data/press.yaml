@@ -25,7 +25,7 @@
 
             The OpenROV project's focus is affordability and accessibility,
             allowing exploration to be available for those who do not have big budgets.
-  logo: bbc.png
+  logo: bbc_logo.png
 
 - outlet: TED
   date: October 19, 2015 
