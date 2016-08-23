@@ -23,10 +23,16 @@ section#community {
             }
         }
         .panel {
+            // height: 250px;
+
+            h1 {
+                font-size: 1.8em;
+                @media (max-width: 767px) { font-size: 1.5em; }
+            }
             .box-rect {
                 margin-bottom: 0;
             }
-            
+
             .box-round.image img {
                 height: 100%;
                 object-fit: cover;
@@ -62,6 +68,7 @@ section#community-forums {
 
     img.forums {
         height: 6em;
+        @media (max-width: 767px) { height: 4.5em; }
         padding-top: .5em;
         padding-bottom: .5em;
     }
