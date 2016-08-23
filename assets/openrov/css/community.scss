@@ -15,6 +15,44 @@ section#community {
             }
         }
     }
+
+    a.pannel-link {
+        &:hover {
+            .panel {
+                background-color: #999696;
+            }
+        }
+        .panel {
+            .box-rect {
+                margin-bottom: 0;
+            }
+            
+            .box-round.image img {
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .image {
+                width: 320px;
+                height: 100px;
+            
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: scale-down;
+
+                    &.picture {
+                        object-fit: cover;
+                    }
+                }
+            
+            }
+
+            .box-inner {
+                background-color: transparent;
+            }        
+        }
+    }
 }
 
 section#community-forums {

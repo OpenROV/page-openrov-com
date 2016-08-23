@@ -2,14 +2,48 @@
 title: Community | OpenROV | Underwater Exploration Robots
 layout: default
 page_css: /assets/openrov/css/community.css
+items: 
+    - title: Access the OpenROV GitHub
+      image: github-logo.png
+      isPicture: false
+      link: https://github.com/OpenROV/
+      animation: fadeInLeft
+         
+    - title: Hack / Mod Your OpenROV
+      image: openrov-hack-mod-400x300.jpg
+      isPicture: true
+      link: #
+      animation: fadeInUp
+         
+    - title: Chat with Developers on Gitter
+      image: gitter-logo.png
+      isPicture: false
+      link: https://gitter.im/OpenROV
+      animation: fadeInRight
+         
+    - title: Jump to OpenROV Hardware
+      image: open-source-underwater-drone-400x300.jpg
+      isPicture: true
+      link: https://github.com/OpenROV/openrov-hardware
+      animation: fadeInUp
+
+    - title: Jump to OpenROV Software
+      image: openrov-software-400x300.jpg
+      isPicture: true
+      link: https://github.com/OpenROV/openrov-software
+      animation: fadeInBottom
+
+    - title: Jump to OpenROV Electronics
+      image: openrov-electronics-400x300.jpg
+      isPicture: true
+      link: https://github.com/OpenROV/openrov-electronics
+      animation: fadeInBottom
+                 
 ---
 {% include community/head.html %}
 
 
-
-
-
-<section id="community" class="section swatch-white">
+<!--<section id="community" class="section swatch-white">
     <div class="container">
         <div class="row">
             <div class="col-md-12 element-medium-top  text-center">
@@ -17,7 +51,7 @@ page_css: /assets/openrov/css/community.css
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <a href="http://forum.openrov.com/" class="" 
     target="_self" data-os-animation="none"
     data-os-animation-delay="0s ">
@@ -39,118 +73,38 @@ page_css: /assets/openrov/css/community.css
 </section>
 </a>
 
-<section id="community" class="section swatch-white">
+<section id="community" class="section swatch-gray">
     <div class="container">
         <div class="row" id="developers"><!-- ID used for link -->
             <div class="col-md-12 element-medium-top">  
-                <h1 class="hairline bordered">Developers</h1>
+                <h1 class="hairline bordered">OpenROV Builder’s Resources</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 element-no-top element-tall-bottom">
                 <div class="row ">
 
+                    {% for item in page.items %}
                     <div class="col-md-4 col-xs-12">
-                        <div class="panel panel-primary  element-short-top element-no-bottom os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">
-                            <div class="panel-heading">
-                                <h3 class="panel-title text-center">
-                                    Github
-                                </h3>
-                            </div>
+                        <a href="{{item.link}}" class="pannel-link">
+                        <div class="panel element-short-top element-no-bottom os-animation" data-os-animation="{{item.animation}}" data-os-animation-delay="0s">
                             <div class="panel-body">
                                 <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque perspiciatis vero placeat, harum hic. Blanditiis exercitationem similique debitis vero velit pariatur error, temporibus repellendus a voluptatem obcaecati perferendis possimus soluta.
-                                    </p>
+                                    <div class="text-center">
+                                        <h1>{{item.title}}</h1>
+                                    </div>
+                                    <div class="element-short-top box-rect image">
+                                        <div class="box-dummy"></div>
+                                        <span class="box-inner">
+                                            <img {% if item.isPicture %}class="picture"{% endif %} src="{{site.baseurl}}/assets/openrov/images/community/logos/{{item.image}}">
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        </a>
                     </div>
-
-                    <div class="col-md-4 col-xs-12">
-                        <div class="panel panel-warning  element-short-top element-no-bottom os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.3s">
-                            <div class="panel-heading">
-                                <h3 class="panel-title text-center">
-                                    Community Hacks
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae voluptates cupiditate earum hic maiores assumenda porro a labore magnam, eos, reiciendis ut eum saepe, placeat quasi facere ab, perferendis a voluptatem obcaecati.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-12">
-                        <div class="panel panel-info  element-short-top element-no-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.6s">
-                            <div class="panel-heading">
-                                <h3 class="panel-title text-center">
-                                    Chat on Gitter
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laboriosam ut consequatur ipsa animi voluptatum vero, culpa. Provident hic nisi expedita doloremque distinctio soluta iusto repudiandae eum reiciendis. Ad, veritatis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-12">
-                        <div class="panel panel-success  element-short-top element-no-bottom os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.6s">
-                            <div class="panel-heading">
-                                <h3 class="panel-title text-center">
-                                    Software
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laboriosam ut consequatur ipsa animi voluptatum vero, culpa. Provident hic nisi expedita doloremque distinctio soluta iusto repudiandae eum reiciendis. Ad, veritatis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-12">
-                        <div class="panel panel-success  element-short-top element-no-bottom os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.6s">
-                            <div class="panel-heading">
-                                <h3 class="panel-title text-center">
-                                    Hardware
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laboriosam ut consequatur ipsa animi voluptatum vero, culpa. Provident hic nisi expedita doloremque distinctio soluta iusto repudiandae eum reiciendis. Ad, veritatis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-12">
-                        <div class="panel panel-success  element-short-top element-no-bottom os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.6s">
-                            <div class="panel-heading">
-                                <h3 class="panel-title text-center">
-                                    Electronics
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laboriosam ut consequatur ipsa animi voluptatum vero, culpa. Provident hic nisi expedita doloremque distinctio soluta iusto repudiandae eum reiciendis. Ad, veritatis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {%endfor %}
 
                 </div>
             </div>
