@@ -5,3 +5,5 @@ baseurl: /page-openrov-com
 
 sass:
   sass_dir: _includes
+
+array: []
