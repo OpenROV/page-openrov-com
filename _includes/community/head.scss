@@ -1,0 +1,13 @@
+section#community-gallery {
+    .jumbotron {
+        height: 500px;
+        text-align: center;
+
+        &.image {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50% 50%;
+            background-color: white;
+        }        
+    }
+}

@@ -15,5 +15,19 @@ section#community {
             }
         }
     }
-    
 }
+
+section#community-forums {
+    &:hover {
+        background-color: #3782A9;
+    }    
+
+    img.forums {
+        height: 6em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+}
+
+@import 'community/head.scss'
