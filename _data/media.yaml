@@ -2,9 +2,9 @@
   logo: nyt_logo.png
   url: http://www.nytimes.com/2016/06/27/technology/a-drone-start-up-explores-underwater.html?_r=0
 
-- outlet: Wired
-  logo: wired_logo.png
-  url: http://www.wired.com/2014/11/citizen-explorers-meet-new-submersible/
+- outlet: BBC
+  logo: bbc_logo.png
+  url: http://www.bbc.com/news/technology-36834761
 
 - outlet: Popular Science
   logo: popsci_logo.png
