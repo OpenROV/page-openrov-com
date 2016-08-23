@@ -165,3 +165,45 @@ nav.main-navbar ul.dropdown-menu.first {
   left:auto!important;
   right:auto!important;
 }
+
+.flexslider {
+    .flex-direction-nav a {
+      margin-top: -1.5em;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;      
+    }
+    .flex-direction-nav {
+      a:before {
+        font-size: 2em;
+        font-weight: 600;
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.9);
+      } 
+      .flex-prev {
+        text-shadow: 3px 0 1px rgba(255, 255, 255, 1);
+        left: -50px;
+      }
+      .flex-next {
+        text-shadow: -3px 0 1px rgba(255, 255, 255, 1);
+        right: -50px;
+        text-align: right;
+      }
+    }
+
+
+  &:hover .flex-direction-nav {
+      .flex-prev {
+          opacity: 0.7;
+          left: 10px;
+      }
+
+      .flex-next {
+        opacity: 0.7;
+        right: 10px;
+      }
+  }
+
+}
