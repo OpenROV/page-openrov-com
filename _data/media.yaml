@@ -1,0 +1,25 @@
+- outlet: New York Times
+  logo: nyt_logo.png
+  url: http://www.nytimes.com/2016/06/27/technology/a-drone-start-up-explores-underwater.html?_r=0
+
+- outlet: Wired
+  logo: wired_logo.png
+  url: http://www.wired.com/2014/11/citizen-explorers-meet-new-submersible/
+
+- outlet: Popular Science
+  logo: popsci_logo.png
+  url: http://www.popsci.com/drone-for-everyday-cousteau
+
+- outlet: Tech Crunch
+  logo: tech_crunch_logo.png
+  url: https://techcrunch.com/2015/10/29/underwater-drone-startup-openrov-launches-a-super-fast-exploration-robot/
+
+- outlet: Gizmodo
+  logo: gizmodo_logo.png
+  url: http://gizmodo.com/new-ultrafast-swimming-drones-are-tiny-ocean-explorers-1735342168
+  hideOnMobile: true
+
+- outlet: TED
+  logo: ted_logo.png
+  url: http://ideas.ted.com/how-to-investigate-the-bottom-of-the-ocean-without-getting-wet-2/
+  hideOnMobile: true
