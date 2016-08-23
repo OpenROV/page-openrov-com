@@ -28,19 +28,32 @@ section#trident {
         height: 100%;
     }
 
-    blockquote.quote {
-        p {
-            font-size: 2em;
-            color: white!important;
-            font-style: italic;
-        }
-        footer img {
-            max-height: 1em;
-            margin: 0 0 0 !important
-        }
+    blockquote{
+        &.quote {
+            p {
+                font-size: 2em;
+                color: white!important;
+                font-style: italic;
 
-        footer:before {
-            color: white;
+                &:before { 
+                    content: "\201C"
+                }
+                &:after { 
+                    content: "\201E"
+                }
+                
+            }
+            footer img {
+                max-height: 1em;
+                margin: 0 0 0 !important
+            }
+
+            footer:before {
+                color: white;
+            }
+        }
+        &:before {
+            display: none;
         }
     }
 
