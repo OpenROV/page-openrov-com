@@ -15,85 +15,25 @@ page_css: /assets/openrov/css/press.css
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="list-container row element-short-top element-normal-bottom">
-                    <div class="col-md-6 element-short-bottom os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                    
+                    {% for item in site.data.press %}<div class="col-md-6 element-short-bottom os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
                         <blockquote class="blockquote-list">
                             <div class="image-container">
                                 <div class="image">
-                                    <img class="" src="{{ file.path | prepend: site.baseurl }}/assets/openrov/images/media/nyt.png" alt="The New York Times" />
+                                    <img class="" src="{{ file.path | prepend: site.baseurl }}/assets/openrov/images/media/{{item.logo}}" alt="{{item.outlet}}" />
                                 </div>
                             </div>
+                            {% if item.title %}<p class="bold">{{item.title}}</p>{% endif %}
                             <p>
-                                OpenROV has sold more than 3,000 of a first-generation submarine, which is able to navigate below the surface, 
-                                connected by a thin cable and controlled by software running on a tablet or smartphone. The new Trident, which 
-                                will go on sale this fall for $1,499, will travel at speeds of almost four knots underwater and will have a 
-                                high-resolution camera and a lighting system as bright as car headlights. It will operate from a wirelessly connected buoy.
+                                {{item.quote}}
                             </p>
                             <footer>
-                                <a href="http://www.nytimes.com/2016/06/27/technology/a-drone-start-up-explores-underwater.html?_r=1"
-                                    target="_blank">The New York Times, July 27, 2016</a>
+                                <a href="{{item.url}}"
+                                    target="_blank">{{item.outlet}}, {{item.date}}</a>
                             </footer>
                         </blockquote>
-                    </div>
-                    <div class="col-md-6 element-short-bottom os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                        <blockquote class="blockquote-list">
-                            <div class="image-container">
-                                <div class="image">
-                                    <img class="" src="{{ file.path | prepend: site.baseurl }}/assets/openrov/images/media/wired.png" alt="Wired" />
-                                </div>
-                            </div>
-                            <p>
-                                UNDERWATER EXPLORATION HAS traditionally been an exclusive endeavor, 
-                                accessible only to deep-pocketed adventurers or researchers backed by government 
-                                scientific agencies. But with the recent rise of citizen science and low-cost, open-source tools,
-                                the boundaries to underwater exploration are rapidly being degraded. OpenROV has been leading the 
-                                charge since 2012, offering low-cost (sub-$1000) submersibles [...].
-                            </p>
-                            <footer>
-                                <a href="http://www.wired.com/2014/11/citizen-explorers-meet-new-submersible/" targe=_blank>
-                                    Wired, November 24, 2014
-                                </a>
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="col-md-6 element-short-bottom os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                        <blockquote class="blockquote-list">
-                            <div class="image-container">
-                                <div class="image">
-                                    <img class="" src="{{ file.path | prepend: site.baseurl }}/assets/openrov/images/media/bbc.png" alt="BBC" />
-                                </div>
-                            </div>
-                            <p>
-                                A low-cost underwater drone has provided one of the closest 
-                                looks at the SS Tahoe shipwreck for more than 70 years.
-                            </p>
-                            <p>The OpenROV project's focus is affordability and accessibility,
-                                 allowing exploration to be available for those who do not have big budgets.
-                            </p>
-                            <footer>
-                                <a href="http://www.bbc.com/news/technology-36834001" targe=_blank>
-                                    BBC, July 19, 2016
-                                </a>
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="col-md-6 element-short-bottom os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                        <blockquote class="blockquote-list">
-                            <div class="image-container">
-                                <div class="image">
-                                    <img class="" src="{{ file.path | prepend: site.baseurl }}/assets/openrov/images/media/ted.png" alt="TED" />
-                                </div>
-                            </div>
-                            <p>David Lang is a maker who taught himself to become an amateur oceanographer — or,
-                                he taught a robot to be one for him. In a charming talk Lang, a TED Fellow, shows 
-                                how he and a network of ocean lovers teamed up to build open-sourced, low-cost underwater explorers.
-                            </p>
-                            <footer>
-                                <a href="https://www.ted.com/talks/david_lang_my_underwater_robot" targe=_blank>
-                                    TED, February, 2013
-                                </a>
-                            </footer>
-                        </blockquote>
-                    </div>
+                    </div>{% endfor %}
+
                 </div>
             </div>
         </div>
