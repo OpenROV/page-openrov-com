@@ -6,7 +6,7 @@
                     <div class="logos">
                         {% for item in site.data.media %}
                         <a href="{{item.url}}" target="_blank" class="{% if item.hideOnMobile %}hideOnMobile{% endif %}">
-                            <img src="assets/openrov/images/media/{{item.logo}}" alt="{{item.outlet}}">
+                            <img src="{{site.baseurl}}/assets/openrov/images/media/{{item.logo}}" alt="{{item.outlet}}">
                         </a>{% endfor %}
                     </div>
                 </header>
