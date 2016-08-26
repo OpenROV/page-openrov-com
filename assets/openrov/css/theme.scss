@@ -223,3 +223,19 @@ nav.main-navbar ul.dropdown-menu.first {
     height: 100%;
   }
 }
+
+
+a.btn-learn-more {
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  
+  &.white {
+    color: white;
+    border-color: white;
+    &:hover {
+      color: black;
+      background-color: white;
+    }
+  }
+}
