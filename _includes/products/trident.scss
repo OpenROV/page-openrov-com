@@ -33,15 +33,7 @@ section#trident {
             p {
                 font-size: 2em;
                 color: white!important;
-                font-style: italic;
-
-                &:before { 
-                    content: "\201C"
-                }
-                &:after { 
-                    content: "\201E"
-                }
-                
+                font-style: italic;                
             }
             footer img {
                 max-height: 1em;

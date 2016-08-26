@@ -249,4 +249,26 @@ nav.main-navbar ul.dropdown-menu.first {
       background-color: transparent!important;
     }
   }
+ 
 }
+
+
+
+  blockquote{
+      &.quote {
+          p {
+              font-style: italic;
+
+              &:before { 
+                  content: "\201C"
+              }
+              &:after { 
+                  content: "\201E"
+              }
+              
+          }
+      }
+      &:before {
+          display: none;
+      }
+  }

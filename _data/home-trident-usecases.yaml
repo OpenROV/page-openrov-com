@@ -1,15 +1,19 @@
 - title: Boating
   text: Learn why Trident is the perfect boat accessory.
   image-base: trident-hull-inspection
+  url: products/trident/#boating
 
 - title: SCUBA
   text: See how to dive smarter with your personal underwater drone.
   image-base: trident-scuba-drone
+  url: products/trident/#uc-diving
 
 - title: Family exploration
   text: Get inspired to explore new worlds.
   image-base: family-explore-underwater
+  url: products/trident/#explore
 
 - title: Research
   text: Create new opportunities in marine science and exploration.
   image-base: trident-mini-research-rov
+  url: products/trident/#research
