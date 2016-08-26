@@ -228,25 +228,25 @@ nav.main-navbar ul.dropdown-menu.first {
 .btn-learn-more {
   border-width: 1px;
   border-style: solid;
-  background-color: transparent;
 
   &.white {
-    color: white;
+    color: white!important;
     border-color: white;
+    background: transparent!important;
     &:hover {
-      color: black;
-      background-color: white;
+      color: black!important;
+      background-color: white!important;
     }
   }
 
   &.white.invert {
-    color: black;
-    border-color: white;
-    background-color: white;
+    color: black!important;
+    border-color: white!important;
+    background-color: white!important;
 
     &:hover {
-      color: white;
-      background-color: transparent;
+      color: white!important;
+      background-color: transparent!important;
     }
   }
 }
