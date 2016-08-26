@@ -229,13 +229,24 @@ nav.main-navbar ul.dropdown-menu.first {
   border-width: 1px;
   border-style: solid;
   background-color: transparent;
-  
+
   &.white {
     color: white;
     border-color: white;
     &:hover {
       color: black;
       background-color: white;
+    }
+  }
+
+  &.white.invert {
+    color: black;
+    border-color: white;
+    background-color: white;
+
+    &:hover {
+      color: white;
+      background-color: transparent;
     }
   }
 }
