@@ -2,12 +2,50 @@
 title: Products | OpenROV | Underwater Exploration Robots
 layout: default
 page_css: /assets/openrov/css/product.css
+page_script: /assets/openrov/js/product.js
 ---
 <article>
 
+    <div class="section element-no-top element-no-bottom pre-order-banner" id='pre-order-banner'>
+
+        <section class="section swatch-blue section-text-shadow section-inner-shadow">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 ">
+                        <header class="text-center  element-short-top element-short-bottom not-condensed" data-os-animation="none" data-os-animation-delay="0s">
+                            <h1 class="big light bordered-normal">
+                                Pre-order Trident now
+                            </h1>
+                        </header>
+                    </div>
+                    <div class="col-md-2 ">
+                        <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="btn btn-primary btn-lg element-short-top element-short-bottom  " 
+                            target="_self" data-os-animation="none"
+                            data-os-animation-delay="0s ">
+                            <span><i class="fa fa-shopping-cart" data-animation="none"></i></span>&nbsp;
+                            Pre order
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
     {% include products/promotions.html %}
-    {% include products/trident.html %}
-    {% include products/rov28.html %}
+
+    <section class="section swatch-white">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6" id="trident">
+                {% include products/trident.html %}
+            </div>
+            <div class="col-md-6" id="rov28">
+                {% include products/rov28.html %}
+            </div>
+        </div>
+    </div>
+    
     {% include products/components.html %}
 
 </article>
