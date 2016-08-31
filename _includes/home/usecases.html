@@ -7,6 +7,7 @@
                     <div class="portfolio masonry " data-padding="2" data-col-xs="2" data-col-sm="2" data-col-md="4" data-col-lg="4" data-layout="fitRows">
                         
                         {% for item in site.data.home-trident-usecases %}
+
                         <div class="masonry-item portfolio-item isotope-item" data-menu-order="{{forloop.index}}" data-title="{{item.title}}">
                             <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-sepia fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
                                 <span class="figure-image" target="_self">
@@ -14,7 +15,7 @@
                                     <div class="figure-overlay grid-overlay-30">
                                         <div class="figure-overlay-container">
                                             <div class="figure-caption">
-                                                <a href="{{item.url}}" class="" target="_self">
+                                                <a href="#" class="" data-toggle="modal" data-target="#modal-{{forloop.index}}">
                                                 <h4 title class="title figure-caption-title element-small-bottom ">
                                                     {{item.text}}
                                                 </h4>
@@ -38,3 +39,22 @@
         </div>
     </div>
 </section>
+
+{% for item in site.data.home-trident-usecases %}
+<div class="modal fade" id="modal-{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document"  >
+        <div class="modal-content">
+            <div class="modal-body" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg)">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="v-container gradient">
+                    <div class="v-box">
+                        <h1>{{item.title}}</h1>
+                        {{item.text}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

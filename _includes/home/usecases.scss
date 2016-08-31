@@ -12,3 +12,66 @@ section#usecases {
         }
     }
 }
+
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 600px;
+  height: 400px;
+
+  .modal-body {
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 600px;
+      height: 400px;
+      text-align: left;
+
+      .v-container {
+        text-align: left;
+      }
+  }
+
+  .close {
+    color: white!important;
+    opacity: 0.8;
+    font-size: 2em;
+    z-index: 1060;
+    position: relative;
+  }
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    $color: #3782A9;
+    background: $color; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, $color , transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $color, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $color, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $color , transparent); /* Standard syntax */
+
+    .v-box {
+      margin-left: 20px;
+      color: white;
+      z-index: 1050;
+    }
+  }
+}
