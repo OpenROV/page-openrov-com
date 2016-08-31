@@ -7,3 +7,6 @@ sass:
   sass_dir: _includes
 
 array: []
+
+gems:
+  - jekyll-sitemap

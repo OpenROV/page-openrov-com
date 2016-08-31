@@ -107,25 +107,44 @@ img.invert {
 //     background-color: rgba(12, 47, 62, 1) !important;
 // }
 
-.link-partners i.fa {
-    font-size: 20px;
-}
-.link-partners .btn-block {
-    width: 70%;
-    margin-bottom: 10px!important;
+$socialIconColor: white;
+$socialIconColorHover: grey;
+
+.link-partners {
+  line-height:  50px;
+  .fa {
+      font-size: 40px;
+  }
+  .social {
+    a { 
+      display: block;
+      float: left;
+      margin-right: 10px; 
+      color: $socialIconColor;
+
+      &:hover {
+        color: $socialIconColorHover
+      }
+    }
+    span { display: inline-block; }
+  }
+  
 }
 
 .oe {
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/oe_white.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
+    width: 1em;
+    height: 1em;
+    // background-image: url('../images/oe-logo.svg');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: 80%;
 
+    #background {
+      fill: $socialIconColor!important;
+    }
 }
-a:hover .oe {
-    background-image: url('../images/oe_dark.png');
+a:hover .oe #background {
+  fill: $socialIconColorHover!important;
 }
 
 footer#footer {
@@ -271,4 +290,9 @@ nav.main-navbar ul.dropdown-menu.first {
       &:before {
           display: none;
       }
+  }
+
+
+  footer .section.swatch-blue {
+    background-color: #224151;
   }

@@ -1,13 +1,26 @@
 <footer id="footer" role="contentinfo">
-    <section class="section swatch-black">
+    <section class="section swatch-blue">
         <div class="container">
             <div class="row element-normal-top element-short-bottom">
                 <div class="col-md-3 link-partners">
                     <h3 class="sidebar-header">Find us here:</h3>
-                    {% for social in site.data.social %}<a href="{{social.link}}" class="btn btn-link btn-md  btn-icon-right btn-block  element-no-top element-no-bottom"
-                        target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
-                        {{ social.label }}<span ><div class="{{ social.class }}" data-animation="none"></div></span>
-                    </a>{% endfor %}
+
+                    <div class="social">
+
+                        <a href="{{social.link}}" class=""
+                            target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+                            <span ><div class="fa oe" data-animation="none">
+                                {% include oe-logo.svg  %}
+                                    </div></span>
+                        </a>
+
+                        {% for social in site.data.social %}<a href="{{social.link}}" class=""
+                            target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+                            <span ><div class="{{ social.class }}" data-animation="none"></div></span>
+                        </a>{% endfor %}
+
+
+                    </div>
                 </div>
                 <div class="col-md-2">
                     <h3 class="sidebar-header">Products:</h3>
@@ -39,11 +52,6 @@
                         <li><a href="{{ site.baseurl }}/tos.html">Terms of Service</a></li>
                         <li><a href="{{ site.baseurl }}/privacy.html">Privacy Policy</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="row element-no-top element-short-bottom">
-                <div class="col-md-2 pull-right">
-                    <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"></a>
                 </div>
             </div>
         </div>

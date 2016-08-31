@@ -1,7 +1,7 @@
 
-- label: OpenExplorer
-  link: http://www.openexplorer.com
-  class: oe
+# - label: OpenExplorer
+#   link: http://www.openexplorer.com
+#   class: fa oe
 
 - label: Twitter
   link: https://twitter.com/OpenROV
