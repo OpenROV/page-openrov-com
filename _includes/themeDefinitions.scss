@@ -12,3 +12,22 @@ $heightNexus6P: 773px;
 $tabletMedia: 'screen and (max-width: #{$tabletWidth})';
 $mobileMedia: 'screen and (max-width: #{$mobileWidth})';
 $smallMedia: 'screen and (max-width: #{$smallWidth})';
+
+
+@mixin header-height() {
+        @media screen and (max-height: #{$heightNexus6P}) { 
+            height: 645px;
+        }
+        @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
+            height: 605px;
+        }
+        @media screen and (max-height: #{$heightiPhone6}) { 
+            height: 535px;
+        }
+
+        @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
+            height: 440px;
+        }            
+}
+
+$height: 600px;

@@ -1,94 +1,65 @@
 @import "themeDefinitions.scss";
-.container {
-    display: block;
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
+    
+    .hero {    
+        background-size: cover;
+        background-position: center;
+        height: $height;
+        color: white;
 
-    @media #{$mobileMedia} {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-    }
+        text-align: left;
 
-    .ships-in-november {
-        margin-top: 4em;
+        div.full-height {
+            height: 100%;
+        }
+
+        h1 {
+            text-align: left;
+            color: white;
+            font-weight: 300;
+            font-size: 80px;
+            line-height: 0.65;
+
+        }
         h2 {
-            color: black;
-            background-color: rgba(255, 255, 255, 0.9);
-            display: inline-block;
-            padding: 0.5em;
+            text-align: left;
+            color: white;
+            font-size: 20px;
+        }
+        .description {
+            text-align: left;
+            color: white;
+            font-weight: 400;
+            font-size: 20px;
         }
 
-        @media #{$mobileMedia} {
-            margin-top: 1em;
-
-            h2 {
-                font-size: 1.2m;
-                padding: .8em;
-                line-height: 1em;
-            }
-        }
-
-        @media #{$mobileMedia} { 
-            width: 100%;
+        .shipping {
+            object-fit: contain;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 1.33;
+            letter-spacing: 0.8px;
             text-align: center;
+            margin-bottom: 10px;
         }
-    }
 
-    .pre-order-container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        display: flex;
-        // justify-content: center; /* align horizontal */
-        align-items: center;  /* align vertical */
-        text-align: center;
+        .btn-primary {
+            width: 240px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 6px;
+            background-image: radial-gradient(circle at 52% 50%, #fef838, #FFB339);
 
-        .pre-order {
-            width: 70%;
-            margin: auto;  
-
-            @media #{$mobileMedia} {
-                width: 100%;
-                padding-top: 4em;
-            }
-
-
-            .price {
-                width: 50%;
-                float: left;
-                h1 {
-                    color: white;
-                }
-                h2 {
-                    color: #848484;
-                }
-
-                @media #{$mobileMedia} {
-                    width: 100%;
-                    h1 {
-                        font-size: 1.5em;
-                    }
-                }
-
-            }
-            .buttons {
-                margin-top: 0.4em;
-                float: right;
-                text-align: center;
-                
-                .btn {
-                    margin-bottom: 1em;
-                }
-
-                @media #{$mobileMedia} {
-                    width: 100%;
-                    margin-top: 3em;
-                }
-
-            }
+            font-size: 25px;
+            line-height: 80px;
+            text-align: center;
+            color: #11244f;               
+            padding: 0;
         }
+
+        .v-box {
+            margin-top: -100px;
+        }
+
+        @include header-height();
+
     }
-}

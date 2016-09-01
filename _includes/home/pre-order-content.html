@@ -1,17 +1,40 @@
-<div class="container">
-    <div class="ships-in-november">
-        <h2>Ships in November</h2>
-    </div>
-    <div class="pre-order-container">
-        <div class="pre-order">
-            <div class="price">
-                <h1>Pre-Order $1,199</h1>
-                <h2>(MSRP $1,499)</h2>
-            </div>
-            <div class="buttons">
-                <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="btn btn-lg btn-primary" taget="_blank">Pre order</a><br>
-                <a href="{{ site.baseurl }}/products/trident" class="btn bt-primary btn-learn-more white">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
+                            <div class="container element-no-bottom hero">
+                                <div class="row full-height">
+                                    <div class="col-md-9 col-md-offset-2 full-height">
+                                        <div class="v-container">
+                                            <div class="v-box fullwidth ">
+                                                <div class="row ">
+                                                    <div class="col-md-6">
+                                                        <h1>Trident</h1>
+                                                        {% if include.description %}
+                                                        <div class="description element-short-top">
+                                                            Pre-order today and be one of the first to get a Trident underwater drone.
+                                                            Pre-orders ship starting in early 2017.
+                                                        </div>                 
+                                                        {% endif %}
+                                                        <h2 class="element-short-top">
+                                                            Pre-Order $1,199  
+                                                        </h2>               
+                                                        {% if include.retail %}        
+                                                        <h2 class="element-no-top">
+                                                            (Retail: $1,499) 
+                                                        </h2>                 
+                                                        {% endif %}      
+                                                    </div>
+                                                    <div class="col-md-4 pull-right">
+                                                        <div class="shipping">
+                                                            Ships in November
+                                                        </div>
+                                                        <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="btn btn-lg btn-primary" taget="_blank">Pre order now</a><br>
+                     
+                                                        <a href="products/trident" class="btn  btn-learn-more white element-short-top" taget="">Learn more</a>
+
+                                                    </div>
+                                                    
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>

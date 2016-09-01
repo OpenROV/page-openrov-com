@@ -1,25 +1,7 @@
 @import "themeDefinitions.scss";
 section#head {
 
-    @mixin header-height() {
-            @media screen and (max-height: #{$heightNexus6P}) { 
-                height: 645px;
-            }
-            @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
-                height: 605px;
-            }
-            @media screen and (max-height: #{$heightiPhone6}) { 
-                height: 535px;
-            }
-
-            @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
-                height: 440px;
-            }            
-    }
-
     .flexslider {
-
-        $height: 600px;
 
         .background-media {
             height: $height;
@@ -72,69 +54,7 @@ section#head {
             }
         }
 
-        .hero {    
-            background-size: cover;
-            background-position: center;
-            height: $height;
-            color: white;
-
-            text-align: left;
-
-            div.full-height {
-                height: 100%;
-            }
-
-            h1 {
-                text-align: left;
-                color: white;
-                font-weight: 300;
-                font-size: 80px;
-                line-height: 0.65;
-
-            }
-            h2 {
-                text-align: left;
-                color: white;
-                font-size: 20px;
-            }
-            .description {
-                text-align: left;
-                color: white;
-                font-weight: 400;
-                font-size: 20px;
-            }
-
-            .shipping {
-                object-fit: contain;
-                font-size: 15px;
-                font-weight: bold;
-                line-height: 1.33;
-                letter-spacing: 0.8px;
-                text-align: center;
-                margin-bottom: 10px;
-           }
-
-           .btn-primary {
-                width: 240px;
-                height: 80px;
-                object-fit: contain;
-                border-radius: 6px;
-                background-image: radial-gradient(circle at 52% 50%, #fef838, #FFB339);
-
-                font-size: 25px;
-                line-height: 80px;
-                text-align: center;
-                color: #11244f;               
-                padding: 0;
-           }
-
-            .v-box {
-                margin-top: -100px;
-            }
-
-            @include header-height();
-
-        }
+        @import 'pre-order-content.scss'
 
     }
 

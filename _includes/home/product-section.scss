@@ -1,17 +1,6 @@
 section#product {
     width: 100%;
     
-    .pre-order-content-container {
-        height: 500px;
-        background-image: url('../images/cards/trident/trident-diving-front-1200x900.jpg');
-        @import "home/pre-order-content.scss";
-
-        .price h1 {
-            color: black!important;
-            text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
-        }
-    }
-
     .figure-overlay {
         z-index: 1000;
     }
