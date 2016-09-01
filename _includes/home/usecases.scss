@@ -11,11 +11,52 @@ section#usecases {
             top: 1.8em;            
         }
     }
+
+    .usecase {
+      .background {
+        height: 215px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+
+        .v-container {
+          background-color: rgba(51, 129, 171, 0.8)
+        }
+
+        h1 { 
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .description {
+          font-size: 14px;
+        }
+        .fa {
+          color: white;
+          font-size: 65px;
+        }
+
+      }
+
+      .learn-more {
+        height: 79px;
+        margin-bottom: 30px;
+        .btn-primary {
+          background-image:  radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #FFFFFF 50%, #B7B7B7 200%);
+          color: #3381ab;
+          width: 100%;
+          height: 100%;
+          line-height: 79px;
+          padding: 0;
+        }
+      }
+    }
 }
 
 
 .modal {
   text-align: center;
+  z-index: 1110
 }
 
 @media screen and (min-width: 768px) { 
@@ -27,51 +68,92 @@ section#usecases {
   }
 }
 
+.modal-backdrop {
+  z-index: 1100;
+}
+
+
+$modalWidth: 800px;
+$modalHeight: 600px;
 .modal-dialog {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-  width: 600px;
-  height: 400px;
+  width: $modalWidth;
+  height: $modalHeight;
 
   .modal-body {
       background-repeat: no-repeat;
       background-size: cover;
-      width: 600px;
-      height: 400px;
+      width: $modalWidth;
+      height: $modalHeight;
       text-align: left;
 
       .v-container {
         text-align: left;
       }
+      
+      .head {
+        .icon {
+          width: 70px;
+          height: 70px;
+          font-size: 70px;
+          padding: 0;
+          float: left;
+          margin-right: 30px;
+        }
+      h1 {
+          font-size: 40px;
+          font-weight: 300;
+        }
+      }
+
+      .explore-trident {
+        width: 258.7px;
+        height: 79px;
+        line-height: 79px;
+        padding: 0;
+        color: #3381ab;
+        font-size: 15px;
+
+      }
   }
 
   .close {
-    color: white!important;
-    opacity: 0.8;
-    font-size: 2em;
-    z-index: 1060;
+    color: #3381ab!important;
+    padding: 5px 10px;
+    background-color: white!important;
+    opacity: 1;
+    font-size: 1.5em;
+    z-index: 1120;
     position: relative;
   }
-
+  
   .gradient {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 70px;
 
     $color: #3782A9;
+    $otherColor: rgba(55, 130, 169, 0.54);
     background: $color; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, $color , transparent); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, $color, transparent); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, $color, transparent); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, $color , transparent); /* Standard syntax */
+    background: -webkit-linear-gradient(left, $color , $otherColor); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $color, $otherColor); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $color, $otherColor); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $color , $otherColor); /* Standard syntax */
 
     .v-box {
       margin-left: 20px;
       color: white;
-      z-index: 1050;
+      z-index: 1115;
     }
   }
+}
+
+.svg {
+  height: 65px;
+  .content { fill: white!important; }
 }

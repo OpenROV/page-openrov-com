@@ -353,16 +353,24 @@ div#pre-order-banner {
           text-align: center;
         }
 
-        .btn-primary {
-          background-image:  radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #FFFFFF 50%, #B7B7B7 200%);
-          color: black;
-          font-size: 25px;
-          text-align: center;
-          border-radius: 6px;
-                  
-        }
 
     }
     .container {
     }
 }
+
+
+  .btn-white-magic {
+    &:hover {
+      color: black;
+    }
+    &:active {
+      background: #B7B7B7!important;
+    }
+    background-image:  radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #FFFFFF 50%, #B7B7B7 200%);
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 6px;
+            
+  }

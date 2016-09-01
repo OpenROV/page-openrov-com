@@ -1,40 +1,35 @@
-<section id="usecases" class="section swatch-white">
-    <div class="container-fullwidth">
+<section id="usecases" class="section swatch-gray">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="portfolio-container element-no-top element-no-bottom">
-                   
-                    <div class="portfolio masonry " data-padding="2" data-col-xs="2" data-col-sm="2" data-col-md="4" data-col-lg="4" data-layout="fitRows">
-                        
-                        {% for item in site.data.home-trident-usecases %}
+            <div class="col-md-10 col-md-offset-1">
+                <header class="text-center element-short-top element-short-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                    <h1 class="bigger hairline">
+                        Benefits of Trident
+                    </h1>
+                </header>
 
-                        <div class="masonry-item portfolio-item isotope-item" data-menu-order="{{forloop.index}}" data-title="{{item.title}}">
-                            <div class="figure portfolio-os-animation element-no-top element-no-bottom text-center figcaption-middle normalwidth image-filter-sepia fade-in image-filter-onhover" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                                <span class="figure-image" target="_self">
-                                    <img src="assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg" alt="{{item.title}}" class="normalwidth">
-                                    <div class="figure-overlay grid-overlay-30">
-                                        <div class="figure-overlay-container">
-                                            <div class="figure-caption">
-                                                <a href="#" class="" data-toggle="modal" data-target="#modal-{{forloop.index}}">
-                                                <h4 title class="title figure-caption-title element-small-bottom ">
-                                                    {{item.text}}
-                                                </h4>
-                                                <p class="figure-caption-description">
-                                                                                                        
-                                                </p>
-                                                <div class="btn btn-learn-more white">
-                                                        Learn more
-                                                    </div> 
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </span>
+                <div class="row">
+                    {% for item in site.data.home-trident-usecases %}
+                    <div class="col-md-6 usecase text-center">
+                        <div class="background" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg)">
+                            <div class="v-container">
+                                <div class="v-box">
+                                    {% if item.icon %}<i class="fa {{item.icon}}" aria-hidden="true"></i>{% endif %}
+                                    {% if item.svg %} <div class="svg">{% include {{item.svg}} %}</div> {% endif %}
+                                    <h1>{{item.title}}</h1>
+                                    <div class="description">{{item.description}}</div>
+                                </div>
                             </div>
-                        </div>{% endfor %}
-
+                        </div>
+                        <div class="learn-more">
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{forloop.index}}">
+                                Learn more
+                            </a>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
+                
             </div>
         </div>
     </div>
@@ -48,8 +43,11 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="v-container gradient">
                     <div class="v-box">
-                        <h1>{{item.title}}</h1>
-                        {{item.text}}
+                        {%if item.modalFile %}
+                        {% capture filename %}home/usecases/{{item.modalFile}}.html{% endcapture %}
+                        {% include {{filename}} svg=item.svg icon=item.icon %}
+                        {% endif %}
+                        <a href="products/trident" class="btn btn-primary btn-white-magic explore-trident">Explore Trident</a>                 
                     </div>
                 </div>
 
