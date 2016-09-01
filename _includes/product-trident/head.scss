@@ -29,6 +29,12 @@ section#head {
 
             @import "home/pre-order-content.scss";
 
+            .hero {
+                .buttons {
+                    margin-top: 140px;
+                }
+            }
+
         }
 
     }

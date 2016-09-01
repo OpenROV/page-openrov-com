@@ -9,7 +9,11 @@ section {
     z-index: 1000;
 }
 
-section#rov28 .rov28 {
+#rov28, #trident {
     height: 600px;
 }
 
+.hero {
+    height: 400px!important;
+    // .full-height
+}

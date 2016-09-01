@@ -5,7 +5,9 @@
                                             <div class="v-box fullwidth ">
                                                 <div class="row ">
                                                     <div class="col-md-6">
-                                                        <h1>Trident</h1>
+                                                        <h1> {% if include.title %}{{include.title}}
+                                                            {% else %}Trident{% endif %}
+                                                        </h1>
                                                         {% if include.description %}
                                                         <div class="description element-short-top">
                                                             Pre-order today and be one of the first to get a Trident underwater drone.
@@ -21,14 +23,15 @@
                                                         </h2>                 
                                                         {% endif %}      
                                                     </div>
-                                                    <div class="col-md-4 pull-right">
+                                                    <div class="col-md-4 pull-right buttons">
                                                         <div class="shipping">
                                                             Ships in November
                                                         </div>
                                                         <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="btn btn-lg btn-primary" taget="_blank">Pre order now</a><br>
-                     
+                      
+                                                        {% if include.hideLearnMore != true %}
                                                         <a href="products/trident" class="btn  btn-learn-more white element-short-top" taget="">Learn more</a>
-
+                                                        {% endif %}
                                                     </div>
                                                     
                                                 </div>
