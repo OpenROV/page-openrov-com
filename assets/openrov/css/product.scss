@@ -13,21 +13,3 @@ section#rov28 .rov28 {
     height: 600px;
 }
 
-div#pre-order-banner {
-    &.pre-order-banner {
-        // background-color: greenyellow;
-        height: 6px;
-        width: 100%;
-        z-index: 1001;
-        transition: all 0.4s;
-        position: fixed;
-        top: 90px;
-
-        &.sticky {
-
-            height: 100px;
-            top: 70px;
-        }
-
-    }
-}

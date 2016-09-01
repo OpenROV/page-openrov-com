@@ -309,3 +309,60 @@ footer#footer {
   }
 
 }
+
+
+div#pre-order-banner {
+    &.pre-order-banner {
+        // background-color: greenyellow;
+        background-image: radial-gradient(circle at 52% 50%, #fef838, #FFB339);
+        
+        height: 6px;
+        width: 100%;
+        z-index: 1001;
+        transition: all 0.4s;
+        position: fixed;
+        top: 90px;
+        opacity: .98;
+
+        &.sticky {
+
+            height: 110px;
+            top: 50px;
+        }
+
+        h1 {
+          font-size: 60px;
+          font-weight: 300;
+          line-height: 1.07;
+          color: #3381ab;
+          text-shadow: initial;
+          margin-top: 4px;          
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1.7;
+          color: #000000;
+          text-shadow: initial;          
+        }
+
+        .shipping {
+          margin-top: 10px;
+          margin-bottom: 4px;
+          text-align: center;
+        }
+
+        .btn-primary {
+          background-image:  radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #FFFFFF 50%, #B7B7B7 200%);
+          color: black;
+          font-size: 25px;
+          text-align: center;
+          border-radius: 6px;
+                  
+        }
+
+    }
+    .container {
+    }
+}

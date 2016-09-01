@@ -16,7 +16,7 @@
 
 var oxyThemeData = oxyThemeData || {
     navbarHeight : 90,
-    navbarScrolled : 70,
+    navbarScrolled : 50,
     navbarScrolledPoint : 200,
     navbarScrolledSwatches: {
         up: 'swatch-white',
