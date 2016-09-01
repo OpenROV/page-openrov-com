@@ -1,17 +1,31 @@
-section#media {
+// section#media {
+.media-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
     .logos {
+        .featured-on {
+            display: inline-block;
+            color: white;
+            padding-right: 8px;
+        }
+
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: stretch;
 
         img {
             display: inline-block;
-            max-height: 30px;
-            -webkit-filter: opacity(60%); /* Chrome, Safari, Opera */
-            filter: opacity(60%);
+            max-height: 20px;
+            opacity: .9;
+            -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+            filter: invert(100%);
             padding-left: 8px;
             padding-right: 8px;
             // valign: middle;
         }
     }
 }
+// }

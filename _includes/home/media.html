@@ -1,16 +1,20 @@
-<section id="media" class="section swatch-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <header class="text-center element-short-top element-short-bottom not-condensed">
-                    <div class="logos">
-                        {% for item in site.data.media %}
-                        <a href="{{item.url}}" target="_blank" class="{% if item.hideOnMobile %}hideOnMobile{% endif %}">
-                            <img src="{{site.baseurl}}/assets/openrov/images/media/{{item.logo}}" alt="{{item.outlet}}">
-                        </a>{% endfor %}
-                    </div>
-                </header>
+<!--<section id="media" class="section swatch-white">-->
+    <div class="media-links">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="text-center element-short-top element-short-bottom not-condensed">
+                        <div class="logos">
+                            <div class="featured-on">Featured on:</div>
+                            {% for item in site.data.media %}
+                            <a href="{{item.url}}" target="_blank" class="{% if item.hideOnMobile %}hideOnMobile{% endif %}">
+                                <img src="{{site.baseurl}}/assets/openrov/images/media/{{item.logo}}" alt="{{item.outlet}}">
+                            </a>{% endfor %}
+                        </div>
+                    </header>
+                </div>
             </div>
         </div>
+
     </div>
-</section>
+<!--</section>-->
