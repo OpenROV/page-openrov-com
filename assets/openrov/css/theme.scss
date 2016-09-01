@@ -203,6 +203,7 @@ nav.main-navbar ul.dropdown-menu.first {
 .btn-learn-more {
   border-width: 1px;
   border-style: solid;
+  border-radius: 6px;
 
   &.white {
     color: white!important;
@@ -214,7 +215,7 @@ nav.main-navbar ul.dropdown-menu.first {
     }
   }
 
-  &.white.invert {
+ &.white.invert {
     color: black!important;
     border-color: white!important;
     background-color: white!important;
