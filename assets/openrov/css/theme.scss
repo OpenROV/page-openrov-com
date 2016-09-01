@@ -107,50 +107,6 @@ img.invert {
 //     background-color: rgba(12, 47, 62, 1) !important;
 // }
 
-$socialIconColor: white;
-$socialIconColorHover: grey;
-
-.link-partners {
-  line-height:  50px;
-  .fa {
-      font-size: 40px;
-  }
-  .social {
-    a { 
-      display: block;
-      float: left;
-      margin-right: 10px; 
-      color: $socialIconColor;
-
-      &:hover {
-        color: $socialIconColorHover
-      }
-    }
-    span { display: inline-block; }
-  }
-  
-}
-
-.oe {
-    width: 1em;
-    height: 1em;
-    // background-image: url('../images/oe-logo.svg');
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: 80%;
-
-    #background {
-      fill: $socialIconColor!important;
-    }
-}
-a:hover .oe #background {
-  fill: $socialIconColorHover!important;
-}
-
-footer#footer {
-  ul { padding-left: 20px; }
-}
-
 .v-container{
     height: 100%;
     white-space: nowrap;
@@ -293,6 +249,63 @@ nav.main-navbar ul.dropdown-menu.first {
   }
 
 
-  footer .section.swatch-blue {
-    background-color: #224151;
+footer#footer {
+  * {
+    color: white;
   }
+
+  .main-footer {
+    background-color: #3381ab;
+    height: 225px;
+  }
+
+  .bottom {
+    background: #2d6584;
+    height: 104px;
+
+    .row {
+      margin-top: 34px!important;
+    }
+  }  
+
+  $socialIconColor: white;
+  $socialIconColorHover: grey;
+
+  .link-partners {
+    line-height:  30px;
+    .fa {
+        font-size: 24px;
+    }
+    .social {
+      a { 
+        display: block;
+        float: left;
+        margin-right: 10px; 
+        color: $socialIconColor;
+
+        &:hover .fa{
+          color: $socialIconColorHover
+        }
+      }
+      span { display: inline-block; }
+    }
+    
+  }
+
+  .oe {
+      width: 1em;
+      height: 1em;
+
+      #background {
+        fill: $socialIconColor!important;
+      }
+  }
+  a:hover .oe #background {
+    fill: $socialIconColorHover!important;
+  }
+
+  .footer-header {
+    margin-bottom: 12px;
+  }
+
+}
