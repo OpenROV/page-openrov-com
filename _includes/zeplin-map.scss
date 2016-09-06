@@ -1,0 +1,14 @@
+@import './zeplin-definitions.scss';
+@import './zeplin-styles.scss';
+
+
+.or-hero-large-hairline {
+    @extend .H1;
+    color: white!important;
+    text-align: left;
+}
+
+.or-hero-sub-title {
+    @extend .Content-Sub-title-LIT-Left;
+    text-align: left;
+}
