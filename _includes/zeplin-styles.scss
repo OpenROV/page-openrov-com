@@ -1,4 +1,14 @@
-.H1 {
+.Hero-Title-Left-LIT-Bold {
+  font-family: Lato;
+  font-size: 80px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.01;
+  color: $Primary_White;
+}
+
+.Hero-Title-Dark-Left {
   font-family: Lato;
   font-size: 70px;
   font-weight: 300;
@@ -8,36 +18,37 @@
   color: $Secondary_Blue;
 }
 
-.Section-Title-LIT-Center {
+.Section-Title-LIT {
   font-family: Lato;
   font-size: 40px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   text-align: center;
-  color: $white;
+  color: $Primary_White;
 }
 
-.Content-Title-DRK-Left {
-  font-family: Lato;
-  font-size: 40px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: $Primary_Blue;
-}
-
-.Content-Title-LIT-Left {
+.Content-Title-LIT {
   font-family: Lato;
   font-size: 40px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.3;
-  color: $white;
+  text-align: center;
+  color: $Primary_White;
 }
 
-.Section-Title-DRK-Center {
+.Section-Title-Left-DRK {
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: $Primary_Blue;
+}
+
+.Section-Title-DRK {
   font-family: Lato;
   font-size: 40px;
   font-weight: normal;
@@ -47,50 +58,60 @@
   color: $Primary_Blue;
 }
 
-.Pre-Order-CTA-Center {
+.Content-Title-LIT-Left {
   font-family: Lato;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 0.8;
-  text-align: center;
-  color: $Pre_order;
+  line-height: 1.2;
+  color: $Primary_White;
 }
 
-.Content-Sub-Title-DRK-Center {
+.BTN-Pre-Order-CTA {
   font-family: Lato;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 23px;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.7;
+  line-height: 0.87;
   text-align: center;
-  color: $Primary_Blue;
-}
-
-.Content-Sub-title-LIT-Center {
-  font-family: Lato;
-  font-size: 20px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.7;
-  text-align: center;
-  color: $white;
+  color: #11244f;
 }
 
 .Content-Sub-title-LIT-Left {
   font-family: Lato;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.2;
-  color: $white;
+  line-height: 1.09;
+  color: $Primary_White;
 }
 
-.Content-Body-Dark-Center {
+.Content-Sub-title-LIT {
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.55;
+  text-align: center;
+  color: $Primary_White;
+}
+
+.Content-Sub-Title-DRK {
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.55;
+  text-align: center;
+  color: $Primary_Blue;
+}
+
+.Content-Body-Dark {
   font-family: Lato;
   font-size: 18px;
   font-weight: normal;
@@ -101,17 +122,7 @@
   color: $Primary_Grey;
 }
 
-.Content-Body-LIT-Left {
-  font-family: Lato;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.56;
-  color: $white;
-}
-
-.Content-Body-LIT-Center {
+.Content-Body-LIT {
   font-family: Lato;
   font-size: 18px;
   font-weight: normal;
@@ -119,7 +130,17 @@
   font-stretch: normal;
   line-height: 1.56;
   text-align: center;
-  color: $white;
+  color: $Primary_White;
+}
+
+.Content-Body-LIT-Left {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.56;
+  color: #e5e5e5;
 }
 
 .Content-Body-Dark-Left {
@@ -132,7 +153,7 @@
   color: $Primary_Grey;
 }
 
-.Nav-Link-LIT-Center {
+.Nav-Link-LIT {
   font-family: Lato;
   font-size: 16px;
   font-weight: bold;
@@ -140,10 +161,10 @@
   font-stretch: normal;
   line-height: 0.94;
   text-align: center;
-  color: $white;
+  color: $Primary_White;
 }
 
-.Nav-Link-DRK-Left {
+.Nav-Link-Default {
   font-family: Lato;
   font-size: 16px;
   font-weight: normal;
@@ -153,20 +174,20 @@
   color: $Primary_Blue;
 }
 
-.Micro-Sub-Title-LIT-Left {
+.Micro-Sub-Title-LIT {
   font-family: Lato;
   font-size: 15px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  color: $white;
+  color: $Primary_White;
 }
 
-.Micro-Body-LIT-Left {
+.Micro-Body-LIT {
   font-family: Lato;
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: $white;
+  color: $Primary_White;
 }

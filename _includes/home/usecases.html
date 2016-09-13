@@ -2,30 +2,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <header class="text-center element-short-top element-short-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                    <h1 class="bigger hairline">
-                        Benefits of Trident
+                <header class="text-center element-medium-top element-short-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                    <h1 class="or-section-title-dark">
+                        How you can use Trident
                     </h1>
                 </header>
 
                 <div class="row">
                     {% for item in site.data.home-trident-usecases %}
                     <div class="col-md-6 usecase text-center">
-                        <div class="background" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg)">
-                            <div class="v-container">
-                                <div class="v-box">
-                                    {% if item.icon %}<i class="fa {{item.icon}}" aria-hidden="true"></i>{% endif %}
-                                    {% if item.svg %} <div class="svg">{% include {{item.svg}} %}</div> {% endif %}
-                                    <h1>{{item.title}}</h1>
-                                    <div class="description">{{item.description}}</div>
+                            <div class="background element-short-bottom" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg)">
+                                <a href="#" class="" data-toggle="modal" data-target="#modal-{{forloop.index}}">
+                                <div class="v-container">
+                                    <div class="v-box">
+                                        {% if item.icon %}<i class="fa {{item.icon}}" aria-hidden="true"></i>{% endif %}
+                                        {% if item.svg %} <div class="svg">{% include {{item.svg}} %}</div> {% endif %}
+                                        <h1>{{item.title}}</h1>
+                                        <div class="description">{{item.description}}</div>
+                                    </div>
+                                    <div class="or-botton-line"></div>
                                 </div>
+
+                                </a>
+                                
                             </div>
-                        </div>
-                        <div class="learn-more">
-                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{forloop.index}}">
-                                Learn more
-                            </a>
-                        </div>
                     </div>
                     {% endfor %}
                 </div>

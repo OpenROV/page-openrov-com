@@ -1,3 +1,4 @@
+                        <div class="container or-hero-gradient">
                             <div class="container element-no-bottom hero">
                                 <div class="row full-height">
                                     <div class="col-md-9 col-md-offset-2 full-height">
@@ -5,11 +6,11 @@
                                             <div class="v-box fullwidth ">
                                                 <div class="row ">
                                                     <div class="col-md-6">
-                                                        <h1 class="or-hero-large-hairline"> {% if include.title %}{{include.title}}
+                                                        <h1 class="or-hero-title"> {% if include.title %}{{include.title}}
                                                             {% else %}Trident{% endif %}
                                                         </h1>
                                                         {% if include.description %}
-                                                        <div class="or-hero-sub-title element-short-top">
+                                                        <div class="or-hero-sub-title element-no-top">
                                                             Pre-order today and be one of the first to get a Trident underwater drone.
                                                         </div>                 
                                                         {% endif %}
@@ -23,13 +24,14 @@
                                                         {% endif %}      -->
                                                     </div>
                                                     <div class="col-md-4 pull-right buttons">
-                                                        <div class="shipping">
+                                                        <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="or-hero-btn-pre-order btn" taget="_blank">PRE-ORDER NOW</a><br>
+
+                                                        <div class="or-hero-micro-title">
                                                             Shipping Early 2017
                                                         </div>
-                                                        <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="btn btn-lg btn-primary" taget="_blank">Pre-Order Now</a><br>
                       
                                                         {% if include.hideLearnMore != true %}
-                                                        <a href="products/trident" class="btn  btn-learn-more white element-short-top" taget="">Learn more</a>
+                                                        <a href="products/trident" class="btn or-hero-btn-pre-order white element-short-top" taget="">Learn more</a>
                                                         {% endif %}
                                                     </div>
                                                     
@@ -40,3 +42,4 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>

@@ -2,13 +2,129 @@
 @import './zeplin-styles.scss';
 
 
-.or-hero-large-hairline {
-    @extend .H1;
-    color: white!important;
+.or-hero-title {
+    @extend .Hero-Title-Left-LIT;
+    color: $Primary_White!important;
     text-align: left;
 }
 
 .or-hero-sub-title {
     @extend .Content-Sub-title-LIT-Left;
     text-align: left;
+}
+
+.or-hero-micro-title {
+    @extend .Micro-Sub-Title-LIT;
+}
+
+.or-hero-gradient {
+      background-image: radial-gradient(circle at 47% 42%, rgba(0, 0, 0, 0.26), rgba(78, 173, 215, 0.67));
+      width: 100%;
+}
+
+
+.or-nav-link a{
+    @extend .Nav-Link-Default;
+    color: $Primary_Blue!important;
+
+    &:before {
+        left: 15px!important;
+        right: 15px!important;
+        background-color: #55b2e4!important;
+    }
+
+    &:hover {
+        color: #55b2e4!important;
+    }
+
+    &:active {
+        color: #306582;
+    }
+    
+    &:active:before {
+        background-color: #306582;
+    }
+}
+
+.or-nav-highlight a:after {
+    background: radial-gradient(circle at 54% 55%, #55b2e4, #4e92df)!important;
+}
+.or-nav-highlight a:hover:after {
+    background: #55b2e4!important;
+}
+
+.or-section-title-dark {
+    @extend .Section-Title-DRK;
+    color: $Primary_Blue!important;
+}
+
+// button styles
+.or-hero-btn-pre-order {
+
+  border-radius: 6px;
+  background-image: linear-gradient(259deg, #ffb538, #ffb900 58%, #ffb638);
+  border: solid 1px $Primaray_Spot_Color;
+  width: 240px;
+  height: 80px;
+  padding: 0;
+
+  &:hover {
+      text-decoration: underline;
+  }    
+
+  &:active {
+        background-color: #E8AC04;
+        text-decoration: underline;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: #E8AC04;
+  }
+
+  @extend .BTN-Pre-Order-CTA__;
+
+}
+
+.or-botton-line {    
+    position: absolute;
+    height: 4px!important;
+    bottom: 0;
+    @extend .Yellow-Border;
+}
+
+
+
+// Additional styles
+
+.Hero-Title-Left-LIT {
+  object-fit: contain;
+  font-family: 'Lato',sans-serif!important;
+  font-size: 80px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.01;
+  color: $Primary_White;
+}
+
+.BTN-Pre-Order-CTA__ {
+  object-fit: contain;
+  font-family: 'Lato',sans-serif!important;
+  font-size: 23px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 80px;
+  text-align: center;
+  color: $Primary_Blue!important;
+}
+
+.Yellow-Border {
+  background-image: linear-gradient(261deg, #ffb538, #ffb900 58%, #ffb638);
+  border: solid 1px $Primaray_Spot_Color;
+  height: 6px;
+  width: 100%;
+  opacity: .98;
+  z-index: 1001;
+  transition: all 0.4s;
+
 }

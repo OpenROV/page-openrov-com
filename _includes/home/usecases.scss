@@ -1,4 +1,6 @@
 section#usecases {
+
+
     .usecase-boating {
         width: 100%;
         height: 600px;
@@ -20,6 +22,7 @@ section#usecases {
         color: white;
 
         .v-container {
+          position: relative;
           background-color: rgba(51, 129, 171, 0.8)
         }
 

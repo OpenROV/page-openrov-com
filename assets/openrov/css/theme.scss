@@ -1,6 +1,8 @@
 ---
 ---
 
+@import 'zeplin-map.scss';
+
 .strikethrough {
   text-decoration: line-through;
 }
@@ -315,15 +317,9 @@ footer#footer {
 div#pre-order-banner {
     &.pre-order-banner {
         // background-color: greenyellow;
-        background-image: radial-gradient(circle at 52% 50%, #fef838, #FFB339);
-        
-        height: 6px;
-        width: 100%;
-        z-index: 1001;
-        transition: all 0.4s;
+        @extend .Yellow-Border;        
         position: fixed;
         top: 90px;
-        opacity: .98;
 
         &.sticky {
 
@@ -375,6 +371,3 @@ div#pre-order-banner {
     border-radius: 6px;
             
   }
-
-
-@import 'zeplin-map.scss';
