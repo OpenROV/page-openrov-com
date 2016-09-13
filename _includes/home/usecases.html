@@ -56,14 +56,14 @@
                         {% capture filename %}home/usecases/{{item.modalFile}}.html{% endcapture %}
                         {% include {{filename}} svg=item.svg icon=item.icon %}
                         {% endif %}
-                        <a href="products/trident" class="btn btn-primary btn-white-magic explore-trident">Explore Trident</a>                 
+                        <a href="products/trident" class="btn btn-primary explore-trident">LEARN MORE</a>                 
                     </div>
                 </div>
                 {% if forloop.first == false %}
-                <div class="usecase-arrow left"><a href="#" data-modal-id="{{forloop.index}}">{% include yellow-arrow-left.svg %}</a></div>
+                <div class="usecase-arrow left"><a data-modal-id="{{forloop.index}}">{% include yellow-arrow-left.svg %}</a></div>
                 {% endif %}
                 {% if forloop.last == false %}
-                <div class="usecase-arrow right"><a href="#" data-modal-id="{{forloop.index}}">{% include yellow-arrow-right.svg %}</a></div>
+                <div class="usecase-arrow right"><a data-modal-id="{{forloop.index}}">{% include yellow-arrow-right.svg %}</a></div>
                 {% endif %}
             </div>
         </div>
