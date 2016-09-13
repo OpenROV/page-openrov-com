@@ -59,6 +59,11 @@
     color: $Primary_Blue!important;
 }
 
+.or-content-sub-title-dark {
+    @extend .Content-Sub-Title-DRK;
+    color: $Primary_Blue!important;
+}
+
 // button styles
 .or-hero-btn-pre-order {
 
@@ -96,7 +101,7 @@
     font-stretch: normal;
     line-height: 2.13;
     text-align: center;
-    color: $Primary_White;
+    color: $Primary_White!important;
     padding: 0 5px;
     transition: all 0.4s;    
 

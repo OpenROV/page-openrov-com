@@ -1,19 +1,19 @@
-- header: Go to 100m
-  image: depth-black
-  text: Go deep! Trident dives comfortably to 100m, far deeper than recreational diving.
+- header: Full HD Camera
+  image: camera-white
+  text:  Underwater optimized, full HD camera with low latency offers high quality video streaming and recording.
   additional-css:
 
-- header: 4 Hours battery life
-  image: battery-black
+- header: Go to 100m
+  image: depth-white
+  text: Trident can dive comfortably to 100m, far deeper than most recreational divers.
+  additional-css:
+
+- header: 4 Hours Battery Life
+  image: battery-white
   text: Onboard rechargeable lithium batteries give you 4 hours of power to explore underwater.
   additional-css:
 
-- header: Full HD Camera
-  image: camera-black
-  text: The underwater-optimized full HD camera offers low latency, high quality video streaming and recording.
-  additional-css:
-
-- header: Wifi Buoy
-  image: wifi-buoy-black
-  text: Trident uses a neutrally buoyant tether to communicate to a towable WiFi buoy allowing for unprecedented freedom of movement.
+- header: Radio Buoy
+  image: wifi-buoy-white
+  text: Trident is equipped with a towable radio buoy for unprecedented freedom of movement.
   additional-css: hideOnMobile

@@ -1,20 +1,20 @@
 - title: Ready to dive
-  image: console
-  text: Ready-to-dive. Trident is rugged, reliable, and virtually maintenance-free even in salt water.
+  image: ready-to-dive
+  text: Trident is rugged, reliable, and virtually maintenance-free even in salt water.
   additional-css:
 
-- title: Easy controls
-  image: kids
-  text: Be the pilot. You can control Trident easily with a smartphone, tablet, or laptop.
+- title: Easy to Control
+  image: easy-control
+  text: Trident is easy to control with any smartphone, tablet, or laptop.
   additional-css:
 
-- title: Fast and maneuverable 
-  image: jump
-  text: Fly underwater. Fast and maneuverable, Trident can keep up with strong currents or stop and observe motionlessly.
+- title: Fast &amp; Maneuverable 
+  image: fast-easy-handling
+  text: Trident can keep up with strong currents or stay in place underwater.
   additional-css:
 
-- title: Lightweight and portable 
-  image: carry
-  text: Take Trident anywhere. Lightweight and portable, Trident fits easily in a backpack or as carry-on.
+- title: Lightweight &amp; Portable 
+  image: portable
+  text: Lightweight and portable, Trident fits easily in a backpack or as carry-on.
   additional-css: hideOnMobile
 
