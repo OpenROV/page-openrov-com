@@ -13,4 +13,18 @@ jQuery(document).ready(function( $ ) {
         }
     });
 
+    $('.usecase-arrow.right').click(function(a, b) {
+        const modalId = parseInt($(this).find('a')[0].dataset.modalId);
+        $('#modal-' + (modalId +1)).modal('toggle');
+        $('#modal-' + modalId).modal('toggle');
+    });
+
+    $('.usecase-arrow.left').click(function(a, b) {
+        const modalId = parseInt($(this).find('a')[0].dataset.modalId);
+        $('#modal-' + (modalId -1)).modal('toggle');
+        $('#modal-' + modalId).modal('toggle');
+    });
+    
+
+
 });

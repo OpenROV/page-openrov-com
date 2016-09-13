@@ -1,9 +1,11 @@
 .usecase-arrow-base {
   position: absolute;
-  right: 10px;
+  right: 0;
   top: 0;
   bottom: 0;
   width: 40px;
+  &.right { right: 10px; }
+  &.left { left: 30px; }
 }
 
 section#usecases {

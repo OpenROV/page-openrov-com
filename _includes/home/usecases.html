@@ -26,7 +26,7 @@
                                                 <div class="description Content-Body-LIT-Left">{{item.description}}</div>
                                             </div>
                                         </div>
-                                        <div class="usecase-arrow">{% include yellow-arrow.svg %}</div>
+                                        <div class="usecase-arrow right">{% include yellow-arrow-right.svg %}</div>
                                     </div>
                                     <div class="or-botton-line"></div>
                                     
@@ -59,10 +59,15 @@
                         <a href="products/trident" class="btn btn-primary btn-white-magic explore-trident">Explore Trident</a>                 
                     </div>
                 </div>
-                <div class="usecase-arrow">{% include yellow-arrow.svg %}</div>
-
+                {% if forloop.first == false %}
+                <div class="usecase-arrow left"><a href="#" data-modal-id="{{forloop.index}}">{% include yellow-arrow-left.svg %}</a></div>
+                {% endif %}
+                {% if forloop.last == false %}
+                <div class="usecase-arrow right"><a href="#" data-modal-id="{{forloop.index}}">{% include yellow-arrow-right.svg %}</a></div>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
 {% endfor %}
+
