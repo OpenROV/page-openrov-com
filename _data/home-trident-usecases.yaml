@@ -1,27 +1,27 @@
-- title: Boaters and Fishers
+- title: Boating &amp; Fishing
   description: Learn why Trident is the perfect boat accessory.
-  image-base: trident-hull-inspection
+  image-base: boating-fishing
   url: products/trident/#boating
-  icon: fa-ship
+  svg: raft-icon.svg
   modalFile: boat
 
 - title: Divers
   description: See how to dive smarter with your personal underwater drone.
-  image-base: trident-scuba-drone
+  image-base: diving
   url: products/trident/#uc-diving
-  svg: diver.svg
+  svg: diving-icon.svg
   modalFile: diver
 
 - title: Explore
   description: Get inspired to explore new worlds.
-  image-base: family-explore-underwater
+  image-base: explore
   url: products/trident/#explore
-  icon: fa-compass
+  svg: nautical-icon.svg
   modalFile: explore
 
 - title: Marine Research &amp; Rescue
   description: Create new opportunities in marine science and exploration.
-  image-base: trident-mini-research-rov
+  image-base: marine-science
   url: products/trident/#research
-  icon: fa-search
+  svg: anchor-icon.svg
   modalFile: research

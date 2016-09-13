@@ -21,22 +21,34 @@ section#usecases {
         background-size: cover;
         color: white;
 
-        .v-container {
-          position: relative;
-          background-color: rgba(51, 129, 171, 0.8)
+        h1 { 
+          // color: white;
+          // font-size: 20px;
+          // font-weight: bold;
+          // text-align: left;
         }
 
-        h1 { 
-          color: white;
-          font-size: 20px;
-          font-weight: bold;
-        }
         .description {
-          font-size: 14px;
+          padding-top: 5px;
+          text-align: left;
         }
-        .fa {
-          color: white;
-          font-size: 65px;
+
+        .usecase-container {
+          position:relative;
+          height: 100%;
+        }
+        .usecase-content {
+          position: absolute;
+          bottom: 0;
+          height: 105px;
+          width: 100%;
+          padding-left: 25px;
+          padding-right: 55px;
+        }
+
+        .svg {
+          // position: absolute;
+          bottom: 33px;
         }
 
       }
@@ -154,9 +166,4 @@ $modalHeight: 600px;
       z-index: 1115;
     }
   }
-}
-
-.svg {
-  height: 65px;
-  .content { fill: white!important; }
 }

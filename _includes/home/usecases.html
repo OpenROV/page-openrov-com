@@ -11,14 +11,21 @@
                 <div class="row">
                     {% for item in site.data.home-trident-usecases %}
                     <div class="col-md-6 usecase text-center">
-                            <div class="background element-short-bottom" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg)">
+                            <div class="background element-short-bottom" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-small.png)">
                                 <a href="#" class="" data-toggle="modal" data-target="#modal-{{forloop.index}}">
-                                <div class="v-container">
-                                    <div class="v-box">
-                                        {% if item.icon %}<i class="fa {{item.icon}}" aria-hidden="true"></i>{% endif %}
-                                        {% if item.svg %} <div class="svg">{% include {{item.svg}} %}</div> {% endif %}
-                                        <h1>{{item.title}}</h1>
-                                        <div class="description">{{item.description}}</div>
+                                <div class="usecase-container">
+                                    <div class="container-fluid usecase-content">
+                                        <div class="row" style="height:100%">
+                                            <div class="col-md-3" style="height: 100%">
+                                                <div style="height:100%; position:relative;" class="v-container">
+                                                    {% if item.svg %} <div class="svg v-box">{% include {{item.svg}} %}</div> {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="or-hero-sub-title">{{item.title}}</h1>
+                                                <div class="description Content-Body-LIT-Left">{{item.description}}</div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="or-botton-line"></div>
                                 </div>
