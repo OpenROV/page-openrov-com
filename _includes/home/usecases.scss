@@ -36,7 +36,17 @@ section#usecases {
         .usecase-container {
           position:relative;
           height: 100%;
+          background-color:  rgba(51, 129, 171, 0.2);
+
+          &:hover {
+            background-color: transparent;
+
+            .usecase-arrow {
+              display: inline-block;
+            }
+          }
         }
+
         .usecase-content {
           position: absolute;
           bottom: 0;
@@ -49,6 +59,16 @@ section#usecases {
         .svg {
           // position: absolute;
           bottom: 33px;
+        }
+
+        .usecase-arrow {
+          position: absolute;
+          right: 10px;
+          top: 0;
+          bottom: 0;
+          width: 40px;
+          display: none;
+
         }
 
       }

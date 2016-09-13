@@ -5,8 +5,8 @@
   svg: raft-icon.svg
   modalFile: boat
 
-- title: Divers
-  description: See how to dive smarter with your personal underwater drone.
+- title: Diving
+  description: Get the most out of your dives.
   image-base: diving
   url: products/trident/#uc-diving
   svg: diving-icon.svg
@@ -19,8 +19,8 @@
   svg: nautical-icon.svg
   modalFile: explore
 
-- title: Marine Research &amp; Rescue
-  description: Create new opportunities in marine science and exploration.
+- title: Marine Science
+  description: See the future of marine science and exploration.
   image-base: marine-science
   url: products/trident/#research
   svg: anchor-icon.svg
