@@ -1,5 +1,12 @@
-section#usecases {
+.usecase-arrow-base {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+}
 
+section#usecases {
 
     .usecase-boating {
         width: 100%;
@@ -62,13 +69,8 @@ section#usecases {
         }
 
         .usecase-arrow {
-          position: absolute;
-          right: 10px;
-          top: 0;
-          bottom: 0;
-          width: 40px;
+          @extend .usecase-arrow-base;
           display: none;
-
         }
 
       }
@@ -117,6 +119,13 @@ $modalHeight: 600px;
   width: $modalWidth;
   height: $modalHeight;
 
+  .modal-content {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+  }
+
   .modal-body {
       background-repeat: no-repeat;
       background-size: cover;
@@ -154,31 +163,33 @@ $modalHeight: 600px;
       }
   }
 
+  .usecase-arrow {
+    @extend .usecase-arrow-base;
+    top: 300px;
+
+    svg path {
+      stroke: white!important;
+    }
+  }
+
+
   .close {
-    color: #3381ab!important;
+    color: white!important;
     padding: 5px 10px;
-    background-color: white!important;
+    background-color: transparent!important;
     opacity: 1;
     font-size: 1.5em;
     z-index: 1120;
     position: relative;
   }
   
-  .gradient {
+  .content {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 70px;
-
-    $color: #3782A9;
-    $otherColor: rgba(55, 130, 169, 0.54);
-    background: $color; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, $color , $otherColor); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, $color, $otherColor); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, $color, $otherColor); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, $color , $otherColor); /* Standard syntax */
 
     .v-box {
       margin-left: 20px;

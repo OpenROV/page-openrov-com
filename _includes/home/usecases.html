@@ -48,9 +48,9 @@
 <div class="modal fade" id="modal-{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-sm" role="document"  >
         <div class="modal-content">
-            <div class="modal-body" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-400x300.jpg)">
+            <div class="modal-body" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-large.png)">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="v-container gradient">
+                <div class="v-container content">
                     <div class="v-box">
                         {%if item.modalFile %}
                         {% capture filename %}home/usecases/{{item.modalFile}}.html{% endcapture %}
@@ -59,6 +59,7 @@
                         <a href="products/trident" class="btn btn-primary btn-white-magic explore-trident">Explore Trident</a>                 
                     </div>
                 </div>
+                <div class="usecase-arrow">{% include yellow-arrow.svg %}</div>
 
             </div>
         </div>
