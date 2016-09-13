@@ -316,6 +316,7 @@ footer#footer {
 
 div#pre-order-banner {
     &.pre-order-banner {
+      $height: 110px;
         // background-color: greenyellow;
         @extend .Yellow-Border;        
         position: fixed;
@@ -323,36 +324,34 @@ div#pre-order-banner {
 
         &.sticky {
 
-            height: 110px;
+            height: $height;
             top: 50px;
         }
 
         h1 {
-          font-size: 60px;
+          font-family: Lato;
+          font-size: 70px;
           font-weight: 300;
-          line-height: 1.07;
+          line-height: $height;
           color: #3381ab;
           text-shadow: initial;
-          margin-top: 4px;          
+          // margin-top: 4px;          
         }
 
-        h3 {
-          font-size: 20px;
-          font-weight: bold;
-          line-height: 1.7;
-          color: #000000;
-          text-shadow: initial;          
+        .button-container {
+          line-height: $height;
+
+          .btn {
+                margin-top: -5px;
+                height: 70px;
+                margin: 0;
+                line-height: 70px;
+                padding: 0 20px;
+                font-family: Lato;
+                font-size: 23px;
+                color: $Primary_Blue;
+          }
         }
-
-        .shipping {
-          margin-top: 10px;
-          margin-bottom: 4px;
-          text-align: center;
-        }
-
-
-    }
-    .container {
     }
 }
 
