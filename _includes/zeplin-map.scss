@@ -64,6 +64,19 @@
     color: $Primary_Blue!important;
 }
 
+
+.or-content-title-light-left {
+    @extend .Content-Title-LIT-Left;
+    color: $Primary_White!important;
+    text-align: left;
+}
+.or-content-sub-title-light-left {
+    @extend .Content-Sub-Title-LIT-Left;
+    color: $Primary_White!important;
+    text-align: left;
+}
+
+
 // button styles
 .or-hero-btn-pre-order {
 
@@ -118,6 +131,17 @@
     @extend .Yellow-Border;
 }
 
+.or-darken-34 {    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.34;
+    background-color: #000000;
+    z-index: 10;    
+}
+
 
 
 // Additional styles
@@ -143,6 +167,17 @@
   line-height: 80px;
   text-align: center;
   color: $Primary_Blue!important;
+}
+
+.Content-Sub-Title-LIT-Left {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.7;
+  text-align: left;
+  color: $Primary_White;
 }
 
 .Yellow-Border {
