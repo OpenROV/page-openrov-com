@@ -1,58 +1,17 @@
 @import "themeDefinitions.scss";
 section#components {
 
-    .portfolio-item .figure  {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .portfolio-item:first-child .figure  {
-        margin-right: 10px;
-        margin-left: 0;
-    }
-    .portfolio-item:last-child .figure  {
-        margin-left: 10px;
-        margin-right: 0;
-    }
+    .linkImage .background {
+        height: 270px;
 
-    @media #{$tabletMedia} {
-        .portfolio-item .figure,
-        .portfolio-item:first-child .figure,
-        .portfolio-item:last-child .figure {
-            margin-left: 0;
-            margin-right: 0;
+        .description {
+            position: absolute;
+            bottom: -110px;
         }
-        
-        $width: 5px;
-        @media #{$mobileMedia} {
-            $width: 5px;
-        }
-        .portfolio-item[data-menu-order="1"]  {
-            padding-right: $width;
-            padding-bottom: $width;
-        }
-        .portfolio-item[data-menu-order="2"]  {
-            padding-left: $width;
-            padding-bottom: $width;
-        }
-        .portfolio-item[data-menu-order="3"]  {
-            padding-right: $width;
-            padding-top: $width;
-        }
-        .portfolio-item[data-menu-order="4"]  {
-            padding-left: $width;
-            padding-top: $width;
+
+        .linkImage-arrow {
+            top: 55px;
         }
     }
 
-    .figure img {
-        border: solid black 1px;
-    }
-
-    .item.accessories {
-        background-image: url(../images/products/accessories.jpg);
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100%;
-    }
 }
