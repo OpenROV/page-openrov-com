@@ -1,0 +1,46 @@
+<section id="content" class="section swatch-gray">
+    <div class="container element-medium-top element-medium-bottom" id='overview'>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <header class="element-small-top element-no-bottom">
+                    <h1 class="or-section-title-dark element-short-bottom">Technical Specs</h1>
+                </header>
+            </div>
+        </div>
+
+
+        <div class="row">
+           
+            <div class="col-md-4 col-md-offset-4">
+                <img src="{{ site.baseurl }}/assets/openrov/images/product-trident/trident-dimensions.png" alt="Trident dimensions">
+            </div>
+
+        </div><!--row-->
+
+        <div class="row">
+             {% for item in site.data.product-trident-techspecs %}
+            <div class="col-md-6">
+                <!--<div>-->
+                    <h1 class="or-section-title-dark left element-short-top">{{item.title}}</h1>
+                    <span class="or-content-body-dark text-left">
+                        {% for content in item.content %}
+                            {% unless content.items %}
+                            {{content}}<br>
+                            {% else %}
+                            {{ content.title }}:
+                            <ul>
+                                {% for subItem in content.items %}
+                                <li>{{subItem}}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endunless %}
+                        {% endfor %}
+                    </span>
+                <!--</div>-->
+            </div>
+             {% endfor %}
+        </div>
+
+    </div>
+</section>
