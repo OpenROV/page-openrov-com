@@ -1,11 +1,11 @@
-                        <div class="container or-hero-gradient">
+                        <div class="container {% if include.hideGradient == false %}or-hero-gradient{% endif %}">
                             <div class="container element-no-bottom hero">
                                 <div class="row full-height">
-                                    <div class="col-md-9 col-md-offset-2 full-height">
+                                    <div class="col-md-10 col-md-offset-1 full-height">
                                         <div class="v-container">
                                             <div class="v-box fullwidth ">
                                                 <div class="row ">
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-8">
                                                         <h1 class="or-hero-title"> {% if include.title %}{{include.title}}
                                                             {% else %}Trident{% endif %}
                                                         </h1>
@@ -14,14 +14,6 @@
                                                             See underwater like never before. 
                                                         </div>                 
                                                         {% endif %}
-                                                        <!--<h2 class="element-short-top">
-                                                            Pre-Order $1,199  
-                                                        </h2>               
-                                                        {% if include.retail %}        
-                                                        <h2 class="element-no-top">
-                                                            (Retail: $1,499) 
-                                                        </h2>                 
-                                                        {% endif %}      -->
                                                     </div>
                                                     <div class="col-md-4 pull-right buttons">
                                                         <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="or-hero-btn-pre-order btn" taget="_blank">PRE-ORDER NOW</a><br>
