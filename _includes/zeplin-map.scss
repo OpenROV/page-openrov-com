@@ -83,18 +83,27 @@
     &.left { text-align: left; }
 }
 
+
 // button styles
+.or-btn-shadow {
+    &:hover {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.26)
+    }
+}
 .or-hero-btn-pre-order {
 
   border-radius: 6px;
+  background-color: #ffb538;
   background-image: linear-gradient(259deg, #ffb538, #ffb900 58%, #ffb638);
   border: solid 1px $Primaray_Spot_Color;
-  width: 240px;
-  height: 80px;
-  padding: 0;
+  padding: 20px 25px;
+  line-height: 1em;
 
   &:hover {
       text-decoration: underline;
+      background-image: none;
+      background-color: #E8AC04;
+      border-color: #E8AC04;
   }    
 
   &:active {
@@ -106,7 +115,7 @@
   }
 
   @extend .BTN-Pre-Order-CTA__;
-
+  @extend .or-btn-shadow;
 }
 
 .or-button-blue {
@@ -121,12 +130,37 @@
     line-height: 2.13;
     text-align: center;
     color: $Primary_White!important;
-    padding: 0 5px;
-    transition: all 0.4s;    
+    padding: 3px 16px;
 
     &:hover {
         background-image: none;
+        text-decoration: underline;
     }
+    @extend .or-btn-shadow;
+}
+
+.or-hero-btn-white-lg {
+
+  border-radius: 6px;
+  background-image:  radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #FFFFFF 50%, #B7B7B7 200%);
+  border: solid 1px #fff;
+  padding: 20px 25px;
+  line-height: 1em;
+
+  &:hover {
+      text-decoration: underline;
+  }    
+
+  &:active {
+        background-color: #B7B7B7;
+        text-decoration: underline;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: #B7B7B7;
+  }
+
+  @extend .BTN-Pre-Order-CTA__;
+
 }
 
 
@@ -170,7 +204,6 @@
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 80px;
   text-align: center;
   color: $Primary_Blue!important;
 }
