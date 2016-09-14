@@ -2,18 +2,13 @@
 ---
 @import 'products/components.scss';
 @import 'products/promotions.scss';
-@import 'products/rov28.scss';
-@import 'products/trident.scss';
+@import 'products/products.scss';
 
 section {
     z-index: 1000;
 }
 
-#rov28, #trident {
-    height: 600px;
-}
 
 .hero {
     height: 400px!important;
-    // .full-height
 }
