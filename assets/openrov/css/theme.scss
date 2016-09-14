@@ -424,6 +424,9 @@ div#pre-order-banner {
           padding-left: 25px;
           padding-right: 55px;
           z-index: 100;
+          &.tall {
+            height: 139px;
+          }
         }
 
         .svg {

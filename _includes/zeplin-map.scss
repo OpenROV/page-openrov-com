@@ -56,6 +56,7 @@
 }
 
 .or-section-title-dark {
+    &.left { text-align: left; }
     @extend .Section-Title-DRK;
     color: $Primary_Blue!important;
 }
@@ -77,6 +78,10 @@
     text-align: left;
 }
 
+.or-content-body-dark {
+    @extend .Content-Body-Dark;
+    &.left { text-align: left; }
+}
 
 // button styles
 .or-hero-btn-pre-order {

@@ -1,7 +1,7 @@
     <div class="background element-short-bottom" style="background-image: url({{ include.image }})">
         <a href="{{ include.url }}" class="" >
         <div class="linkImage-container">
-            <div class="container-fluid linkImage-content">
+            <div class="container-fluid linkImage-content {% if include.tall == true %}tall{% endif %}">
                 <div class="row" style="height:100%">
                     <div class="col-md-12">
                         <h1 class="or-content-title-light-left">{{ include.title }}</h1>

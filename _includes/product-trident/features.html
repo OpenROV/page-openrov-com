@@ -1,92 +1,26 @@
-<section class="section swatch-white element-short-bottom">
+<section id="features" class="section swatch-gray">
     <div class="container" id='overview'>
         <div class="row">
             <div class="col-md-12">
-                <h1 class="hairline  element-short-top">
-                    Trident Features
-                </h1>
-            </div>
-        </div>
+                <div class="row">
+                {% for item in site.data.product-trident-features %}<div class="col-md-4 col-xs-6 {{item.additional-css}}">
+                    <div class="element-short-top element-no-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
+                        <div class="box box-round box-medium box-simple">
+                            <div class="box-dummy"></div>
+                            <div class="box-inner grid-overlay-0 icon">
+                                <img class="" src="../../assets/openrov/images/features/{{item.image}}.png" alt="{{item.title}}" />
+                            </div>
+                        </div>
+                        <h3 class="or-content-sub-title-dark ">
 
-        <div class="row">
-            <div class="col-md-6">
+                            {{item.title}}
 
-                <ul class="features-list element-no-top element-no-bottom features-white" data-linecolor="" data-os-animation="none" data-os-animation-delay="0s">
-                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">
-                        <div class="features-list-icon">
-                            <img src="{{site.baseurl}}/assets/openrov/images/specs/dive-black.png" alt="Ready to dive" class="">
-                        </div>
-                        <h3>
-                            Ready to Dive
                         </h3>
-                        <p>
-                            Trident comes ready to dive out of the box and
-                            is easy control with any device.
-                        </p>
-                    </li>
-                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">
-                        <div class="features-list-icon">
-                            <img src="{{site.baseurl}}/assets/openrov/images/specs/depth-black.png" alt="Rated to 100m Deep" class="">
-                        </div>
-                        <h3>
-                            Rated to 100m Deep
-                        </h3>
-                        <p>
-                            Go deep! Trident dives comfortably to 100m, far deeper than recreational diving.
-                        </p>
-                    </li>
-                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">
-                        <div class="features-list-icon">
-                            <img src="{{site.baseurl}}/assets/openrov/images/specs/battery-black.png" alt="4 Hours Battery Life" class="">
-                        </div>
-                        <h3>
-                            4 Hours Battery Life
-                        </h3>
-                        <p>
-                            Onboard rechargeable lithium batteries give you 4 hours of power to explore underwater.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6">
+                        <p class="or-content-body-dark">{{item.text}}</p>
+                    </div>
+                </div>{% endfor %}
+                </div>
 
-                <ul class="features-list element-no-top element-no-bottom features-white" data-linecolor="" data-os-animation="none" data-os-animation-delay="0s">
-                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
-                        <div class="features-list-icon">
-                            <img src="{{site.baseurl}}/assets/openrov/images/specs/camera-black.png" alt="Shoot and Record Video in HD" class="">
-                        </div>
-                        <h3>
-                            Shoot and Record Video in HD
-                        </h3>
-                        <p>
-                            The underwater-optimized full HD camera offers low latency, high quality video streaming 
-                            and recording.
-                        </p>
-                    </li>
-                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
-                        <div class="features-list-icon">
-                            <img src="{{site.baseurl}}/assets/openrov/images/specs/wifi-buoy-black.png" alt="WiFi Buoy" class="">
-                        </div>
-                        <h3>
-                            WiFi Buoy
-                        </h3>
-                        <p>
-                            Trident uses a neutrally buoyant tether to communicate to a towable WiFi buoy allowing 
-                            for unprecedented freedom of movement.
-                        </p>
-                    </li>
-                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
-                        <div class="features-list-icon">
-                            <img src="{{site.baseurl}}/assets/openrov/images/specs/memory-black.png" alt="Expandable and Flexible" class="">
-                        </div>
-                        <h3>
-                            Expandable and Flexible
-                        </h3>
-                        <p>
-                            Trident features easy interface for upgrades, add-ons and modules.
-                        </p>
-                    </li>
-                </ul>
             </div>
         </div>
         
