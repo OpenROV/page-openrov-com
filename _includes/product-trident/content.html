@@ -23,12 +23,35 @@
 
             <!--image column-->
             <div class="col-md-6 col-md-offset-1">
-                <div class="figure element-no-top element-no-bottom os-animation text-center animated fadeInLeft" data-os-animation="fadeInLeft"
+
+                <div id="control-slider" class="flexslider " data-flex-speed="4000" 
+                        data-flex-duration="1000" data-flex-animation="fade" data-flex-controls="show" 
+                        data-flex-directions="hide" data-flex-controlsalign="center" 
+                        data-flex-controlsposition="inside"
+                        data-flex-sliderdirection="horizontal" data-flex-controlsvertical="bottom">
+                    <ul class="slides">
+                        <li>
+                            <img src="{{ site.baseurl }}/assets/openrov/images/product-trident/vr-control.png" alt="VR Control">
+                        </li>
+                        <li>
+                            <img src="{{ site.baseurl }}/assets/openrov/images/product-trident/mobile-control.png" alt="Mobile Control">
+                        </li>
+                        <li>
+                            <img src="{{ site.baseurl }}/assets/openrov/images/product-trident/tablet-control.png" alt="Tablet Control">
+                        </li>
+                        <li>
+                            <img src="{{ site.baseurl }}/assets/openrov/images/product-trident/laptop-control.png" alt="Laptop Control">
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--<div class="figure element-no-top element-no-bottom os-animation text-center animated fadeInLeft" data-os-animation="fadeInLeft"
                     data-os-animation-delay="0.3s" style="animation-delay: 0.3s;">
                     <span class="figure-image">
                         <img src="{{ site.baseurl }}/assets/openrov/images/product-trident/v-r.png" alt="control">
                     </span>
-                </div>
+                </div>-->
             </div>
 
         </div><!--row-->
@@ -55,7 +78,7 @@
         </div><!--row-->
 
 
-        <div class="row">
+        <div class="row element-medium-top">
            
             <!--text-->
             <div class="col-md-5 element-medium-top">
