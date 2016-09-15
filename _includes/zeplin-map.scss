@@ -19,6 +19,14 @@
     @extend .Micro-Sub-Title-LIT;
 }
 
+.or-footer-micro-title {
+    @extend .Micro-Sub-Title-LIT;
+}
+
+.or-footer-micro-body {
+    @extend .Micro-Body-LIT;
+}
+
 .or-hero-gradient {
       background-image: radial-gradient(circle at 47% 42%, rgba(0, 0, 0, 0.26), rgba(78, 173, 215, 0.67));
       width: 100%;
