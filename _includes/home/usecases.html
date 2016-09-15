@@ -53,10 +53,25 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="v-container content">
                     <div class="v-box">
-                        {%if item.modalFile %}
-                        {% capture filename %}home/usecases/{{item.modalFile}}.html{% endcapture %}
-                        {% include {{filename}} svg=item.svg icon=item.icon %}
-                        {% endif %}
+
+                        <div class="head">
+                            <div class="icon">
+                                <div class="svg" style="{{item.svgStyle}}">{% include {{item.svg}} %}</div>
+                            </div>
+                            <h1 style="{{item.popup.titleStyle}}">{{item.popup.title}}</h1>
+
+                        </div>
+                        <div class="description Content-Body-LIT-Left">
+                        {{item.popup.description}}
+
+                            <ul class="element-short-top">
+                                {% for listItem in item.popup.list %}
+                                <li>{{listItem}}</li>
+                                {%endfor%}
+                            </ul>     
+                        </div>
+
+
                         <a href="products/trident" class="btn btn-primary explore-trident">LEARN MORE</a>                 
                     </div>
                 </div>
