@@ -25,6 +25,9 @@
 
 .or-footer-micro-body {
     @extend .Micro-Body-LIT;
+    &> a:hover {
+        text-decoration: underline;
+    }
 }
 
 .or-hero-gradient {
