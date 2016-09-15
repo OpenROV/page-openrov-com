@@ -73,6 +73,7 @@
 }
 
 .or-content-sub-title-dark {
+    &.left { text-align: left; }
     @extend .Content-Sub-Title-DRK;
     color: $Primary_Blue!important;
 }
@@ -145,7 +146,6 @@
 
     &:hover {
         background-image: none;
-        text-decoration: underline;
     }
     @extend .or-btn-shadow;
 }
@@ -157,12 +157,16 @@
   border: solid 1px #fff;
   padding: 20px 25px;
   line-height: 1em;
+  background-color: #ebebeb;
+  border-color: #ebebeb;
 
   &:hover {
+      background-image:  none;
       text-decoration: underline;
   }    
 
   &:active {
+      background-image: none;
         background-color: #B7B7B7;
         text-decoration: underline;
         -webkit-box-shadow: none;

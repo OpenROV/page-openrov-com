@@ -363,6 +363,9 @@ div#pre-order-banner {
   .btn-white-magic {
     &:hover {
       color: black;
+      text-decoration: none!important;
+      background-image:  none;
+
     }
     &:active {
       background: #B7B7B7!important;
@@ -372,6 +375,9 @@ div#pre-order-banner {
     font-size: 25px;
     text-align: center;
     border-radius: 6px;
+    background-color: #ebebeb!important;
+    border-color: #ebebeb!important;
+
             
   }
 
