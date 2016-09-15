@@ -8,5 +8,5 @@ sass:
 
 array: []
 
-gems:
-  - jekyll-sitemap
+# gems:
+#   - jekyll-sitemap
