@@ -351,7 +351,7 @@ div#pre-order-banner {
                 font-size: 20px;
                 color: $Primary_Blue;
                 &:hover {
-                  text-decoration: underline;
+                  text-decoration: none;
                 }
             @extend .or-btn-shadow;
           }
