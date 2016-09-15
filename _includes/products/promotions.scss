@@ -2,6 +2,10 @@ section#promotions {
     .jumbotron {
         height: 400px;
         text-align: center;
+        
+        &> div.content {
+            z-index: 50;
+        }
 
         h1 { 
             margin-top: 0.7em;
