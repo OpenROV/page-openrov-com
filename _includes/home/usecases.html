@@ -11,14 +11,15 @@
                 <div class="row">
                     {% for item in site.data.home-trident-usecases %}
                     <div class="col-md-6 usecase text-center">
-                            <div class="background element-short-bottom" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-small.jpg)">
-                                <a href="#" class="" data-toggle="modal" data-target="#modal-{{forloop.index}}">
+                        <div class="background element-short-bottom" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-small.jpg)">
+                            <a href="#" class="" data-toggle="modal" data-target="#modal-{{forloop.index}}">
                                 <div class="usecase-container">
                                     <div class="container-fluid usecase-content">
                                         <div class="row" style="height:100%">
                                             <div class="col-md-3" style="height: 100%">
                                                 <div style="height:100%; position:relative;" class="v-container">
-                                                    {% if item.svg %} <div class="svg v-box">{% include {{item.svg}} %}</div> {% endif %}
+                                                    {% if item.svg %}
+                                                    <div class="svg v-box">{% include {{item.svg}} %}</div> {% endif %}
                                                 </div>
                                             </div>
                                             <div class="col-md-9">
@@ -29,12 +30,9 @@
                                         <div class="usecase-arrow right">{% include yellow-arrow-right.svg %}</div>
                                     </div>
                                     <div class="or-botton-line"></div>
-                                    
                                 </div>
-
-                                </a>
-                                
-                            </div>
+                            </a>
+                        </div>
                     </div>
                     {% endfor %}
                 </div>
@@ -46,8 +44,8 @@
 </section>
 
 {% for item in site.data.home-trident-usecases %}
-<div class="modal fade" id="modal-{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-sm" role="document"  >
+<div class="modal" id="modal-{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-body" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-large.jpg)">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -62,23 +60,22 @@
 
                         </div>
                         <div class="description Content-Body-LIT-Left">
-                        {{item.popup.description}}
+                            {{item.popup.description}}
 
                             <ul class="element-short-top">
                                 {% for listItem in item.popup.list %}
                                 <li>{{listItem}}</li>
                                 {%endfor%}
-                            </ul>     
+                            </ul>
                         </div>
 
 
-                        <a href="products/trident" class="btn btn-primary explore-trident">LEARN MORE</a>                 
+                        <a href="products/trident" class="btn btn-primary explore-trident">LEARN MORE</a>
                     </div>
                 </div>
                 {% if forloop.first == false %}
                 <div class="usecase-arrow left"><a data-modal-id="{{forloop.index}}">{% include yellow-arrow-left.svg %}</a></div>
-                {% endif %}
-                {% if forloop.last == false %}
+                {% endif %} {% if forloop.last == false %}
                 <div class="usecase-arrow right"><a data-modal-id="{{forloop.index}}">{% include yellow-arrow-right.svg %}</a></div>
                 {% endif %}
             </div>
@@ -86,4 +83,3 @@
     </div>
 </div>
 {% endfor %}
-
