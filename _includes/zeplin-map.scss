@@ -157,12 +157,14 @@
   border: solid 1px #fff;
   padding: 20px 25px;
   line-height: 1em;
-  background-color: #ebebeb;
-  border-color: #ebebeb;
+  background-color: #ebebeb!important;
+  border-color: #ebebeb!important;
 
   &:hover {
       background-image:  none;
       text-decoration: underline;
+      background-color: #ebebeb!important;
+      border-color: #ebebeb!important;
   }    
 
   &:active {
@@ -195,6 +197,19 @@
     opacity: 0.34;
     background-color: #000000;
     z-index: 10;    
+}
+
+.or-hero-blue-tint {    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.34;
+    background-color: #000000;
+    z-index: 10;  
+    @extend .or-hero-gradient; 
+  
 }
 
 
