@@ -868,7 +868,7 @@ jQuery(document).ready(function( $ ) {
         removalDelay: 300,
         mainClass: 'mfp-fade',
         image: {
-            titleSrc: item => {
+            titleSrc: function(item) {
                 return item.el.find('.figure-caption-title').text();
             }
         }
