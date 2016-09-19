@@ -9,13 +9,12 @@
   width: 40px;
   transition: all 0.4s;
 
-  // &:hover {
-  //   box-shadow: 2px 2px 2px rgba(0,0,0,1);
-  //   opacity: .8;
-  // }
-
-  &.right { right: 10px; }
-  &.left { left: 30px; }
+  &.right { 
+    right: 10px; 
+  }
+  &.left { 
+    left: 30px; 
+  }
 }
 
 section#usecases {
@@ -79,6 +78,7 @@ section#usecases {
         .usecase-arrow {
           @extend .usecase-arrow-base;
           display: none;
+          
         }
 
       }
@@ -172,6 +172,18 @@ $modalHeight: 608px;
   .usecase-arrow {
     @extend .usecase-arrow-base;
     top: 300px;
+    height: 32px;
+
+    &:hover {
+      opacity: 0.8;
+      &.right {
+        right: 14px;
+      }
+      &.left {
+        left: 34px;
+      }
+    }
+
 
   }
 
