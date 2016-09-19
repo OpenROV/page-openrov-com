@@ -3,12 +3,12 @@
   - 'Weight: 3.3kg (7.3lbs)'
   - 'Dimensions: 86mm x 205mm x 410mm (3.4in x 8in x 16.1in)'
   - 'Depth rating: 100m (328ft)'
-  - 'Neutrally buoyant in both the fresh and saltwater (includes additional ballast)'
+  - 'Neutrally buoyant in both fresh and saltwater (includes additional ballast)'
   - title: 'Hydrodynamic chassis design'
     items:
     - 'Speeds up to 4 knots (2m/s or 6.75ft/s)'
     - 'Tracks well in a straight line'
-    - 'Able to pitch and roll at high speeds'
+    - 'Able to pitch at high speeds'
     - 'Able to hover up and down at low speeds'
     - 'Rugged rubberized bumpers for protection and grip'
 
@@ -29,25 +29,25 @@
 
 - title: 'Lights'
   content:
-  - 'Forward lights: 2x3 lumen LED lights'
+  - '3 forward facing LEDs on each side'
   - 'Total lumens: 360'
   - 'Color temperature: 4000K'
 
 - title: 'Radio Buoy'
   content:
+  - 'Trident tows a buoy on the surface that can communicate wirelessly to your device'
   - 'Protocol: 802.11'
   - 'Range: ~30m (98ft)'
-  - 'Trident tows a buoy on the surface that can communicate wirelessly to your device'
-
+  
 - title: 'Motors / Propellers'
   content: 
   - '3 brushless DC motors'
   - 'Ruggedized for low maintenance in seawater'
-  - 'Electronic speed control optimized for running underwater'    
+  - 'Electronic speed control matched with motors for optimal underwater performance'    
 
 - title: 'Sensors'
   content: 
-  - 'Inertial Movement Unit (IMU) with 9-axis gyro and 9-axis accelerometer'
+  - 'Inertial Movement Unit (IMU) with 3-axis gyro and 3-axis accelerometer'
   - 'Depth sensor'
   - 'Magnetometer (compass)'
   - 'Temperature'  
@@ -68,7 +68,7 @@
   - 'AC adapter and charger included'
   - 'Chemistry: lithium manganese cobalt oxide (NMC)'
   - 'Arrangement: 3s2p'
-  - 'Capacity: 99.7Wh'
+  - 'Capacity: 95Wh'
   - 'Average run time: 4 hours'
   - 'Average charge time: 2-3 hours'
 
