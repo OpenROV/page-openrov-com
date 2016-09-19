@@ -60,10 +60,13 @@
 }
 
 .or-nav-highlight a:after {
+    transition: all 0.4s;
+    background-color: #4e92df!important;
     background: radial-gradient(circle at 54% 55%, #55b2e4, #4e92df)!important;
 }
 .or-nav-highlight a:hover:after {
     background: #55b2e4!important;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.26);
 }
 
 .or-section-title-dark {
@@ -146,6 +149,7 @@
 
     &:hover {
         background-image: none;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.26);
     }
     @extend .or-btn-shadow;
 }
@@ -165,6 +169,7 @@
       text-decoration: underline;
       background-color: #ebebeb!important;
       border-color: #ebebeb!important;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.26);
   }    
 
   &:active {
