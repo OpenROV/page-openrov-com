@@ -7,6 +7,12 @@
   text-decoration: line-through;
 }
 
+.hideOnDeskop {
+  @media (min-width: 770px) {
+    display: none!important;
+  }
+}
+
 .bold {
   text-weight: bold;
 }
@@ -129,14 +135,6 @@ img.invert {
     vertical-align: middle;
     white-space: normal;
 }
-
-
-@media (max-width: 770px) {
-  .hideOnMobile {
-    display: none;
-  }
-}
-
 
 nav.main-navbar ul.dropdown-menu.first {
   left:auto!important;
