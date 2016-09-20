@@ -22,11 +22,6 @@
   - '25m (82ft) standard length'
   - '100m (328ft) length available'
 
-- title: 'Payload'
-  content:
-  - 'Published and standard bolt pattern'
-  - 'Modules and add-ons interface with the main vehicle via WiFi' 
-
 - title: 'Lights'
   content:
   - '3 forward facing LEDs on each side'
@@ -70,6 +65,14 @@
   - 'Capacity: 95Wh'
   - 'Average run time: 3-4 hours'
   - 'Average charge time: &lt;3 hours'
+
+- title: 'Payload'
+  content:
+  - 'Modules and add-ons interface with the main vehicle via WiFi'
+  - 'Published and standard bolt pattern'
+  - ''
+  - '<img src="../../..//assets/openrov/images/product-trident/trident-hole-pattern-specification.jpg" alt="Trident hole pattern">' 
+
 
 - title: 'Software'
   content: 
