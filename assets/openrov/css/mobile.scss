@@ -269,6 +269,10 @@ section#promotions .jumbotron h1{
             }
 
         }
+
+        .linkImage .background .linkImage-content {
+            height: 180px;
+        }
     }
 }
 
@@ -309,7 +313,7 @@ section#promotions .jumbotron h1{
 @media screen and (max-width: $mobileWidth) {
 footer#footer {
     section.main-footer {
-        height: 16em;
+        height: 18em;
 
         &>.container > .row {
             margin-top: 20px!important;
