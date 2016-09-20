@@ -171,7 +171,7 @@
 
   &:hover {
       background-image:  none;
-      text-decoration: underline;
+      text-decoration: none;
       background-color: #ebebeb!important;
       border-color: #ebebeb!important;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.26);
@@ -180,7 +180,7 @@
   &:active {
       background-image: none;
         background-color: #B7B7B7;
-        text-decoration: underline;
+        text-decoration: none;
         -webkit-box-shadow: none;
         box-shadow: none;
         border-color: #B7B7B7;
