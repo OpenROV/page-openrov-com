@@ -1,9 +1,9 @@
-- title: 'Chasis'
+- title: 'Vehicle'
   content:
   - 'Weight: 3.3kg (7.3lbs)'
   - 'Dimensions: 86mm x 205mm x 410mm (3.4in x 8in x 16.1in)'
   - 'Depth rating: 100m (328ft)'
-  - 'Neutrally buoyant in both fresh and saltwater (includes additional ballast)'
+  - 'Neutrally buoyant in both fresh and saltwater <br>(includes additional ballast)'
   - title: 'Hydrodynamic chassis design'
     items:
     - 'Speeds up to 4 knots (2m/s or 6.75ft/s)'
@@ -47,7 +47,7 @@
 
 - title: 'Sensors'
   content: 
-  - 'Inertial Movement Unit (IMU) with 3-axis gyro and 3-axis accelerometer'
+  - 'Inertial Measurement Unit (IMU) with 3-axis gyro and <br>3-axis accelerometer'
   - 'Depth sensor'
   - 'Magnetometer (compass)'
   - 'Temperature'  
@@ -57,7 +57,7 @@
   content:
   - 'Resolution: 1080p'
   - 'Framerate: 30 fps'
-  - 'Compression: onboard H.264 for easy streaming, recording, and storage'
+  - 'Compression: onboard H.264 for easy streaming, recording, and&nbsp;storage'
   - 'High dynamic range (HDR)'
   - 'Excellent color rendition'
   - 'Wide angle'
@@ -68,16 +68,16 @@
   - 'AC adapter and charger included'
   - 'Chemistry: lithium manganese cobalt oxide (NMC)'
   - 'Capacity: 95Wh'
-  - 'Average run time: 4 hours'
-  - 'Average charge time: 2-3 hours'
+  - 'Average run time: 3-4 hours'
+  - 'Average charge time: &lt;3 hours'
 
 - title: 'Software'
   content: 
-  - 'System requirements: Any device able to run Google Chrome'
-  - 'Device types: tablet, smartphone, or modern mobile device'
+  - 'System requirements: Any device able to run a recent version of Google Chrome'
+  - 'Device types: laptop, tablet, smartphone, or modern mobile device'
   - 'Control methods: game controller, joystick, keyboard, or touchscreen'
   - 'VR capable'
-  - 'Customizable UI'
+  - 'Customizable UI'  
   - title: 'Computer assisted flight controls including'
     items: 
     - 'Gyro stabilization'
