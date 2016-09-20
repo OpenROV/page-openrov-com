@@ -425,6 +425,9 @@ div#pre-order-banner {
         &:hover {
           transform:scale(1.05);
         }
+        &.no-scale:hover{
+          transform: none;
+        }
 
         .description {
           padding-top: 5px;
