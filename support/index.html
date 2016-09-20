@@ -4,11 +4,11 @@ layout: default
 page_css: /assets/openrov/css/support.css
 ---
 
-<section id="support" class="section swatch-white">
+<section id="support" class="section swatch-gray">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <header class="element-small-top element-no-bottom">
+                <header class="element-short-top element-no-bottom">
                     <h1 class="or-section-title-dark element-medium-bottom">Our Support Channels</h1>
                 </header>
             </div>
@@ -16,23 +16,21 @@ page_css: /assets/openrov/css/support.css
 
         <div class="row">
 
-            <div class="col-md-4 linkImage">
-                {% include linkimage.html image='../assets/openrov/images/support/assembly-instructions-800x600.jpg' url='http://openrov.dozuki.com/' title='Assembly instructions' subtitle='Built it!' tall=true %}
+            <div class="col-md-6 linkImage">
+                {% include linkimage.html image='../assets/openrov/images/support/assembly-instructions-800x600.jpg' url='http://openrov.dozuki.com/' title='Assembly instructions' subtitle='Built it!' tall=false %}
             </div>
-            <div class="col-md-4 linkImage">
+            <div class="col-md-6 linkImage">
                 {% include linkimage.html image='../assets/openrov/images/support/forum-800x600.jpg' url='http://forum.openrov.com/c/help-and-support' title='Forum' subtitle='Connect with the community'  %}
             </div>            
-            <div class="col-md-4 linkImage">
-                {% include linkimage.html image='../assets/openrov/images/support/archeology-800x600.jpg' url='http://openrov.dozuki.com/c/Operation' title='Operations Manual' subtitle='Get your ROV in ship shape' tall=true %}
+            <div class="col-md-6 linkImage">
+                {% include linkimage.html image='../assets/openrov/images/support/archeology-800x600.jpg' url='http://openrov.dozuki.com/c/Operation' title='Operations Manual' subtitle='Get your ROV in ship shape' tall=false %}
             </div>            
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 linkImage" id="supportFormContainer">
+            <div class="col-md-6 linkImage" id="supportFormContainer">
                 {% include linkimage.html image='../assets/openrov/images/support/support-800x600.jpg' url='https://openrov.zendesk.com/hc/en-us/requests/new' title='Contact support' subtitle='We are here to help' tall=false %}
             </div>
+
         </div>
+
     </div>
 </section>
 
