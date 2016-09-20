@@ -12,7 +12,7 @@ section#promotions {
         h1 { 
             margin-top: 0.7em;
             text-shadow: none;
-            font-family: Lato;
+            font-family: 'Lato',sans-serif!important;
             font-size: 70px!important;
             font-weight: 300;
 
@@ -20,7 +20,7 @@ section#promotions {
                 height: 55px;
                 width: auto;
                 margin-left: 0;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
 
             &.with-description {
