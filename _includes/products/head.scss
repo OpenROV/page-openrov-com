@@ -16,6 +16,13 @@ section#promotions {
             font-size: 70px!important;
             font-weight: 300;
 
+            img {
+                height: 55px;
+                width: auto;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
             &.with-description {
                 // margin-top: 0;
             }            
