@@ -21,18 +21,21 @@
   .mobile-text-center {
       text-align: center!important;
   }
+    .no-gutter-mobile [class*="-6"] {
+        padding-left:0;
+    }  
 }
 
 
 
 .or-hero-sub-title {
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: $mobileWidth) {
         font-size: 17px!important;
     }
 }
 
  .or-section-title-dark {
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: $mobileWidth) {
         font-size: 30px!important;
     }
 }
@@ -90,5 +93,24 @@ article#home {
                 }
             }        
         }
+    }
+
+    section#usecases {
+        @media screen and (max-width: $mobileWidth) {
+            .usecase .background .usecase-content {
+                height: 180px;
+                padding-left: initial;
+                padding-right: initial;
+
+                .row.full-height {
+                    height: initial;
+                }
+
+                .svg-container {
+                    margin-bottom: 5px;
+                    height: 76px;
+                }
+            }
+        }        
     }
 }
