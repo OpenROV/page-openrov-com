@@ -213,3 +213,28 @@ article#home {
         }
     }
 }
+
+
+// ------------ FOOTER --------
+footer#footer {
+    section.main-footer {
+        height: 16em;
+
+        &>.container > .row {
+            margin-top: 20px!important;
+        }
+        .link-partners {
+            .social {
+                margin-top: 5px !important;
+            }
+        }
+    }
+
+    section.bottom {
+        text-align: center;
+        .pull-right {
+            float:none!important;
+        }
+    }
+
+}
