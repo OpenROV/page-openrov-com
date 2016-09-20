@@ -5,15 +5,14 @@ window.map = {
     map_style: 'blackwhite',
     map_scrollable: 'on',
     marker: 'show',
-    label: ['London Royal','Athens Bistro'],
+    label: ['OpenROV HQ'],
     address: '',
-    latlng : ['51.511084, -0.133202','51.506623, -0.111916'],
+    latlng : ['37.864415,-122.300633'], //37.864415, -122.300633
     center_latlng: '',
     markerURL: 'assets/images/marker.png',
     auto_center: true,
 };
 'use strict';
-
 /* ========================================================================
  * Omega: map.js
  * Map Shortcode Javascript file

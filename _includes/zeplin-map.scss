@@ -79,6 +79,11 @@
     &.left { text-align: left; }
     @extend .Content-Sub-Title-DRK;
     color: $Primary_Blue!important;
+
+    small {
+        font-size: smaller;
+        font: 'Lato',sans-serif!important;
+    }
 }
 
 
