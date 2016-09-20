@@ -42,6 +42,71 @@
 
 
 
+// ------------ MODAL -----------------
+.modal {
+    .modal-dialog {
+        margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+
+        .content {
+            padding: 0;
+            .v-box {
+                margin-left: 10px;
+                margin-right: 10px;
+                text-align: center;
+            }
+        }
+
+        .close {
+            font-size: 2.5em;
+        }
+
+        .usecase-arrow {
+            top: 90%;
+        }
+
+        .modal-content {
+            height: 100%;
+            width: 100%;
+        }
+        .modal-body {
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .head {
+                .icon {
+                    float: none;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+
+                h1 {
+                    font-size: 25px!important;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .description {
+                font-size: 15px;
+                text-align: left;
+            }
+
+        }
+
+    }
+}
+
 // ------------ PRE-ORDER SASH --------
 #masthead.navbar-scrolled {
     height: 50px;

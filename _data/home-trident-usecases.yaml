@@ -32,7 +32,7 @@
   popup:
     title: Explore and Inspire
     titleStyle: "line-height:70px!important"
-    description: "Inspire your friends and family with Trident. If you have ever been curious about what is underwater, then Trident is for you. There are so many amazing sites to discover in our own backyards. Trident is the easiest way to see what's underwater wherever you are."
+    description: "Inspire your friends and family with Trident. If you have ever been curious about what is underwater, then Trident is for you. There are so many amazing sites to discover in our own backyards. Trident is the easiest way to see what's underwater wherever you&nbsp;are."
     list:
     - "Easy, fast, and fun"
     - "Capture beautiful video using Trident's underwater-optimized HD camera"
