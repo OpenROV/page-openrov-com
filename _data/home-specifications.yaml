@@ -5,7 +5,7 @@
 
 - header: Go to 100m
   image: depth-white
-  text: Trident can dive comfortably to 100m, far deeper than most recreational divers.
+  text: 'Trident can dive comfortably to 100m, far deeper than most recreational divers.<span class="hideOnDesktop"><br>&nbsp;<br>&nbsp;<br>&nbsp;</span>'
   additional-css:
 
 - header: 4 Hours Battery Life
@@ -16,4 +16,4 @@
 - header: Radio Buoy
   image: wifi-buoy-white
   text: Trident is equipped with a towable radio buoy for unprecedented freedom of movement.
-  additional-css: hideOnMobile
+  additional-css: 

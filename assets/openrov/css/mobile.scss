@@ -34,7 +34,12 @@
     }
 }
 
- .or-section-title-dark {
+.or-section-title-dark {
+    @media screen and (max-width: $mobileWidth) {
+        font-size: 30px!important;
+    }
+}
+.Section-Title-LIT {
     @media screen and (max-width: $mobileWidth) {
         font-size: 30px!important;
     }
@@ -122,6 +127,19 @@ div#pre-order-banner.pre-order-banner {
     }
 }
 
+
+// ---------------- linkImage ---------
+.linkImage {
+    .linkImage-content {
+        h1.or-content-title-light-left {
+            font-size: 25px!important;
+        }
+        .description {
+            font-size: 20px;
+        }
+    }
+}    
+
 // ---------------- HOME --------------
 article#home {
 
@@ -177,5 +195,21 @@ article#home {
                 }
             }
         }        
+    }
+
+    section#tridentSpecs .background-media {
+        background-position-x: 20%;
+    }
+
+    section#openexplorer {
+        .oe-content {
+            height: 420px;
+            padding-top: 1px;
+        }
+        .background-media {
+            background-size: cover;
+            background-position-x: 68%;
+            background-position-y: 1%;
+        }
     }
 }
