@@ -1,0 +1,48 @@
+<section class="section swatch-gray" id="tridentFeatures">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="text-center element-medium-top element-no-bottom condensed os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                    <h1 class="or-section-title-dark">
+                        Trident Features
+                    </h1>
+                    <div class=" element-short-top">
+                        <a href="products/trident" class="or-button-blue btn">LEARN MORE</a>
+                    </div>
+                   
+                </header>
+
+                {% for item in site.data.home-trident-features %}<div class="col-md-3 col-xs-6 {{item.additional-css}}">
+                    <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
+                        <div class="box box-round box-medium box-simple">
+                            <div class="box-dummy"></div>
+                            <div class="box-inner grid-overlay-0 icon">
+                                <img class="" src="assets/openrov/images/features/{{item.image}}.png" alt="{{item.title}}" />
+                            </div>
+                        </div>
+                        <h3 class="or-content-sub-title-dark ">
+
+                            {{item.title}}
+
+                        </h3>
+                        <p class="">{{item.text}}</p>
+                    </div>
+                </div>{% endfor %}
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 element-medium-bottom">
+                <img src="assets/openrov/images/cards/trident/control-options.jpg">
+                <h1 class="or-section-title-dark">
+                    Trident Puts You in Control
+                </h1>
+                <div class="Content-Body-Dark">All you need is a web browser and a laptop, tablet, or smart phone.</div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

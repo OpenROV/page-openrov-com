@@ -1,4 +1,24 @@
 #baseurl: /page-openrov-com
-collections:
-  products:
-    output: true
+
+sass:
+  sass_dir: _includes
+
+array: []
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+
+# for SEO
+google_site_verification: 6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvm NxYDI4
+title: 'OpenROV | Underwater Exploration Robots'
+description: 'OpenROV is an open-source, low-cost underwater robot for exploration and education.'
+url: 'http://www.openrov.com'
+author:
+  twitter: openrov
+
+twitter: openrov
+logo: /assets/openrov/images/openrov.png
+
+social:

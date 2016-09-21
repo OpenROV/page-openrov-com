@@ -1,0 +1,49 @@
+---
+---
+section#press {
+
+    .image-container .image img {
+        max-height: 1.8em;
+    }
+
+    blockquote footer a {
+        font-weight: 600;
+    }
+
+    blockquote.blockquote-list {
+        margin-left: 10px;
+        margin-right: 10px; 
+        padding: 10px;
+        border-radius: 20px;
+
+
+            $duration: 100ms;
+            $delay: 0;
+
+            -webkit-transition-property: background-color box-shadow;
+            -webkit-transition-duration: $duration;
+            -webkit-transition-timing-function: ease-in;
+            -webkit-transition-delay: $delay;
+
+            -moz-transition-property: background-color box-shadow;
+            -moz-transition-duration: $duration;
+            -moz-transition-timing-function: ease-in;
+            -moz-transition-delay: $delay;
+
+            -o-transition-property: background-color box-shadow;
+            -o-transition-duration: $duration;
+            -o-transition-timing-function: ease-in;
+            -o-transition-delay: $delay;
+
+            transition-property: background-color box-shadow;
+            transition-duration: $duration;
+            transition-timing-function: ease-in;
+            transition-delay: $delay;
+        
+    }
+
+    blockquote.blockquote-list:hover {
+        background-color: white;
+        box-shadow: 2px 2px 2px rgba(0,0,0,.6); 
+    }
+}

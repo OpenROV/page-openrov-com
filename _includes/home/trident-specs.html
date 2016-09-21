@@ -1,0 +1,37 @@
+<section id="tridentSpecs" class="section swatch-white">
+    <div class="background-media" style="">
+    </div>
+    <div class="container">
+        <div id="services" class="row">
+            <div class="col-md-12">
+                <header class="text-center element-medium-top element-no-bottom os-animation condensed" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                    <h1 class="Section-Title-LIT">
+                         Trident Specifications
+                    </h1>
+                    <div class=" element-short-top">
+                        <a href="products/trident" class="or-button-blue btn">LEARN MORE</a>
+                    </div>
+                </header>
+                <div class="row " data-os-animation="" data-os-animation-delay="">
+                    {% for item in site.data.home-specifications %}<div class="col-md-3 col-xs-6 {{item.additional-css}}">
+                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
+                            <div class="box box-round box-medium box-simple">
+                                <div class="box-dummy"></div>
+                                <div class="box-inner grid-overlay-0 icon">
+                                    <img class="" src="assets/openrov/images/specs/{{item.image}}.png" alt="{{item.header}}" />
+                                </div>
+                            </div>
+                            <h3 class="normal bold  ">
+
+                                {{item.header}}
+
+                            </h3>
+                            <p class="">{{item.text}}</p>
+                        </div>
+                    </div>{% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

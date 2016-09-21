@@ -1,0 +1,212 @@
+@import 'zeplin-map.scss';
+
+.usecase-arrow-base {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  transition: all 0.4s;
+
+  &.right { 
+    right: 10px; 
+  }
+  &.left { 
+    left: 30px; 
+  }
+}
+
+section#usecases {
+
+    .figure-image {
+        .figure-caption .figure-icon {
+            position: relative;
+            top: 1.8em;            
+        }
+    }
+
+    .usecase {
+      .background {
+        height: 215px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+
+        transition: all 0.4s;
+
+        &:hover {
+          transform:scale(1.05);
+        }
+
+        .description {
+          padding-top: 5px;
+          text-align: left;
+        }
+
+        .usecase-container {
+          position:relative;
+          height: 100%;
+          background-color:  rgba(51, 129, 171, 0.2);
+          transition: background-color 0.4s;
+
+          &:hover {
+           
+            background-color: transparent;
+
+            .usecase-arrow {
+              display: inline-block;
+            }
+          }
+        }
+
+        .usecase-content {
+          position: absolute;
+          bottom: 0;
+          height: 105px;
+          width: 100%;
+          padding-left: 25px;
+          padding-right: 55px;
+
+        }
+
+        .svg-container {
+          height: 100%;
+        }
+        
+        .svg {
+          // position: absolute;
+          bottom: 33px;
+        }
+
+        .usecase-arrow {
+          @extend .usecase-arrow-base;
+          display: none;
+          
+        }
+
+      }
+
+    }
+}
+
+
+.modal {
+  text-align: center;
+  z-index: 1110;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.in {
+    opacity: 1;
+  }
+}
+
+.modal-open {
+  overflow-y: scroll;
+}
+
+body {
+  padding-right: 0!important;
+}
+
+
+
+.modal-backdrop {
+  z-index: 1100;
+}
+
+
+$modalWidth: 800px;
+$modalHeight: 608px;
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: $modalWidth;
+  height: $modalHeight;
+
+  .modal-content {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  .modal-body {
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: $modalWidth;
+      height: $modalHeight;
+      text-align: left;
+
+      .v-container {
+        text-align: left;
+      }
+      
+      .head {
+        .icon {
+          width: 70px;
+          height: 70px;
+          font-size: 70px;
+          padding: 0;
+          float: left;
+          margin-right: 30px;
+        }
+      h1 {
+          @extend .or-hero-sub-title;
+          font-size: 35px!important;
+          line-height: 1.2!important;
+          font-weight: normal;
+        }
+      }
+
+      .explore-trident {
+        @extend .or-button-blue;
+      }
+  }
+
+  .usecase-arrow {
+    @extend .usecase-arrow-base;
+    top: 300px;
+    height: 32px;
+
+    &:hover {
+      opacity: 0.8;
+      &.right {
+        right: 14px;
+      }
+      &.left {
+        left: 34px;
+      }
+    }
+
+
+  }
+
+
+  .close {
+    color: white!important;
+    padding: 5px 10px;
+    background-color: transparent!important;
+    opacity: 1;
+    font-size: 1.5em;
+    z-index: 1120;
+    position: relative;
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 70px  120px;
+
+    .v-box {
+      margin-left: 20px;
+      color: white;
+      z-index: 1115;
+    }
+  }
+}

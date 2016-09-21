@@ -2,12 +2,15 @@ OpenROV website using GitHub pages
 ==========
 
 
-Pages are generated with Jekyll
+Pages are generated with Jekyll;
+ Style sheets are writen in Sass and Jekyll translates it to CSS.
 
 
-For the development we recommend using a Jekyll docker instance:
+For the development we recommend using a Jekyll/browser-sync docker setup:
 
 
-    docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 127.0.0.1:4000:4000 jekyll/jekyll:pages
+    docker-compose up
     
     
+Then connecto to http://localhost:3000/
+To access the Browser-Sync console connecto to http://localhost:3001/

@@ -1,0 +1,14 @@
+---
+---
+@import 'products/components.scss';
+@import 'products/head.scss';
+@import 'products/products.scss';
+
+section {
+    z-index: 1000;
+}
+
+
+.hero {
+    height: 400px!important;
+}

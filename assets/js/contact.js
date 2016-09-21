@@ -1279,6 +1279,6 @@ jQuery(document).ready(function($) {
 
     function showInputMessage(message, status) {
         $('#messages').empty();
-        $('#messages').append('<div class="alert alert-' + status + '" role="alert">' + message.message + '</div>');
+        $('#messages').append('<div class="element-short-top alert alert-' + status + '" role="alert">' + message.message + '</div>');
     }
 });

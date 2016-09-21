@@ -1,0 +1,336 @@
+---
+---
+@import 'themeDefinitions.scss';
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  .hideOnMobile {
+    display: none!important;
+  }
+  .mobile-text-left {
+      text-align: left!important;
+  }
+  .mobile-text-center {
+      text-align: center!important;
+  }
+    .no-gutter-mobile [class*="-6"] {
+        padding-left:0;
+    }  
+}
+
+
+
+.or-hero-sub-title {
+    @media screen and (max-width: $mobileWidth) {
+        font-size: 17px!important;
+    }
+}
+
+.or-section-title-dark {
+    @media screen and (max-width: $mobileWidth) {
+        font-size: 30px!important;
+    }
+}
+.Section-Title-LIT {
+    @media screen and (max-width: $mobileWidth) {
+        font-size: 30px!important;
+    }
+}
+
+
+
+// ------------ MODAL -----------------
+@media screen and (max-width: $mobileWidth) {
+.modal {
+    .modal-dialog {
+        margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+
+        .content {
+            padding: 0;
+            .v-box {
+                margin-left: 10px;
+                margin-right: 10px;
+                text-align: center;
+            }
+        }
+
+        .close {
+            font-size: 2.5em;
+        }
+
+        .usecase-arrow {
+            top: 90%;
+        }
+
+        .modal-content {
+            height: 100%;
+            width: 100%;
+        }
+        .modal-body {
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .head {
+                .icon {
+                    float: none;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+
+                h1 {
+                    font-size: 25px!important;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .description {
+                font-size: 15px;
+                text-align: left;
+            }
+
+        }
+
+    }
+}
+}
+
+// ------------ PRE-ORDER SASH --------
+@media screen and (max-width: $mobileWidth) {
+#masthead.navbar-scrolled {
+    height: 50px;
+    .navbar-toggle {
+        margin-top: 5px;
+    }
+}
+}
+
+// ------------ PRE-ORDER SASH --------
+@media screen and (max-width: $mobileWidth) {
+div#pre-order-banner.pre-order-banner {
+    h1 {
+        font-size: 33px;
+    }
+}
+}
+
+// ---------------- linkImage ---------
+@media screen and (max-width: $mobileWidth) {
+.linkImage {
+    .linkImage-content {
+        h1.or-content-title-light-left {
+            font-size: 25px!important;
+        }
+        .description {
+            font-size: 20px;
+        }
+    }
+}    
+}
+
+// ---------------- HOME --------------
+@media screen and (max-width: $mobileWidth) {
+article#home {
+
+    section#head {
+        .flexslider {
+            @media screen and (max-height: #{$heightNexus6P}) { 
+                height: 645px;
+            }
+            @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
+                height: 605px;
+            }
+            @media screen and (max-height: #{$heightiPhone6}) { 
+                height: 535px;
+            }
+
+            @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
+                height: 440px;
+            }
+
+            .hero {
+                .title {
+                    margin-top: 10px;
+                }
+                .title > h1 > img {
+                    height: 40px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .buttons {
+                    &.pull-right {
+                        float:none!important;
+                    }
+                    margin-top: 185px;
+                }
+            }        
+        }
+    }
+
+    section#usecases {
+        .usecase .background .usecase-content {
+            height: 180px;
+            padding-left: initial;
+            padding-right: initial;
+
+            .row.full-height {
+                height: initial;
+            }
+
+            .svg-container {
+                margin-bottom: 5px;
+                height: 76px;
+            }
+        }
+    }
+
+    section#tridentSpecs .background-media {
+        background-position-x: 20%;
+    }
+
+    section#openexplorer {
+        .oe-content {
+            height: 420px;
+            padding-top: 1px;
+        }
+        .background-media {
+            background-size: cover;
+            background-position-x: 68%;
+            background-position-y: 1%;
+        }
+    }
+}
+}
+
+// ------------ Product --------
+@media screen and (max-width: $mobileWidth) {
+.jumbotron {
+    &> div.content {
+        margin-left: 0 !important;
+    }
+
+}
+
+section#promotions .jumbotron h1{
+    &.or-hero-title {
+        font-size: 50px!important;
+    }
+    img {
+        height: 40px!important;
+        margin-left: auto!important;
+        margin-right: auto!important; 
+    }
+}
+
+}
+
+// ------------ Product Trident --------
+@media screen and (max-width: $mobileWidth) {
+    article#trident {
+        .jumbotron {
+            &> div.content {
+                margin-left: 0 !important;
+            }
+
+        }
+
+        section#head .jumbotron {
+            background-position-x: 66%;
+            h1{
+                &.or-hero-title {
+                    font-size: 50px!important;
+                }
+            }
+
+            .hero .buttons {
+                margin-top: 15px!important;
+                &.pull-right {
+                    float: none!important;
+                }
+            }
+
+        }
+
+        .linkImage .background .linkImage-content {
+            height: 180px;
+        }
+    }
+}
+
+// ------------ Product Trident Spec --------
+@media screen and (max-width: $mobileWidth) {
+    article#trident-specification {
+        .jumbotron {
+            &> div.content {
+                margin-left: 0 !important;
+            }
+
+        }
+
+        section#content .row > .col-md-6 {
+            width: 100%;
+        }
+
+        section#head .jumbotron {
+            background-position-x: 66%;
+            h1{
+                &.or-hero-title {
+                    font-size: 50px!important;
+                }
+            }
+
+            .hero .buttons {
+                margin-top: 15px!important;
+                &.pull-right {
+                    float: none!important;
+                }
+            }
+
+        }
+    }
+}
+
+// ------------ FOOTER --------
+@media screen and (max-width: $mobileWidth) {
+footer#footer {
+    section.main-footer {
+        height: 18em;
+
+        &>.container > .row {
+            margin-top: 20px!important;
+        }
+        .link-partners {
+            .social {
+                margin-top: 5px !important;
+            }
+        }
+    }
+
+    section.bottom {
+        text-align: center;
+        .pull-right {
+            float:none!important;
+        }
+    }
+
+}
+}

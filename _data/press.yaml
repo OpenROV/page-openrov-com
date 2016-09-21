@@ -1,0 +1,89 @@
+- outlet: "The New York Times"
+  date: "July 27, 2016"
+  url: http://www.nytimes.com/2016/06/27/technology/a-drone-start-up-explores-underwater.html
+  quote: "OpenROV has sold more than 3,000 of a first-generation submarine, which is able to navigate below the surface, connected by a thin cable and controlled by software running on a tablet or smartphone. The new Trident, which will go on sale this fall for $1,499, will travel at speeds of almost four knots underwater and will have a high-resolution camera and a lighting system as bright as car headlights. It will operate from a wirelessly connected buoy."
+  logo: nyt_logo.png
+
+- outlet: BBC
+  date: "July 19, 2016"
+  url: http://www.bbc.com/news/technology-36834001
+  quote: " low-cost underwater drone has provided one of the closest looks at the SS Tahoe shipwreck for more than 70 years. The OpenROV project’s focus is affordability and accessibility, allowing exploration to be available for those who do not have big budgets. The SS Tahoe was sunk in Lake Tahoe in an attempt to preserve it, but it sank far deeper than was intended and only the most skilled divers could reach it until now."
+  logo: bbc_logo.png
+
+- outlet: TED
+  date: "October 19, 2015" 
+  url: http://ideas.ted.com/how-to-investigate-the-bottom-of-the-ocean-without-getting-wet-2/
+  title:  "How to investigate the bottom of the ocean — without getting wet"
+  quote: "Imagine climbing into the cockpit of your own personal submarine, zooming and diving through the depths of the ocean and exploring otherwise-unreachable underwater worlds — all without needing to know how to swim. That’s the promise of Trident, a new, ultra-compact underwater drone that can travel faster, dive deeper and stay submerged longer than the average scuba diver can, all while sharing discoveries live to the Internet."
+  logo: ted-logo-simple.png
+
+- outlet: "Wired"
+  date: "November 24, 2014"
+  url: http://www.wired.com/2014/11/citizen-explorers-meet-new-submersible/
+  quote: " Underwater exploration has traditionally been an exclusive endeavor, accessible only to deep-pocketed adventurers or researchers backed by government scientific agencies. But with the recent rise of citizen science and low-cost, open-source tools, the boundaries to underwater exploration are rapidly being degraded. OpenROV has been leading the charge since 2012, offering low-cost (sub-$1000) submersibles [...]."
+  logo: wired_logo.png
+
+
+
+- outlet: Hackaday
+  date: "July 13, 2016"
+  url: http://hackaday.com/2016/07/13/highlights-from-robotic-shipwreck-exploration/
+  quote: "OpenROV shared the results of their June 2016 underwater expedition to locate and robotically explore the wreck of the S.S. Tahoe, currently sitting at a depth of 150m in Lake Tahoe. Back in 1940 the ship was intentionally scuttled in shallow water, but unexpectedly slid to a much deeper depth. OpenROV used a modified version of their new Trident design to dive all the way down to the wreck and take a good look at things, streaming it over the internet in the process."
+  logo: hackaday-logo.png
+
+- outlet: " The Mercury News"
+  date: "July 8, 2016"
+  url: "http://www.mercurynews.com/2016/07/08/new-sea-drone-will-open-the-ocean-to-amateur-explorers/"
+  quote: "New Sea Drone Will Open the Ocean to Amateur Explorers. The ability to remotely explore oceans and other bodies of water to depths exceeding 300 feet — which previously cost tens of thousands of dollars or more — is now priced about the same as a decent aerial drone. The Trident remotely operated vehicle will live-stream video, and is intended, with the associated OpenExplorer website, to create the biggest ocean-research platform in the world."
+  logo: mercury-logo.png
+
+- outlet: "National Geographic"
+  date: "June 18, 2016"
+  url: "http://nationalgeographic.org/projects/explorers-week/the-underwater-revolution-is-at-hand/"
+  quote: "Before 2012, the world of remote submarine exploration was a small one. Each year, just a few researchers were able to explore a few sites at enormous cost and risk. Then David Lang and Eric Stockpile launched OpenROV, an inexpensive, open-source, easily hackable underwater rover. This small, remotely operated robot, capable of being built and tinkered with by almost anyone who has mastered the art of following IKEA instructions, has opened up the underwater world like never before, and created a uniquely engaged international community of explorers and inventors."
+  logo: "natgeo-logo.png"
+
+- outlet: "Discovery VR"
+  date: "May 31, 2016"
+  url: http://www.discoveryvr.com/watch/the-submersible-drone
+  quote: "The Earth is 2/3 water and the ocean is impossibly deep. Eric Stackpole is looking to conquer the impossible with his underwater drone technology. Design expert Dr. Mike North checks in with him to learn about the future of deep sea exploration."
+  logo: discoveryvr-logo50.png
+
+- outlet: "National Geographic"
+  date: "September 5, 2016"
+  url: http://video.nationalgeographic.com/video/ng-live/160905-sciex-nglive-lang-openrov-citizen-science-lecture
+  quote: "Originally interested in building an underwater robot to explore a cave rumored to have gold and treasure, 2016 National Geographic explorer David Lang and a friend had no idea where their curiosity and drive for exploration would lead them. They turned to the Internet for help building their underwater robot, and a community of people emerged to assist. With the ability to descend to a maximum depth of a hundred meters, their low-cost underwater robot, called OpenROV, is redefining ocean exploration. Hear Lang talk about the journey to build OpenROV, how it is inspiring people to explore and engage in citizen science projects, and how the latest technology is creating a wave of low-cost, do-it-yourself products that are making new forms of exploration accessible to people all over the globe."
+  logo: natgeo-logo.png
+
+- outlet: MAKE
+  date: "September 14, 2015"
+  url: http://makezine.com/2015/09/14/openrov-trident/
+  quote: "Over the past few years, OpenROV has helped put underwater science into the hands of everyone with their affordable, open-source underwater submersible. The toaster-oven-sized device has allowed students, professionals, and hobbyists to exploring sunken ships and underwater caves, while transmitting video data back to the pilots for analysis...The Trident, launching today on Kickstarter, is more of a dolphin than a rover. Instead of housing its electronics (including an updated camera — 1080p at 30fps) in OpenROV’s traditional, boxy package, Trident uses a sleek wedge body that moves like an underwater flying wing. It’s an agile yet practical vehicle — the device dashes and spins with the push of its levers, then stops and pans where needed."
+  logo: make-logo.png
+
+
+- outlet: "TED Radio Hour, NPR"
+  date: "October 23, 2015"
+  url: "http://www.npr.org/2015/10/23/449202146/how-can-we-open-source-exploring-our-oceans"
+  quote: "David Lang became an amateur oceanographer by getting a network of ocean lovers to team up and build open source, low-cost underwater explorers…[he] is the co-founder of OpenROV, a community of citizen ocean explorers who build small remote-operated underwater robots. Lang is also the author of Zero to Maker and a 2013 TED Fellow."
+  logo: npr-logo.png
+
+
+- outlet: "RaspberryPi.org"
+  date: "August 2, 2016"
+  url: https://www.raspberrypi.org/blog/openrov-underwater-exploration-with-raspberry-pi/
+  quote: "The California-based company’s newest product, Trident, is an affordable underwater drone built with hackability in mind. OpenROV raised over $815,000 on Kickstarter for Trident, an entirely new product to follow their popular OpenROV 2.8 underwater drone. All of us are especially excited about Trident because there’s a Raspberry Pi 3 inside."
+  logo: "raspberrypi-logo.png"
+
+- outlet: "Reuters"
+  date: "October 27, 2015"
+  url: http://www.reuters.com/article/us-usa-underwater-robot-idUSKCN0SL27D20151027
+  quote: "&quot;Ocean science and exploration is really tragically underfunded and there are all sorts of people that are stuck...trying to get the research done with very limited budgets and so this tool has become great for them,&quot; said Lang, adding that Trident will cost just a fraction of the price of conventional ROVs with much of the same functionality." 
+  logo: reuters-logo.png
+
+# - outlet:
+#   date:
+#   url:
+#   quote:
+#   logo:
+
