@@ -7,3 +7,18 @@ array: []
 
 gems:
   - jekyll-redirect-from
+  - jekyll-seo-tag
+
+
+# for SEO
+google_site_verification: 6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvm NxYDI4
+title: 'OpenROV | Underwater Exploration Robots'
+description: 'OpenROV is an open-source, low-cost underwater robot for exploration and education.'
+url: 'https://www.openrov.com'
+author:
+  twitter: openrov
+
+twitter: openrov
+logo: /assets/openrov/images/openrov.png
+
+social:

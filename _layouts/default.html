@@ -5,11 +5,11 @@
     <head>
         <meta charset="utf-8">
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | OpenROV | Underwater Exploration Robots</title>
-        <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+        {% seo %}
+        <!--<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
         <meta property="og:description" content="OpenROV is an open-source, low-cost underwater robot for exploration and education.<br> It's also a passionate community of professional and amateur ocean explorers and technologists." />
         <meta property="og:image" content="{{ '/assets/openrov/images/ogimage.jpg' | prepend: site.baseurl }}" />
-        <meta property="og:url" content="http://www.openrov.com" />
-        <meta name="google-site-verification" content="6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvm NxYDI4" />
+        <meta property="og:url" content="http://www.openrov.com" />-->
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="yes" name="apple-mobile-web-app-capable">
