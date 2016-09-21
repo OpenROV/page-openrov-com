@@ -1,15 +1,9 @@
 baseurl: /page-openrov-com
-#collections:
-#  products:
-#    output: true
 
 sass:
   sass_dir: _includes
 
 array: []
 
-
 gems:
   - jekyll-redirect-from
-
-  # redirect_from: "/foo"
