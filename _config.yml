@@ -8,5 +8,8 @@ sass:
 
 array: []
 
-# gems:
-#   - jekyll-sitemap
+
+gems:
+  - jekyll-redirect-from
+
+  # redirect_from: "/foo"
