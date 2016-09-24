@@ -20,6 +20,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 pull-right buttons">
+                                                        {% unless include.hidePreOrder %}
                                                         <a href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" class="or-hero-btn-pre-order btn" taget="_blank">PRE-ORDER NOW</a><br>
 
                                                         <div class="or-hero-micro-title">
@@ -29,6 +30,7 @@
                                                         {% if include.hideLearnMore != true %}
                                                         <a href="products/trident" class="btn or-hero-btn-pre-order white element-short-top" taget="">Learn more</a>
                                                         {% endif %}
+                                                        {% endunless %}
                                                     </div>
                                                     
                                                 </div>

@@ -1,0 +1,54 @@
+--- 
+title: Trident Drone Pre Order
+layout: default
+page_css: /assets/openrov/css/product-trident-specifications.css
+page_script: /assets/openrov/js/confirmation.js
+image: /assets/openrov/images/social/trident.jpg
+---
+<article id="trident-specification">
+{% include pre-order-banner.html  %}
+{% include product-trident/head.html title='Thank you for your pre-order' special=true %}
+
+<section id="content" class="section swatch-gray">
+    <div class="container element-medium-top element-medium-bottom" id='overview'>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <header class="element-small-top element-no-bottom">
+                    <h1 class="or-section-title-dark element-short-bottom">Your confirmation number is: <span id="confirmationNumber"></span></h1>
+                </header>
+            </div>
+        </div>
+
+<!--
+        <div class="row">
+           
+            <div class="col-md-4 col-md-offset-4">
+                <img src="{{ site.baseurl }}/assets/openrov/images/product-trident/trident-dimensions.png" alt="Trident dimensions">
+            </div>
+
+        </div>-->
+
+        <div class="row">
+            <div class="col-md-12 ">
+                <div>
+                    <span class="or-content-body-dark text-left element-short-top">
+                        <p>
+                        Your pre-order has been successfull. <br>
+                        You will receive a confirmation email on <b><span id="confirmationEmail"></span></b> shortly.                         
+                        </p>
+                        
+                        <p>
+                            Thank you<br>
+                            The OpenROV Team
+                        </p>
+                        
+
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+</article>
