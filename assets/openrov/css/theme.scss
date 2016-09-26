@@ -342,16 +342,19 @@ footer#footer {
 
 div#pre-order-banner {
     &.pre-order-banner {
-      $height: 81px;
-        // background-color: greenyellow;
+        $height: 81px;
         @extend .Yellow-Border;        
         position: fixed;
         top: 90px;
 
         &.sticky {
-
             height: $height;
             top: 50px;
+        }
+        &.noShowOnScroll {
+          height: 6px;
+          position: relative;
+          top: 0;
         }
 
         h1 {

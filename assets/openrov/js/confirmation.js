@@ -10,11 +10,6 @@
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 
-
-    var email = getParameterByName('email'); 
-    var number = getParameterByName('number'); 
-
-    $('#confirmationNumber').text(number);
-    $('#confirmationEmail').text(email);
+    $('#confirmationNumber').text(getParameterByName('number'));
 
 })($) 
