@@ -12,7 +12,7 @@
                    
                 </header>
 
-                {% for item in site.data.home-trident-features %}<div class="col-md-3 col-xs-6 {{item.additional-css}}">
+                {% for item in site.data.home-trident-features %}<div class="col-md-3 col-xs-12 {{item.additional-css}}">
                     <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
                         <div class="box box-round box-medium box-simple">
                             <div class="box-dummy"></div>
@@ -25,7 +25,7 @@
                             {{item.title}}
 
                         </h3>
-                        <p class="">{{item.text}}</p>
+                        <p class="description">{{item.text}}</p>
                     </div>
                 </div>{% endfor %}
 

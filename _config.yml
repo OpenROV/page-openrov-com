@@ -1,4 +1,4 @@
-#baseurl: /page-openrov-com
+baseurl: /page-openrov-com
 
 sass:
   sass_dir: _includes
@@ -6,7 +6,7 @@ sass:
 array: []
 
 gems:
-  - jekyll-redirect-from
+  # - jekyll-redirect-from
   - jekyll-seo-tag
 
 

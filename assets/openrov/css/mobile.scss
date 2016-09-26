@@ -27,24 +27,91 @@
 }
 
 
+@media screen and (max-width: $mobileWidth) {
+    .or-hero-sub-title,
+    .or-content-sub-title,
+    .or-content-sub-title-dark {
+        font-size: 12px!important;
+    }
 
-.or-hero-sub-title {
-    @media screen and (max-width: $mobileWidth) {
-        font-size: 17px!important;
+    .or-section-title-dark {
+        font-size: 15px!important;
+        font-weight: bold!important;
+    }
+    .or-content-title-light-left {
+        font-size: 15px !important;
+        font-weight: bold!important;
+    }
+
+    .Section-Title-LIT {
+        font-size: 15px!important;
+        font-weight: bold!important;
+    }
+    .or-hero-micro-title {
+        font-size: 10px !important;
+    }
+
+    .or-content-body-dark {
+        font-size: 10px !important;
+    }
+
+    .or-footer-micro-body {
+        font-size: 10px !important;    
+    }
+
+    .element-medium-top {
+        margin-top: 23px!important;
+    }
+    .element-medium-bottom {
+        margin-bottom: 23px!important;
+    }
+    .element-medium-bottom {
+        margin-bottom: 23px!important;
+    }
+    .element-short-top {
+        margin-top: 9px !important;
+    }
+    .element-short-bottom {
+        margin-bottom: 9px !important;
+    }
+
+
+    .or-button-blue {
+        font-size: 12px !important;
+        padding: 4px 20px !important;
+    }
+
+    #masthead {
+        &.navbar {
+            height: 43px;
+            min-height: 43px;
+        }
+        &.navbar-scrolled {
+            .navbar-brand {
+                height: 43px;
+                line-height: 43px;
+            }
+            .navbar-toggle {
+                margin-top: 4px;
+            }
+        }
+
+        .navbar-brand {
+            height: 43px;
+            line-height: 43px;
+            img {
+                height: 18px;
+                width: auto;
+                top: -3px;
+            }
+        }
+
+        .navbar-toggle {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
     }
 }
-
-.or-section-title-dark {
-    @media screen and (max-width: $mobileWidth) {
-        font-size: 30px!important;
-    }
-}
-.Section-Title-LIT {
-    @media screen and (max-width: $mobileWidth) {
-        font-size: 30px!important;
-    }
-}
-
 
 
 // ------------ MODAL -----------------
@@ -114,37 +181,50 @@
 }
 }
 
-// ------------ PRE-ORDER SASH --------
-@media screen and (max-width: $mobileWidth) {
-#masthead.navbar-scrolled {
-    height: 50px;
-    .navbar-toggle {
-        margin-top: 5px;
-    }
-}
-}
 
 // ------------ PRE-ORDER SASH --------
 @media screen and (max-width: $mobileWidth) {
 div#pre-order-banner.pre-order-banner {
+    top: 43px;
+    &.sticky {
+        height: 50px;
+        top: 43px;
+    }
+    
     h1 {
         font-size: 33px;
     }
-}
-}
 
+    .button-container {
+        line-height: 50px !important;
+        .btn {
+            font-size: 12px !important;
+            font-weight: bold !important;
+            line-height: 0;
+            margin-top: -5px !important;
+        }
+    }
+}
+}
+ 
 // ---------------- linkImage ---------
 @media screen and (max-width: $mobileWidth) {
 .linkImage {
     .linkImage-content {
-        h1.or-content-title-light-left {
-            font-size: 25px!important;
-        }
+        height: 77px !important; 
         .description {
-            font-size: 20px;
+            font-size: 14px;
         }
     }
 }    
+}
+
+// ---------------- pre-order button ---------
+@media screen and (max-width: $mobileWidth) {
+    .or-hero-btn-pre-order {
+        font-size: 11px !important;
+        padding: 11px 20px !important;
+    }
 }
 
 // ---------------- HOME --------------
@@ -153,19 +233,8 @@ article#home {
 
     section#head {
         .flexslider {
-            @media screen and (max-height: #{$heightNexus6P}) { 
-                height: 645px;
-            }
-            @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
-                height: 605px;
-            }
-            @media screen and (max-height: #{$heightiPhone6}) { 
-                height: 535px;
-            }
 
-            @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
-                height: 440px;
-            }
+            @include header-height();
 
             .hero {
                 .title {
@@ -180,20 +249,34 @@ article#home {
                     &.pull-right {
                         float:none!important;
                     }
-                    margin-top: 185px;
+                    margin-top: 115px;
                 }
             }        
         }
     }
 
+    .media-links .element-short-bottom {
+        margin-bottom: 10px !important;
+    }
+
+
     section#usecases {
+        .usecase > div {
+            height: 140px;
+        }
+        .usecase-text {
+            margin-top: 10px;
+        }
+        .description {
+            font-size: 10px;
+        }
         .usecase .background .usecase-content {
-            height: 180px;
-            padding-left: initial;
-            padding-right: initial;
+            height: 70px;
+            padding-left: 14px;
+            padding-right: 14px;
 
             .row.full-height {
-                height: initial;
+                // height: initial;
             }
 
             .svg-container {
@@ -203,19 +286,48 @@ article#home {
         }
     }
 
-    section#tridentSpecs .background-media {
-        background-position-x: 20%;
+    section#tridentSpecs {
+        .background-media {
+            background-position-x: 20%;
+        }
+        .description {
+            font-size: 10px !important;
+        }
+    }
+
+    section#tridentFeatures {
+        .description {
+            font-size: 10px !important;
+        }
     }
 
     section#openexplorer {
         .oe-content {
-            height: 420px;
+            height: 280px;
             padding-top: 1px;
+            header {
+                margin-top: 23px !important;
+                margin-bottom: 10px !important;
+                h1 {
+                    margin-top: 20px !important;
+                    margin-bottom: 20px !important;
+                }
+                img {
+                    height: 18px;
+                    width: auto;
+                }
+            }
         }
         .background-media {
-            background-size: cover;
-            background-position-x: 68%;
-            background-position-y: 1%;
+            background-image: url('../images/hero/b-g-explore-small.jpg');
+        }
+    }
+
+    section#product {
+        .linkImage {
+            .background {
+                height: 260px;
+            }
         }
     }
 }
@@ -313,14 +425,24 @@ section#promotions .jumbotron h1{
 @media screen and (max-width: $mobileWidth) {
 footer#footer {
     section.main-footer {
-        height: 18em;
+        height: 20em;
 
         &>.container > .row {
             margin-top: 20px!important;
+
+            &> div {
+                margin-top: 10px;
+            }
         }
         .link-partners {
             .social {
                 margin-top: 5px !important;
+                a {
+                    margin-right: 14px;
+                }
+            }
+            .fa {
+                font-size: 32px;
             }
         }
     }
@@ -329,6 +451,9 @@ footer#footer {
         text-align: center;
         .pull-right {
             float:none!important;
+        }
+        .row {
+            margin-top: 18px !important;
         }
     }
 

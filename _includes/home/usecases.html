@@ -16,15 +16,15 @@
                                 <div class="usecase-container">
                                     <div class="container-fluid usecase-content">
                                         <div class="row full-height">
-                                            <div class="col-md-3 col-xs-12 svg-container" style="">
+                                            <div class="col-md-3 col-xs-3 svg-container" style="">
                                                 <div style="height:100%; position:relative;" class="v-container">
                                                     {% if item.svg %}
                                                     <div class="svg v-box">{% include {{item.svg}} %}</div> {% endif %}
                                                 </div>
                                             </div>
-                                            <div class="col-md-9 col-xs-12">
-                                                <h1 class="or-hero-sub-title  mobile-text-center">{{item.title}}</h1>
-                                                <div class="description Content-Body-LIT-Left mobile-text-center">{{item.description}}</div>
+                                            <div class="col-md-9 col-xs-9 usecase-text">
+                                                <h1 class="or-hero-sub-title ">{{item.title}}</h1>
+                                                <div class="description Content-Body-LIT-Left">{{item.description}}</div>
                                             </div>
                                         </div>
                                         <div class="usecase-arrow right">{% include yellow-arrow-right.svg %}</div>

@@ -16,17 +16,17 @@ $smallMedia: 'screen and (max-width: #{$smallWidth})';
 
 @mixin header-height() {
         @media screen and (max-height: #{$heightNexus6P}) { 
-            height: 645px;
+            height: 545px;
         }
         @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
-            height: 605px;
+            height: 505px;
         }
         @media screen and (max-height: #{$heightiPhone6}) { 
-            height: 535px;
+            height: 435px;
         }
 
         @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
-            height: 440px;
+            height: 350px;
         }            
 }
 
