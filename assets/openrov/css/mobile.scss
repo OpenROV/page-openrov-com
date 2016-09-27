@@ -63,11 +63,14 @@
         font-size: 10px !important;    
     }
 
+    .element-tall-top {
+        margin-top: 30px!important;
+    }
+    .element-tall-bottom {
+        margin-bottom: 30px!important;
+    }
     .element-medium-top {
         margin-top: 23px!important;
-    }
-    .element-medium-bottom {
-        margin-bottom: 23px!important;
     }
     .element-medium-bottom {
         margin-bottom: 23px!important;
@@ -435,6 +438,13 @@ article#home {
 
         .linkImage .background .linkImage-content {
             height: 180px;
+        }
+
+        section#content {
+            #wifi {
+                width: 90%;
+                height: auto;
+            }
         }
     }
 }
