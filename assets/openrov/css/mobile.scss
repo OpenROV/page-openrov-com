@@ -28,6 +28,10 @@
 
 
 @media screen and (max-width: $mobileWidth) {
+    .or-hero-title {
+        font-size: 33px !important;
+    }
+    
     .or-hero-sub-title,
     .or-content-sub-title,
     .or-content-sub-title-dark {
@@ -337,25 +341,37 @@ article#home {
 
 // ------------ Product --------
 @media screen and (max-width: $mobileWidth) {
-.jumbotron {
-    &> div.content {
-        margin-left: 0 !important;
+    section#promotions {
+        .jumbotron {
+            height: 500px;
+            @include header-height();
+        }
+        .description {
+            font-size: 14px !important;
+        }
+        
+    }
+
+    .jumbotron {
+        &> div.content {
+            margin-left: 0 !important;
+        }
+
+    }
+
+    section#promotions .jumbotron h1{
+        &.or-hero-title {
+            font-size: 33px!important;
+        }
+        img {
+            height: 40px!important;
+            margin-left: auto!important;
+            margin-right: auto!important; 
+        }
     }
 
 }
 
-section#promotions .jumbotron h1{
-    &.or-hero-title {
-        font-size: 50px!important;
-    }
-    img {
-        height: 40px!important;
-        margin-left: auto!important;
-        margin-right: auto!important; 
-    }
-}
-
-}
 
 // ------------ Product Trident --------
 @media screen and (max-width: $mobileWidth) {
@@ -368,11 +384,17 @@ section#promotions .jumbotron h1{
         }
 
         section#head .jumbotron {
+            height: 500px;
+            @include header-height();
             background-position-x: 66%;
             h1{
                 &.or-hero-title {
-                    font-size: 50px!important;
+                    font-size: 33px!important;
                 }
+            }
+
+            .description {
+                font-size: 14px !important;
             }
 
             .hero .buttons {
@@ -394,6 +416,9 @@ section#promotions .jumbotron h1{
 @media screen and (max-width: $mobileWidth) {
     article#trident-specification {
         .jumbotron {
+            height: 500px;
+            @include header-height();
+
             &> div.content {
                 margin-left: 0 !important;
             }
@@ -408,7 +433,7 @@ section#promotions .jumbotron h1{
             background-position-x: 66%;
             h1{
                 &.or-hero-title {
-                    font-size: 50px!important;
+                    font-size: 33px!important;
                 }
             }
 
@@ -418,6 +443,17 @@ section#promotions .jumbotron h1{
                     float: none!important;
                 }
             }
+
+        }
+    }
+}
+
+// ------------ Product 2-8 --------
+@media screen and (max-width: $mobileWidth) {
+    section#head-2-8 {
+        .jumbotron {
+            height: 500px;
+            @include header-height();
 
         }
     }
