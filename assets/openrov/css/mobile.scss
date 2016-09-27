@@ -345,11 +345,24 @@ article#home {
         .jumbotron {
             height: 500px;
             @include header-height();
+
+            .btn {
+                font-size: 11px;
+                padding: 11px 20px !important;
+            }
         }
         .description {
             font-size: 14px !important;
         }
         
+    }
+
+    section#products {
+        .linkImage {
+            .background {
+                height: 230px!important;
+            }
+        }
     }
 
     .jumbotron {
@@ -369,6 +382,20 @@ article#home {
             margin-right: auto!important; 
         }
     }
+
+    section#components {
+
+        .linkImage {
+
+            .background {
+                height: 150px !important;
+            }
+            .linkImage-content {
+                height: 101px !important;
+            }
+        }
+
+    }    
 
 }
 
