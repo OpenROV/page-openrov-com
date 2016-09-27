@@ -234,6 +234,7 @@ article#home {
     section#head {
         .flexslider {
 
+            height: 435px;
             @include header-height();
 
             .hero {
