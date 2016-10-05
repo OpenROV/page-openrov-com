@@ -12,7 +12,7 @@
                     {% for item in site.data.home-trident-usecases %}
                     <div class="col-md-6 usecase text-center">
                         <div class="background element-short-bottom" style="background-image: url(assets/openrov/images/usecases/{{item.image-base}}-small.jpg)">
-                            <a href="#" class="" data-toggle="modal" data-target="#modal-{{forloop.index}}">
+                            <a href="#" id="uc-{{ item.element-id }}" class="trk-usecase" data-toggle="modal" data-target="#modal-{{forloop.index}}">
                                 <div class="usecase-container">
                                     <div class="container-fluid usecase-content">
                                         <div class="row full-height">
