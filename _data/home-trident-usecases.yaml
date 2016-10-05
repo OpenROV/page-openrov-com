@@ -2,6 +2,7 @@
   description: Learn why Trident is the perfect boat accessory.
   image-base: boating-fishing
   svg: raft-icon.svg
+  element-id: trk-boating-fishing
   popup:
     title: Trident Is an Essential Boat Accessory.
     description: Want to check the set on the anchor or see the condition of a mooring before tying off? With Trident you can easily inspect your boat. Instead of calling a diver, deploy Trident in seconds if you suspect damage to your hull, rudder, or prop. Trident earns its place on board every  vessel whether at dock, sea, or anchor.
@@ -16,6 +17,7 @@
   image-base: diving
   svg: diving-icon.svg
   svgStyle: "font-size: 55px"
+  element-id: trk-diving
   popup:
     title: Trident Helps You Maximize Your Dive Efficiency
     description: Use Trident to scout your dive conditions and location before you suit up. Trident can dive quickly to 100m and is maneuverable and compact enough to explore deeper and more dangerous areas. During a surface interval use Trident to find a new dive site.
@@ -29,6 +31,7 @@
   description: Get inspired to explore new worlds.
   image-base: explore
   svg: nautical-icon.svg
+  element-id: trk-explore
   popup:
     title: Explore and Inspire
     titleStyle: "line-height:70px!important"
@@ -43,6 +46,7 @@
   description: See the future of marine science and exploration.
   image-base: marine-science
   svg: anchor-icon.svg
+  element-id: trk-marine-science
   popup:
     title: Underwater Research Using Trident
     description: "Trident is a versatile software and hardware platform. It comes standard with depth, heading, IMU sensors, radio buoy with onboard GPS, all-digital HD camera, and wireless communications system."
