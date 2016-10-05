@@ -73,6 +73,7 @@
     &.left { text-align: left; }
     @extend .Section-Title-DRK;
     color: $Primary_Blue!important;
+    line-height: 40px;
 }
 
 .or-content-sub-title-dark {
