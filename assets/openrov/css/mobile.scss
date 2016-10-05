@@ -72,7 +72,8 @@
     .element-medium-top {
         margin-top: 23px!important;
     }
-    .element-medium-bottom {
+    .element-medium-bottom,
+    .mobule-element-medium-bottom {
         margin-bottom: 23px!important;
     }
     .element-short-top {
@@ -497,6 +498,15 @@ article#home {
     }
 }
 
+// ------------ PRESS  --------
+@media screen and (max-width: $mobileWidth) {
+    section#press {
+        .press-kit.pull-right {
+            float: none!important;
+        }
+    }
+}
+
 // ------------ FOOTER --------
 @media screen and (max-width: $mobileWidth) {
 footer#footer {
@@ -532,6 +542,5 @@ footer#footer {
             margin-top: 18px !important;
         }
     }
-
 }
 }
