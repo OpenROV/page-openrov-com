@@ -14,9 +14,11 @@
 
 // If script is not localized apply defaults
 
+const isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
+
 var oxyThemeData = oxyThemeData || {
-    navbarHeight : 90,
-    navbarScrolled : 50,
+    navbarHeight : isMobile ? 43 : 90,
+    navbarScrolled : isMobile ? 43 : 50,
     navbarScrolledPoint : 200,
     navbarScrolledSwatches: {
         up: 'swatch-white',
@@ -31,6 +33,8 @@ var oxyThemeData = oxyThemeData || {
     siteLoader: 'on'
 };
 
+
+
 window.paceOptions = {
     startOnPageLoad: oxyThemeData.siteLoader === 'on',
     restartOnRequestAfter: false
@@ -44,6 +48,7 @@ jQuery(document).ready(function( $ ) {
             forceHeight: false
         });
     } else {
+
         // Assign the 'oxy-agent' class when not assigned by PHP - for the html Version
         // ======================
         $('body:not([class*="oxy-agent-"])').addClass('oxy-agent-');

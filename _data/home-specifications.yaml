@@ -5,7 +5,7 @@
 
 - header: Go to 100m
   image: depth-white
-  text: 'Trident can dive comfortably to 100m, far deeper than most recreational divers.<span class="hideOnDesktop"><br>&nbsp;<br>&nbsp;<br>&nbsp;</span>'
+  text: 'Trident can dive comfortably to 100m, far deeper than most recreational divers.'
   additional-css:
 
 - header: 4 Hours Battery Life

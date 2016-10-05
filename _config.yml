@@ -6,7 +6,7 @@ sass:
 array: []
 
 gems:
-  - jekyll-redirect-from
+  # - jekyll-redirect-from
   - jekyll-seo-tag
 
 
