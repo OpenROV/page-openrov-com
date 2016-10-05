@@ -1,0 +1,29 @@
+section#pre-order-faq {
+    .panel-heading {
+        background-color: white!important;
+        border-left: 1px solid #5d89ac!important;
+        border-right: 1px solid #5d89ac!important;
+        border-top: 1px solid #5d89ac!important;
+
+        &.last { border-bottom: 1px solid #5d89ac!important;}
+
+        a, .fa { color: #1c4472 !important; }
+
+        a.collapsed {
+            .fa.up { display: none; }
+            .fa.down { display: initial; }
+        }
+        .fa.up { display: initial; }
+        .fa.down { display: none; }
+   }
+   .panel-collapse {
+       &.collapse.in {
+            border-top: 1px solid #5d89ac!important;
+            &.last { border-top: none!important; }
+       }
+       &.collapsing {
+           border-top: 1px solid #5d89ac!important;
+           &.last { border-top: none!important; }
+       }
+   }
+}
