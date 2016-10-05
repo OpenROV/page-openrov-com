@@ -8,14 +8,14 @@
                     <div class="social element-short-top">
 
                         <a href="https://openexplorer.com" class=""
-                            target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+                            target="_blank" data-track="Footer OpenExplorer">
                             <span ><div class="fa oe" data-animation="none">
                                 {% include oe-logo.svg  %}
                                     </div></span>
                         </a>
 
                         {% for social in site.data.social %}<a href="{{social.link}}" class=""
-                            target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+                            target="_blank" data-track="Footer {{social.label}}">
                             <span ><div class="{{ social.class }}" data-animation="none"></div></span>
                         </a>{% endfor %}
 
