@@ -14,7 +14,7 @@
 
 // If script is not localized apply defaults
 
-const isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
+var isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
 
 var oxyThemeData = oxyThemeData || {
     navbarHeight : isMobile ? 43 : 90,
