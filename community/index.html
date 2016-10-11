@@ -7,6 +7,8 @@ redirect_from:
  - '/usergroups/'
 items: 
     - title: OpenROV GitHub
+      subtitle: Open source software and hardware
+      tall: true
       image: github-logo.png
       isPicture: false
       link: https://github.com/OpenROV/
@@ -19,6 +21,7 @@ items:
       animation: fadeInUp
          
     - title: Gitter Chat
+      subtitle: Connect with other developers
       image: gitter-logo.png
       isPicture: false
       link: https://gitter.im/OpenROV
@@ -54,8 +57,11 @@ items:
         </div>
         
         <div class="row" id="forums">
-            <div class="col-md-6 col-md-offset-3 linkImage">
+            <div class="col-md-6 linkImage">
                 {% include linkimage.html image='../assets/openrov/images/support/forum-800x600.jpg' url='http://forum.openrov.com/' title='Forum' subtitle='Connect with the community'  %}
+            </div>            
+            <div class="col-md-6 linkImage">
+                {% include linkimage.html image='../assets/openrov/images/hero/b-g-explore.jpg' url='https://www.openexplorer.com/home/' title='OpenExplorer' subtitle='Join fellow explorers'   %}
             </div>            
 
         </div>
@@ -72,7 +78,7 @@ items:
                     {% for item in page.items %}
                     <div class="col-md-4 linkImage">
                       {% capture image %}{{site.baseurl}}/assets/openrov/images/community/logos/{{item.image}}{% endcapture %}
-                      {% include linkimage.html image=image url=item.link title=item.title  %}
+                      {% include linkimage.html image=image url=item.link title=item.title subtitle=item.subtitle tall=item.tall  %}
 
                     </div>
 
