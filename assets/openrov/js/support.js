@@ -1,6 +1,4 @@
     (function(){
-        //a665d92bf7d65cac192bf2a3e55b510978d4e56aa6c90e038a8e8c17d9f0bea4
-
         $.get('https://openrov.zendesk.com/embeddable/config')
             .done(function(result){
                 result.embeds.ticketSubmissionForm.props.customFields.forEach(
@@ -92,7 +90,7 @@
                     $('#modal-contactSupport').modal('hide');
                 })
                 .fail(function(err) {
-                    console.log(err)
+                    alert('Whoops, something went wrong. Please try again later.')
                 })
                 
             }
