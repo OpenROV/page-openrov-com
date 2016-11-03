@@ -2,6 +2,7 @@
 title: Support
 layout: default
 page_css: /assets/openrov/css/support.css
+page_script: /assets/openrov/js/support.js
 ---
 
 <section id="support" class="section swatch-gray">
@@ -26,14 +27,77 @@ page_css: /assets/openrov/css/support.css
                 {% include linkimage.html image='../assets/openrov/images/support/archeology-800x600.jpg' url='http://openrov.dozuki.com/c/Operation' title='Operations Manual' subtitle='Get your ROV in ship shape' tall=false %}
             </div>            
             <div class="col-md-6 linkImage" id="supportFormContainer">
-                {% include linkimage.html image='../assets/openrov/images/support/contact-support.jpg' url='https://openrov.zendesk.com/hc/en-us/requests/new' title='Have a question?' subtitle='Contact support' tall=false %}
+                {% include linkimage.html image='../assets/openrov/images/support/contact-support.jpg' modal='modal-contactSupport' title='Have a question?' subtitle='Contact support' tall=false %}
             </div>
-
         </div>
 
     </div>
+
+
+
+
+
+
 </section>
 
 
-<script>
-</script>
+
+<div class="modal" id="modal-contactSupport" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="v-container content">
+                    <div class="v-box">
+                        <section class="section swatch-white">
+
+                            <!--<div class="container">-->
+                                <div class="row element-short-top">
+                                    <div class="col-md-12">
+                                        <h1 class="or-content-title-dark-left element-short-bottom element-short-top">Contact Support</h1>
+                                        <form id="zFormer" name="former">
+                                            
+                                            <div class="form-group">
+                                                <label for="nameInput">Your name: *</label>
+                                                <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="emailInput">Email: *</label>
+                                                <input type="text" class="form-control" id="emailInput" placeholder="Email">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="typeInput">Request type: *</label>
+
+                                                <select class="form-control" id="typeInput">
+                                                    <option disabled selected value> -- select an option -- </option>
+                                                </select>    
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="subjectInput">Subject: *</label>
+                                                <input type="text" class="form-control" id="subjectInput" placeholder="Subject">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="descriptionInput">Description: *</label>
+                                                <textarea class="form-control" rows="3" placeholder="Description" id="descriptionInput"></textarea>
+                                            </div>
+                                            <p>
+                                                <input type="submit" value="submit" id="submitter" class="element-short-bottom">
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            <!--</div>-->
+                        </section>
+                            
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
