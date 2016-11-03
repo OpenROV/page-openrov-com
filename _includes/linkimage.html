@@ -1,4 +1,4 @@
-    <div class="background element-short-bottom {% unless include.url %}no-scale{% endunless %}" style="background-image: url({{ include.image }})">
+    <div class="background element-short-bottom {% unless include.url %} {% unless include.modal %} no-scale{% endunless %}{% endunless %}" style="background-image: url({{ include.image }})">
         {% if include.url %}<a href="{{ include.url }}" class="" >{% endif %}
         {% if include.modal %}<a href="#" data-toggle="modal" data-target="#{{ include.modal }}" class="" >{% endif %}
         <div class="linkImage-container">
