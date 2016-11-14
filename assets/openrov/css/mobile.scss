@@ -498,6 +498,19 @@ article#home {
     }
 }
 
+// ------------ support  --------
+@media screen and (max-width: $mobileWidth) {
+    #modal-contactSupport {
+        section.section {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+        }
+    }
+}
+
 // ------------ PRESS  --------
 @media screen and (max-width: $mobileWidth) {
     section#press {
