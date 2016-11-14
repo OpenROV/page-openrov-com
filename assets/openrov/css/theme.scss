@@ -3,6 +3,25 @@
 
 @import 'zeplin-map.scss';
 
+.form-group.has-error {
+  textarea,
+  .select-wrap {
+    border-color: #fff;
+    -webkit-box-shadow: 0px 5px 0px rgba(169, 66, 56, 0.9), 0px 5px 5px rgba(169, 66, 56, 0.1);
+    -moz-box-shadow: 0px 5px 0px rgba(169, 66, 56, 0.9), 0px 5px 5px rgba(169, 66, 56, 0.1);
+    box-shadow: 0px 5px 0px rgba(169, 66, 56, 0.9), 0px 5px 5px rgba(169, 66, 56, 0.1)
+  }
+
+  label {
+    color: rgba(169, 66, 56, 1);
+  }
+
+}
+
+input[type=submit]:disabled, input[type=submit]:disabled:hover {
+  background-color: lightgray;
+} 
+
 .strikethrough {
   text-decoration: line-through;
 }
