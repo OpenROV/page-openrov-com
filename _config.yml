@@ -21,13 +21,3 @@ twitter: openrov
 logo: /assets/openrov/images/openrov.png
 
 social:
-
-
-# webrick:
-#   headers:
-#     Access-Control-Allow-Origin: *
-
-webrick:
-  headers:
-    Access-Control-Allow-Origin: "*"
-    Access-Control-Allow-Methods: "GET,HEAD,POST,PUT,DELETE"
