@@ -49,7 +49,7 @@
   element-id: trk-marine-science
   popup:
     title: Underwater Research Using Trident
-    description: "Trident is a versatile software and hardware platform. It comes standard with depth, heading, IMU sensors, radio buoy with onboard GPS, all-digital HD camera, and wireless communications system."
+    description: "Trident is a versatile software and hardware platform. It comes standard with depth, heading, IMU sensors, wireless topside, all-digital HD camera, and wireless communications system."
     list:
     - "Upgradeable and expandable to meet the needs of your projects"
     - "Trident has a mounting standard for new instrumentation, modules, or payloads"
