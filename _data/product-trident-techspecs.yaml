@@ -28,9 +28,9 @@
   - 'Total lumens: 360'
   - 'Color temperature: 4000K'
 
-- title: 'Radio Buoy'
+- title: 'Wireless topside'
   content:
-  - 'Trident tows a buoy on the surface that can communicate wirelessly to your device'
+  - 'Trident is connected to a wireless topside unit that can communicate to your device of choice'
   - 'Protocol: 802.11'
   - 'Range: ~30m (98ft)'
   
