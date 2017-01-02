@@ -1,4 +1,4 @@
-- outlet: "CBS This Morning"
+  - outlet: "CBS This Morning"
   date: "November 2, 2016"
   url: http://www.cbsnews.com/news/underwater-drones-openrov-trident-citizen-scientists-exploration/
   quote: "New generation of underwater drones makes waves for 'citizen scientists'. 'Trident' is the newest model to come out of a Kickstarter campaign launched by David Lang and Eric Stackpole. While the technology is complex, the idea is simple: to let anyone become an explorer."
@@ -34,8 +34,6 @@
   url: http://www.wired.com/2014/11/citizen-explorers-meet-new-submersible/
   quote: " Underwater exploration has traditionally been an exclusive endeavor, accessible only to deep-pocketed adventurers or researchers backed by government scientific agencies. But with the recent rise of citizen science and low-cost, open-source tools, the boundaries to underwater exploration are rapidly being degraded. OpenROV has been leading the charge since 2012, offering low-cost (sub-$1000) submersibles [...]."
   logo: wired_logo.png
-
-
 
 - outlet: Hackaday
   date: "July 13, 2016"
