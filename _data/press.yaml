@@ -1,7 +1,7 @@
 - outlet: "CBS This Morning"
   date: "November 2, 2016"
   url: http://www.cbsnews.com/news/underwater-drones-openrov-trident-citizen-scientists-exploration/
-  title:  New generation of underwater drones makes waves for 'citizen scientists'
+  title:  New Generation of Underwater Drones Makes Waves for 'Citizen Scientists'
   quote: "'Trident' is the newest model to come out of a Kickstarter campaign launched by David Lang and Eric Stackpole. While the technology is complex, the idea is simple: to let anyone become an explorer."
   logo: cbs-news.png
   
@@ -22,7 +22,7 @@
 - outlet: "BBC"
   date: "July 19, 2016"
   url: http://www.bbc.com/news/technology-36834001
-  title: "Low-cost Underwater Drone Explores SS Tahoe Shipwreck"
+  title: "Low-Cost Underwater Drone Explores SS Tahoe Shipwreck"
   quote: "Low-cost underwater drone has provided one of the closest looks at the SS Tahoe shipwreck for more than 70 years. The OpenROV project’s focus is affordability and accessibility, allowing exploration to be available for those who do not have big budgets. The SS Tahoe was sunk in Lake Tahoe in an attempt to preserve it, but it sank far deeper than was intended and only the most skilled divers could reach it until now."
   logo: bbc_logo.png
 
