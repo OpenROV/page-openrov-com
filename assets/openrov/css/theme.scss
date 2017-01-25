@@ -505,3 +505,78 @@ div#pre-order-banner {
 
     }
 
+
+.modal.contact-support {
+  text-align: center;
+  z-index: 1110;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.in {
+    opacity: 1;
+  }
+}
+
+.modal-open {
+  overflow-y: scroll;
+}
+
+$modalWidth: 800px;
+$modalHeight: 608px;
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: $modalWidth;
+  height: $modalHeight;
+
+  .modal-content {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  .modal-body {
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: $modalWidth;
+      height: $modalHeight;
+      text-align: left;
+
+      .v-container {
+        text-align: left;
+      }
+  }
+
+  .close {
+    color: black!important;
+    padding: 5px 10px;
+    background-color: transparent!important;
+    opacity: 1;
+    font-size: 1.5em;
+    z-index: 1120;
+    position: relative;
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0;
+
+    .v-box {
+      width: $modalWidth;
+      height: $modalHeight;
+      margin-left: 0;
+      color: white;
+      z-index: 1115;
+
+      .row {
+          margin: 0;
+      }
+    }
+  }
+}

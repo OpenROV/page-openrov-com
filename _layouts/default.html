@@ -83,6 +83,12 @@
         <script src="{{ '/assets/js/theme.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/assets/openrov/js/main.js' | prepend: site.baseurl }}"></script>
 
+        <!--contact support overlay -->
+        {% include contact-support.html %}
+        <!--/contact support overlay -->
+
+
+
         {% if page.page_script %}
             {% for item in page.page_script %}
                 {% assign itemPath = item | prepend: site.baseurl %}
