@@ -23,6 +23,11 @@
     @extend .Micro-Sub-Title-LIT;
 }
 
+.or-footer-med-title {
+    @extend .Micro-Sub-Title-LIT;
+    font-size: 20px;
+}
+
 .or-footer-micro-body {
     @extend .Micro-Body-LIT;
     &> a:hover {

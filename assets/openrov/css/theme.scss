@@ -307,6 +307,30 @@ footer#footer {
     height: 225px;
   }
 
+  .mailchimp-footer {
+    background-color: #1c4472;
+    height: 200px;
+    
+    
+    .mailchimp-footer-email-align {
+      height: 46px; 
+      margin-top: 3px;
+    }
+
+    h2, h3 {
+      color: white;
+    }
+
+    input[type="email"] {
+      color: #000;
+      width: 100%
+    }
+
+    input[type="submit"] {
+      margin-left: 10px;
+    }
+  }
+
   .bottom {
     background: #2d6584;
     height: 104px;

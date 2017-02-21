@@ -547,6 +547,13 @@ footer#footer {
         }
     }
 
+    section.mailchimp-footer {
+        .mailchimp-footer-email-align {
+            margin-top: inherit;
+            height: inherit;
+        }
+    }
+
     section.bottom {
         text-align: center;
         .pull-right {
