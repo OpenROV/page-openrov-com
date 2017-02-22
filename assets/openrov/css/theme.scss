@@ -310,11 +310,50 @@ footer#footer {
   .mailchimp-footer {
     background-color: #1c4472;
     height: 200px;
+    line-height:  30px;
     
     
     .mailchimp-footer-email-align {
       height: 46px; 
       margin-top: 3px;
+    }
+
+    #mc-email-group #email-error {
+      display: none;
+    }
+
+    #mc-email-group.has-error #email-error {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    #mc-email-group {
+
+
+        &.has-success {
+          .success {
+            display: inline-block;
+          }
+        }
+        &.has-error {
+          .fail {
+            display: inline-block;
+          }
+        }
+        
+        .success, .fail {
+          display: none
+        }        
+    }
+
+    .mc-result-container {
+      margin-top: 10px;
+      float: left;
+    }
+
+    .mc-result {
+      font-size: 28px;
+      margin-left: 20px;
     }
 
     h2, h3 {
@@ -328,6 +367,7 @@ footer#footer {
 
     input[type="submit"] {
       margin-left: 10px;
+      float: left;
     }
   }
 

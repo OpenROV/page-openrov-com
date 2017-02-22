@@ -4,23 +4,28 @@
         <div class="container">
             <div class="row element-short-top element-short-bottom">
 
-                <div class="col-md-8 col-md-offset-1 col-xs-12 link-partners">
+                <div class="col-md-8 col-md-offset-1 col-xs-12">
                     <h2 class="or-footer-med-title">Join our Newsletter</h2>
                     <h3 class="or-footer-micro-title element-short-top">Enter your details to join our mailing list and receive updates on OpenROV Trident</h3>
                     <!-- Begin MailChimp Signup Form -->
 
                     <div id="mc_embed_signup" class="element-short-top">
-                        <form action="//openrov.us5.list-manage.com/subscribe/post?u=0f4e2a0115f4c948c958f001d&amp;id=fc995aa39e" method="post" id="mc-embedded-subscribe-form"
+                        <form action="//openrov.us5.list-manage.com/subscribe/post-json?u=0f4e2a0115f4c948c958f001d&amp;id=fc995aa39e" method="post" id="mc-embedded-subscribe-form"
                             name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll" class="form-group">
 
-                                <div class="mc-field-group form-group">
+                                <div class="mc-field-group form-group" id="mc-email-group">
                                     <div class="row">
                                         <div class="col-xs-6 mailchimp-footer-email-align">                                    
                                             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email address" class="form-control">
+                                            <span id="email-error" class="help-block">Please check your email address!</span>
                                         </div>
                                         <div class="col-xs-4">
                                             <input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="or-button-blue btn">
+                                            <div class="mc-result-container">
+                                                <div class="mc-result success fa fa-check-circle" data-animation="none"></div>
+                                                <div class="mc-result fail fa fa-times-circle" data-animation="none"></div>
+                                            </div>
                                         </div>
                                     <div style="display: none"><input type="checkbox" value="512" name="group[17497][512]" id="mce-group[17497]-17497-9" checked></div>
                                 </div>
