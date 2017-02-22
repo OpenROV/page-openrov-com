@@ -641,3 +641,7 @@ $modalHeight: 608px;
     }
   }
 }
+
+.modal-backdrop {
+  z-index: 1100;
+}

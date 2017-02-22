@@ -73,15 +73,13 @@ module.exports = () => {
             '.navbar-static-top',
             '.navbar',
             '.navbar-sticky',
-            '#masthead.navbar-stuck',
             '.flexslider',
             '.flexslider *',
-            /\.mejs\-.*/,
             '.background-media',
-            '#pre-order-banner.*',
-            '#pre-order-banner *',
-            '.pre-order-banner.*',
-            '.pre-order-banner *',
+            /pre-order-banner.*/,
+            /\.mejs\-.*/,
+            /\.modal.*/,
+            /.masthead.*/,
             
         ]
 

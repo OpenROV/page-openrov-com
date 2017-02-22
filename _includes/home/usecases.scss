@@ -111,12 +111,6 @@ body {
 }
 
 
-
-.modal-backdrop {
-  z-index: 1100;
-}
-
-
 $modalWidth: 800px;
 $modalHeight: 608px;
 .modal-dialog.uc {
@@ -207,6 +201,7 @@ $modalHeight: 608px;
       margin-left: 20px;
       color: white;
       z-index: 1115;
+      width: inherit;
     }
   }
 }
