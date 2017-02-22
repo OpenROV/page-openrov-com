@@ -1,5 +1,10 @@
 @import 'zeplin-map.scss';
 
+.modal-backdrop {
+  z-index: 1200!important;
+}
+
+
 .form-group.has-error {
   textarea,
   .select-wrap {
@@ -39,6 +44,10 @@ input[type=submit]:disabled, input[type=submit]:disabled:hover {
 
 #masthead .container {
   background-color: white;
+}
+
+#masthead.navbar-stuck {
+  z-index: 1040;
 }
 
 .image-overlay-text {
@@ -569,7 +578,7 @@ div#pre-order-banner {
 
 .modal.contact-support {
   text-align: center;
-  z-index: 1110;
+  z-index: 1210;
   opacity: 0;
   transition: opacity 0.3s;
 
@@ -640,8 +649,4 @@ $modalHeight: 608px;
       }
     }
   }
-}
-
-.modal-backdrop {
-  z-index: 1100;
 }

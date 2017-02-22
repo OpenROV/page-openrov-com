@@ -93,7 +93,7 @@ section#usecases {
 
 .modal {
   text-align: center;
-  z-index: 1110;
+  z-index: 1210;
   opacity: 0;
   transition: opacity 0.3s;
 
@@ -185,7 +185,7 @@ $modalHeight: 608px;
     background-color: transparent!important;
     opacity: 1;
     font-size: 1.5em;
-    z-index: 1120;
+    z-index: 1220;
     position: relative;
   }
   
@@ -200,7 +200,7 @@ $modalHeight: 608px;
     .v-box {
       margin-left: 20px;
       color: white;
-      z-index: 1115;
+      z-index: 1215;
       width: inherit;
     }
   }
