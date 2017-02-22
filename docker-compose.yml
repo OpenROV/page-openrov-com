@@ -3,20 +3,11 @@ services:
     jekyll:
         image: jekyll/jekyll:pages
         volumes:
-            - ./:/srv/jekyll
+            - .:/srv/jekyll
         ports:
             - "4000:4000"
+        working_dir: /
+        # command: /usr/local/bin/jekyll  server -s /srv/jekyll/build 
+        command: /usr/local/bin/jekyll  server
         # environment:
             # - VERBOSE=true
-    browsersync:
-        image: ustwo/browser-sync
-        ports:
-            - 3000
-            - 3001
-        volumes:
-            - ./_site:/data
-        ports:
-            - "3000:3000"
-            - "3001:3001"
-        entrypoint: browser-sync start --proxy "jekyll:4000" --files "/data/**/*.*"
-        

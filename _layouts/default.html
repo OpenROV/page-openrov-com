@@ -66,15 +66,10 @@
         <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/openrov/images/favicon/apple-touch-icon-152x152.png" />
         
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
-        <link rel="stylesheet" href="{{ '/assets/css/theme.css?v=2' | prepend: site.baseurl }}">
-        <link rel="stylesheet" href="{{ '/assets/css/color-defaults.min.css' | prepend: site.baseurl }}" media="screen">
-        <link rel="stylesheet" href="{{ '/assets/css/swatch-white.min.css' | prepend: site.baseurl }}" media="screen">
-        <link rel="stylesheet" href="{{ '/assets/css/swatch-gray.min.css' | prepend: site.baseurl }}" media="screen">
-        <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | prepend: site.baseurl }}" media="screen">
-        
-        <link rel="stylesheet" href="{{ '/assets/openrov/css/theme.css?v=4' | prepend: site.baseurl }}" media="screen">
-        <link rel="stylesheet" media="screen and (max-width: 437px), screen and (max-height 437px)" href="{{ '/assets/openrov/css/mobile.css?v=2' | prepend: site.baseurl }}" media="screen">
+
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/assets/openrov/css/app.css' | prepend: site.baseurl }}">
+
         {% if page.page_css %}
             {% for css in page.page_css %}
                 {% assign cssPath = css | prepend: site.baseurl %}
@@ -114,9 +109,10 @@
         <script src="{{site.baseurl}}/bower_components/jquery/dist/jquery.min.js"></script> <!-- query move/swipe requires 2.x -->
         <script src="{{site.baseurl}}/bower_components/jquery.event.move/js/jquery.event.move.js"></script>
         <script src="{{site.baseurl}}/bower_components/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+        
         <script async src="https://www.trycelery.com/js/celery.js"></script>
 
-        <script src="{{ '/assets/js/packages.min.js' | prepend: site.baseurl }}"></script>
+        <script src="{{ '/assets/js/packages.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/assets/js/theme.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/assets/openrov/js/main.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/assets/openrov/js/mailchimp.js' | prepend: site.baseurl }}"></script>
