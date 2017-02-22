@@ -34,14 +34,14 @@ gulp.task('theme-styles', () => {
     return gulp
         .src(config.allCss)
         .pipe($.if(args.verbose, $.print()))
-        .pipe($.sourcemaps.init())
+        // .pipe($.sourcemaps.init())
         .pipe($.concat(config.themeCss))
         .pipe($.if(args.verbose, $.print()))
         // .pipe(uncss({
         //     html: config.allHtml
         // }))
         // .pipe(cleanCss())
-        .pipe($.sourcemaps.write())
+        // .pipe($.sourcemaps.write())
         .pipe(gulp.dest(config.build));
 })
 
@@ -50,8 +50,10 @@ gulp.task('minify-css', () => {
         .src(config.siteCss)
         .pipe($.if(args.verbose, $.print()))
         .pipe(uncss({
-            html: config.siteHtml
+            html: config.siteHtml,
+            ignore: config.cssDontTouch,
         }))
+        .pipe($.cssnano())
         .pipe(gulp.dest('./'));
 })
 

@@ -3,7 +3,7 @@
     .hero {    
         background-size: cover;
         background-position: center;
-        height: $height;
+        height: $height!important;
         color: white;
 
         text-align: left;

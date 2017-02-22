@@ -68,6 +68,21 @@ module.exports = () => {
         cssToMinify: [
             '**/assets/css/*.css',
             '**/assets/openrov/css/*.css',
+        ],
+        cssDontTouch: [
+            '.navbar-static-top',
+            '.navbar',
+            '.navbar-sticky',
+            '#masthead.navbar-stuck',
+            '.flexslider',
+            '.flexslider *',
+            /\.mejs\-.*/,
+            '.background-media',
+            '#pre-order-banner.*',
+            '#pre-order-banner *',
+            '.pre-order-banner.*',
+            '.pre-order-banner *',
+            
         ]
 
 
