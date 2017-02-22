@@ -1,0 +1,51 @@
+--- 
+title: Press 
+layout: default
+---
+
+<section id="press" class="section swatch-white">
+    <div class="background-overlay grid-overlay-10 " style="background-color: rgba(0,0,0,0);"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-center pull-right element-normal-top element-no-bottom press-kit">
+                <a href=" https://drive.google.com/open?id=0B6NWgE2MWfYyfnB0bVpnSk1CNzh0bm10NklvSDdFbFB2UlZCdEpvRDdsdEdGZWljSk9jT1k" target="_blank" class="btn or-button-blue element-no-top element-no-bottom" taget="_blank">PRESS-KIT</a>
+                <div class="press-kit-inquiries mobule-element-medium-bottom">
+                    Inquiries? <a href="mailto: press@openrov.com">Contact us</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <header class="element-no-top element-no-bottom">
+                    <h1 class="or-section-title-dark element-medium-bottom">OpenROV in the Press</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="list-container row element-short-top element-normal-bottom">
+                    
+                    {% for item in site.data.press %}<div class="col-md-6 element-short-bottom os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                        <blockquote class="blockquote-list">
+                            <div class="image-container">
+                                <div class="image">
+                                    <img class="" src="{{ file.path | prepend: site.baseurl }}/assets/openrov/images/media/{{item.logo}}" alt="{{item.outlet}}" />
+                                </div>
+                            </div>
+                            {% if item.title %}<p class="bold">{{item.title}}</p>{% endif %}
+                            <p>
+                                {{item.quote}}
+                            </p>
+                            <footer>
+                                <a href="{{item.url}}"
+                                    target="_blank">{{item.outlet}}, {{item.date}}</a>
+                            </footer>
+                        </blockquote>
+                    </div>{% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+$tabletWidth: 769px;
+$mobileWidth: 437px;
+$smallWidth: 320px;
+
+$heightiPhone5: 568px;
+$heightNexus5: 640px;
+$heightiPhone6: 667px;
+$heightNexus5x-iPhone6P: 736px;
+$heightNexus6P: 773px;
+
+
+$tabletMedia: 'screen and (max-width: #{$tabletWidth})';
+$mobileMedia: 'screen and (max-width: #{$mobileWidth})';
+$smallMedia: 'screen and (max-width: #{$smallWidth})';
+
+
+@mixin header-height() {
+        @media screen and (max-height: #{$heightNexus6P}) { 
+            height: 545px !important;
+        }
+        @media screen and (max-height: #{$heightNexus5x-iPhone6P}) { 
+            height: 505px !important;
+        }
+        @media screen and (max-height: #{$heightiPhone6}) { 
+            height: 435px !important;
+        }
+
+        @media screen and (max-height: #{$heightNexus5}) { // and iPhone5
+            height: 350px !important;
+        }            
+}
+
+$height: 500px;
+
+
+

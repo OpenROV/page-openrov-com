@@ -1,0 +1,28 @@
+<section id="features" class="section swatch-gray">
+    <div class="container" id='overview'>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                {% for item in site.data.product-trident-features %}<div class="col-md-4 col-xs-12 {{item.additional-css}}">
+                    <div class="element-short-top element-no-bottom text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
+                        <div class="box box-round box-medium box-simple">
+                            <div class="box-dummy"></div>
+                            <div class="box-inner grid-overlay-0 icon">
+                                <img class="" src="../../assets/openrov/images/features/{{item.image}}.png" alt="{{item.title}}" />
+                            </div>
+                        </div>
+                        <h3 class="or-content-sub-title-dark ">
+
+                            {{item.title}}
+
+                        </h3>
+                        <p class="or-content-body-dark">{{item.text}}</p>
+                    </div>
+                </div>{% endfor %}
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</section>
