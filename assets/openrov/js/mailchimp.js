@@ -36,10 +36,13 @@ function register($form) {
         contentType: "application/json; charset=utf-8",
         error: function (err) { alert("Could not connect to the registration server. Please try again later."); },
         success: function (data) {
-            alert(data.msg);
             if (data.result != "success") {
+                if (data.msg.indexOf('is already') > 0 ) {
+                    $form.find('#email-error').text('This email address is already subscribed.');
+                }
                 $form.find('#mc-email-group').addClass('has-error')
             } else {
+                alert(data.msg);
                 $form.find('#mc-email-group').addClass('has-success')
             }
         }
