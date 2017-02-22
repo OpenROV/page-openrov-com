@@ -4,6 +4,7 @@ const merge = require('merge-stream');
 const config = require('./gulp.config')();
 const del = require('del');
 const cleanCss = require('gulp-clean-css');
+const uncss = require('gulp-uncss');
 
 const $ = require('gulp-load-plugins')({
     lazy: true,
@@ -35,9 +36,23 @@ gulp.task('theme-styles', () => {
         .pipe($.if(args.verbose, $.print()))
         .pipe($.sourcemaps.init())
         .pipe($.concat(config.themeCss))
-        .pipe(cleanCss())
+        .pipe($.if(args.verbose, $.print()))
+        // .pipe(uncss({
+        //     html: config.allHtml
+        // }))
+        // .pipe(cleanCss())
         .pipe($.sourcemaps.write())
         .pipe(gulp.dest(config.build));
+})
+
+gulp.task('minify-css', () => {
+    return gulp
+        .src(config.siteCss)
+        .pipe($.if(args.verbose, $.print()))
+        .pipe(uncss({
+            html: config.siteHtml
+        }))
+        .pipe(gulp.dest('./'));
 })
 
 // gulp.task('style', ['clean-styles'], () => {

@@ -10,12 +10,42 @@ module.exports = () => {
             './assets/openrov/js/*.js'
         ],
         allCss: [
-            './assets/css/*.css',
+            // './assets/css/*.css'
+            './assets/css/bootstrap.css',
+            // './assets/css/color-defaults.css',
+            './assets/css/fonts.css',
+            // './assets/css/swatch-black.css',
+            // './assets/css/swatch-blue.css',
+            './assets/css/swatch-gray.css',
+            // './assets/css/swatch-white-black.css',
+            './assets/css/swatch-white.css',
+            // './assets/css/swatch-white-green.css',
+            // './assets/css/swatch-white-red.css',
+            './assets/css/theme.css',
+
+            // './assets/css/swatch-blue.css',
+            // './assets/css/swatch-gray.css',
+            // './assets/css/swatch-white.css',
         ],
         allScss: [
             './assets/openrov/_scss/*.scss',
         ],
-
+        siteHtml: [
+            './_site/**/*.html',
+            // './*.html',
+            // './community/**/*.html',
+            // './gallery/**/*.html',
+            // './learn/**/*.html',
+            // './press/**/*.html',
+            // './products/**/*.html',
+            // './support/**/*.html',
+            // './welcome/**/*.html',
+            // './_includes/**/*.html'
+        ],
+        siteCss: [
+            '**/build/assets/css/*.css',
+            '**/build/assets/openrov/css/*.css',
+        ],
         allData: [
             './_config.yml',
             '**/*.html',
