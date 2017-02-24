@@ -5,6 +5,7 @@ const config = require('./gulp.config')();
 const del = require('del');
 const cleanCss = require('gulp-clean-css');
 const uncss = require('gulp-uncss');
+const pump = require('pump');
 
 const $ = require('gulp-load-plugins')({
     lazy: true,
@@ -55,6 +56,15 @@ gulp.task('minify-css', () => {
         }))
         .pipe($.cssnano())
         .pipe(gulp.dest('./'));
+})
+
+gulp.task('minify-js', (cb) => {
+    pump([
+        gulp.src(config.allJs),
+        $.uglify(),
+        gulp.dest('./.tmp/')
+    ]) 
+
 })
 
 // gulp.task('style', ['clean-styles'], () => {

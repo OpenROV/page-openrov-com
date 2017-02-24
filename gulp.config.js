@@ -6,8 +6,9 @@ module.exports = () => {
         orCssDest: './assets/openrov/css/',
         themeCss: './assets/css/main.css',
         allJs: [
-            './assets/js/*.js',
-            './assets/openrov/js/*.js'
+            '**/assets/js/*.js',
+            '**/assets/openrov/js/*.js',
+            '!./_site/**/*.*'
         ],
         allCss: [
             // './assets/css/*.css'
