@@ -114,7 +114,7 @@ function handleCss(destination) {
                 browsers: ['last 2 versions', '> 5%'],
         }),
         cleanCss(),
-        $.cssnano(),
+        $.cssnano({zindex: false}),
         $.concat(destination),
         $.sourcemaps.write(config.paths.maps)
     );    
