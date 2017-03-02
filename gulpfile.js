@@ -1,107 +1,62 @@
-const gulp = require('gulp');
 const args = require('yargs').argv;
-const merge = require('merge-stream');
-const config = require('./gulp.config')();
-const del = require('del');
+const gulp = require('gulp');
+const config = require('./gulp.config');
 const cleanCss = require('gulp-clean-css');
 const uncss = require('gulp-uncss');
+const del = require('del');
+
+var combiner = require('stream-combiner2');
 const pump = require('pump');
 
-const $ = require('gulp-load-plugins')({
-    lazy: true,
-     
+const $ = require('gulp-load-plugins')({ lazy: true });
+
+
+gulp.task('build:theme:styles', () => {
+    return gulp
+        .src(config.paths.theme + config.paths.patterns.cssPattern)
+        .pipe($.if(args.verbose, $.print()))
+
+        .pipe(handleCss(config.paths.themeCss))
+
+        .pipe(gulp.dest(config.paths.dist))
 });
 
-gulp.task('js', () => {
-    return gulp
-        .src(config.allJs)
-        .pipe($.if(args.verbose, $.print()))
-})
 
-gulp.task('build', ['theme-styles', 'copy-html', 'styles'], () => {
-
-})
-
-gulp.task('copy-html', [], () => {
-    log('Copying HTML');
-    return gulp
-        .src(config.allData)
-        .pipe($.if(args.verbose, $.print()))
-        .pipe(gulp.dest(config.build));
-})
-
-
-gulp.task('theme-styles', () => {
-    return gulp
-        .src(config.allCss)
-        .pipe($.if(args.verbose, $.print()))
-        // .pipe($.sourcemaps.init())
-        .pipe($.concat(config.themeCss))
-        .pipe($.if(args.verbose, $.print()))
-        // .pipe(uncss({
-        //     html: config.allHtml
-        // }))
-        // .pipe(cleanCss())
-        // .pipe($.sourcemaps.write())
-        .pipe(gulp.dest(config.build));
-})
-
-gulp.task('minify-css', () => {
-    return gulp
-        .src(config.siteCss)
-        .pipe($.if(args.verbose, $.print()))
-        .pipe(uncss({
-            html: config.siteHtml,
-            ignore: config.cssDontTouch,
-        }))
-        .pipe($.cssnano())
-        .pipe(gulp.dest('./'));
-})
-
-gulp.task('minify-js', (cb) => {
-    pump([
-        gulp.src(config.allJs),
-        $.uglify(),
-        gulp.dest('./.tmp/')
-    ]) 
-
-})
-
-// gulp.task('style', ['clean-styles'], () => {
-gulp.task('styles', [], () => {
+gulp.task('build:styles', [], () => {
     log('Compiling SCSS --> css');
 
     const sassStream = gulp
-        .src(config.allScss)
+        .src(config.paths.styles + config.paths.patterns.sassPattern)
         .pipe($.if(args.verbose, $.print()))
         .pipe($.sourcemaps.init())
         .pipe($.sass({
-            includePaths: config.sassInclude,
+            includePaths: config.paths.sassInclude,
         }).on('error', $.sass.logError))
-        .pipe($.autoprefixer({
-            browsers: [ 'last 3 versions', '> 5%'],
-        }))
-        .pipe($.concat('app.css'))
-        .pipe(cleanCss())
-        .pipe($.sourcemaps.write())
-        .pipe(gulp.dest(config.build + 'assets/openrov/css/'));
-        //.pipe(gulp.dest(config.build + config.orCssDest))
+        .pipe(handleCss(config.paths.appCss))
+
+        .pipe(gulp.dest(config.paths.dist));
 })
 
-gulp.task('clean-build', (done) => {
-    log('Cleaning up');
-    clean(config.build + '/*', done);
-})
+gulp.task('build', ['build:theme:styles', 'build:styles'], () => {});
 
-gulp.task('clean-styles', (done) => {
-    var files = config.temp + '**/*.css';
-    clean(files, done);
-})
+gulp.task('clean:dist', (done) => {
+    clean([
+        config.paths.dist + '/**/*.*',
+        config.paths.dist + '/maps',
+        '!' + config.paths.dist + '/README.md'], done);
+});
 
-
-function clean(path, done) {
-    log('Cleaning: ' + $.util.colors.blue(path));
-    del(path, done);
+function handleCss(destination) {
+    return combiner.obj(
+        $.sourcemaps.init(),
+        $.autoprefixer({
+                browsers: ['last 2 versions', '> 5%'],
+        }),
+        cleanCss(),
+        $.cssnano(),
+        $.concat(destination),
+        $.sourcemaps.write(config.paths.maps)
+    );    
 }
 
 function log(msg) {
@@ -114,4 +69,11 @@ function log(msg) {
     } else {
         $.util.log($.util.colors.blue(msg));
     }
+}
+
+
+
+function clean(path, done) {
+    log('Cleaning: ' + $.util.colors.blue(path));
+    del(path, done);
 }

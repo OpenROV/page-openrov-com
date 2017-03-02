@@ -6,6 +6,9 @@ includes_dir: /_includes
 #destination: fooBar
 
 exclude:
+  - _app
+  - .gitignore
+  - bower.json
   - package.json
   - node_modules
   - gulpfile.js
