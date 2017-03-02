@@ -16,7 +16,7 @@ paths.patterns.xml = '/**/*.xml';
 
 
 paths.app               = './_app';
-paths.dist              = './dist';
+paths.dist              = './assets';
 paths.styles            = paths.app + '/styles';
 paths.theme             = paths.app + '/vendor/theme';
 paths.appCss            = './app.css'

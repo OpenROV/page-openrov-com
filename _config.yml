@@ -1,8 +1,5 @@
 #baseurl: /page-openrov-com
 
-source: build
-layouts_dir: build/_layouts
-includes_dir: /_includes
 #destination: fooBar
 
 exclude:

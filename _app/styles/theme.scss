@@ -198,7 +198,7 @@ nav.main-navbar ul.dropdown-menu.first {
           left: 14px!important;
         }        
         &:before {
-          background: url({{site:baseurl}}/assets/openrov/images/white-arrow-left.svg);
+          background: url(/assets/openrov/images/white-arrow-left.svg);
           width: 32px;
           height: 32px;
           background-repeat: no-repeat;
@@ -215,7 +215,7 @@ nav.main-navbar ul.dropdown-menu.first {
           right: 14px!important;
         }        
        &:before {
-          background: url({{site:baseurl}}/assets/openrov/images/white-arrow-right.svg);
+          background: url(/assets/openrov/images/white-arrow-right.svg);
           width: 32px;
           height: 32px;
           background-repeat: no-repeat;

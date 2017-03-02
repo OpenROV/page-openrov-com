@@ -19,7 +19,7 @@ gulp.task('build:theme:styles', () => {
 
         .pipe(handleCss(config.paths.themeCss))
 
-        .pipe(gulp.dest(config.paths.dist + '/css'))
+        .pipe(gulp.dest(config.paths.dist + '/theme'))
 });
 
 
@@ -35,7 +35,7 @@ gulp.task('build:styles', [], () => {
         }).on('error', $.sass.logError))
         .pipe(handleCss(config.paths.appCss))
 
-        .pipe(gulp.dest(config.paths.dist + '/css'));
+        .pipe(gulp.dest(config.paths.dist + ''));
 })
 
 gulp.task('build', ['build:app', 'build:theme'], () => {});
@@ -49,7 +49,7 @@ gulp.task('build:theme:scripts', function () {
         config.paths.theme + '/js/' + config.paths.patterns.js
     ])
         .pipe(handleJs('theme.js'))
-        .pipe(gulp.dest(config.paths.dist))
+        .pipe(gulp.dest(config.paths.dist + '/theme'))
         .on('error', gutil.log);
 });
 
@@ -64,7 +64,7 @@ gulp.task('build:scripts', function () {
         .on('error', gutil.log);
 });
 
-gulp.task('clean:dist', (done) => {
+gulp.task('clean', (done) => {
     clean([
         config.paths.dist + '/**/*.*',
         config.paths.dist + '/*',
@@ -76,7 +76,7 @@ gulp.task('clean:dist', (done) => {
 gulp.task('build:theme:images', function () {
     log(`Minifying images`);
     return gulp.src(config.paths.themeImages)
-        .pipe(handleImages(config.paths.dist + '/images/theme'))
+        .pipe(handleImages(config.paths.dist + '/theme/images'))
         .on('error', gutil.log);
 })
 
@@ -85,7 +85,7 @@ gulp.task('build:theme:images', function () {
 gulp.task('build:images', function () {
     log(`Minifying images ${config.paths.appImages}`);
     return gulp.src(config.paths.appImages)
-        .pipe(handleImages(config.paths.dist + '/images'))
+        .pipe(handleImages(config.paths.dist + '/openrov/images'))
         .on('error', gutil.log);
 })
 
