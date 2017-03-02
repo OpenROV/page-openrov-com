@@ -5,6 +5,16 @@ var config = {
     paths: paths
 };
 
+
+paths.patterns.css = '/**/*.css';
+paths.patterns.sass = '/**/*.scss';
+paths.patterns.js = '/**/*.js';
+paths.patterns.image = '/**/*.+(jpg|JPG|jpeg|JPEG|png|PNG|svg|SVG|gif|GIF|webp|WEBP|tif|TIF)';
+paths.patterns.markdown = '/**/*.+(md|MD|markdown|MARKDOWN)';
+paths.patterns.html = '/**/*.html';
+paths.patterns.xml = '/**/*.xml';
+
+
 paths.app               = './_app';
 paths.dist              = './dist';
 paths.styles            = paths.app + '/styles';
@@ -12,23 +22,15 @@ paths.theme             = paths.app + '/vendor/theme';
 paths.appCss            = './app.css'
 paths.themeCss          = './theme.css'
 paths.maps              = './maps';
+paths.themeImages       = paths.theme + '/images' + paths.patterns.image;
+paths.appImages         = paths.app + '/images' + paths.patterns.image;
+
 
 paths.sassInclude       = './_includes';
 
 paths.siteHtml = [
     './_site/**/*.html',
 ];
-
-
-
-paths.patterns.cssPattern = '/**/*.css';
-paths.patterns.sassPattern = '/**/*.scss';
-paths.patterns.jsPattern = '/**/*.js';
-paths.patterns.imagePattern = '/**/*.+(jpg|JPG|jpeg|JPEG|png|PNG|svg|SVG|gif|GIF|webp|WEBP|tif|TIF)';
-paths.patterns.markdownPattern = '/**/*.+(md|MD|markdown|MARKDOWN)';
-paths.patterns.htmlPattern = '/**/*.html';
-paths.patterns.xmlPattern = '/**/*.xml';
-
 
 config.cssDontTouch = [
     '.navbar-static-top',
