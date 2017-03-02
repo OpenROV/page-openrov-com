@@ -89,6 +89,13 @@ gulp.task('build:images', function () {
         .on('error', gutil.log);
 })
 
+// Places fonts in proper location
+gulp.task('build:fonts', function () {
+    return gulp.src(config.paths.theme + '/fonts/**/*.*')
+        .pipe(gulp.dest(config.paths.dist + '/fonts'))
+        .on('error', gutil.log);
+})
+
 function handleImages(destination) {
     return combiner.obj(
         $.if(args.verbose, $.print()),
