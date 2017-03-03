@@ -90,6 +90,7 @@ gulp.task('build:images', function () {
     //     .pipe(handleImages(config.paths.dist + '/openrov/images'))
     //     .on('error', gutil.log);
     const plugins = [
+        imagmin.optipng({ quality: '65-80' }),
         imageminMozjpeg({ quality: '90' }),
         // imageminPngquant({ quality: '65-80' })
     ]
