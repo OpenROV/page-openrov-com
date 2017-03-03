@@ -8,6 +8,8 @@ const gutil = require('gulp-util');
 const combiner = require('stream-combiner2');
 const pump = require('pump');
 const imagmin = require('gulp-imagemin');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
 
 const $ = require('gulp-load-plugins')({ lazy: true });
 
@@ -84,8 +86,20 @@ gulp.task('build:theme:images', function () {
 // then outputs to appropriate location(s)
 gulp.task('build:images', function () {
     log(`Minifying images ${config.paths.appImages}`);
+    // return gulp.src(config.paths.appImages)
+    //     .pipe(handleImages(config.paths.dist + '/openrov/images'))
+    //     .on('error', gutil.log);
+    const plugins = [
+        imageminMozjpeg({ quality: '90' }),
+        // imageminPngquant({ quality: '65-80' })
+    ]
+
+
     return gulp.src(config.paths.appImages)
-        .pipe(handleImages(config.paths.dist + '/openrov/images'))
+        .pipe($.if(args.verbose, $.print()))
+        .pipe(imagmin(plugins))
+        .pipe(gulp.dest(config.paths.dist + '/openrov/images'))
+        .pipe($.size({ showFiles: true }))
         .on('error', gutil.log);
 })
 
@@ -97,9 +111,14 @@ gulp.task('build:fonts', function () {
 })
 
 function handleImages(destination) {
+    const plugins = [
+        imageminMozjpeg({ quality: '5-90'}),
+        // imageminPngquant({ quality: '65-80' })
+    ]
+    
     return combiner.obj(
         $.if(args.verbose, $.print()),
-        imagmin(),
+        imagmin( plugins, {verbose: true} ),
         gulp.dest(destination),
         $.size({ showFiles: true })
     ).on('error', gutil.log);
