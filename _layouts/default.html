@@ -65,12 +65,12 @@
         <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/assets/openrov/images/favicon/apple-touch-icon-144x144.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/openrov/images/favicon/apple-touch-icon-152x152.png" />
         
-        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+        
 
-        <!--<link rel="stylesheet" href="{{ '/assets/theme/theme.css' | prepend: site.baseurl }}">
+        
+        
+                <!--<link rel="stylesheet" href="{{ '/assets/theme/theme.css' | prepend: site.baseurl }}">
         <link rel="stylesheet" href="{{ '/assets/app.css' | prepend: site.baseurl }}">-->
-        <link rel="stylesheet" href="{{ '/assets/main.css' | prepend: site.baseurl }}">
-        <link rel="stylesheet" media="screen and (max-width: 437px), screen and (max-height 437px)" href="{{ '/assets/mobile.css?v=3' | prepend: site.baseurl }}" media="screen"> 
 
         {% if page.critical %}
         <style>
@@ -155,5 +155,27 @@
             ga('send', 'pageview');
         </script>
         <!-- End Google Analytics -->        
+
+
+        <noscript id="deferred-styles">
+            <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic'
+                    rel='stylesheet' type='text/css'>        
+            <link rel="stylesheet" href="{{ '/assets/main.css' | prepend: site.baseurl }}">
+            <link rel="stylesheet" media="screen and (max-width: 437px), screen and (max-height 437px)" href="{{ '/assets/mobile.css?v=3' | prepend: site.baseurl }}"
+                media="screen">
+        </noscript>
+        <script>
+            var loadDeferredStyles = function () {
+                var addStylesNode = document.getElementById("deferred-styles");
+                var replacement = document.createElement("div");
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement)
+                addStylesNode.parentElement.removeChild(addStylesNode);
+            };
+            var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                webkitRequestAnimationFrame || msRequestAnimationFrame;
+            if (raf) raf(function () { window.setTimeout(loadDeferredStyles, 0); });
+            else window.addEventListener('load', loadDeferredStyles);
+        </script>        
     </body>
 </html>
