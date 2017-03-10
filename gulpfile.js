@@ -10,6 +10,8 @@ const pump = require('pump');
 const imagmin = require('gulp-imagemin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
+const criticalCss = require('gulp-critical-css');
+const critical = require('critical');
 
 const $ = require('gulp-load-plugins')({ lazy: true });
 
@@ -110,6 +112,33 @@ gulp.task('build:fonts', function () {
         .pipe(gulp.dest(config.paths.dist + '/fonts'))
         .on('error', gutil.log);
 })
+
+gulp.task('build:critical:css', ['build:styles', 'build:theme:styles'], function() {
+    return gulp
+        .src([
+            config.paths.dist + '/**/app.css',
+            config.paths.dist + '/**/theme/theme.css'
+            ])
+        .pipe(criticalCss({
+            selectors: config.criticalCss
+        }))
+        .pipe(gulp.dest(config.paths.dist + '/../_includes'))
+        .on('error', gutil.log);
+})
+
+
+gulp.task('critical', function(cb){
+    critical.generate({
+        base: __dirname,
+        src: '_site/index.html',
+        css: ['assets/app.css', 'assets/theme/theme.css'],
+        dest: '_includes/app.critical.css',
+        include: [config.criticalCss],
+        minify: true,
+        width: 1300,
+        height: 1200
+    });
+});
 
 function handleImages(destination) {
     const plugins = [

@@ -67,8 +67,19 @@
         
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="{{ '/assets/theme/theme.css' | prepend: site.baseurl }}">
-        <link rel="stylesheet" href="{{ '/assets/app.css' | prepend: site.baseurl }}">
+        <!--<link rel="stylesheet" href="{{ '/assets/theme/theme.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ '/assets/app.css' | prepend: site.baseurl }}">-->
+
+        <style>
+            .mejs-container { position: relative; background: none; font-family: Helvetica, Arial; text-align: left; vertical-align:
+            top; text-indent: 0; height: 100%; } .mejs-container video { -webkit-background-size: cover; -moz-background-size: cover;
+            -o-background-size: cover; background-size: cover; background-repeat: no-repeat; background-position: 0 0; }            
+            .mejs-mediaelement { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position:
+            50% 50%; background-repeat: no-repeat; }            
+            
+            {% include app.critical.css %}
+            
+        </style>
 
         {% if page.page_css %}
             {% for css in page.page_css %}

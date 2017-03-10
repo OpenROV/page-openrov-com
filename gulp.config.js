@@ -23,7 +23,7 @@ paths.appCss            = './app.css'
 paths.themeCss          = './theme.css'
 paths.maps              = './maps';
 paths.themeImages       = paths.theme + '/images' + paths.patterns.image;
-paths.appImages         = paths.app + '/images' + paths.patterns.image;
+paths.appImages         = paths.app + '/images' + paths.patterns.image
 
 
 paths.sassInclude       = './_includes';
@@ -31,6 +31,27 @@ paths.sassInclude       = './_includes';
 paths.siteHtml = [
     './_site/**/*.html',
 ];
+
+config.criticalCss = [
+    'section#head',
+    '.sticky-wrapper',
+    '#masthead',
+    '.navbar',
+    '.navbar-sticky',
+    '.flexslider',
+    '.colapse',
+    '.mejs-container',
+    '.mejs-mediaelement',
+    '.mejs-mediaelement *',
+    '.mejs-video',
+    '.or-hero-blue-tint',
+    '.or-hero-gradient',
+    '.container .or-hero-gradient',
+    'section#head .flexslider *',
+    '.background-media',
+    '.hero',
+    '.or-hero-btn-pre-order',
+]
 
 config.cssDontTouch = [
     '.navbar-static-top',

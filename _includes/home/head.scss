@@ -9,6 +9,10 @@ section#head {
             @include header-height();
         }
 
+        .video {
+            display: inherit;
+        }
+
         .hero {
 
             .title {
