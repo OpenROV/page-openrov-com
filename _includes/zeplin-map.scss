@@ -40,6 +40,10 @@
       width: 100%!important;
 }
 
+.or-hero-gradient.grey {
+    background-image: radial-gradient(circle at 47% 42%, rgba(0, 0, 0, 0.26), rgba(32, 32, 32, 0.66));    
+}
+
 .or-nav-link a{
     @extend .Nav-Link-Default;
     color: $Primary_Blue!important;
