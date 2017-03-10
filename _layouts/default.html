@@ -69,7 +69,10 @@
 
         <!--<link rel="stylesheet" href="{{ '/assets/theme/theme.css' | prepend: site.baseurl }}">
         <link rel="stylesheet" href="{{ '/assets/app.css' | prepend: site.baseurl }}">-->
+        <link rel="stylesheet" href="{{ '/assets/main.css' | prepend: site.baseurl }}">
+        <link rel="stylesheet" media="screen and (max-width: 437px), screen and (max-height 437px)" href="{{ '/assets/mobile.css?v=3' | prepend: site.baseurl }}" media="screen"> 
 
+        {% if page.critical %}
         <style>
             .mejs-container { position: relative; background: none; font-family: Helvetica, Arial; text-align: left; vertical-align:
             top; text-indent: 0; height: 100%; } .mejs-container video { -webkit-background-size: cover; -moz-background-size: cover;
@@ -80,6 +83,8 @@
             {% include app.critical.css %}
             
         </style>
+        
+        {% endif %}
 
         {% if page.page_css %}
             {% for css in page.page_css %}

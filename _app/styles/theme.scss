@@ -467,7 +467,7 @@ div#pre-order-banner {
                 line-height: 23px;
                 padding: 17px 22px;
                 font-family: Lato;
-                font-size: 20px;
+                font-size: 20px!important;
                 color: $Primary_Blue;
                 &:hover {
                   text-decoration: none;
@@ -490,11 +490,11 @@ div#pre-order-banner {
     &:active {
       background: #B7B7B7!important;
     }
-    background-image:  radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #FFFFFF 50%, #B7B7B7 200%);
+    background-image:  radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #FFFFFF 50%, #B7B7B7 200%)!important;
     color: #1c4472!important;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 6px;
+    font-size: 25px!important;
+    text-align: center!important;
+    border-radius: 6px!important;
     background-color: #ebebeb!important;
     border-color: #ebebeb!important;
 
@@ -586,10 +586,19 @@ div#pre-order-banner {
   &.in {
     opacity: 1;
   }
+
+  .modal-dialog {
+    width: 800px;
+  }
 }
 
 .modal-open {
   overflow-y: scroll;
+  
+}
+
+.modal {
+  z-index: 1210!important;
 }
 
 $modalWidth: 800px;

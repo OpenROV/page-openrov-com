@@ -117,12 +117,12 @@
 }
 .or-hero-btn-pre-order {
 
-  border-radius: 6px;
+  border-radius: 6px!important;
   background-color: #ffb538;
-  background-image: linear-gradient(259deg, #ffb538, #ffb900 58%, #ffb638);
-  border: solid 1px $Primaray_Spot_Color;
-  padding: 20px 25px;
-  line-height: 1em;
+  background-image: linear-gradient(259deg, #ffb538, #ffb900 58%, #ffb638)!important;
+  border: solid 1px $Primaray_Spot_Color!important;
+  padding: 20px 25px!important;
+  line-height: 1em!important;
 
   &:hover {
       text-decoration: none;
@@ -144,18 +144,18 @@
 }
 
 .or-button-blue {
-    border-radius: 4px;
-    background-color: $Secondary_Blue;
-    background-image: radial-gradient(circle at 54% 55%, #55b2e4, #4e92df);
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 2.13;
-    text-align: center;
+    border-radius: 4px!important;
+    background-color: $Secondary_Blue!important;
+    background-image: radial-gradient(circle at 54% 55%, #55b2e4, #4e92df)!important;
+    font-family: Lato!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    font-style: normal!important;
+    font-stretch: normal!important;
+    line-height: 2.13!important;
+    text-align: center!important;
     color: $Primary_White!important;
-    padding: 3px 16px;
+    padding: 3px 16px!important;
 
     &:hover {
         background-image: none;
@@ -245,7 +245,7 @@
 .BTN-Pre-Order-CTA__ {
   object-fit: contain;
   font-family: 'Lato',sans-serif!important;
-  font-size: 23px;
+  font-size: 23px!important;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;

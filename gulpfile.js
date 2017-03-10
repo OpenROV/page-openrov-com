@@ -31,7 +31,7 @@ gulp.task('build:styles', [], () => {
     log('Compiling SCSS --> css');
 
     const sassStream = gulp
-        .src(config.paths.styles + config.paths.patterns.sass)
+        .src([config.paths.styles + config.paths.patterns.sass,`!_app/styles/mobile.scss`])
         .pipe($.if(args.verbose, $.print()))
         .pipe($.sourcemaps.init())
         .pipe($.sass({
@@ -40,6 +40,21 @@ gulp.task('build:styles', [], () => {
         .pipe(handleCss(config.paths.appCss))
 
         .pipe(gulp.dest(config.paths.dist + ''));
+})
+
+gulp.task('build:styles:mobile', [], () => {
+    log('Compiling mobile SCSS --> css');
+
+    const sassStream = gulp
+        .src([config.paths.styles + '/mobile.scss'])
+        .pipe($.if(args.verbose, $.print()))
+        .pipe($.sourcemaps.init())
+        .pipe($.sass({
+            includePaths: config.paths.sassInclude,
+        }).on('error', $.sass.logError))
+        .pipe(handleCss(config.paths.mobileCss))
+
+        .pipe(gulp.dest(config.paths.dist));
 })
 
 gulp.task('build', ['build:app', 'build:theme'], () => {});
@@ -113,27 +128,39 @@ gulp.task('build:fonts', function () {
         .on('error', gutil.log);
 })
 
-gulp.task('build:critical:css', ['build:styles', 'build:theme:styles'], function() {
+// gulp.task('build:critical:css', ['build:styles', 'build:theme:styles'], function() {
+//     return gulp
+//         .src([
+//             config.paths.dist + '/**/app.css',
+//             config.paths.dist + '/**/theme/theme.css'
+//             ])
+//         .pipe(criticalCss({
+//             selectors: config.criticalCss
+//         }))
+//         .pipe(gulp.dest(config.paths.dist + '/../_includes'))
+//         .on('error', gutil.log);
+// })
+
+gulp.task('uncss', function() {
     return gulp
-        .src([
-            config.paths.dist + '/**/app.css',
-            config.paths.dist + '/**/theme/theme.css'
-            ])
-        .pipe(criticalCss({
-            selectors: config.criticalCss
-        }))
-        .pipe(gulp.dest(config.paths.dist + '/../_includes'))
-        .on('error', gutil.log);
+        .src(['assets/app.css', 'assets/theme/theme.css'])
+        .pipe($.if(args.verbose, $.print()))
+        .pipe($.concat('main.css'))
+        // .pipe($.uncss({
+        //     html: config.paths.siteHtml,
+        //     ignore: config.keepCss,
+        // }))
+        .pipe(gulp.dest('./assets/'));
 })
 
-
-gulp.task('critical', function(cb){
+gulp.task('critical', ['uncss'], function(cb){
     critical.generate({
         base: __dirname,
         src: '_site/index.html',
-        css: ['assets/app.css', 'assets/theme/theme.css'],
+        css: ['assets/main.css'],
         dest: '_includes/app.critical.css',
-        include: [config.criticalCss],
+        include: config.keepCss,
+        ignore: config.ignoreCss,
         minify: true,
         width: 1300,
         height: 1200

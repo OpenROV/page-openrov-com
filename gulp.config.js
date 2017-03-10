@@ -20,6 +20,7 @@ paths.dist              = './assets';
 paths.styles            = paths.app + '/styles';
 paths.theme             = paths.app + '/vendor/theme';
 paths.appCss            = './app.css'
+paths.mobileCss            = './mobile.css'
 paths.themeCss          = './theme.css'
 paths.maps              = './maps';
 paths.themeImages       = paths.theme + '/images' + paths.patterns.image;
@@ -32,12 +33,17 @@ paths.siteHtml = [
     './_site/**/*.html',
 ];
 
-config.criticalCss = [
+config.keepCss = [
     'section#head',
     '.sticky-wrapper',
     '#masthead',
+    '#masthead.navbar-stuck',
+    '#masthead.navbar-scrolled',
+    /\.navbar-scrolled.*/,
+    '#masthead.navbar',
     '.navbar',
     '.navbar-sticky',
+    '.navbar-stuck',
     '.flexslider',
     '.colapse',
     '.mejs-container',
@@ -50,7 +56,20 @@ config.criticalCss = [
     'section#head .flexslider *',
     '.background-media',
     '.hero',
-    '.or-hero-btn-pre-order',
+    /.*\.or-hero-btn-pre-order.*/,
+    /div#pre-order-banner\.pre-order-banner.*/,
+]
+
+config.ignoreCss = [
+    '.col-xs-12'
+]
+
+config.criticalCss = [
+    /#masthead\..*/,
+    /\.navbar.*/,
+    '#masthead.navbar-stuck',
+    ''
+
 ]
 
 config.cssDontTouch = [

@@ -194,12 +194,12 @@
 div#pre-order-banner.pre-order-banner {
     top: 43px;
     &.sticky {
-        height: 50px;
-        top: 43px;
+        height: 50px!important;
+        top: 43px!important;
     }
     
     h1 {
-        font-size: 33px;
+        font-size: 33px!important;
     }
 
     .button-container {
@@ -207,7 +207,7 @@ div#pre-order-banner.pre-order-banner {
         .btn {
             font-size: 12px !important;
             font-weight: bold !important;
-            line-height: 0;
+            line-height: 0 !important;
             margin-top: -5px !important;
         }
     }
@@ -327,7 +327,7 @@ article#home {
             }
         }
         .background-media {
-            background-image: url('../images/hero/b-g-explore-small.jpg');
+            background-image: url('./openrov/images/hero/b-g-explore-small.jpg');
             background-size: cover;
         }
     }

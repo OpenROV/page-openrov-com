@@ -37,6 +37,7 @@
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
+    "gulp-uncss": "^1.0.6",
     "gulp-util": "^3.0.8",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.0.0",
