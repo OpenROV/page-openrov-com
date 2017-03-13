@@ -13,6 +13,7 @@ exclude:
   - docker-componse.yml
   - TODO.md
   - assets/openrov/_scss
+  - _assets
 
 array: []
 
