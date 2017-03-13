@@ -57,9 +57,19 @@ gulp.task('build:styles:mobile', [], () => {
         .pipe(gulp.dest(config.paths.dist));
 })
 
-gulp.task('build', ['build:app', 'build:theme'], () => {});
-gulp.task('build:theme', ['build:theme:styles', 'build:theme:scripts', 'build:theme:images'], () => {});
-gulp.task('build:app', ['build:styles', 'build:scripts', 'build:images'], () => {});
+gulp.task('build', ['build:app', 'build:theme', 'build:styles:critical'], () => {});
+gulp.task('build:theme', ['build:theme:styles', 'build:theme:scripts'], () => {});
+gulp.task('build:app', ['build:styles', 'build:styles:mobile', 'build:scripts'], () => {});
+gulp.task('build:images', ['build:theme:images', 'build:app:images'], () => {});
+
+gulp.task('watch', ['watch:styles'], () => {});
+
+
+gulp.task('watch:styles', function () {
+    gulp.watch(
+        [config.paths.styles + config.paths.patterns.sass, config.paths.sassInclude + config.paths.patterns.sass], 
+        ['build:styles', 'build:styles:critical'])
+});
 
 // Concatenates and uglifies global JS files and outputs result     to the
 // appropriate location.
@@ -101,7 +111,7 @@ gulp.task('build:theme:images', function () {
 
 // Creates optimized versions of images,
 // then outputs to appropriate location(s)
-gulp.task('build:images', function () {
+gulp.task('build:app:images', function () {
     log(`Minifying images ${config.paths.appImages}`);
     // return gulp.src(config.paths.appImages)
     //     .pipe(handleImages(config.paths.dist + '/openrov/images'))
@@ -141,19 +151,15 @@ gulp.task('build:fonts', function () {
 //         .on('error', gutil.log);
 // })
 
-gulp.task('uncss', function() {
+gulp.task('build:styles:concat', function() {
     return gulp
         .src(['assets/app.css', 'assets/theme/theme.css'])
         .pipe($.if(args.verbose, $.print()))
         .pipe($.concat('main.css'))
-        // .pipe($.uncss({
-        //     html: config.paths.siteHtml,
-        //     ignore: config.keepCss,
-        // }))
         .pipe(gulp.dest('./assets/'));
 })
 
-gulp.task('critical', ['uncss'], function(cb){
+gulp.task('build:styles:critical', ['build:styles:concat'], function(cb){
     critical.generate({
         base: __dirname,
         src: '_site/index.html',
@@ -164,7 +170,7 @@ gulp.task('critical', ['uncss'], function(cb){
         minify: true,
         width: 1300,
         height: 1200
-    });
+    }, cb);
 });
 
 function handleImages(destination) {

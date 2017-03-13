@@ -39,6 +39,7 @@
     "gulp-uglify": "^2.0.1",
     "gulp-uncss": "^1.0.6",
     "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.0.0",
     "lazypipe": "^1.0.1",
