@@ -33,6 +33,14 @@ paths.siteHtml = [
     './_site/**/*.html',
 ];
 
+paths.allHtml = [
+    '.' + paths.patterns.html,
+    '!./bower_components/' + paths.patterns.html,
+    '!./assets/' + paths.patterns.html,
+    '!./_site/' + paths.patterns.html,
+    '!./node_modules/' + paths.patterns.html,
+]   
+
 config.keepCss = [
     'section#head',
     '.sticky-wrapper',

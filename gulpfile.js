@@ -12,6 +12,8 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 const criticalCss = require('gulp-critical-css');
 const critical = require('critical');
+const rev = require('gulp-rev-append');
+
 
 const $ = require('gulp-load-plugins')({ lazy: true });
 
@@ -57,10 +59,10 @@ gulp.task('build:styles:mobile', [], () => {
         .pipe(gulp.dest(config.paths.dist));
 })
 
-gulp.task('build', ['build:app', 'build:theme', 'build:styles:critical'], () => {});
+gulp.task('build', ['build:app', 'build:theme', 'build:styles:critical', 'build:versions'], () => {});
 gulp.task('build:theme', ['build:theme:styles', 'build:theme:scripts'], () => {});
 gulp.task('build:app', ['build:styles', 'build:styles:mobile', 'build:scripts'], () => {});
-gulp.task('build:images', ['build:theme:images', 'build:app:images'], () => {});
+gulp.task('build:images', [/*'build:theme:images', */ 'build:app:images'], () => {});
 
 gulp.task('watch', ['watch:styles'], () => {});
 
@@ -68,7 +70,7 @@ gulp.task('watch', ['watch:styles'], () => {});
 gulp.task('watch:styles', function () {
     gulp.watch(
         [config.paths.styles + config.paths.patterns.sass, config.paths.sassInclude + config.paths.patterns.sass], 
-        ['build:styles', 'build:styles:critical'])
+        ['build:styles', 'build:styles:critical', 'build:versions'])
 });
 
 // Concatenates and uglifies global JS files and outputs result     to the
@@ -138,19 +140,6 @@ gulp.task('build:fonts', function () {
         .on('error', gutil.log);
 })
 
-// gulp.task('build:critical:css', ['build:styles', 'build:theme:styles'], function() {
-//     return gulp
-//         .src([
-//             config.paths.dist + '/**/app.css',
-//             config.paths.dist + '/**/theme/theme.css'
-//             ])
-//         .pipe(criticalCss({
-//             selectors: config.criticalCss
-//         }))
-//         .pipe(gulp.dest(config.paths.dist + '/../_includes'))
-//         .on('error', gutil.log);
-// })
-
 gulp.task('build:styles:concat', function() {
     return gulp
         .src(['assets/app.css', 'assets/theme/theme.css'])
@@ -172,6 +161,14 @@ gulp.task('build:styles:critical', ['build:styles:concat'], function(cb){
         height: 1200
     }, cb);
 });
+
+gulp.task('build:versions', [], () => {
+    return gulp
+        .src(config.paths.allHtml)
+        .pipe($.if(args.verbose, $.print()))
+        .pipe(rev())
+        .pipe(gulp.dest('.'))
+})
 
 function handleImages(destination) {
     const plugins = [
