@@ -79,6 +79,14 @@
         
         {% endif %}
 
+        {% if page.critical != true %}
+            <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic'
+                    rel='stylesheet' type='text/css'>        
+            <link rel="stylesheet" href="/assets/main.css?rev=e15bcc00535b5f1091390e6a92d824b4">
+            <link rel="stylesheet" media="screen and (max-width: 437px), screen and (max-height 437px)" href="/assets/mobile.css?rev=f822512b198daddecbbf8c286159d769"
+                media="screen">
+        {% endif %}
+
         {% if page.page_css %}
             {% for css in page.page_css %}
                 {% assign cssPath = css | prepend: site.baseurl %}
@@ -86,6 +94,7 @@
         <link rel="stylesheet" href="{{ cssPath }}" media="screen">
             {% endfor %}
         {% endif %}
+
     </head>
     <body class="normal-header "><!--pace-on pace-counter-->
 
@@ -150,6 +159,7 @@
         <!-- End Google Analytics -->        
 
 
+{% if page.critical %}
         <noscript id="deferred-styles">
             <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic'
                     rel='stylesheet' type='text/css'>        
@@ -157,6 +167,7 @@
             <link rel="stylesheet" media="screen and (max-width: 437px), screen and (max-height 437px)" href="/assets/mobile.css?rev=f822512b198daddecbbf8c286159d769"
                 media="screen">
         </noscript>
+
         <script>
             var loadDeferredStyles = function () {
                 var addStylesNode = document.getElementById("deferred-styles");
@@ -170,5 +181,7 @@
             if (raf) raf(function () { window.setTimeout(loadDeferredStyles, 0); });
             else window.addEventListener('load', loadDeferredStyles);
         </script>        
+{% endif %}
+
     </body>
 </html>
