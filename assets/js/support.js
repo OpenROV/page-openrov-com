@@ -1,16 +1,16 @@
     (function(){
-        $.get('https://openrov.zendesk.com/embeddable/config')
-            .done(function(result){
-                result.embeds.ticketSubmissionForm.props.customFields.forEach(
+        $.get('https://openrov.zendesk.com/embeddable/ticket_fields?locale=en')
+            .done(function(fieldIdsResult){
+                fieldIdsResult.forEach(
                     function(field) {
-                        if (field.type == "text" && field.title =="Name") {
+                        if (field.type == "text" && field.title_in_portal =="Name") {
                             $('#nameInput').data('id', field.id);
                         }
                         if (field.type == "tagger") {
                             var control = $('#typeInput');
                             control.data('id', field.id);
-                            control.append(field.options.map(function(o) {
-                                return '<option value="' + o.value+ '">' + o.title +'</option>'
+                            control.append(field.custom_field_options.map(function(o) {
+                                return '<option value="' + o.value+ '">' + o.name +'</option>'
                             }));
 
                         }
