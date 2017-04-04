@@ -1,8 +1,22 @@
+- outlet: "Forbes"
+  date: "February 16, 2017"
+  url: https://www.forbes.com/video/5319226384001/
+  title:  Using Drones to Explore the Ocean Floor
+  quote: "[Video] Drones have allowed amateur explorers to fly through the skies, but companies like OpenROV are determined to take us into the unknown, deep underwater. But with new territory comes unique challenges, and the solutions aren't always easily found."
+  logo: forbes-logo.png
+
+- outlet: "San Francisco Magazine"
+  date: "February 14, 2017"
+  url: http://www.modernluxury.com/san-francisco/story/submarines-everyone
+  title:  Submarines for Everyone
+  quote: "After four years of design and test piloting, Stackpole and Lang—a former sailing instructor and a recipient of the 2016 National Geographic Emerging Explorer award—were deploying Trident, their new drone, at the possible site of one of the bay’s most famous shipwrecks."
+  logo: sfmag-logo.png
+
 - outlet: "CBS This Morning"
   date: "November 2, 2016"
   url: http://www.cbsnews.com/news/underwater-drones-openrov-trident-citizen-scientists-exploration/
   title:  New Generation of Underwater Drones Makes Waves for 'Citizen Scientists'
-  quote: "'Trident' is the newest model to come out of a Kickstarter campaign launched by David Lang and Eric Stackpole. While the technology is complex, the idea is simple: to let anyone become an explorer."
+  quote: "[Video] 'Trident' is the newest model to come out of a Kickstarter campaign launched by David Lang and Eric Stackpole. While the technology is complex, the idea is simple: to let anyone become an explorer."
   logo: cbs-news.png
   
 - outlet: "Virgin"
