@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var $form = $('#mc-embedded-subscribe-form');
     if ($form.length > 0) {
-        $('form input[type="submit"]').bind('click', function (event) {
+        $form.find('input[type="submit"]').bind('click', function (event) {
             if (event) event.preventDefault();
             if (validate_input($form)) { 
                 $(this).attr('disabled', true)

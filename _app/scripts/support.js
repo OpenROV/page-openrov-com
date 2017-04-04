@@ -1,3 +1,4 @@
+$(document).ready(function () {
     (function(){
         $.get('https://openrov.zendesk.com/embeddable/ticket_fields?locale=en')
             .done(function(fieldIdsResult){
@@ -18,7 +19,7 @@
             })
 
         var submitedFrom = '\n\n------------------\nSubmitted from: ' + location;
-        $('input[type=submit]').on('click', function(ev) {
+        $('#modal-contactSupport input[type=submit]').on('click', function(ev) {
             ev.preventDefault();
 
             $('#nameInput').parent().toggleClass('has-error', false)
@@ -105,3 +106,4 @@
            
 
     })()
+});
