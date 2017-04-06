@@ -1,5 +1,21 @@
 $(document).ready(function () {
     (function(){
+
+        function mapToObject(items) {
+            var data = {};
+
+            items.forEach(function (item) {
+                var parts = item.name.split('::');
+                var node = data;
+                parts.forEach(function (p) {
+                    delete node.value;
+                    if (!node[p]) { node[p] = { value: item.value } }
+                    node = node[p];
+                })
+            })
+            return data;
+        }
+
         $.get('https://openrov.zendesk.com/embeddable/ticket_fields?locale=en')
             .done(function(fieldIdsResult){
                 fieldIdsResult.forEach(
@@ -7,12 +23,27 @@ $(document).ready(function () {
                         if (field.type == "text" && field.title_in_portal =="Name") {
                             $('#nameInput').data('id', field.id);
                         }
-                        if (field.type == "tagger") {
-                            var control = $('#typeInput');
-                            control.data('id', field.id);
-                            control.append(field.custom_field_options.map(function(o) {
-                                return '<option value="' + o.value+ '">' + o.name +'</option>'
-                            }));
+                        if (field.id == 24180405) {
+                            var topLevelControl = $('#modal-contactSupport #typeInput');
+                            $('#modal-contactSupport #typeInput').data('id', field.id);
+                            var done = {};
+                            var elements = field.custom_field_options.map(function(option) {
+                                var res = [];
+                                var parts = option.name.split('::');
+                                var breadCrumbs = [];
+                                for(var i = 0; i < parts.length; i++) {
+                                    breadCrumbs.push(parts[i]);
+                                    var joined = breadCrumbs.join(' &gt; ')
+                                    if (!done[joined]) {
+                                        done[joined] = {}
+                                        var value = i === parts.length -1 ? option.value : undefined;
+                                        res.push('<option value="' + value + '">'+ joined +'</option>');
+                                    }
+                                }
+                                return res.join(' ');
+                            })
+                            topLevelControl.append(elements);
+                            topLevelControl.selectHierarchy({ hideOriginal: true, placeholder: ' -- select an option -- ' });
 
                         }
                     })
@@ -22,11 +53,11 @@ $(document).ready(function () {
         $('#modal-contactSupport input[type=submit]').on('click', function(ev) {
             ev.preventDefault();
 
-            $('#nameInput').parent().toggleClass('has-error', false)
-            $('#emailInput').parent().toggleClass('has-error', false)
-            $('#subjectInput').parent().toggleClass('has-error', false)
-            $('#descriptionInput').parent().toggleClass('has-error', false)
-            $('#typeInput').parent().parent().toggleClass('has-error', false)
+            $('#modal-contactSupport #nameInput').parent().toggleClass('has-error', false)
+            $('#modal-contactSupport #emailInput').parent().toggleClass('has-error', false)
+            $('#modal-contactSupport #subjectInput').parent().toggleClass('has-error', false)
+            $('#modal-contactSupport #descriptionInput').parent().toggleClass('has-error', false)
+            $('#modal-contactSupport .drilldown').parent().parent().toggleClass('has-error', false)
             var error = false;
             try {
                 var name = $('#nameInput').val();
@@ -42,14 +73,16 @@ $(document).ready(function () {
                 if (description.trim().length == 0) { $('#descriptionInput').parent().toggleClass('has-error', true); error = true; }
 
                 var type = '';
-                $($('#typeInput')[0]).children().toArray().forEach(function(child) {
+                var drillDowns = $('#modal-contactSupport .drilldown');
+
+                $(drillDowns[drillDowns.length -1]).children().toArray().forEach(function(child) {
                     if (child.selected) {
                         if (child.value) {
                             type = child.value
                         }
                     }
                 })
-                if (type.trim().length == 0) { $('#typeInput').parent().parent().toggleClass('has-error', true); error = true; }
+                if (type.trim().length == 0) { $(drillDowns[drillDowns.length - 1]).parent().parent().toggleClass('has-error', true); error = true; }
 
                 var nameId = $('#nameInput').data('id');
                 var typeId = $('#typeInput').data('id');

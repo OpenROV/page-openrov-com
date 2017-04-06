@@ -72,6 +72,11 @@ gulp.task('watch:styles', function () {
         [config.paths.styles + config.paths.patterns.sass, config.paths.sassInclude + config.paths.patterns.sass], 
         ['build:styles', 'build:styles:critical', 'build:versions'])
 });
+gulp.task('watch:scripts', function () {
+    gulp.watch(
+        [config.paths.app + '/scripts/' + config.paths.patterns.js], 
+        ['build:scripts', 'build:versions'])
+});
 
 // Concatenates and uglifies global JS files and outputs result     to the
 // appropriate location.
