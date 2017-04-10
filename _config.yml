@@ -1,4 +1,35 @@
 #baseurl: /page-openrov-com
-collections:
-  products:
-    output: true
+
+#destination: fooBar
+
+exclude:
+  - _app
+  - .gitignore
+  - bower.json
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - gulp.config.js
+  - docker-componse.yml
+  - TODO.md
+  - assets/openrov/_scss
+  - _assets
+
+array: []
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+# for SEO
+google_site_verification: 6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvm NxYDI4
+title: 'OpenROV | Underwater Exploration Robots'
+description: 'OpenROV is a community of DIY explorers who are working together to create more accessible, affordable, and awesome tools for underwater exploration.'
+url: 'https://www.openrov.com'
+author:
+  twitter: openrov
+
+twitter: openrov
+logo: /assets/openrov/images/openrov-dark.png
+
+social:

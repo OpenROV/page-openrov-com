@@ -1,0 +1,981 @@
+/* - Black - */
+.swatch-black, [class*="swatch-"] .swatch-black {
+  background: #000000;
+  color: #ffffff;
+}
+.swatch-black h1, .swatch-black h2, .swatch-black h3, .swatch-black h4, .swatch-black h5, .swatch-black h6, [class*="swatch-"] .swatch-black h1, [class*="swatch-"] .swatch-black h2, [class*="swatch-"] .swatch-black h3, [class*="swatch-"] .swatch-black h4, [class*="swatch-"] .swatch-black h5, [class*="swatch-"] .swatch-black h6 {
+  color: #ffffff;
+}
+.swatch-black h1 small, .swatch-black h2 small, .swatch-black h3 small, .swatch-black h4 small, .swatch-black h5 small, .swatch-black h6 small, [class*="swatch-"] .swatch-black h1 small, [class*="swatch-"] .swatch-black h2 small, [class*="swatch-"] .swatch-black h3 small, [class*="swatch-"] .swatch-black h4 small, [class*="swatch-"] .swatch-black h5 small, [class*="swatch-"] .swatch-black h6 small {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black a, [class*="swatch-"] .swatch-black a {
+  color: #ffffff;
+}
+.swatch-black a:hover, [class*="swatch-"] .swatch-black a:hover {
+  color: #d0d0d0;
+}
+.swatch-black small, [class*="swatch-"] .swatch-black small {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black small a, [class*="swatch-"] .swatch-black small a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black small a:hover, [class*="swatch-"] .swatch-black small a:hover {
+  color: #ffffff;
+}
+.swatch-black i, [class*="swatch-"] .swatch-black i {
+  color: #ffffff;
+}
+.swatch-black blockquote p, [class*="swatch-"] .swatch-black blockquote p {
+  color: #ffffff !important;
+}
+.swatch-black blockquote:before, [class*="swatch-"] .swatch-black blockquote:before {
+  background-color: #ffffff;
+}
+.swatch-black blockquote small, .swatch-black blockquote footer, [class*="swatch-"] .swatch-black blockquote small, [class*="swatch-"] .swatch-black blockquote footer {
+  color: #ffffff;
+}
+.swatch-black ::selection, [class*="swatch-"] .swatch-black ::selection {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black ::-moz-selection, [class*="swatch-"] .swatch-black ::-moz-selection {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black hr, [class*="swatch-"] .swatch-black hr {
+  border-top-color: #3c3c3c;
+}
+.swatch-black pre, [class*="swatch-"] .swatch-black pre {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .active, [class*="swatch-"] .swatch-black .active {
+  color: #d0d0d0;
+}
+.swatch-black .btn-primary, .swatch-black button, .swatch-black input[type="submit"], [class*="swatch-"] .swatch-black .btn-primary, [class*="swatch-"] .swatch-black button, [class*="swatch-"] .swatch-black input[type="submit"] {
+  background-color: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .btn-primary:hover, .swatch-black button:hover, .swatch-black input[type="submit"]:hover, [class*="swatch-"] .swatch-black .btn-primary:hover, [class*="swatch-"] .swatch-black button:hover, [class*="swatch-"] .swatch-black input[type="submit"]:hover {
+  background-color: rgba(245, 245, 245, 0.9);
+  color: #3c3c3c;
+}
+.swatch-black .btn-primary.btn-icon-left span, .swatch-black .btn-primary.btn-icon-right span, .swatch-black button.btn-icon-left span, .swatch-black button.btn-icon-right span, .swatch-black input[type="submit"].btn-icon-left span, .swatch-black input[type="submit"].btn-icon-right span, [class*="swatch-"] .swatch-black .btn-primary.btn-icon-left span, [class*="swatch-"] .swatch-black .btn-primary.btn-icon-right span, [class*="swatch-"] .swatch-black button.btn-icon-left span, [class*="swatch-"] .swatch-black button.btn-icon-right span, [class*="swatch-"] .swatch-black input[type="submit"].btn-icon-left span, [class*="swatch-"] .swatch-black input[type="submit"].btn-icon-right span {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.swatch-black .btn-primary i, [class*="swatch-"] .swatch-black .btn-primary i {
+  color: #3c3c3c !important;
+}
+.swatch-black .btn-link, [class*="swatch-"] .swatch-black .btn-link {
+  background: none;
+  color: #f5f5f5;
+  text-decoration: none;
+  box-shadow: 0px 0px 0px 1px #f5f5f5 inset;
+}
+.swatch-black .btn-link span, [class*="swatch-"] .swatch-black .btn-link span {
+  background: none;
+}
+.swatch-black .btn-link i, [class*="swatch-"] .swatch-black .btn-link i {
+  color: #f5f5f5 !important;
+}
+.swatch-black .btn-link:hover, [class*="swatch-"] .swatch-black .btn-link:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+  color: #3c3c3c;
+  box-shadow: 0px 0px 0px 1px #f5f5f5;
+}
+.swatch-black .btn-link:hover i, [class*="swatch-"] .swatch-black .btn-link:hover i {
+  color: #3c3c3c !important;
+}
+.swatch-black .open .dropdown-toggle.btn-primary, [class*="swatch-"] .swatch-black .open .dropdown-toggle.btn-primary {
+  background-color: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .btn-group .dropdown-menu, [class*="swatch-"] .swatch-black .btn-group .dropdown-menu {
+  background-color: #f5f5f5;
+}
+.swatch-black .btn-group .dropdown-menu > li > a, [class*="swatch-"] .swatch-black .btn-group .dropdown-menu > li > a {
+  color: #3c3c3c;
+  box-shadow: 0px -1px 0px #e8e8e8;
+}
+.swatch-black .btn-group .dropdown-menu > li:first-child > a, [class*="swatch-"] .swatch-black .btn-group .dropdown-menu > li:first-child > a {
+  box-shadow: none;
+}
+.swatch-black .btn-group .dropdown-menu > li > a:hover, [class*="swatch-"] .swatch-black .btn-group .dropdown-menu > li > a:hover {
+  background: white;
+}
+.swatch-black .label-primary, [class*="swatch-"] .swatch-black .label-primary {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .label-primary a, [class*="swatch-"] .swatch-black .label-primary a {
+  color: #3c3c3c;
+}
+.swatch-black select, .swatch-black textarea, .swatch-black input, .swatch-black .uneditable-input, .swatch-black .input-group-btn, [class*="swatch-"] .swatch-black select, [class*="swatch-"] .swatch-black textarea, [class*="swatch-"] .swatch-black input, [class*="swatch-"] .swatch-black .uneditable-input, [class*="swatch-"] .swatch-black .input-group-btn {
+  background: #ffffff;
+  color: #1c1c1c;
+}
+.swatch-black select:-moz-placeholder, .swatch-black textarea:-moz-placeholder, .swatch-black input:-moz-placeholder, .swatch-black .uneditable-input:-moz-placeholder, .swatch-black .input-group-btn:-moz-placeholder, [class*="swatch-"] .swatch-black select:-moz-placeholder, [class*="swatch-"] .swatch-black textarea:-moz-placeholder, [class*="swatch-"] .swatch-black input:-moz-placeholder, [class*="swatch-"] .swatch-black .uneditable-input:-moz-placeholder, [class*="swatch-"] .swatch-black .input-group-btn:-moz-placeholder {
+  color: #6c6c6c;
+}
+.swatch-black select::-moz-placeholder, .swatch-black textarea::-moz-placeholder, .swatch-black input::-moz-placeholder, .swatch-black .uneditable-input::-moz-placeholder, .swatch-black .input-group-btn::-moz-placeholder, [class*="swatch-"] .swatch-black select::-moz-placeholder, [class*="swatch-"] .swatch-black textarea::-moz-placeholder, [class*="swatch-"] .swatch-black input::-moz-placeholder, [class*="swatch-"] .swatch-black .uneditable-input::-moz-placeholder, [class*="swatch-"] .swatch-black .input-group-btn::-moz-placeholder {
+  color: #6c6c6c;
+}
+.swatch-black select:-ms-input-placeholder, .swatch-black textarea:-ms-input-placeholder, .swatch-black input:-ms-input-placeholder, .swatch-black .uneditable-input:-ms-input-placeholder, .swatch-black .input-group-btn:-ms-input-placeholder, [class*="swatch-"] .swatch-black select:-ms-input-placeholder, [class*="swatch-"] .swatch-black textarea:-ms-input-placeholder, [class*="swatch-"] .swatch-black input:-ms-input-placeholder, [class*="swatch-"] .swatch-black .uneditable-input:-ms-input-placeholder, [class*="swatch-"] .swatch-black .input-group-btn:-ms-input-placeholder {
+  color: #6c6c6c;
+}
+.swatch-black select::-webkit-input-placeholder, .swatch-black textarea::-webkit-input-placeholder, .swatch-black input::-webkit-input-placeholder, .swatch-black .uneditable-input::-webkit-input-placeholder, .swatch-black .input-group-btn::-webkit-input-placeholder, [class*="swatch-"] .swatch-black select::-webkit-input-placeholder, [class*="swatch-"] .swatch-black textarea::-webkit-input-placeholder, [class*="swatch-"] .swatch-black input::-webkit-input-placeholder, [class*="swatch-"] .swatch-black .uneditable-input::-webkit-input-placeholder, [class*="swatch-"] .swatch-black .input-group-btn::-webkit-input-placeholder {
+  color: #6c6c6c;
+}
+.swatch-black input:focus, .swatch-black textarea:focus, .swatch-black select.form-control:focus, [class*="swatch-"] .swatch-black input:focus, [class*="swatch-"] .swatch-black textarea:focus, [class*="swatch-"] .swatch-black select.form-control:focus {
+  -webkit-box-shadow: 0px 3px 0px #82c9ed;
+  -moz-box-shadow: 0px 3px 0px #82c9ed;
+  box-shadow: 0px 3px 0px #82c9ed;
+}
+.swatch-black input[type="checkbox"], .swatch-black input[type="radio"], [class*="swatch-"] .swatch-black input[type="checkbox"], [class*="swatch-"] .swatch-black input[type="radio"] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.swatch-black .form-icon-group i, [class*="swatch-"] .swatch-black .form-icon-group i {
+  color: #82c9ed;
+}
+.swatch-black input[type="button"], [class*="swatch-"] .swatch-black input[type="button"] {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .select-wrap, [class*="swatch-"] .swatch-black .select-wrap {
+  background: #ffffff;
+}
+.swatch-black .select-wrap:after, [class*="swatch-"] .swatch-black .select-wrap:after {
+  color: #1c1c1c;
+}
+.swatch-black .table th, [class*="swatch-"] .swatch-black .table th {
+  background-color: #ffffff;
+  text-transform: uppercase;
+  color: #000000;
+}
+.swatch-black .table th, .swatch-black .table td, .swatch-black .table-bordered, [class*="swatch-"] .swatch-black .table th, [class*="swatch-"] .swatch-black .table td, [class*="swatch-"] .swatch-black .table-bordered {
+  border-color: #3c3c3c;
+}
+.swatch-black .table-hover tbody tr:hover th, [class*="swatch-"] .swatch-black .table-hover tbody tr:hover th {
+  background: #3c3c3c;
+}
+.swatch-black .table-striped > tbody > tr:nth-child(odd) > td, .swatch-black .table-striped > tbody > tr:nth-child(odd) > th, .swatch-black .table-hover > tbody > tr:hover > td, .swatch-black .table-hover > tbody > tr:hover > th, [class*="swatch-"] .swatch-black .table-striped > tbody > tr:nth-child(odd) > td, [class*="swatch-"] .swatch-black .table-striped > tbody > tr:nth-child(odd) > th, [class*="swatch-"] .swatch-black .table-hover > tbody > tr:hover > td, [class*="swatch-"] .swatch-black .table-hover > tbody > tr:hover > th {
+  background: #3c3c3c;
+}
+.swatch-black#masthead, [class*="swatch-"] .swatch-black#masthead {
+  border-color: #000000;
+}
+.swatch-black.navbar, [class*="swatch-"] .swatch-black.navbar {
+  background: #000000;
+  color: #ffffff;
+}
+.swatch-black .navbar-text, [class*="swatch-"] .swatch-black .navbar-text {
+  color: #ffffff;
+}
+.swatch-black.navbar .navbar-brand, [class*="swatch-"] .swatch-black.navbar .navbar-brand {
+  color: #ffffff;
+}
+.swatch-black.navbar .navbar-brand:hover, [class*="swatch-"] .swatch-black.navbar .navbar-brand:hover {
+  color: #ffffff;
+}
+.swatch-black.navbar .nav > li > a, [class*="swatch-"] .swatch-black.navbar .nav > li > a {
+  color: #ffffff;
+}
+.swatch-black.navbar .nav > li > a:hover, .swatch-black.navbar .nav > li > a:focus, [class*="swatch-"] .swatch-black.navbar .nav > li > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > li > a:focus {
+  color: #ffffff;
+  background: none;
+}
+.swatch-black.navbar .nav > li > a:before, [class*="swatch-"] .swatch-black.navbar .nav > li > a:before {
+  background-color: #ffffff;
+}
+.swatch-black.navbar a .menu-icon, [class*="swatch-"] .swatch-black.navbar a .menu-icon {
+  color: #ffffff;
+}
+.swatch-black.navbar a:hover .menu-icon, [class*="swatch-"] .swatch-black.navbar a:hover .menu-icon {
+  color: #ffffff;
+}
+.swatch-black.navbar .dropdown-menu a:hover .menu-icon, [class*="swatch-"] .swatch-black.navbar .dropdown-menu a:hover .menu-icon {
+  color: #000000;
+}
+.swatch-black .navbar-toggle, [class*="swatch-"] .swatch-black .navbar-toggle {
+  background: none !important;
+}
+.swatch-black .navbar-toggle .icon-bar, [class*="swatch-"] .swatch-black .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.swatch-black .navbar-toggle:hover, [class*="swatch-"] .swatch-black .navbar-toggle:hover {
+  background: none;
+}
+.swatch-black.navbar .nav > li > a:focus, .swatch-black.navbar .nav > li > a:hover, .swatch-black.navbar .nav > .active > a, .swatch-black.navbar .nav > .active > a:hover, .swatch-black.navbar .nav > .current-menu-parent > a, .swatch-black.navbar .nav > .current-menu-ancestor > a, .swatch-black.navbar .nav > .current-menu-item > a, .swatch-black.navbar .nav > .current-menu-item > a:hover, .swatch-black.navbar .nav > .current-menu-item > a:focus, .swatch-black.navbar .nav > .active > a:focus, .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle, .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle, .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle, [class*="swatch-"] .swatch-black.navbar .nav > li > a:focus, [class*="swatch-"] .swatch-black.navbar .nav > li > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > .active > a, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-parent > a, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-ancestor > a, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:hover, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:focus, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:focus, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  color: #ffffff;
+}
+.swatch-black.navbar .nav > li > a:focus:before, .swatch-black.navbar .nav > li > a:hover:before, .swatch-black.navbar .nav > .active > a:before, .swatch-black.navbar .nav > .active > a:hover:before, .swatch-black.navbar .nav > .current-menu-parent > a:before, .swatch-black.navbar .nav > .current-menu-ancestor > a:before, .swatch-black.navbar .nav > .current-menu-item > a:before, .swatch-black.navbar .nav > .current-menu-item > a:hover:before, .swatch-black.navbar .nav > .current-menu-item > a:focus:before, .swatch-black.navbar .nav > .active > a:focus:before, .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle:before, .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle:before, .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle:before, [class*="swatch-"] .swatch-black.navbar .nav > li > a:focus:before, [class*="swatch-"] .swatch-black.navbar .nav > li > a:hover:before, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:hover:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-parent > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-ancestor > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:hover:before, [class*="swatch-"] .swatch-black.navbar .nav > .current-menu-item > a:focus:before, [class*="swatch-"] .swatch-black.navbar .nav > .active > a:focus:before, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open > .dropdown-toggle:before, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.active > .dropdown-toggle:before, [class*="swatch-"] .swatch-black.navbar .nav li.dropdown.open.active > .dropdown-toggle:before {
+  background-color: #ffffff;
+}
+.swatch-black.navbar .nav > .disabled > a, [class*="swatch-"] .swatch-black.navbar .nav > .disabled > a {
+  color: #ffffff;
+}
+.swatch-black.navbar .nav > .disabled > a:before, [class*="swatch-"] .swatch-black.navbar .nav > .disabled > a:before {
+  display: none;
+}
+.swatch-black .dropdown-menu, [class*="swatch-"] .swatch-black .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.95);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 3px 0px white inset;
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 3px 0px white inset;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 3px 0px white inset;
+}
+.swatch-black .dropdown-menu > li > a, [class*="swatch-"] .swatch-black .dropdown-menu > li > a {
+  color: #ffffff;
+}
+.swatch-black .dropdown-menu > li > a:hover, .swatch-black .dropdown-menu > .active > a, .swatch-black .dropdown-menu > .active > a:hover, .swatch-black .dropdown-menu > .active > a:focus, [class*="swatch-"] .swatch-black .dropdown-menu > li > a:hover, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:hover, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:focus {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .dropdown-menu > li > a:hover i, .swatch-black .dropdown-menu > .active > a i, .swatch-black .dropdown-menu > .active > a:hover i, .swatch-black .dropdown-menu > .active > a:focus i, [class*="swatch-"] .swatch-black .dropdown-menu > li > a:hover i, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a i, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:hover i, [class*="swatch-"] .swatch-black .dropdown-menu > .active > a:focus i {
+  color: #000000;
+}
+.swatch-black .dropdown-menu > li.disabled > a:hover, [class*="swatch-"] .swatch-black .dropdown-menu > li.disabled > a:hover {
+  color: #ffffff;
+}
+.swatch-black.navbar .nav > li > .dropdown-menu:after, .swatch-black.navbar .nav > li > .dropdown-menu:before, [class*="swatch-"] .swatch-black.navbar .nav > li > .dropdown-menu:after, [class*="swatch-"] .swatch-black.navbar .nav > li > .dropdown-menu:before {
+  display: none;
+}
+.swatch-black.navbar-scrolled, [class*="swatch-"] .swatch-black.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.95);
+}
+.swatch-black .dropdown-submenu > a:after, [class*="swatch-"] .swatch-black .dropdown-submenu > a:after {
+  border-left-color: #ffffff !important;
+}
+.swatch-black .dropdown-submenu > a:hover:after, [class*="swatch-"] .swatch-black .dropdown-submenu > a:hover:after {
+  border-left-color: #000000 !important;
+}
+.swatch-black .dropdown-menu .divider, [class*="swatch-"] .swatch-black .dropdown-menu .divider {
+  background-color: rgba(60, 60, 60, 0.8);
+}
+.swatch-black.navbar .nav-highlight > a, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a {
+  color: #000000 !important;
+}
+.swatch-black.navbar .nav-highlight > a:after, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a:after {
+  background: #ffffff;
+}
+.swatch-black.navbar .nav-highlight > a:hover, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a:hover {
+  color: #000000 !important;
+}
+.swatch-black.navbar .nav-highlight > a:hover:after, [class*="swatch-"] .swatch-black.navbar .nav-highlight > a:hover:after {
+  background: rgba(255, 255, 255, 0.8);
+}
+.swatch-black.navbar li.nav-highlight-ghost > a, [class*="swatch-"] .swatch-black.navbar li.nav-highlight-ghost > a {
+  color: #ffffff;
+}
+.swatch-black.navbar li.nav-highlight-ghost > a:after, [class*="swatch-"] .swatch-black.navbar li.nav-highlight-ghost > a:after {
+  border: 1px solid #ffffff;
+}
+.swatch-black.navbar li.nav-highlight-ghost > a:hover, [class*="swatch-"] .swatch-black.navbar li.nav-highlight-ghost > a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black.navbar li.nav-highlight-ghost > a:hover:after, [class*="swatch-"] .swatch-black.navbar li.nav-highlight-ghost > a:hover:after {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+.transparent-header .swatch-black.navbar, .transparent-header [class*="swatch-"] .swatch-black.navbar {
+  background: none;
+}
+.transparent-header .swatch-black.navbar-scrolled, .transparent-header [class*="swatch-"] .swatch-black.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+.transparent-header .swatch-black.search-active, .transparent-header [class*="swatch-"] .swatch-black.search-active {
+  background: #000000 !important;
+}
+.swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a {
+  color: #ffffff;
+}
+.swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover .menu-icon, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover .menu-icon {
+  color: #ffffff;
+}
+.swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li.current-menu-item > a, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li.current-menu-item > a {
+  color: #ffffff;
+}
+.swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > p, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > p {
+  border-bottom-color: rgba(60, 60, 60, 0.8);
+}
+.swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li:before, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li:before {
+  background: rgba(60, 60, 60, 0.8);
+}
+@media (max-width: 992px) {
+  .swatch-black.navbar .nav > li > a, [class*="swatch-"] .swatch-black.navbar .nav > li > a {
+    border-radius: 0;
+  }
+  .swatch-black.navbar .dropdown-menu, [class*="swatch-"] .swatch-black.navbar .dropdown-menu {
+    background: #3c3c3c;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .swatch-black.navbar .dropdown-menu > li > a, [class*="swatch-"] .swatch-black.navbar .dropdown-menu > li > a {
+    border-radius: 0;
+  }
+  .swatch-black.navbar .dropdown-menu > li > a:hover, .swatch-black.navbar .dropdown-menu > li > a:focus, .swatch-black.navbar .dropdown-menu > li.active > a, [class*="swatch-"] .swatch-black.navbar .dropdown-menu > li > a:hover, [class*="swatch-"] .swatch-black.navbar .dropdown-menu > li > a:focus, [class*="swatch-"] .swatch-black.navbar .dropdown-menu > li.active > a {
+    background: #ffffff;
+    color: #000000;
+  }
+  .swatch-black .dropdown-submenu > ul > li > a, [class*="swatch-"] .swatch-black .dropdown-submenu > ul > li > a {
+    background: #3c3c3c;
+  }
+  .swatch-black .dropdown-submenu > ul > li > a:hover, [class*="swatch-"] .swatch-black .dropdown-submenu > ul > li > a:hover {
+    background: #3c3c3c;
+  }
+  .swatch-black .dropdown-submenu > a:after, [class*="swatch-"] .swatch-black .dropdown-submenu > a:after {
+    border-left-color: transparent !important;
+    border-top-color: #ffffff !important;
+  }
+  .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li > ul > li > a:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+  .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li:before, [class*="swatch-"] .swatch-black .menu-item-object-oxy_mega_menu .dropdown-menu > li:before {
+    display: none;
+  }
+  .swatch-black .nav-highlight > a, [class*="swatch-"] .swatch-black .nav-highlight > a {
+    color: #ffffff !important;
+  }
+  .swatch-black .nav-highlight > a:after, [class*="swatch-"] .swatch-black .nav-highlight > a:after {
+    background: transparent;
+  }
+  .swatch-black .nav-highlight > a:hover, [class*="swatch-"] .swatch-black .nav-highlight > a:hover {
+    color: #ffffff !important;
+  }
+  .swatch-black .nav-highlight > a:hover:after, [class*="swatch-"] .swatch-black .nav-highlight > a:hover:after {
+    background: transparent;
+  }
+  .transparent-header .swatch-black .navbar-collapse, .transparent-header [class*="swatch-"] .swatch-black .navbar-collapse {
+    background: rgba(0, 0, 0, 0.95) !important;
+  }
+}
+.swatch-black .pagination > li > a, .swatch-black .pagination > li > span, [class*="swatch-"] .swatch-black .pagination > li > a, [class*="swatch-"] .swatch-black .pagination > li > span {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .pagination > .active > a, .swatch-black .pagination > .active > span, .swatch-black .pagination > li > a:hover, [class*="swatch-"] .swatch-black .pagination > .active > a, [class*="swatch-"] .swatch-black .pagination > .active > span, [class*="swatch-"] .swatch-black .pagination > li > a:hover {
+  background: rgba(245, 245, 245, 0.8);
+}
+.swatch-black .pagination > .active > a i, .swatch-black .pagination > .active > span i, .swatch-black .pagination > li > a:hover i, [class*="swatch-"] .swatch-black .pagination > .active > a i, [class*="swatch-"] .swatch-black .pagination > .active > span i, [class*="swatch-"] .swatch-black .pagination > li > a:hover i {
+  color: #3c3c3c;
+}
+.swatch-black .pagination > li:first-child i, .swatch-black .pagination > li:last-child i, [class*="swatch-"] .swatch-black .pagination > li:first-child i, [class*="swatch-"] .swatch-black .pagination > li:last-child i {
+  color: #3c3c3c;
+}
+.swatch-black .pagination > li.disabled span i, [class*="swatch-"] .swatch-black .pagination > li.disabled span i {
+  color: rgba(60, 60, 60, 0.4);
+}
+.swatch-black .pager > li > a, [class*="swatch-"] .swatch-black .pager > li > a {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .pager > li > a i, [class*="swatch-"] .swatch-black .pager > li > a i {
+  color: #3c3c3c;
+}
+.swatch-black .tooltip-inner, [class*="swatch-"] .swatch-black .tooltip-inner {
+  background-color: #ffffff;
+  color: #000000;
+}
+.swatch-black .tooltip.in, [class*="swatch-"] .swatch-black .tooltip.in {
+  opacity: 1;
+}
+.swatch-black .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.top .tooltip-arrow {
+  border-top-color: #ffffff;
+}
+.swatch-black .tooltip.right .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.right .tooltip-arrow {
+  border-right-color: #ffffff;
+}
+.swatch-black .tooltip.left .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.left .tooltip-arrow {
+  border-left-color: #ffffff;
+}
+.swatch-black .tooltip.bottom .tooltip-arrow, [class*="swatch-"] .swatch-black .tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #ffffff;
+}
+.swatch-black .jumbotron, [class*="swatch-"] .swatch-black .jumbotron {
+  background: #3c3c3c;
+}
+.swatch-black .progress-bar-primary, [class*="swatch-"] .swatch-black .progress-bar-primary {
+  background: #f5f5f5;
+  box-shadow: none;
+}
+.swatch-black .progress-bar-primary span, [class*="swatch-"] .swatch-black .progress-bar-primary span {
+  color: #3c3c3c;
+}
+.swatch-black .progress-bar-primary.progress-striped .progress-bar, .swatch-black .progress-striped .progress-bar-primary, [class*="swatch-"] .swatch-black .progress-bar-primary.progress-striped .progress-bar, [class*="swatch-"] .swatch-black .progress-striped .progress-bar-primary {
+  background-color: #f5f5f5;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+.swatch-black .badge, [class*="swatch-"] .swatch-black .badge {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .tab-content, .swatch-black .nav-tabs .active a, .swatch-black .tab-content, .swatch-black .nav-tabs .active a:hover, [class*="swatch-"] .swatch-black .tab-content, [class*="swatch-"] .swatch-black .nav-tabs .active a, [class*="swatch-"] .swatch-black .tab-content, [class*="swatch-"] .swatch-black .nav-tabs .active a:hover {
+  background: #ffffff;
+}
+.swatch-black .nav-tabs > li > a:hover, .swatch-black .nav-tabs > li > a:focus, [class*="swatch-"] .swatch-black .nav-tabs > li > a:hover, [class*="swatch-"] .swatch-black .nav-tabs > li > a:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+.swatch-black .nav-tabs > li.active > a, [class*="swatch-"] .swatch-black .nav-tabs > li.active > a {
+  color: #000000;
+}
+.swatch-black .nav-tabs > li.active > a:hover, [class*="swatch-"] .swatch-black .nav-tabs > li.active > a:hover {
+  color: #000000;
+}
+.swatch-black .nav-pills > li > a .badge, [class*="swatch-"] .swatch-black .nav-pills > li > a .badge {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .nav-pills > .active > a, .swatch-black .nav-pills > .active > a:hover, .swatch-black .nav-pills > li > a:hover, .swatch-black .nav-pills > li > a:focus, [class*="swatch-"] .swatch-black .nav-pills > .active > a, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:focus {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .nav-pills > .active > a .badge, .swatch-black .nav-pills > .active > a:hover .badge, .swatch-black .nav-pills > li > a:hover .badge, .swatch-black .nav-pills > li > a:focus .badge, [class*="swatch-"] .swatch-black .nav-pills > .active > a .badge, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover .badge, [class*="swatch-"] .swatch-black .nav-pills > li > a:hover .badge, [class*="swatch-"] .swatch-black .nav-pills > li > a:focus .badge {
+  background: #000000;
+  color: #ffffff;
+}
+.swatch-black .nav-pills > .active > a:hover, .swatch-black .nav-pills > .active > a:hover:hover, .swatch-black .nav-pills > li > a:hover:hover, .swatch-black .nav-pills > li > a:focus:hover, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover, [class*="swatch-"] .swatch-black .nav-pills > .active > a:hover:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:hover:hover, [class*="swatch-"] .swatch-black .nav-pills > li > a:focus:hover {
+  color: #000000;
+}
+.swatch-black .tab-pane, .swatch-black .tab-pane.active, [class*="swatch-"] .swatch-black .tab-pane, [class*="swatch-"] .swatch-black .tab-pane.active {
+  color: #000000;
+}
+.swatch-black .tab-pane h1, .swatch-black .tab-pane h2, .swatch-black .tab-pane h3, .swatch-black .tab-pane h4, .swatch-black .tab-pane h5, .swatch-black .tab-pane h6, .swatch-black .tab-pane a, .swatch-black .tab-pane p, .swatch-black .tab-pane.active h1, .swatch-black .tab-pane.active h2, .swatch-black .tab-pane.active h3, .swatch-black .tab-pane.active h4, .swatch-black .tab-pane.active h5, .swatch-black .tab-pane.active h6, .swatch-black .tab-pane.active a, .swatch-black .tab-pane.active p, [class*="swatch-"] .swatch-black .tab-pane h1, [class*="swatch-"] .swatch-black .tab-pane h2, [class*="swatch-"] .swatch-black .tab-pane h3, [class*="swatch-"] .swatch-black .tab-pane h4, [class*="swatch-"] .swatch-black .tab-pane h5, [class*="swatch-"] .swatch-black .tab-pane h6, [class*="swatch-"] .swatch-black .tab-pane a, [class*="swatch-"] .swatch-black .tab-pane p, [class*="swatch-"] .swatch-black .tab-pane.active h1, [class*="swatch-"] .swatch-black .tab-pane.active h2, [class*="swatch-"] .swatch-black .tab-pane.active h3, [class*="swatch-"] .swatch-black .tab-pane.active h4, [class*="swatch-"] .swatch-black .tab-pane.active h5, [class*="swatch-"] .swatch-black .tab-pane.active h6, [class*="swatch-"] .swatch-black .tab-pane.active a, [class*="swatch-"] .swatch-black .tab-pane.active p {
+  color: #000000;
+}
+.swatch-black .tab-pane .btn, .swatch-black .tab-pane.active .btn, [class*="swatch-"] .swatch-black .tab-pane .btn, [class*="swatch-"] .swatch-black .tab-pane.active .btn {
+  color: #ffffff !important;
+  background: #000000 !important;
+}
+.swatch-black .tab-pane .tooltip-inner, .swatch-black .tab-pane.active .tooltip-inner, [class*="swatch-"] .swatch-black .tab-pane .tooltip-inner, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip-inner {
+  background-color: #000000;
+  color: #ffffff;
+}
+.swatch-black .tab-pane .tooltip.top .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.top .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.top .tooltip-arrow {
+  border-top-color: #000000;
+}
+.swatch-black .tab-pane .tooltip.right .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.right .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.right .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.right .tooltip-arrow {
+  border-right-color: #000000;
+}
+.swatch-black .tab-pane .tooltip.left .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.left .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.left .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.left .tooltip-arrow {
+  border-left-color: #000000;
+}
+.swatch-black .tab-pane .tooltip.bottom .tooltip-arrow, .swatch-black .tab-pane.active .tooltip.bottom .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane .tooltip.bottom .tooltip-arrow, [class*="swatch-"] .swatch-black .tab-pane.active .tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #000000;
+}
+.swatch-black .panel, .swatch-black .well, [class*="swatch-"] .swatch-black .panel, [class*="swatch-"] .swatch-black .well {
+  background: #3c3c3c;
+}
+.swatch-black .panel-primary .panel-heading, [class*="swatch-"] .swatch-black .panel-primary .panel-heading {
+  background: #f5f5f5;
+}
+.swatch-black .panel-primary .panel-heading a, .swatch-black .panel-primary .panel-heading .panel-title, [class*="swatch-"] .swatch-black .panel-primary .panel-heading a, [class*="swatch-"] .swatch-black .panel-primary .panel-heading .panel-title {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+.swatch-black .panel-primary > .panel-heading + .panel-collapse .panel-body, [class*="swatch-"] .swatch-black .panel-primary > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #cfcfcf;
+}
+.swatch-black .panel-footer, [class*="swatch-"] .swatch-black .panel-footer {
+  background: white;
+  border-color: #e8e8e8;
+}
+.swatch-black .panel .table, [class*="swatch-"] .swatch-black .panel .table {
+  box-shadow: 0px 0px 0px 1px #3c3c3c inset;
+}
+.swatch-black .panel .table th, [class*="swatch-"] .swatch-black .panel .table th {
+  background: #3c3c3c;
+  color: #ffffff;
+}
+.swatch-black .portfolio-title, [class*="swatch-"] .swatch-black .portfolio-title {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .portfolio-nav svg, [class*="swatch-"] .swatch-black .portfolio-nav svg {
+  stroke: #ffffff;
+}
+.swatch-black .social-icons li a, [class*="swatch-"] .swatch-black .social-icons li a {
+  background-color: #ffffff;
+}
+.swatch-black .social-icons li a i, [class*="swatch-"] .swatch-black .social-icons li a i {
+  color: #000000;
+}
+.swatch-black .social-icons li a:not([data-iconcolor]):hover, [class*="swatch-"] .swatch-black .social-icons li a:not([data-iconcolor]):hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black .social-simple li a i, [class*="swatch-"] .swatch-black .social-simple li a i {
+  color: #ffffff;
+}
+.swatch-black .social-simple li a:not([data-iconcolor]):hover i, [class*="swatch-"] .swatch-black .social-simple li a:not([data-iconcolor]):hover i {
+  color: #ffffff;
+}
+.swatch-black .box-inner, [class*="swatch-"] .swatch-black .box-inner {
+  background-color: #d3d3d3;
+}
+.swatch-black .box:not(.box-simple) a.box-inner:hover, [class*="swatch-"] .swatch-black .box:not(.box-simple) a.box-inner:hover {
+  background: none !important;
+  box-shadow: 0px 0px 0px 1px #ffffff inset;
+}
+.swatch-black .box:not(.box-simple) a.box-inner:hover svg, [class*="swatch-"] .swatch-black .box:not(.box-simple) a.box-inner:hover svg {
+  stroke: #ffffff;
+}
+.swatch-black .bordered:after, [class*="swatch-"] .swatch-black .bordered:after {
+  background-color: #ffffff;
+}
+.swatch-black .bordered-link:after, [class*="swatch-"] .swatch-black .bordered-link:after {
+  background-color: #ffffff !important;
+}
+.swatch-black .bordered > a:after, [class*="swatch-"] .swatch-black .bordered > a:after {
+  background-color: #ffffff;
+}
+.swatch-black .bordered-link:after, [class*="swatch-"] .swatch-black .bordered-link:after {
+  background-color: #ffffff !important;
+}
+.swatch-black #infscr-loading, [class*="swatch-"] .swatch-black #infscr-loading {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .counter .value, [class*="swatch-"] .swatch-black .counter .value {
+  color: #ffffff;
+}
+.swatch-black .scroll-to, [class*="swatch-"] .swatch-black .scroll-to {
+  border-color: #ffffff;
+}
+.swatch-black .scroll-to svg, [class*="swatch-"] .swatch-black .scroll-to svg {
+  stroke: #ffffff;
+}
+.swatch-black .scroll-to:hover, [class*="swatch-"] .swatch-black .scroll-to:hover {
+  border-color: #ffffff;
+}
+.swatch-black .scroll-to:hover svg, [class*="swatch-"] .swatch-black .scroll-to:hover svg {
+  stroke: #ffffff;
+}
+.swatch-black .map-marker-label, [class*="swatch-"] .swatch-black .map-marker-label {
+  border-top-color: #ffffff;
+}
+.swatch-black .tag-list span, [class*="swatch-"] .swatch-black .tag-list span {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .mejs-audio, [class*="swatch-"] .swatch-black .mejs-audio {
+  background-color: #ffffff;
+  color: #000000;
+}
+.swatch-black .mejs-container .mejs-controls .mejs-time span, [class*="swatch-"] .swatch-black .mejs-container .mejs-controls .mejs-time span {
+  color: #000000;
+}
+.swatch-black .mejs-controls .mejs-button button:hover, [class*="swatch-"] .swatch-black .mejs-controls .mejs-button button:hover {
+  background-color: transparent;
+}
+.swatch-black .mejs-controls .mejs-time-rail .mejs-time-loaded, [class*="swatch-"] .swatch-black .mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background: #000000;
+}
+.swatch-black .mejs-controls .mejs-time-rail .mejs-time-current, .swatch-black .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current, [class*="swatch-"] .swatch-black .mejs-controls .mejs-time-rail .mejs-time-current, [class*="swatch-"] .swatch-black .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  background: #3c3c3c;
+}
+.swatch-black .select2-container, [class*="swatch-"] .swatch-black .select2-container {
+  background: #ffffff;
+}
+.swatch-black .select2-container .select2-choice, [class*="swatch-"] .swatch-black .select2-container .select2-choice {
+  color: #1c1c1c;
+}
+.swatch-black .select2-container .select2-choice .select2-arrow b:after, [class*="swatch-"] .swatch-black .select2-container .select2-choice .select2-arrow b:after {
+  color: #1c1c1c;
+}
+.swatch-black .select2-drop-active, [class*="swatch-"] .swatch-black .select2-drop-active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1c1c1c;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.swatch-black .select2-results .select2-highlighted, [class*="swatch-"] .swatch-black .select2-results .select2-highlighted {
+  background-color: #82c9ed;
+  color: #1c1c1c;
+}
+.swatch-black .select2-results, [class*="swatch-"] .swatch-black .select2-results {
+  background: #ffffff;
+}
+.swatch-black .select2-search, [class*="swatch-"] .swatch-black .select2-search {
+  background: #000000;
+}
+.swatch-black .post:after, [class*="swatch-"] .swatch-black .post:after {
+  background: #3c3c3c;
+}
+.swatch-black .post-icon, [class*="swatch-"] .swatch-black .post-icon {
+  background: #f5f5f5;
+}
+.swatch-black .post-icon i, [class*="swatch-"] .swatch-black .post-icon i {
+  color: #3c3c3c;
+}
+.swatch-black .post-search-icon, [class*="swatch-"] .swatch-black .post-search-icon {
+  color: #3c3c3c;
+  text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.2);
+}
+.swatch-black .post-extras a, [class*="swatch-"] .swatch-black .post-extras a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black .post-extras a:hover, [class*="swatch-"] .swatch-black .post-extras a:hover {
+  color: #ffffff;
+}
+.swatch-black .post-extras i, [class*="swatch-"] .swatch-black .post-extras i {
+  color: #ffffff;
+}
+.swatch-black .post-more-link i, [class*="swatch-"] .swatch-black .post-more-link i {
+  color: #ffffff;
+}
+.swatch-black .media-inner:after, [class*="swatch-"] .swatch-black .media-inner:after {
+  background: #ffffff;
+}
+.swatch-black .author-info, [class*="swatch-"] .swatch-black .author-info {
+  background-color: #ffffff;
+  color: #000000;
+}
+.swatch-black .author-info .media-heading, [class*="swatch-"] .swatch-black .author-info .media-heading {
+  color: #000000;
+}
+.swatch-black .author-info .media-heading:after, [class*="swatch-"] .swatch-black .author-info .media-heading:after {
+  background: #000000;
+}
+.post-masonry .swatch-black:hover, .post-masonry [class*="swatch-"] .swatch-black:hover {
+  color: #ffffff;
+}
+.swatch-black .breadcrumb-blog a, .swatch-black .breadcrumb-blog .active, [class*="swatch-"] .swatch-black .breadcrumb-blog a, [class*="swatch-"] .swatch-black .breadcrumb-blog .active {
+  color: #ffffff;
+}
+.swatch-black .breadcrumb-blog a:hover, [class*="swatch-"] .swatch-black .breadcrumb-blog a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black .post-related-post, [class*="swatch-"] .swatch-black .post-related-post {
+  background-color: #ffffff;
+}
+.swatch-black .post-related-post a, [class*="swatch-"] .swatch-black .post-related-post a {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000000;
+}
+.swatch-black .post-related-post a:hover, [class*="swatch-"] .swatch-black .post-related-post a:hover {
+  color: #000000;
+}
+.swatch-black .post-related-post small, [class*="swatch-"] .swatch-black .post-related-post small {
+  background: #000000;
+  color: #ffffff;
+}
+.swatch-black .post-related-post blockquote, [class*="swatch-"] .swatch-black .post-related-post blockquote {
+  color: #000000;
+}
+.swatch-black .post-related-post blockquote small, [class*="swatch-"] .swatch-black .post-related-post blockquote small {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000000;
+}
+.swatch-black .post-related-post blockquote:before, [class*="swatch-"] .swatch-black .post-related-post blockquote:before {
+  background-color: #ededed;
+}
+.swatch-black .post-sticky, [class*="swatch-"] .swatch-black .post-sticky {
+  background: rgba(245, 245, 245, 0.8);
+}
+.swatch-black .post-sticky i, [class*="swatch-"] .swatch-black .post-sticky i {
+  color: #3c3c3c;
+}
+.swatch-black .gform_wrapper .gsection, [class*="swatch-"] .swatch-black .gform_wrapper .gsection {
+  border-color: #3c3c3c;
+}
+.swatch-black .gf_progressbar, [class*="swatch-"] .swatch-black .gf_progressbar {
+  background: #3c3c3c;
+}
+.swatch-black .gf_progressbar_percentage, [class*="swatch-"] .swatch-black .gf_progressbar_percentage {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .sidebar, [class*="swatch-"] .swatch-black .sidebar {
+  color: #ffffff;
+}
+.swatch-black .sidebar h3, [class*="swatch-"] .swatch-black .sidebar h3 {
+  color: #ffffff;
+}
+.swatch-black .sidebar a, [class*="swatch-"] .swatch-black .sidebar a {
+  color: #ffffff;
+}
+.swatch-black .sidebar a:hover, [class*="swatch-"] .swatch-black .sidebar a:hover {
+  color: #ffffff;
+}
+.swatch-black .sidebar-header:after, [class*="swatch-"] .swatch-black .sidebar-header:after {
+  background: #ffffff;
+}
+.swatch-black .sidebar-widget .post-icon, [class*="swatch-"] .swatch-black .sidebar-widget .post-icon {
+  background: #f5f5f5;
+}
+.swatch-black .sidebar-widget .post-icon i, [class*="swatch-"] .swatch-black .sidebar-widget .post-icon i {
+  color: #3c3c3c;
+}
+.swatch-black .widget_recent_entries li, [class*="swatch-"] .swatch-black .widget_recent_entries li {
+  border-color: #3c3c3c;
+}
+.swatch-black .widget_tag_cloud ul a, [class*="swatch-"] .swatch-black .widget_tag_cloud ul a {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .widget_tag_cloud ul a:hover, [class*="swatch-"] .swatch-black .widget_tag_cloud ul a:hover {
+  background: rgba(245, 245, 245, 0.9);
+  color: #3c3c3c;
+}
+.swatch-black .widget_calendar tbody a, [class*="swatch-"] .swatch-black .widget_calendar tbody a {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .widget_calendar tbody a:hover, [class*="swatch-"] .swatch-black .widget_calendar tbody a:hover {
+  background: #ededed;
+  color: #000000;
+}
+.swatch-black .widget_calendar tfoot, [class*="swatch-"] .swatch-black .widget_calendar tfoot {
+  background: #3c3c3c;
+}
+.swatch-black .widget_nav_menu .sub-menu li:before, [class*="swatch-"] .swatch-black .widget_nav_menu .sub-menu li:before {
+  color: #3c3c3c;
+}
+.swatch-black .widget_oxy_twitter li:before, [class*="swatch-"] .swatch-black .widget_oxy_twitter li:before {
+  color: #ffffff;
+}
+.swatch-black .top-search form, [class*="swatch-"] .swatch-black .top-search form {
+  background-color: #000000;
+}
+.swatch-black .top-search input, [class*="swatch-"] .swatch-black .top-search input {
+  background: none;
+  color: #ffffff;
+}
+.swatch-black .top-search input:focus, [class*="swatch-"] .swatch-black .top-search input:focus {
+  box-shadow: none;
+}
+.swatch-black .top-search input:-moz-placeholder, [class*="swatch-"] .swatch-black .top-search input:-moz-placeholder {
+  color: #ffffff;
+}
+.swatch-black .top-search input::-moz-placeholder, [class*="swatch-"] .swatch-black .top-search input::-moz-placeholder {
+  color: #ffffff;
+}
+.swatch-black .top-search input:-ms-input-placeholder, [class*="swatch-"] .swatch-black .top-search input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.swatch-black .top-search input::-webkit-input-placeholder, [class*="swatch-"] .swatch-black .top-search input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.swatch-black .top-search .search-close, [class*="swatch-"] .swatch-black .top-search .search-close {
+  color: #ffffff;
+}
+.swatch-black .top-search svg, [class*="swatch-"] .swatch-black .top-search svg {
+  stroke: #ffffff;
+}
+.swatch-black.top-bar a, [class*="swatch-"] .swatch-black.top-bar a {
+  color: #ffffff;
+}
+.swatch-black.top-bar a:hover, [class*="swatch-"] .swatch-black.top-bar a:hover {
+  color: #ffffff;
+}
+.swatch-black.top-bar .sidebar-widget:after, [class*="swatch-"] .swatch-black.top-bar .sidebar-widget:after {
+  background: #3c3c3c;
+}
+.swatch-black .widget_swatch_wpml_language_selector li:before, [class*="swatch-"] .swatch-black .widget_swatch_wpml_language_selector li:before {
+  background: #3c3c3c;
+}
+.swatch-black .button, [class*="swatch-"] .swatch-black .button {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .button:hover, [class*="swatch-"] .swatch-black .button:hover {
+  background: rgba(245, 245, 245, 0.9);
+  color: #3c3c3c;
+}
+.swatch-black.section-commerce .breadcrumb, [class*="swatch-"] .swatch-black.section-commerce .breadcrumb {
+  background: none;
+  color: #ffffff;
+}
+.swatch-black.section-commerce .breadcrumb a, [class*="swatch-"] .swatch-black.section-commerce .breadcrumb a {
+  color: #ffffff;
+}
+.swatch-black.section-commerce .breadcrumb > li + li:before, [class*="swatch-"] .swatch-black.section-commerce .breadcrumb > li + li:before {
+  color: #ffffff;
+}
+.swatch-black .woocommerce-ordering .select-wrap, [class*="swatch-"] .swatch-black .woocommerce-ordering .select-wrap {
+  background: #f5f5f5;
+}
+.swatch-black .woocommerce-ordering .select-wrap:after, [class*="swatch-"] .swatch-black .woocommerce-ordering .select-wrap:after {
+  color: #3c3c3c;
+}
+.swatch-black .woocommerce-ordering select, [class*="swatch-"] .swatch-black .woocommerce-ordering select {
+  color: #3c3c3c;
+  background: transparent;
+}
+.swatch-black .onsale, [class*="swatch-"] .swatch-black .onsale {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .price, [class*="swatch-"] .swatch-black .price {
+  color: #ffffff;
+}
+.swatch-black .page-numbers a, .swatch-black .page-numbers span, [class*="swatch-"] .swatch-black .page-numbers a, [class*="swatch-"] .swatch-black .page-numbers span {
+  color: #3c3c3c;
+}
+.swatch-black .page-numbers li, [class*="swatch-"] .swatch-black .page-numbers li {
+  background: #f5f5f5;
+}
+.swatch-black .page-numbers .current, .swatch-black .page-numbers li a:hover, [class*="swatch-"] .swatch-black .page-numbers .current, [class*="swatch-"] .swatch-black .page-numbers li a:hover {
+  background: #3c3c3c;
+  color: #ffffff;
+}
+.swatch-black #reviews .comment, [class*="swatch-"] .swatch-black #reviews .comment {
+  border-bottom: 1px solid rgba(60, 60, 60, 0.2);
+}
+.swatch-black #reviews .form-control, [class*="swatch-"] .swatch-black #reviews .form-control {
+  background: #000000;
+}
+.swatch-black #reviews input[type="submit"], [class*="swatch-"] .swatch-black #reviews input[type="submit"] {
+  background: #3c3c3c;
+  color: #f5f5f5;
+}
+.swatch-black .related h2, .swatch-black .cross-sells h2, .swatch-black .upsells h2, [class*="swatch-"] .swatch-black .related h2, [class*="swatch-"] .swatch-black .cross-sells h2, [class*="swatch-"] .swatch-black .upsells h2 {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .product-category h3, [class*="swatch-"] .swatch-black .product-category h3 {
+  background: rgba(245, 245, 245, 0.85);
+  color: #3c3c3c;
+}
+.swatch-black .product-category h3 mark, [class*="swatch-"] .swatch-black .product-category h3 mark {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .product-nav a i, [class*="swatch-"] .swatch-black .product-nav a i {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .product-images figcaption, [class*="swatch-"] .swatch-black .product-images figcaption {
+  box-shadow: none;
+  background: #f5f5f5;
+}
+.swatch-black .product-images figcaption i, [class*="swatch-"] .swatch-black .product-images figcaption i {
+  color: #3c3c3c;
+}
+.swatch-black .product-images .flex-active, [class*="swatch-"] .swatch-black .product-images .flex-active {
+  -webkit-box-shadow: 0px 3px 0px #ffffff;
+  -moz-box-shadow: 0px 3px 0px #ffffff;
+  box-shadow: 0px 3px 0px #ffffff;
+}
+.swatch-black .order_details, [class*="swatch-"] .swatch-black .order_details {
+  background: #3c3c3c;
+}
+.swatch-black .order_details li, [class*="swatch-"] .swatch-black .order_details li {
+  border-color: #565656;
+}
+.swatch-black .cart_list li, [class*="swatch-"] .swatch-black .cart_list li {
+  border-color: #3c3c3c;
+}
+.swatch-black .cart-actions, [class*="swatch-"] .swatch-black .cart-actions {
+  background: #000000;
+}
+.swatch-black .widget_product_tag_cloud a, [class*="swatch-"] .swatch-black .widget_product_tag_cloud a {
+  background: #ffffff;
+  color: #000000;
+}
+.swatch-black .widget_product_tag_cloud a:hover, [class*="swatch-"] .swatch-black .widget_product_tag_cloud a:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000000;
+}
+.swatch-black .product_list_widget li, [class*="swatch-"] .swatch-black .product_list_widget li {
+  border-color: #3c3c3c;
+}
+.swatch-black .star-rating, [class*="swatch-"] .swatch-black .star-rating {
+  color: #ffffff;
+}
+.swatch-black .widget_price_filter .ui-slider .ui-slider-range, [class*="swatch-"] .swatch-black .widget_price_filter .ui-slider .ui-slider-range {
+  background: #3c3c3c;
+}
+.swatch-black .widget_price_filter .ui-slider .ui-slider-handle, [class*="swatch-"] .swatch-black .widget_price_filter .ui-slider .ui-slider-handle {
+  background: #ffffff;
+}
+.swatch-black .widget_product_search form:after, [class*="swatch-"] .swatch-black .widget_product_search form:after {
+  color: #000000;
+}
+.swatch-black .bbp-forums-list li, [class*="swatch-"] .swatch-black .bbp-forums-list li {
+  border-left-color: #f5f5f5;
+}
+.swatch-black .bbp-topic-freshness-author:after, [class*="swatch-"] .swatch-black .bbp-topic-freshness-author:after {
+  background: #f5f5f5;
+}
+.swatch-black .bbp-topic-permalink i, [class*="swatch-"] .swatch-black .bbp-topic-permalink i {
+  color: #ffffff;
+}
+.swatch-black .panel-bbpress, [class*="swatch-"] .swatch-black .panel-bbpress {
+  background: #000000;
+}
+.swatch-black .panel-bbpress .panel-heading, [class*="swatch-"] .swatch-black .panel-bbpress .panel-heading {
+  border-color: #f5f5f5;
+}
+.swatch-black .panel-bbpress .panel-body, [class*="swatch-"] .swatch-black .panel-bbpress .panel-body {
+  border-color: #3c3c3c;
+}
+.swatch-black .panel-bbpress .panel-warning, [class*="swatch-"] .swatch-black .panel-bbpress .panel-warning {
+  color: #ffffff;
+  border-color: #3c3c3c;
+}
+.swatch-black .panel-bbpress .bbp-template-notice, [class*="swatch-"] .swatch-black .panel-bbpress .bbp-template-notice {
+  border-color: #3c3c3c;
+}
+.swatch-black .panel-bbpress .panel-footer, [class*="swatch-"] .swatch-black .panel-bbpress .panel-footer {
+  background: #3c3c3c;
+  border-color: #3c3c3c;
+}
+.swatch-black .label-bbpress, [class*="swatch-"] .swatch-black .label-bbpress {
+  background: transparent;
+  color: #ffffff;
+}
+.swatch-black .bbp-reply-content, [class*="swatch-"] .swatch-black .bbp-reply-content {
+  border-color: #3c3c3c;
+}
+.swatch-black .bbp-reply-content .media-heading, [class*="swatch-"] .swatch-black .bbp-reply-content .media-heading {
+  background: #494949;
+  border-color: #2f2f2f;
+}
+.swatch-black .bbp_author_details img, [class*="swatch-"] .swatch-black .bbp_author_details img {
+  background: #000000;
+  box-shadow: 0px 0px 0px 4px #3c3c3c;
+}
+.swatch-black .bbp_author_details:after, [class*="swatch-"] .swatch-black .bbp_author_details:after {
+  background: #3c3c3c;
+}
+.swatch-black .bbp_author_details:hover img, [class*="swatch-"] .swatch-black .bbp_author_details:hover img {
+  box-shadow: 0px 0px 0px 4px #ffffff;
+}
+.swatch-black .bbpress-header .breadcrumb a, .swatch-black .bbpress-header .breadcrumb .active, [class*="swatch-"] .swatch-black .bbpress-header .breadcrumb a, [class*="swatch-"] .swatch-black .bbpress-header .breadcrumb .active {
+  color: #ffffff;
+}
+.swatch-black .bbpress-header .breadcrumb a:hover, [class*="swatch-"] .swatch-black .bbpress-header .breadcrumb a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swatch-black .bbp-topic-tags a, [class*="swatch-"] .swatch-black .bbp-topic-tags a {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}
+.swatch-black .bbp-topic-tags a:hover, [class*="swatch-"] .swatch-black .bbp-topic-tags a:hover {
+  background: rgba(245, 245, 245, 0.9);
+}
+.swatch-black .bbp-logged-in, [class*="swatch-"] .swatch-black .bbp-logged-in {
+  background: #3c3c3c;
+}
+.swatch-black .bbp-logged-in .button, .swatch-black .bbp-logged-in .button:hover, [class*="swatch-"] .swatch-black .bbp-logged-in .button, [class*="swatch-"] .swatch-black .bbp-logged-in .button:hover {
+  color: #3c3c3c;
+}
+.swatch-black .post-count, [class*="swatch-"] .swatch-black .post-count {
+  background: #f5f5f5;
+  color: #3c3c3c;
+}

@@ -1,3 +1,5 @@
 template
-.idea
+.sass-cache
 _site
+
+node_modules

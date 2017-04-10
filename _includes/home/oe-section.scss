@@ -1,0 +1,43 @@
+section#openexplorer{
+    .oe-content {
+        height:809px;
+        padding-top:6em
+    }
+    .background-media {
+        background-image: url('openrov/images/hero/b-g-explore.jpg');
+         background-repeat: no-repeat; 
+         background-size: contain; 
+        //  background-position: 50%;
+    }
+
+    h1 {
+        color: #1c4472;
+        font-weight: 400!important;
+    }
+
+    h2 {
+        font-size: 45px;
+        line-height: 1.13;
+        text-align: center;
+        color: #4a4a4a;
+        font-weight: 300;
+    }
+
+    .btn-learn-more {
+        font-size: 30px;
+
+        &.blue {
+        color: white!important;
+        background-color: #1c4472!important;
+        &:hover {
+        color: #1c4472!important;
+        border-color: #1c4472;
+        background: transparent!important;
+        
+        }
+    }
+
+    }
+
+    
+}
