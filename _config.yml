@@ -29,7 +29,17 @@ url: 'https://www.openrov.com'
 #author:
 #  twitter: openrov
 
-twitter: openrov
+twitter:
+  username: openrov
+
+social:
+  name: OpenROV
+  links:
+    - https://twitter.com/OpenROV
+    - https://www.facebook.com/OpenROV
+    - https://www.instagram.com/openrov_hq
+    - https://www.youtube.com/user/OpenROV
+
 logo: /assets/openrov/images/openrov-dark.png
 
 social:
