@@ -8,14 +8,14 @@ page_script:
     - /assets/js/buy-trident-min-c3aa0706be.js
 ---
 
-{% include product-trident/head.html %}
+{% include product-trident/head.html special=true title="Pre-Order Trident" %}
 
 <div class="buy-trident">
 
   <section class="order-information container swatch-white py-5">
     <div class="row">
         <div class="col-md-12 align-self-center">
-            <h1 class="text-center text-md-left pb-2" >OpenROV Trident</h1>
+            <h1 class="text-center text-md-left element-short-top or-section-title-dark" >OpenROV Trident</h1>
         </div>
     </div>
     <div class="preloader" id="loader-wrapper">
@@ -32,7 +32,7 @@ page_script:
                     <strong>Description</strong>
                 </div>
                 <div class="card-block">
-                    <p class="card-text" id="description">Calculating...</p>
+                    <p class="card-text" id="description">Loading...</p>
                 </div>
             </div>              
           </div>
@@ -57,7 +57,7 @@ page_script:
                         </select>
                     </div>
                 </div>
-                <div id="options">
+                <div id="options" class="">
                 </div>
 
                 <div class="row">
@@ -66,9 +66,9 @@ page_script:
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row element-short-top">
                     <label for="email" class="col-md-3 col-form-label">Email:</label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-8">
                         <input
                             type="email"
                             class="form-control form-control-danger"
@@ -82,14 +82,15 @@ page_script:
                 <div class="form-inline row">
                     <label for="firstName" class="col-md-3 col-form-label">Name:</label>
                     <div class="col-md-8 form-group">
-                        <input type="text" class="form-control form-control-danger" id="firstName" name="firstName" placeholder="First Name" required>
-                        <input type="text" class="form-control form-control-danger" id="lastName" name="lastName" placeholder="Last Name" required>
+                        
+                        <input type="text" class="form-control form-control-danger" id="firstName" name="firstName" placeholder="First Name" style="width: 49%;" required>
+                        <input type="text" class="form-control form-control-danger" id="lastName" name="lastName" placeholder="Last Name" style="width: 50%;" required>
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row" style="padding-top: 14px;">
                     <label for="country" class="col-md-3 col-form-label">Country:</label>
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <select class="form-control col-md-9 form-control-danger" id="country" name="country">
                             {% for item in site.data.country %}
                             <option value="{{item.id}}">{{item.value}}</option>
@@ -151,10 +152,10 @@ page_script:
 
                     <div class="row">
                         <div class="col-md-8">
-                            <h2>Payment information:</h2>
+                            <h2>Payment information:</h>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row element-short-top">
                         <label for="ccnnumber" class="col-md-3 col-form-label">CC Number:</label>
                         <div class="col-md-8">
                             <input type="tel"  pattern="^[0-9 -]{1,}$" autocomplete="off" class="form-control col-sm-6 form-control-danger" id="ccNumber" name="ccNumber" placeholder="Debit/Credit Card Number" required>
@@ -171,7 +172,7 @@ page_script:
 
                 </div>
 
-                <div id="shippingInfo" class="pt-4">
+                <div id="shippingInfo" class="pt-4 element-short-top">
                     <div class="form-group row">
                         <label for="subtotal" class="col-md-3 col-form-label">Subtotal:</label>
                         <div class="col-md-2">
@@ -216,7 +217,7 @@ page_script:
                     </div>
                 </div>
 
-                <button type="button" class="submit btn btn-primary px-4 mt-4 font-weight-bold">Place your order!</button>
+                <button type="button" class="submit btn btn-primary element-normal-bottom font-weight-bold">Place your order!</button>
 
                 <div class="submitting col-md-12">
                     <table class="w-100 h-100">

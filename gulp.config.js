@@ -64,6 +64,9 @@ config.keepCss = [
     'section#head .flexslider *',
     '.background-media',
     '.hero',
+    '.hidden-xs-up',
+    '.h-100',
+    '.w-100',
     /.*\.or-hero-btn-pre-order.*/,
     /div#pre-order-banner\.pre-order-banner.*/,
 ]
