@@ -1,0 +1,50 @@
+div.buy-trident {
+    .paymernt-information {
+        background-color: rgba(135, 206, 250, 0.784);
+        padding: 10px;
+        margin: -5px;
+    }
+
+
+    .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .8;
+            z-index: 10;
+            font-size: 2rem;
+            text-align: center;
+            background-color: grey;
+    }
+
+
+    #shippingInfo {
+        position: relative;
+        .loading {
+            @extend .overlay;
+        }
+    }
+
+    #orderForm {
+        position: relative;
+        .submitting {
+            @extend .overlay;
+            display: none;
+        }
+    }
+
+}
+
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+
+.hidden-xs-up {
+    display: none;
+}
+
