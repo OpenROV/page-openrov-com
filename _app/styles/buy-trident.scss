@@ -20,7 +20,6 @@ div.buy-trident {
     }
     
     .select-wrap {
-        width: auto;
         display: inline-block;        
     }
 
@@ -28,9 +27,16 @@ div.buy-trident {
     .city-state-zip > select {
         width: 27%;
     }
+    .city-state-zip .select-wrap {
+        width: auto;
+    }
+
+    #options {
+        width: 93%;
+    }
 
     #options > div {
-        width: 50%;
+        // width: 50%;
         padding-right: 15px;
         float: left;
     }

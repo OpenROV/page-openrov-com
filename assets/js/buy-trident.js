@@ -116,12 +116,12 @@ var BuyScreen = function () {
         value: function calculateShipping(form, variants) {
             var formData = objectifyForm(form.serializeArray());
             var data = this.getData(formData, this.getVariant(form, variants));
-            return this._calculateShipping(data);
+            return this._calculateShipping(data, form);
         }
     }, {
         key: '_calculateShipping',
         value: function () {
-            var _ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(data) {
+            var _ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(data, form) {
                 var result;
                 return regeneratorRuntime.wrap(function _callee$(_context) {
                     while (1) {
@@ -156,7 +156,7 @@ var BuyScreen = function () {
                 }, _callee, this);
             }));
 
-            function _calculateShipping(_x) {
+            function _calculateShipping(_x, _x2) {
                 return _ref.apply(this, arguments);
             }
 
@@ -184,14 +184,16 @@ var BuyScreen = function () {
                                 $('#description').html(result.data.description);
 
                                 optionsHtml = result.data.options.map(function (o) {
-                                    return '<div class="form-group">' + ('<label for="' + o.id + '" class="col-2 col-form-label">' + o.name + ':</label>') + ('<div class="select-wrap"><select class="form-control form-control-danger col-6" id="option_' + o.id + '" name="option_' + o.id + '" required>') + ('<option selected value="" disabled>Select ' + o.name + '</option>') + o.values.map(function (v) {
+                                    return '<div class="form-group">' + ('<label for="' + o.id + '" class="col-2 col-form-label">' + o.name + ':</label>') + ('<div class="select-wrap"><select class="form-control col-md-5 form-control-danger col-6" id="option_' + o.id + '" name="option_' + o.id + '" required>') + ('<option selected value="" disabled>Select ' + o.name + '</option>') + o.values.map(function (v) {
                                         return '<option value="' + v.id + '">' + v.name + '</option>';
                                     }).join('') + '</select></div>' + '</div>';
                                 }).join('');
                                 formData = objectifyForm(orderForm.serializeArray());
+                                formData.country = 'us';
                                 data = this.getData(formData, result.data.variants[result.data.variants.length - 1].id);
+                                
 
-                                this._calculateShipping(data);
+                                this._calculateShipping(data, orderForm);
 
                                 orderForm.find('#options').append(optionsHtml);
 
@@ -254,7 +256,7 @@ var BuyScreen = function () {
                 }, _callee2, this);
             }));
 
-            function setupForm(_x2) {
+            function setupForm(_x3) {
                 return _ref2.apply(this, arguments);
             }
 
