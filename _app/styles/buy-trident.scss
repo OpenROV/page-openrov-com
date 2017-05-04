@@ -1,4 +1,40 @@
+
 div.buy-trident {
+        
+    section#head {
+        background-color: blue;
+        $height: 200px;
+        .flexslider {
+
+            .jumbotron {
+                background-size: cover;
+                background-position: center;
+                height: $height;
+                padding-top: 0;
+                .hero {
+                    height: $height!important;
+                }
+                
+            }
+        }
+    }
+    
+    .select-wrap {
+        width: auto;
+        display: inline-block;        
+    }
+
+    .city-state-zip > input,
+    .city-state-zip > select {
+        width: 27%;
+    }
+
+    #options > div {
+        width: 45%;
+        padding-right: 15px;
+        float: left;
+    }
+
     .paymernt-information {
         background-color: rgba(135, 206, 250, 0.784);
         padding: 10px;

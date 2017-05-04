@@ -8,9 +8,9 @@ page_script:
     - /assets/js/buy-trident-min-c3aa0706be.js
 ---
 
-{% include product-trident/head.html special=true title="Pre-Order Trident" %}
 
 <div class="buy-trident">
+{% include product-trident/head.html special=true title="Pre-Order Trident" %}
 
   <section class="order-information container swatch-white py-5">
     <div class="row">
@@ -34,7 +34,7 @@ page_script:
                 <div class="card-block">
                     <p class="card-text" id="description">Loading...</p>
                 </div>
-            </div>              
+            </div>
           </div>
       </div>
       <div class="row pt-4">
@@ -101,36 +101,30 @@ page_script:
 
                 <div class="form-group row">
                     <label for="street" class="col-md-3 col-form-label">Street address:</label>
-                    <div class="col-md-8">
+                    <div class="col-md-4">
                         <input type="text" class="form-control form-control-danger" id="address1" name="address1" placeholder="Street Address"  required>
                     </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="address2" class="col-md-3 col-form-label">Apt, Suite, Bldg:</label>
-                    <div class="col-md-8">
+                    <div class="col-md-4">
                         <input type="text" class="form-control form-control-danger" id="address2" name="address2" placeholder="Apt, Suite, Bldg (optional)">
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="city" class="col-md-3 col-form-label">City:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control form-control-danger" id="city" name="city" placeholder="City"  required>
-                    </div>
-                </div>
+                <div class="form-inline row element-short-bottom">
+                    <label for="state" class="col-md-3 col-form-label">City/State/ZIP:</label>
 
-                <div class="form-group row">
-                    <label for="state" class="col-md-3 col-form-label">State/Province/ZIP:</label>
-                    <div class="col-md-8">
-                        <select class="form-control col-md-3 form-control-danger" id="usState" name="usState">
+                    <div class="col-md-8 form-group city-state-zip">
+                        <input type="text" class="form-control form-control-danger" id="city" name="city" placeholder="City"  required>
+                        <input type="text" class="form-control  form-control-danger" id="zip" placeholder="ZIP/Postal" required>
+
+                        <select class="form-control  form-control-danger" id="usState" name="usState">
                             {% for item in site.data.usStates %}
                             <option value="{{item.Abbreviation}}">{{item.State}}</option>
                             {% endfor %}                        
                         </select>
-                        <input type="text" class="form-control col-md-sm-3 form-control-danger hidden-xs-up" id="state" name="state" placeholder="State/Province"  required>
-                        <input type="text" class="form-control col-md-sm-3 form-control-danger" id="zip" placeholder="ZIP/Postal" required>
+                        <input type="text" class="form-control  form-control-danger hidden" id="state" name="state" placeholder="State/Province"  required>
                     </div>
+
+
                 </div>
 
                 <div class="form-group row">
