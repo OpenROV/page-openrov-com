@@ -67,6 +67,8 @@ config.keepCss = [
     '.hidden-xs-up',
     '.h-100',
     '.w-100',
+    '.inline-group',
+    /\.quantity-container .*/,
     /.*\.or-hero-btn-pre-order.*/,
     /div#pre-order-banner\.pre-order-banner.*/,
 ]

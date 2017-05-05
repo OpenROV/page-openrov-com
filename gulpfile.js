@@ -13,7 +13,7 @@ const imageminPngquant = require('imagemin-pngquant');
 const criticalCss = require('gulp-critical-css');
 const critical = require('critical');
 const rev = require('gulp-rev-append');
-
+const runSequence = require('run-sequence');
 
 const $ = require('gulp-load-plugins')({ lazy: true });
 
@@ -70,13 +70,20 @@ gulp.task('watch', ['watch:styles'], () => {});
 gulp.task('watch:styles', function () {
     gulp.watch(
         [config.paths.styles + config.paths.patterns.sass, config.paths.sassInclude + config.paths.patterns.sass], 
-        ['build:styles', 'build:styles:critical', 'build:versions'])
+        ['exec:watch:styles'])
 });
 gulp.task('watch:scripts', function () {
     gulp.watch(
         [config.paths.app + '/scripts/' + config.paths.patterns.js], 
         ['build:scripts', 'build:versions'])
 });
+
+gulp.task('exec:watch:styles', () => {
+    return new Promise(resolve => {
+        runSequence('build:styles', 'build:styles:concat', 'build:styles:critical', 'build:versions', resolve);
+    });
+
+})
 
 // Concatenates and uglifies global JS files and outputs result     to the
 // appropriate location.

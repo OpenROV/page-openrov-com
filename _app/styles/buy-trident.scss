@@ -19,6 +19,14 @@ div.buy-trident {
         }
     }
     
+
+    .quantity-container {
+        padding-left: 5px;
+        .select-wrap {
+            width: 50px!important
+        }
+    }
+
     .select-wrap {
         display: inline-block;        
     }
@@ -91,7 +99,51 @@ div.buy-trident {
         display: none;
     }
 
+    .form-inline.inline-group {
+        input {
+            max-width: 247px;
+            width: inherit;
+        }
+        
+    }
 
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float: none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+
+    .flex-form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        margin-left: -2px;
+        margin-right: -2px;
+        width: 100%;
+        
+        padding-bottom: 14px;
+
+        & > input, & > textarea, & > div {
+            flex: 1;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+        
+
+        &.selects-2 > .select-wrap {
+            flex: 2;
+        }
+
+    }
+    
 }
 
 
