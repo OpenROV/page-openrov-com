@@ -82,7 +82,7 @@ class BuyScreen {
     }
 
     async _calculateShipping(data, form) {
-        form.find('.loading').show();
+        form.find('tfoot').addClass('calculating');
         const result = await $.ajax({
             "async": true,
             "crossDomain": true,
@@ -98,9 +98,12 @@ class BuyScreen {
             $('#discount-container').removeClass('hidden-xs-up');
             $('#discount').text('$' + (result.discount / 100).toFixed(2))
         }
+        else {
+            $('#discount-container').addClass('hidden-xs-up');
+        }
         form.find('#tax').text('$' + (result.taxes / 100).toFixed(2))
         form.find('#total').text('$' + (result.total / 100).toFixed(2))
-        form.find('.loading').hide();
+        form.find('tfoot').removeClass('calculating');
     }
 
     async setupForm(orderForm) {
@@ -116,7 +119,7 @@ class BuyScreen {
                 '<td class="product-selector product">' +
                     `<input type="radio" value="${v.id}" name="variant" ${idx === 0 ? 'checked' : ''}>` +
                 '</td>' +
-                '<td class="product-info product">Trident</td>' +
+                '<td class="product-info product hideOnMobile">Trident</td>' +
                 v.options.values.map(val => { return `<td class="product">${val.replace(/\([+$0-9].*\)/, '')}</td>`}).join('') +
                 '<td class="text-right product pricing">$'+ (v.price / 100 ).toFixed(2)+ '</td>' +
             '</tr>';
@@ -133,11 +136,11 @@ class BuyScreen {
         orderForm.find('#country').change(ev => {
             if (ev.currentTarget.options[ev.target.selectedIndex].value === 'US') {
                 orderForm.find('.select-wrap #usState').parent().removeClass('hidden-xs-up').attr('required', false);
-                orderForm.find('#state').addClass('hidden-xs-up').attr('required', true);
+                orderForm.find('#state').attr('required', false).parent().addClass('hidden-xs-up')
 
             }
             else {
-                orderForm.find('#state').removeClass('hidden-xs-up').attr('required', false);
+                orderForm.find('#state').attr('required', true).parent().removeClass('hidden-xs-up');
                 orderForm.find('.select-wrap #usState').parent().addClass('hidden-xs-up').attr('required', false);
             }
             orderForm.validator('update');
@@ -156,6 +159,9 @@ class BuyScreen {
 
         orderForm.find('#quantity').change(ev => {
             $('#quantityOrdered').text(ev.target.value);
+            const itemsOrdered = parseInt(ev.target.value);
+            const valueLabel = itemsOrdered === 1 ? 'item' : 'items';
+            $('#itemsLabel').text(valueLabel);
             this.calculateShipping(orderForm);
         });
 
@@ -176,24 +182,17 @@ class BuyScreen {
         });
 
         orderForm
-            .on('validated.bs.validator', ev => {
-                if (ev.relatedTarget.id === 'expDate') {
-                    if (!ev.relatedTarget.checkValidity()) {
-                        $(ev.relatedTarget).parent().addClass('has-danger');
-                        return false;
-                    }
-                    else {
-                        $(ev.relatedTarget).parent().removeClass('has-danger');
-                    }
-
+            .on('valid.bs.validator', ev => {
+                if (ev.relatedTarget.checkValidity()) {
+                    $(ev.relatedTarget).parent().removeClass('has-danger').removeClass('has-error');
                 }
+
             })
             .on('invalid.bs.validator', ev => {
                 console.log(ev.relatedTarget.id + ' ' + ev.detail);
-
-                // if (ev.relatedTarget.id === 'expDate' && ev.type === 'invalid') {
-                //     ev.relatedTarget.parent().addClass('has-danger')
-                // }
+                if (!ev.relatedTarget.checkValidity()) {
+                    $(ev.relatedTarget).parent().addClass('has-danger').addClass('has-error');
+                }
             })
 
         const variants = result.data.variants;
@@ -202,12 +201,11 @@ class BuyScreen {
 
     async submit() {
         const { orderForm, variants } = this;
-        orderForm.find('button[type="submit"]').attr('disabled', true);
-        orderForm.find('.submitting').show();
+        orderForm.find('button.submit').attr('disabled', true);
+        orderForm.find('#orderProcessing').show();
 
         const formData = objectifyForm(orderForm.serializeArray())
-        //TODO const data = this.getData(formData, this.getVariant(formData, this.getVariant(form, variants)));
-        console.error('TODO');
+        const data = this.getData(formData);
         try {
             const result = await $.ajax({
                 "async": true,
@@ -228,13 +226,14 @@ class BuyScreen {
                 "&currency=" + currency +
                 "&line_items=" + line_items;
 
-            window.location.replace(window.location.href + '../confirmation/' + path);
+            window.location.assign(window.location.href + '../confirmation/' + path);
         }
         catch (err) {
             this.orderForm.find('.alert .title').text(err.statusText);
             this.orderForm.find('.alert .description').text(err.responseJSON.data);
             this.orderForm.find('.alert').show();
-            this.orderForm.find('.submitting').hide();
+            this.orderForm.find('button.submit').attr('disabled', false);
+            this.orderForm.find('#orderProcessing').hide();
         }
 
     }
@@ -247,7 +246,6 @@ class BuyScreen {
     init() {
         this.orderForm = $('form#orderForm');
         const self = this;
-        // this.orderForm.validator().on('submit', (ev) => {
         this.orderForm.validator().find('button.submit').click((ev) => {
             ev.preventDefault();
 

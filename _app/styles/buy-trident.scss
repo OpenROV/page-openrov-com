@@ -72,7 +72,6 @@ div.buy-trident {
 
         input[type="radio"][checked="checked"]:after,
         input[type="radio"][checked]:after {
-            -o-object-fit: fill;
             visibility: visible;
             opacity: 1;
             filter: alpha(opacity=100);
@@ -134,7 +133,7 @@ div.buy-trident {
     }
 
     .hidden-xs-up {
-        display: none;
+        display: none!important;
     }
 
     .form-inline.inline-group {
@@ -154,6 +153,16 @@ div.buy-trident {
 
         thead tr td {
             font-weight: bold;
+        }
+        
+        tfoot {
+            transition: opacity 0.2s;
+            opacity: 1;
+
+
+            &.calculating {
+                opacity: 0.3;
+            }
         }
 
         tr {

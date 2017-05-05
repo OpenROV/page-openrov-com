@@ -125,7 +125,7 @@ var BuyScreen = function () {
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
-                                form.find('.loading').show();
+                                form.find('tfoot').addClass('calculating');
                                 _context.next = 3;
                                 return $.ajax({
                                     "async": true,
@@ -145,10 +145,12 @@ var BuyScreen = function () {
                                 if (result.discount > 0) {
                                     $('#discount-container').removeClass('hidden-xs-up');
                                     $('#discount').text('$' + (result.discount / 100).toFixed(2));
+                                } else {
+                                    $('#discount-container').addClass('hidden-xs-up');
                                 }
                                 form.find('#tax').text('$' + (result.taxes / 100).toFixed(2));
                                 form.find('#total').text('$' + (result.total / 100).toFixed(2));
-                                form.find('.loading').hide();
+                                form.find('tfoot').removeClass('calculating');
 
                             case 9:
                             case 'end':
@@ -186,7 +188,7 @@ var BuyScreen = function () {
                                 $('#description').html(result.data.description);
                                 idx = 0;
                                 optionsHtml = result.data.variants.map(function (v, idx) {
-                                    return '<tr class="product-row">' + '<td class="product-selector product">' + ('<input type="radio" value="' + v.id + '" name="variant" ' + (idx === 0 ? 'checked' : '') + '>') + '</td>' + '<td class="product-info product">Trident</td>' + v.options.values.map(function (val) {
+                                    return '<tr class="product-row">' + '<td class="product-selector product">' + ('<input type="radio" value="' + v.id + '" name="variant" ' + (idx === 0 ? 'checked' : '') + '>') + '</td>' + '<td class="product-info product hideOnMobile">Trident</td>' + v.options.values.map(function (val) {
                                         return '<td class="product">' + val.replace(/\([+$0-9].*\)/, '') + '</td>';
                                     }).join('') + '<td class="text-right product pricing">$' + (v.price / 100).toFixed(2) + '</td>' + '</tr>';
                                 }).join('');
@@ -204,9 +206,9 @@ var BuyScreen = function () {
                                 orderForm.find('#country').change(function (ev) {
                                     if (ev.currentTarget.options[ev.target.selectedIndex].value === 'US') {
                                         orderForm.find('.select-wrap #usState').parent().removeClass('hidden-xs-up').attr('required', false);
-                                        orderForm.find('#state').addClass('hidden-xs-up').attr('required', true);
+                                        orderForm.find('#state').attr('required', false).parent().addClass('hidden-xs-up');
                                     } else {
-                                        orderForm.find('#state').removeClass('hidden-xs-up').attr('required', false);
+                                        orderForm.find('#state').attr('required', true).parent().removeClass('hidden-xs-up');
                                         orderForm.find('.select-wrap #usState').parent().addClass('hidden-xs-up').attr('required', false);
                                     }
                                     orderForm.validator('update');
@@ -225,6 +227,9 @@ var BuyScreen = function () {
 
                                 orderForm.find('#quantity').change(function (ev) {
                                     $('#quantityOrdered').text(ev.target.value);
+                                    var itemsOrdered = parseInt(ev.target.value);
+                                    var valueLabel = itemsOrdered === 1 ? 'item' : 'items';
+                                    $('#itemsLabel').text(valueLabel);
                                     _this.calculateShipping(orderForm);
                                 });
 
@@ -244,21 +249,15 @@ var BuyScreen = function () {
                                     _this.calculateShipping(orderForm);
                                 });
 
-                                orderForm.on('validated.bs.validator', function (ev) {
-                                    if (ev.relatedTarget.id === 'expDate') {
-                                        if (!ev.relatedTarget.checkValidity()) {
-                                            $(ev.relatedTarget).parent().addClass('has-danger');
-                                            return false;
-                                        } else {
-                                            $(ev.relatedTarget).parent().removeClass('has-danger');
-                                        }
+                                orderForm.on('valid.bs.validator', function (ev) {
+                                    if (ev.relatedTarget.checkValidity()) {
+                                        $(ev.relatedTarget).parent().removeClass('has-danger').removeClass('has-error');
                                     }
                                 }).on('invalid.bs.validator', function (ev) {
                                     console.log(ev.relatedTarget.id + ' ' + ev.detail);
-
-                                    // if (ev.relatedTarget.id === 'expDate' && ev.type === 'invalid') {
-                                    //     ev.relatedTarget.parent().addClass('has-danger')
-                                    // }
+                                    if (!ev.relatedTarget.checkValidity()) {
+                                        $(ev.relatedTarget).parent().addClass('has-danger').addClass('has-error');
+                                    }
                                 });
 
                                 variants = result.data.variants;
@@ -282,20 +281,18 @@ var BuyScreen = function () {
         key: 'submit',
         value: function () {
             var _ref3 = _asyncToGenerator(regeneratorRuntime.mark(function _callee3() {
-                var orderForm, variants, formData, result, order, total, currency, line_items, path;
+                var orderForm, variants, formData, data, result, order, total, currency, line_items, path;
                 return regeneratorRuntime.wrap(function _callee3$(_context3) {
                     while (1) {
                         switch (_context3.prev = _context3.next) {
                             case 0:
                                 orderForm = this.orderForm, variants = this.variants;
 
-                                orderForm.find('button[type="submit"]').attr('disabled', true);
-                                orderForm.find('.submitting').show();
+                                orderForm.find('button.submit').attr('disabled', true);
+                                orderForm.find('#orderProcessing').show();
 
                                 formData = objectifyForm(orderForm.serializeArray());
-                                //TODO const data = this.getData(formData, this.getVariant(formData, this.getVariant(form, variants)));
-
-                                console.error('TODO');
+                                data = this.getData(formData);
                                 _context3.prev = 5;
                                 _context3.next = 8;
                                 return $.ajax({
@@ -319,8 +316,8 @@ var BuyScreen = function () {
                                 path = "?number=" + order.number + "&amount=" + total + "&currency=" + currency + "&line_items=" + line_items;
 
 
-                                window.location.replace(window.location.href + '../confirmation/' + path);
-                                _context3.next = 23;
+                                window.location.assign(window.location.href + '../confirmation/' + path);
+                                _context3.next = 24;
                                 break;
 
                             case 17:
@@ -330,9 +327,10 @@ var BuyScreen = function () {
                                 this.orderForm.find('.alert .title').text(_context3.t0.statusText);
                                 this.orderForm.find('.alert .description').text(_context3.t0.responseJSON.data);
                                 this.orderForm.find('.alert').show();
-                                this.orderForm.find('.submitting').hide();
+                                this.orderForm.find('button.submit').attr('disabled', false);
+                                this.orderForm.find('#orderProcessing').hide();
 
-                            case 23:
+                            case 24:
                             case 'end':
                                 return _context3.stop();
                         }
@@ -383,7 +381,6 @@ var BuyScreen = function () {
 
             this.orderForm = $('form#orderForm');
             var self = this;
-            // this.orderForm.validator().on('submit', (ev) => {
             this.orderForm.validator().find('button.submit').click(function (ev) {
                 ev.preventDefault();
 
