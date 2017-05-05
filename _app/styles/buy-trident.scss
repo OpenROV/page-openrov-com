@@ -40,7 +40,46 @@ div.buy-trident {
     }
 
     #options {
-        width: 93%;
+        // width: 93%;
+        input[type="radio"] {
+            position: relative;
+            margin: 0 auto;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid #009fb0;            
+
+            &:after {
+                content: "";
+                visibility: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 0;
+                width: 0;
+                border-radius: 50%;
+                background-color: #009fb0;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                transition: all,.2s;
+            }
+        }
+
+        input[type="radio"][checked="checked"]:after,
+        input[type="radio"][checked]:after {
+            -o-object-fit: fill;
+            visibility: visible;
+            opacity: 1;
+            filter: alpha(opacity=100);
+            height: 2rem;
+            width: 2rem;                
+        }
+        
     }
 
     #options > div {
@@ -87,7 +126,6 @@ div.buy-trident {
         }
     }
 
-
     .w-100 {
         width: 100%;
     }
@@ -105,6 +143,56 @@ div.buy-trident {
             width: inherit;
         }
         
+    }
+
+    table.pricing {
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 2px;
+        border-color: grey;        
+
+
+        thead tr td {
+            font-weight: bold;
+        }
+
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;            
+            
+            &.shipping td {
+                border-top: 1px solid #ddd;
+            }
+
+            &.product-row {
+                cursor: pointer;
+
+                &:hover {
+                    td {
+                        background-color: #add8e6;
+                    }
+                }
+            }
+
+            td.product {
+                border-top: 1px solid #ddd;
+                padding: 2rem 0;
+
+                &.product-selector {
+                    padding: 2rem 1rem;
+                    vertical-align: middle;
+                }
+
+                &.pricing {
+                    padding-right: 1rem;
+                }
+            }
+        }
+        
+        .total {
+            font-weight: bold;
+        }
     }
 
     /* centered columns styles */
@@ -136,7 +224,7 @@ div.buy-trident {
             margin-left: 2px;
             margin-right: 2px;
         }
-        
+
 
         &.selects-2 > .select-wrap {
             flex: 2;

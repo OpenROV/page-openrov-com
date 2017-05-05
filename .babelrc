@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "transform-regenerator"
+  ],
+  "presets": [
+    "es2015", "stage-0"
+  ]
+}

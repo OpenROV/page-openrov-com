@@ -77,6 +77,12 @@ gulp.task('watch:scripts', function () {
         [config.paths.app + '/scripts/' + config.paths.patterns.js], 
         ['build:scripts', 'build:versions'])
 });
+gulp.task('watch:es6', function() {
+    gulp.watch(
+        [config.paths.app + '/scripts/**/*.es6'],
+        ['build:es6-scripts']
+    )
+})
 
 gulp.task('exec:watch:styles', () => {
     return new Promise(resolve => {
@@ -106,6 +112,18 @@ gulp.task('build:scripts', function () {
         .pipe(gulp.dest(config.paths.dist + '/js'))        
         .on('error', gutil.log);
 });
+
+gulp.task('build:es6-scripts', () => {
+    const dev=true;
+    return gulp.src(config.paths.app + '/scripts/**/*.es6')
+        .pipe($.plumber())
+        .pipe($.if(dev, $.sourcemaps.init()))
+        .pipe($.babel({ minified: false }))
+        .pipe($.if(dev, $.sourcemaps.write('.')))
+        .pipe(gulp.dest(config.paths.dist + '/js'))        
+        .on('error', gutil.log);
+});
+
 
 gulp.task('clean', (done) => {
     clean([

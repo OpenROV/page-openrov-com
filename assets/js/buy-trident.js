@@ -6,8 +6,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-//var PRODUCT = '57e9bd02726ecc1100f4204a'; // testproduct
-const PRODUCT = '5637ca44df92ea03009633b3'; //trident
+var PRODUCT = '5637ca44df92ea03009633b3'; //trident
 
 function objectifyForm(formArray) {
     //serialize data function
@@ -25,7 +24,7 @@ var BuyScreen = function () {
 
     _createClass(BuyScreen, [{
         key: 'getData',
-        value: function getData(formData, variant) {
+        value: function getData(formData) {
             var address = {
                 "first_name": formData.firstName,
                 "last_name": formData.lastName,
@@ -33,7 +32,7 @@ var BuyScreen = function () {
                 "line1": formData.address1,
                 "line2": formData.address2,
                 "city": formData.city,
-                "state": formData.country === 'US' ? formData.usState : formData.state,
+                "state": formData.country === 'US' ? formData.usState.toLowerCase() : formData.state,
                 "zip": formData.zip,
                 "country": formData.country.toLowerCase(),
                 "phone": formData.phone
@@ -51,9 +50,8 @@ var BuyScreen = function () {
                 "shipping_address": address,
                 "billing_address": Object.assign({}, address, { zip: formData.billingZip }),
                 "line_items": [{
-                    // "product_id": "5637ca44df92ea03009633b3",
                     "product_id": PRODUCT,
-                    "variant_id": variant,
+                    "variant_id": formData.variant,
                     "quantity": parseInt(formData.quantity)
                 }],
                 "payment_source": {
@@ -65,7 +63,7 @@ var BuyScreen = function () {
                         "cvc": formData.cvc
                     }
                 },
-                "discount_codes": []
+                "discount_codes": [formData.couponCode]
             };
             return data;
         }
@@ -113,9 +111,9 @@ var BuyScreen = function () {
         }
     }, {
         key: 'calculateShipping',
-        value: function calculateShipping(form, variants) {
+        value: function calculateShipping(form) {
             var formData = objectifyForm(form.serializeArray());
-            var data = this.getData(formData, this.getVariant(form, variants));
+            var data = this.getData(formData);
             return this._calculateShipping(data, form);
         }
     }, {
@@ -142,10 +140,14 @@ var BuyScreen = function () {
                             case 3:
                                 result = _context.sent;
 
-                                form.find('#shipping').val('$' + (result.shipping / 100).toFixed(2));
-                                form.find('#subtotal').val('$' + (result.subtotal / 100).toFixed(2));
-                                form.find('#tax').val('$' + (result.taxes / 100).toFixed(2));
-                                form.find('#total').val('$' + (result.total / 100).toFixed(2));
+                                form.find('#shipping').text('$' + (result.shipping / 100).toFixed(2));
+                                // form.find('#subtotal').val('$' + (result.subtotal / 100).toFixed(2))
+                                if (result.discount > 0) {
+                                    $('#discount-container').removeClass('hidden-xs-up');
+                                    $('#discount').text('$' + (result.discount / 100).toFixed(2));
+                                }
+                                form.find('#tax').text('$' + (result.taxes / 100).toFixed(2));
+                                form.find('#total').text('$' + (result.total / 100).toFixed(2));
                                 form.find('.loading').hide();
 
                             case 9:
@@ -168,7 +170,7 @@ var BuyScreen = function () {
             var _ref2 = _asyncToGenerator(regeneratorRuntime.mark(function _callee2(orderForm) {
                 var _this = this;
 
-                var result, optionsHtml, formData, data, variants;
+                var result, idx, optionsHtml, formData, data, variants;
                 return regeneratorRuntime.wrap(function _callee2$(_context2) {
                     while (1) {
                         switch (_context2.prev = _context2.next) {
@@ -182,40 +184,48 @@ var BuyScreen = function () {
                                 result = _context2.sent;
 
                                 $('#description').html(result.data.description);
-
-                                optionsHtml = result.data.options.map(function (o) {
-                                    return '<div class="form-group">' + ('<label for="' + o.id + '" class="col-2 col-form-label">' + o.name + ':</label>') + ('<div class="select-wrap"><select class="form-control col-md-5 form-control-danger col-6" id="option_' + o.id + '" name="option_' + o.id + '" required>') + ('<option selected value="" disabled>Select ' + o.name + '</option>') + o.values.map(function (v) {
-                                        return '<option value="' + v.id + '">' + v.name + '</option>';
-                                    }).join('') + '</select></div>' + '</div>';
+                                idx = 0;
+                                optionsHtml = result.data.variants.map(function (v, idx) {
+                                    return '<tr class="product-row">' + '<td class="product-selector product">' + ('<input type="radio" value="' + v.id + '" name="variant" ' + (idx === 0 ? 'checked' : '') + '>') + '</td>' + '<td class="product-info product">Trident</td>' + v.options.values.map(function (val) {
+                                        return '<td class="product">' + val.replace(/\([+$0-9].*\)/, '') + '</td>';
+                                    }).join('') + '<td class="text-right product pricing">$' + (v.price / 100).toFixed(2) + '</td>' + '</tr>';
                                 }).join('');
+
+                                orderForm.find('#options').prepend(optionsHtml);
+
                                 formData = objectifyForm(orderForm.serializeArray());
+
                                 formData.country = 'us';
-                                data = this.getData(formData, result.data.variants[result.data.variants.length - 1].id);
-                                
+                                data = this.getData(formData);
 
                                 this._calculateShipping(data, orderForm);
-
-                                orderForm.find('#options').append(optionsHtml);
 
                                 orderForm.find('#country option[value="US"]').attr('selected', 'true');
                                 orderForm.find('#country').change(function (ev) {
                                     if (ev.currentTarget.options[ev.target.selectedIndex].value === 'US') {
-                                        orderForm.find('#usState').removeClass('hidden-xs-up').attr('required', false);
+                                        orderForm.find('.select-wrap #usState').parent().removeClass('hidden-xs-up').attr('required', false);
                                         orderForm.find('#state').addClass('hidden-xs-up').attr('required', true);
                                     } else {
                                         orderForm.find('#state').removeClass('hidden-xs-up').attr('required', false);
-                                        orderForm.find('#usState').addClass('hidden-xs-up').attr('required', false);
+                                        orderForm.find('.select-wrap #usState').parent().addClass('hidden-xs-up').attr('required', false);
                                     }
                                     orderForm.validator('update');
-                                    _this.calculateShipping(orderForm, result.data.variants);
+                                    _this.calculateShipping(orderForm);
                                 });
 
-                                orderForm.find('#options select').change(function (ev) {
-                                    _this.calculateShipping(orderForm, result.data.variants);
+                                orderForm.find('#zip').change(function (ev) {
+                                    _this.calculateShipping(orderForm);
+                                });
+                                orderForm.find('#usState').change(function (ev) {
+                                    _this.calculateShipping(orderForm);
+                                });
+                                orderForm.find('#couponCode').change(function (ev) {
+                                    _this.calculateShipping(orderForm);
                                 });
 
                                 orderForm.find('#quantity').change(function (ev) {
-                                    _this.calculateShipping(orderForm, result.data.variants);
+                                    $('#quantityOrdered').text(ev.target.value);
+                                    _this.calculateShipping(orderForm);
                                 });
 
                                 orderForm.find('#ccNumber').keypress(function (event) {
@@ -226,6 +236,12 @@ var BuyScreen = function () {
                                 orderForm.find('#expDate').keypress(function (event) {
                                     var char = String.fromCharCode(event.which);
                                     if (!char.match(/[0-9/]/)) event.preventDefault();
+                                });
+
+                                orderForm.find('tr.product-row').click(function (ev) {
+                                    orderForm.find('input[type=radio][name="variant"][checked]')[0].removeAttribute('checked');
+                                    $(ev.target).parent().find('input[type=radio][name="variant"]')[0].setAttribute('checked', 'checked');
+                                    _this.calculateShipping(orderForm);
                                 });
 
                                 orderForm.on('validated.bs.validator', function (ev) {
@@ -248,7 +264,7 @@ var BuyScreen = function () {
                                 variants = result.data.variants;
                                 return _context2.abrupt('return', variants);
 
-                            case 18:
+                            case 23:
                             case 'end':
                                 return _context2.stop();
                         }
@@ -266,7 +282,7 @@ var BuyScreen = function () {
         key: 'submit',
         value: function () {
             var _ref3 = _asyncToGenerator(regeneratorRuntime.mark(function _callee3() {
-                var orderForm, variants, formData, data, result, order, total, currency, line_items, path;
+                var orderForm, variants, formData, result, order, total, currency, line_items, path;
                 return regeneratorRuntime.wrap(function _callee3$(_context3) {
                     while (1) {
                         switch (_context3.prev = _context3.next) {
@@ -277,7 +293,9 @@ var BuyScreen = function () {
                                 orderForm.find('.submitting').show();
 
                                 formData = objectifyForm(orderForm.serializeArray());
-                                data = this.getData(formData, this.getVariant(formData, this.getVariant(form, variants)));
+                                //TODO const data = this.getData(formData, this.getVariant(formData, this.getVariant(form, variants)));
+
+                                console.error('TODO');
                                 _context3.prev = 5;
                                 _context3.next = 8;
                                 return $.ajax({
@@ -397,5 +415,3 @@ var BuyScreen = function () {
     screen.init();
 })();
 //# sourceMappingURL=buy-trident.js.map
-
-//# sourceMappingURL=maps/buy-trident.js.map

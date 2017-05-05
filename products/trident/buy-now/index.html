@@ -23,10 +23,24 @@ page_script:
                 </div>
 
                 <form id="orderForm" class="">
+
+                    <div class="row row-centered">
+                        <div class="col-md-8 col-centered">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Description</strong>
+                                </div>
+                                <div class="card-block">
+                                    <p class="card-text" id="description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     
 
                     <div class="form-group quantity-container ">
-                        <label for="quantity" class="col-xs-2 col-xs-offset-2 col-form-label">Quantity:</label>
+                        <label for="quantity" class="col-md-2 col-md-offset-2 col-xs-3 col-form-label">Quantity:</label>
                         <select class="form-control" id="quantity" name="quantity">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -42,7 +56,7 @@ page_script:
                     </div>
                     
                     <div class="" style="padding-left:10px;">
-                        <table class="col-xs-8 col-xs-offset-2">
+                        <table class="col-md-8 col-md-offset-2 col-xs-12 pricing">
                             <thead>
                                 <tr>
                                     <td colspan="2">Select your option</td>
@@ -51,40 +65,31 @@ page_script:
                                     <td class="text-right">Price</td>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <input type="radio" value="0" name="variant" checked>
-                                    </td>
-                                    <td>Trident</td>
-                                    <td>Add 100m Tether</td>
-                                    <td>Add Hardcase</td>
-                                    <td class="text-right">$1490</td>
+                            <tbody id="options">
+                                <tr class="shipping">
+                                    <td colspan="5" class="text-right">Shipping: <span id="shipping">$0.00</span></td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <input type="radio" value="0" name="variant">
-                                    </td>
-                                    <td>Trident</td>
-                                    <td>Add 100m Tether</td>
-                                    <td>No</td>
-                                    <td class="text-right">$1490</td>
+                                    <td colspan="5" class="text-right">Tax: <span id="tax">$0.00</span></td>
+                                </tr>
+                                <tr id="discount-container" class="hidden-xs-up">
+                                    <td colspan="5" class="text-right">Discount: <span id="discount">$0.00</span></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="5" class="text-right"> Total (<span id="quantityOrdered">1</span> <span id="itemsLabel">item</span>): <span id="total">$1234.00</span></td>
+                                    <td colspan="5" class="text-right total">Total (<span id="quantityOrdered">1</span> <span id="itemsLabel">item</span>): <span id="total">$0.00</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <h2>Shipping information:</h2>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <div class="flex-form-group">
 
 
@@ -104,7 +109,7 @@ page_script:
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <div class="flex-form-group">
                                 <input type="text" class="form-control form-control-danger" id="address1" name="address1" placeholder="Street Address" required>
                                 <input type="text" class="form-control form-control-danger" id="address2" name="address2" placeholder="Apt, Suite, Bldg (optional)">
@@ -113,9 +118,9 @@ page_script:
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <div class="flex-form-group selects-2">
-                                <input type="text" class="form-control  form-control-danger" id="zip" placeholder="ZIP/Postal" required>
+                                <input type="text" class="form-control  form-control-danger" id="zip" name="zip" placeholder="ZIP/Postal" required>
                                 <select class="form-control  form-control-danger" id="usState" name="usState" >
                                     {% for item in site.data.usStates %}
                                     <option value="{{item.Abbreviation}}">{{item.State}}</option>
@@ -132,7 +137,7 @@ page_script:
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <div class="flex-form-group">
 
                                 <input
@@ -154,7 +159,7 @@ page_script:
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <div class="flex-form-group">
                                 <textarea
                                     class="form-control form-control-danger"
@@ -167,19 +172,27 @@ page_script:
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <h2>Billing information:</h2>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <div class="flex-form-group">
+                                <input
+                                    type="text"
+                                    autocomplete="off"
+                                    class="form-control form-control-danger"
+                                    id="couponCode"
+                                    name="couponCode"
+                                    placeholder="Coupon code" >
                                 <input
                                     type="tel"
                                     pattern="^[0-9 -]{1,}$"
                                     autocomplete="off"
                                     class="form-control form-control-danger"
+                                    style="flex: 2"
                                     id="ccNumber"
                                     name="ccNumber"
                                     placeholder="Debit/Credit Card Number" required>
@@ -187,7 +200,7 @@ page_script:
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">
                             <div class="flex-form-group">
                                 <input type="text" class="form-control col-sm-2 form-control-danger" id="expDate" name="expDate" placeholder="MM/YY" pattern="^[0-9]{2}/[0-9]{2}$" required>
                                 <input type="number" data-minlength="3" maxlength="4" class="form-control col-sm-2 form-control-danger" id="cvc" name="cvc" placeholder="CVC" required>
