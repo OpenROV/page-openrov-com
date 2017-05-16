@@ -113,14 +113,26 @@ class BuyScreen {
         $('#description').html(result.data.description);
         let idx = 0;
 
+        const getOptionText = value => {
+            let result = value.replace(/\([+$0-9].*\)/, '').trim();
+            if (result == 'None') { result = '' }
+            else if (result.indexOf('Standard') > -1) {
+                result = 'with ' + result;
+            }
+            else { 
+                result = result.replace(/Add A/, 'with');
+
+            }
+            return result;
+        }
 
         const optionsHtml = result.data.variants.map((v, idx) => {
             return '<tr class="product-row">' +
                 '<td class="product-selector product">' +
                     `<input type="radio" value="${v.id}" name="variant" ${idx === 0 ? 'checked' : ''}>` +
                 '</td>' +
-                '<td class="product-info product hideOnMobile">Trident</td>' +
-                v.options.values.map(val => { return `<td class="product">${val.replace(/\([+$0-9].*\)/, '')}</td>`}).join('') +
+                '<td class="product-info product hideOnMobile">Trident Underwater Drone</td>' +
+                v.options.values.map(val => { return `<td class="product">${getOptionText(val)}</td>`}).join('') +
                 '<td class="text-right product pricing">$'+ (v.price / 100 ).toFixed(2)+ '</td>' +
             '</tr>';
         }).join('');

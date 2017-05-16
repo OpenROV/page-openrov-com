@@ -172,7 +172,7 @@ var BuyScreen = function () {
             var _ref2 = _asyncToGenerator(regeneratorRuntime.mark(function _callee2(orderForm) {
                 var _this = this;
 
-                var result, idx, optionsHtml, formData, data, variants;
+                var result, idx, getOptionText, optionsHtml, formData, data, variants;
                 return regeneratorRuntime.wrap(function _callee2$(_context2) {
                     while (1) {
                         switch (_context2.prev = _context2.next) {
@@ -187,9 +187,22 @@ var BuyScreen = function () {
 
                                 $('#description').html(result.data.description);
                                 idx = 0;
+
+                                getOptionText = function getOptionText(value) {
+                                    var result = value.replace(/\([+$0-9].*\)/, '').trim();
+                                    if (result == 'None') {
+                                        result = '';
+                                    } else if (result.indexOf('Standard') > -1) {
+                                        result = 'with ' + result;
+                                    } else {
+                                        result = result.replace(/Add A/, 'with');
+                                    }
+                                    return result;
+                                };
+
                                 optionsHtml = result.data.variants.map(function (v, idx) {
-                                    return '<tr class="product-row">' + '<td class="product-selector product">' + ('<input type="radio" value="' + v.id + '" name="variant" ' + (idx === 0 ? 'checked' : '') + '>') + '</td>' + '<td class="product-info product hideOnMobile">Trident</td>' + v.options.values.map(function (val) {
-                                        return '<td class="product">' + val.replace(/\([+$0-9].*\)/, '') + '</td>';
+                                    return '<tr class="product-row">' + '<td class="product-selector product">' + ('<input type="radio" value="' + v.id + '" name="variant" ' + (idx === 0 ? 'checked' : '') + '>') + '</td>' + '<td class="product-info product hideOnMobile">Trident Underwater Drone</td>' + v.options.values.map(function (val) {
+                                        return '<td class="product">' + getOptionText(val) + '</td>';
                                     }).join('') + '<td class="text-right product pricing">$' + (v.price / 100).toFixed(2) + '</td>' + '</tr>';
                                 }).join('');
 
@@ -263,7 +276,7 @@ var BuyScreen = function () {
                                 variants = result.data.variants;
                                 return _context2.abrupt('return', variants);
 
-                            case 23:
+                            case 24:
                             case 'end':
                                 return _context2.stop();
                         }
