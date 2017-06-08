@@ -76,8 +76,8 @@
 
 - title: 'Software'
   content: 
-  - 'System requirements: Any device able to run a recent version of Google Chrome'
-  - 'Device types: laptop, tablet, smartphone, or modern mobile device'
+  - 'System requirements: Modern computers with Google Chrome, Android devices through the OpenROV App.'
+  - 'Device types: laptop, tablet, smartphone'
   - 'Control methods: game controller, joystick, keyboard, or touchscreen'
   - 'VR capable'
   - 'Customizable UI'  
