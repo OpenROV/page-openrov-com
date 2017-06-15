@@ -1,0 +1,1 @@
+"use strict";!function($){$("#confirmationNumber").text(function(name,url){url||(url=window.location.href),name=name.replace(/[\[\]]/g,"\\$&");var regex=new RegExp("[?&]"+name+"(=([^&#]*)|&|#|$)"),results=regex.exec(url);return results?results[2]?decodeURIComponent(results[2].replace(/\+/g," ")):"":null}("number"))}($);
