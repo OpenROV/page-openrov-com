@@ -22,8 +22,12 @@ defaults:
       height: 1200
       width: 1200
 
-#author:
-#  twitter: openrov
+author:
+  name: OpenROV
+  email: info@openrov.com
+  twitter: openrov
+  facebook: OpenROV
+  instagram: openrov_hq
 
 twitter:
   username: openrov
@@ -37,7 +41,4 @@ social:
     - https://www.youtube.com/user/OpenROV
 
 logo: /images/openrov.png
-
-social:  
-
 
