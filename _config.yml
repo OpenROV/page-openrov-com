@@ -18,7 +18,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /images/openrov-trident.jpg
+      image: /images/openrov-trident-underwater-drone.jpg
       height: 1200
       width: 1200
 
