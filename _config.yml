@@ -21,6 +21,8 @@ defaults:
       image: /images/openrov-trident-underwater-drone.jpg
       height: 1200
       width: 1200
+      show_nav: true
+      show_footer: true
 
 author:
   name: OpenROV
