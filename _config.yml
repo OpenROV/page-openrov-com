@@ -23,6 +23,7 @@ defaults:
       width: 1200
       show_nav: true
       show_footer: true
+      nav_fixed: true
 
 author:
   name: OpenROV
